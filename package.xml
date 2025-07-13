@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<package format="1" xmlns="https://wiki.freecad.org/Package_Metadata">
+
+  <name>Solar Workbench</name>
+  <description>Workbench to manage solar configurations</description>
+  <version>2025.05.08</version>
+  <date>2025.05.08</date>
+  <author email="fco.rosa@yahoo.com.br">F_Rosa</author>  
+  <maintainer email="fco.rosa@yahoo.com.br">F_Rosa</maintainer>  
+  <license file="LICENSE">LGPL-2.1-or-later</license>
+  <freecadmin>1.0.0</freecadmin>
+  <url type="repository" branch="master">https://github.com/Francisco-Rosa/FreeCAD-Solar</url>
+  <url type="readme">https://github.com/Francisco-Rosa/FreeCAD-Solar/blob/master/README.md</url>
+  <url type="discussion">https://forum.freecadweb.org/viewtopic.php?f=8&amp;t=74432</url>
+  <icon>icons/SunPositionIcon.svg</icon>
+
+  <content>
+    <workbench>
+      <depend optional="True" type="addon" version_gte="2023.02.05">Render</depend>
+      <tag>freecad</tag>
+      <tag>addons</tag>
+      <tag>workbench</tag>
+      <tag>solar</tag>
+      <classname>Solar</classname>
+    </workbench>
+  </content>
+
+</package>
