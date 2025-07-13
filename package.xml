@@ -10,7 +10,7 @@
   <license file="LICENSE">LGPL-2.1-or-later</license>
   <freecadmin>1.0.0</freecadmin>
   <url type="repository" branch="master">https://github.com/Francisco-Rosa/Solar</url>
-  <url type="readme">https://github.com/Francisco-Rosa/Solar/blob/master/README.md</url>
+  <url type="readme">https://github.com/Francisco-Rosa/Solar/blob/main/README.md</url>
   <url type="discussion">https://forum.freecadweb.org/viewtopic.php?f=8&amp;t=74432</url>
   <icon>icons/SunPositionIcon.svg</icon>
 
