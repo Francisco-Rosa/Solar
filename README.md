@@ -1,5 +1,5 @@
 ## Solar Workbench
-Workbench to configure sun position and its path animation
+Workbench for configuring the sun's position and animating its path
 
 ### Worbench Icon
 ![Solar Workbench Icon](./icons//SolarIcon.svg)
@@ -8,14 +8,14 @@ Workbench to configure sun position and its path animation
 #### Configure the sun position
 
 * Manually set the sun position with the location data (latitude, longitude, date and time).
-* Automatically set the sun position with location data with epw files.
+* Automatically set the sun position with location data from epw file.
 * Enable the display of the sun representation and the direction of illumination to aid in analysis.
 * Activate the display of the solar diagram with representation of months, hours, equinoxes and solstices.
 * Save images of the results obtained.
 
 #### Visualize the sun path animations
 
-* Ability to Play the sun path animations in real time prior to recording.
+* Ability to play the sun path animations in real time prior to recording.
 
 #### Record and Play (with Movie and Render Workbenchs)
 
@@ -57,15 +57,13 @@ Not yet available.
 
 ### Preparation
 
-* If you want to use the rendered frames, you must install the Render Workbench, prepare rendering projects and test them preventively to make sure everything is working correctly (see information in [FreeCAD-Render](https://github.com/FreeCAD/FreeCAD-render)). It is also recommended to take advantage and use some cameras from this workbench that better show the animation.
+* If you want to use the rendered frames, you must install the Render Workbench, prepare rendering projects and test them preventively to make sure everything is working correctly (see information in [FreeCAD-Render](https://github.com/FreeCAD/FreeCAD-render)).
 * If you want to use the play and record rendered animation frames, you must install the Movie Workbench [FreeCAD-Movie](https://github.com/Francisco-Rosa/FreeCAD-Movie/tree/master).
 
 
 ### Usage
 
-##### Sun configuration dialog 
-
-The toolbar above is the Movie Cameras and Objects 
+##### Sun configuration dialog  
 
 <img src=./Docs/Sun_dialog.jpg height=600>
 
