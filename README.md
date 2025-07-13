@@ -63,7 +63,7 @@ Not yet available.
   
       pip install ladybug-core pysolar # pysolar is optional
 
-  If the versions are different, you will need to use Python venv called "AdditionalPythonPackages". To do this, go to the Solar workbench folder (see the address above, or open FreeCAD and type in the Python console:
+  If the versions are different, you will need to use Python venv. To do this, go to the Solar workbench folder (see the address above, or open FreeCAD and type in the Python console:
 
       import FreeCAD
       import os
@@ -75,7 +75,7 @@ Not yet available.
       python3 -m venv AdditionalPythonPackages # for Python 3, or
       python -m venv AdditionalPythonPackages
   
-  Activate the virtual environment:
+  Activate the virtual environment (you must use AdditionalPythonPackages as the name):
   
       source AdditionalPythonPackages/bin/activate # Linux/macOS
       AdditionalPythonPackages\Scripts\activate # Windows
