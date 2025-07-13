@@ -57,6 +57,36 @@ Not yet available.
 
 ### Preparation
 
+* To use this workbench, you must have the ladybug-core Python package installed. There are two basic ways to do this:
+
+  If your operating system's Python version is the same as FreeCAD's, simply open a terminal and type:
+  
+      pip install ladybug-core pysolar # pysolar is optional
+
+  If the versions are different, you will need to use Python venv called "AdditionalPythonPackages". To do this, go to the Solar workbench folder (see the address above, or open FreeCAD and type in the Python console:
+
+      import FreeCAD
+      import os
+      user_mod_path = os.path.join(FreeCAD.getUserAppDataDir(), "Solar")
+      print(user_mod_path)
+
+  Create the virtual environment using:
+  
+      python3 -m venv AdditionalPythonPackages # for Python 3, or
+      python -m venv AdditionalPythonPackages
+  
+  Activate the virtual environment:
+  
+      source AdditionalPythonPackages/bin/activate # Linux/macOS
+      AdditionalPythonPackages\Scripts\activate # Windows
+  
+  Install packages within the environment:
+  
+      pip install ladybug-core pysolar # pysolar is optional
+  Deactivate the virtual environment when finished:
+  
+      deactivate
+
 * If you want to use the rendered frames, you must install the Render Workbench, prepare rendering projects and test them preventively to make sure everything is working correctly (see information in [FreeCAD-Render](https://github.com/FreeCAD/FreeCAD-render)).
 * If you want to use the play and record rendered animation frames, you must install the Movie Workbench [FreeCAD-Movie](https://github.com/Francisco-Rosa/FreeCAD-Movie/tree/master).
 
