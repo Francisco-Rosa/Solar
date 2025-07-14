@@ -107,7 +107,7 @@ Not yet available.
 Documentation will be available as soon as possible.
 
   ### Feedback 
-For discussion, please use the [Solar Workbench thread](https://forum.freecadweb.org/) in the FreeCAD forum.
+For discussion, please use the [Solar Workbench thread](https://forum.freecad.org/viewtopic.php?p=836631#p836631) in the FreeCAD forum.
 
 #### License 
 LGPL-2.1 [LICENCE](./LICENCE)
