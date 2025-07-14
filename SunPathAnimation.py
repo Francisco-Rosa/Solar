@@ -98,7 +98,6 @@ class StopSunPathAnimation:
     def Activated(self):
         modify_anim_indicator(animation = False)
         try:
-            #FreeCAD.ActiveDocument.Clapperboard
             Gui.runCommand('StopRecordCamera',0)
         except:
             pass
@@ -135,18 +134,20 @@ def sun_path_animation():
     Returns: City, Date and Time"""
 
     obj = FreeCAD.ActiveDocument.SunProperties
-    if obj.Image_from == "Render 3D view" and obj.SunPathAnimation is True:
-        if obj.Save_path == "":
-            FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("Solar",
-                "Please, provide a file path to save the render images!") + "\n")
-            Gui.runCommand('SunConfigurationDialog',0)
-            return
     # Data_interval
-    calculate_frames()
+    #calculate_frames()
     fps = obj.Fps
     pause = 1/fps
     obj.Hour = obj.InitialHour
     obj.Min = obj.InitialMin
+    if obj.SunPathAnimation is True and obj.Image_from == "Render 3D view":
+        Gui.runCommand('StartRecordRender',0)
+        CL = FreeCAD.ActiveDocument.Clapperboard
+        if CL.Frame_04OutputPath == "":
+            FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP(
+                "Solar", "A path to save images is required! \n"
+                "Click stop animation to start again.") + '\n')
+            return
     sp.get_sun_position() # First step
     Gui.updateGui()
     print(f'{obj.City}, {obj.Day:0>2}/{obj.Month:0>2}/{obj.Year}, {obj.Hour:0>2}:{obj.Min:0>2}')
@@ -193,11 +194,12 @@ def set_render_animation():
     # Clapperboard
     try:
         CL = FreeCAD.ActiveDocument.Clapperboard
-        CL.Frame_04OutputPath = obj.Save_path
         CL.Clap_05AnimFps = int(obj.Fps)
         CL.Frame_07R2OnRec = True
+        CL.Clap_02AnimCurrentStep = 0
         Gui.Selection.addSelection(CL)
         Gui.runCommand('EnableMovieClapperboard',0)
+        Gui.runCommand('PlayBackwardMovieAnimation',0)
         FreeCAD.ActiveDocument.recompute()
         print("set render animation")
     except:
