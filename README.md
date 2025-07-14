@@ -27,6 +27,12 @@ Workbench for configuring the sun's position and animating its path
 
 ##### Using sun configuration
 
+<img src=./Docs/Artigas_house_bw.jpg height=300>
+
+<img src=./Docs/Artigas_house_color.jpg height=300>
+
+<img src=./Docs/Artigas_house_render.jpg height=300>
+
 ##### Setting the sun path and its animatation
 
 ##### Video with object animation by Sketches
