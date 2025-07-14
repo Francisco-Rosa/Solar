@@ -471,15 +471,6 @@ class SunProperties:
                 "Set the width in pixels of the image to be saved"
                 )
             ).Width = 1920
-        if not "Save_path" in pl:
-            obj.addProperty(
-            "App::PropertyPath",
-            "Save_path", "9_Sun_path_animation",
-            QT_TRANSLATE_NOOP(
-                "App::Property",
-                "Path to save the images"
-                )
-            ).Save_path = ""
 
 class SunPropertiesViewProvider:
     """A View Provider for the SunProperties object"""
@@ -515,15 +506,6 @@ class SunPropertiesViewProvider:
                     FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("solar",
                                    "So far, the shadows with colored "
                                    "images only work in the FreeCAD-Link version 20241006.\n"))
-            if obj.Image_from == "Render 3D view":
-                try:
-                    Gui.ActiveDocument.Clapperboard
-                    CL = FreeCAD.ActiveDocument.Clapperboard
-                    if CL.Clap_04OnRec is True:
-                        CL.Frame_04OutputPath = obj.Save_path
-                except:
-                    pass
-
         if prop in ["epw_path"]:
             if obj.epw_path is not None:
                 autofill_from_epw2()
@@ -589,7 +571,8 @@ def get_sun_position():
         Solar coordinates (x, y, and z);
         Solar altitude and azimuth;
         Sunrise, noon, and sunset;
-        Daylight hours."""
+        Daylight hours.
+    """
 
     obj = FreeCAD.ActiveDocument.SunProperties
     if obj.Min >= 0 and obj.Min < 60:
@@ -650,6 +633,7 @@ def get_sun_position():
                             project.RenderHeight = obj.Height
                             project.RenderWidth = obj.Width
                             if obj.SunPathAnimation is False and ANIMATION is False:
+                                print("Solar: Render image")
                                 project.OpenAfterRender = True
                                 output_file = project.Proxy.render(skip_meshing=False,
                                     wait_for_completion=True)
@@ -660,21 +644,15 @@ def get_sun_position():
                             # Render animation
                             if obj.SunPathAnimation is True and ANIMATION is True:
                                 project.OpenAfterRender = False
-                                if obj.Recompute is True:
-                                    output_file = project.Proxy.render(skip_meshing=False,
-                                        wait_for_completion=True)
-                                else:
-                                    output_file=project.Proxy.render(skip_meshing=True,
-                                        wait_for_completion=True)
                                 try:
+                                    print("Solar: Render animation")
                                     Gui.ActiveDocument.Clapperboard
                                     Gui.ActiveDocument.MovieCamera
-                                    import MovieAnimation as ma
                                     import MovieClapperboard as cl
-                                    ma.postMovieAnimation()
                                     cl.runRecordCamera(Back = False)
+                                    Gui.runCommand('PostMovieAnimation',0)
                                 except:
-                                    pass
+                                    print("Solar: No Render animation")
                         except Exception:
                             FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("Solar",
                                 "No render project found!") + '\n')
@@ -884,8 +862,6 @@ def save_image():
                 output_file_name, _ = QFileDialog.getSaveFileName(
                     None, "Save render image", "", " image file (*png)"
                 )
-                #file_name = FreeCAD.ActiveDocument.Name + "_render.png"
-                #shutil.move(OUTPUT_FILE, f'{obj1.Save_path}/{file_name}')
                 shutil.move(OUTPUT_FILE, output_file_name)
     except:
         print("Save image was call but not work")
