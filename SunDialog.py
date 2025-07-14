@@ -85,8 +85,6 @@ class SunConfigurationDialog(QtWidgets.QDialog):
         self.ui.colorButtonTop.clicked.connect(self.choose_color)
         # colorButtonTop_2
         self.ui.colorButtonTop_2.clicked.connect(self.choose_color2)
-        # toolButton_Save
-        self.ui.toolButton_Save_to.clicked.connect(self.save_to_dialog)
         # pushButton_Apply
         self.ui.pushButton_Apply.clicked.connect(self.save_to_propeties)
         self.ui.pushButton_Apply.clicked.connect(self.get_results)
@@ -220,21 +218,6 @@ class SunConfigurationDialog(QtWidgets.QDialog):
         if color.isValid():
             self.ui.colorButtonTop_2.setStyleSheet(f"background-color: rgb{color_rgb};")
 
-    ## Data management
-    def save_to_dialog(self):
-        """Save to dialog"""
-        parent = None
-        try:
-            parent = Gui.getMainWindow()
-        except Exception:
-            parent = None
-        fpath = QtWidgets.QFileDialog.getExistingDirectory(
-            parent,
-            "Select location to save files"
-            )
-        if fpath:
-            self.ui.lineEdit_Save_path.setText(fpath)
-
     def get_properties_data(self):
         """Show the dialog with initial data"""
         try:
@@ -305,7 +288,6 @@ class SunConfigurationDialog(QtWidgets.QDialog):
             idx = self.ui.comboBox_Images.findText(obj1.Image_from)
             if idx >= 0:
                 self.ui.comboBox_Images.setCurrentIndex(idx)
-            self.ui.lineEdit_Save_path.setText(str(obj1.Save_path))
         except:
             print ("Dialog Show_save not changed from properties")
 
@@ -395,26 +377,13 @@ class SunConfigurationDialog(QtWidgets.QDialog):
             # Show_save
             obj1.Image_from = self.ui.comboBox_Images.currentText()
             obj1.Save_to = self.ui.checkBox_Save_to.isChecked()
-            obj1.Save_path = self.ui.lineEdit_Save_path.text()
         except:
             print ("Show_save properties not changed from dialog")
 
-        if obj1.Image_from == "Render 3D view" and obj1.SunPathAnimation is True:
-            if obj1.Save_path == "":
-                QtWidgets.QMessageBox.warning(
-                    self, "Warning",
-                    "Please, provide a file path to save the render images!\n"
-                    "\n"
-                    "(Sun dialog > Sun path animation > Save path:, or\n"
-                    "SunProperties > 9_Sun_path_animation > Save_path)"
-                )
-                return
-            else:
-                sp.get_sun_position()
-                FreeCAD.activeDocument().recompute()
-                spa.set_render_animation()
         sp.get_sun_position()
-        FreeCAD.activeDocument().recompute()
+        if obj1.Image_from == "Render 3D view" and obj1.SunPathAnimation is True:
+            spa.set_render_animation()
+        FreeCAD.ActiveDocument.recompute()
 
     def get_results(self):
         """Get results"""
