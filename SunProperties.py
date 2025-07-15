@@ -736,10 +736,12 @@ def create_sun_representation():
         points = [FreeCAD.Vector(pl.Base), FreeCAD.Vector(pt_final)]
         RAY = Draft.make_wire(points, placement=pl, closed=False, face=True, support=None)
         RAY.Label = "Ray"
-        Gui.ActiveDocument.Line.LineColor = obj.SunLightColor
-        Gui.ActiveDocument.Line.PointColor = obj.SunLightColor
-        line_obj = FreeCAD.ActiveDocument.Line
-        obj.addObject(line_obj)
+        obj.addObject(RAY)
+
+        if hasattr(RAY, "ViewObject"):
+            RAY.ViewObject.LineColor = obj.SunLightColor
+            RAY.ViewObject.PointColor = obj.SunLightColor
+            
         if obj.SunLightRepresentation is True:
             if obj.RayRepresentation is True:
                 RAY.Visibility = True
