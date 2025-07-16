@@ -75,14 +75,14 @@ Not yet available.
   
       pip install ladybug-core pysolar # pysolar is optional
 
-  If the versions are different, you will need to use Python venv. To do this, go to the Solar workbench folder (see the address above, or open FreeCAD and type in the Python console:
+  If the versions are different, you'll need to use Python venv. To do this, go to the Solar Workbench folder (see the address above) or open FreeCAD and type the following expression in the Python console to find the Mod that Solar is in:
 
       import FreeCAD
       import os
-      user_mod_path = os.path.join(FreeCAD.getUserAppDataDir(), "Solar")
+      user_mod_path = os.path.join(FreeCAD.getUserAppDataDir(), "Mod")
       print(user_mod_path)
 
-  Create the virtual environment using:
+  Create the virtual environment inside the Solar WB folder using:
   
       python3 -m venv AdditionalPythonPackages # for Python 3, or
       python -m venv AdditionalPythonPackages
