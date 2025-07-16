@@ -789,6 +789,7 @@ def update_sun_representation():
                 ray.End = pt2_vector
                 Gui.ActiveDocument.getObject(ray.Name).LineColor = obj.SunLightColor
                 Gui.ActiveDocument.getObject(ray.Name).PointColor = obj.SunLightColor
+                FreeCAD.ActiveDocument.getObject(ray.Name).recompute()
             else:
                 ray.Visibility = False
         else:
