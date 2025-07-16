@@ -23,14 +23,12 @@
 
 """This module implements the sun properties."""
 
-import os
-import sys
+import os, sys
 import shutil
 import FreeCAD
 import FreeCADGui as Gui
 from PySide.QtCore import QT_TRANSLATE_NOOP
 from PySide.QtGui import QFileDialog
-
 
 _dir = os.path.dirname(__file__)
 IconPath = os.path.join(_dir, 'icons')
@@ -38,11 +36,9 @@ LanguagePath = os.path.join(_dir, 'translations')
 Gui.addLanguagePath(LanguagePath)
 
 try:
-    sys.path.append(os.path.join(_dir, 'AdditionalPythonPackages/lib/python3.10/site-packages'))
-except:
-    pass
-try:
-    sys.path.append(os.path.join(_dir, 'AdditionalPythonPackages/Lib/site-packages'))
+    for root, dirs, files in os.walk(os.path.join(_dir, "AdditionalPythonPackages")):
+        if os.path.basename(root) == "site-packages":
+            sys.path.append(root)
 except:
     pass
 from ladybug.location import Location
