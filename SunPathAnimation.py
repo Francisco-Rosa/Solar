@@ -48,15 +48,15 @@ class StartSunPathAnimation:
                 'StartSunPathAnimation', 'StartSunPathAnimation'),
                 'ToolTip': QT_TRANSLATE_NOOP(
                 'StartSunPathAnimation', 'Start a sun path animation. \n'
-                'To enable it, choose an image type in “Image from”\n'
-                'other than None/Reset and configure its properties. \n'
+                'To use it, open the SunDialog and enable Sun path animation. \n'
+                'To view shadow projection, choose the image other than None.\n'
                 'Click this button to get started its animation')}
 
     def IsActive(self):
         if Gui.ActiveDocument:
             try:
                 obj = FreeCAD.ActiveDocument.SunProperties
-                if obj.Image_from != "None/Reset" and obj.SunPathAnimation is True:
+                if obj.SunPathAnimation is True:
                     return True
             except:
                 pass
@@ -88,7 +88,7 @@ class StopSunPathAnimation:
         if Gui.ActiveDocument:
             try:
                 obj = FreeCAD.ActiveDocument.SunProperties
-                if obj.Image_from != "None/Reset" and obj.SunPathAnimation is True:
+                if obj.SunPathAnimation is True:
                     return True
             except:
                 pass
