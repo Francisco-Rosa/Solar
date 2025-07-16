@@ -82,7 +82,7 @@ Not yet available.
       user_mod_path = os.path.join(FreeCAD.getUserAppDataDir(), "Mod")
       print(user_mod_path)
 
-  Create the virtual environment inside the Solar WB folder, to do this, go back to the terminal system and type:
+  Create the virtual environment inside the Solar WB folder, to do this, open the terminal system with that path and type:
   
       python3 -m venv AdditionalPythonPackages # for Python 3, or
       python -m venv AdditionalPythonPackages
