@@ -105,8 +105,10 @@ def show_warning_dialog():
     msg = QtWidgets.QMessageBox()
     msg.setWindowTitle("BWShadow Save Warning")
     msg.setText(QT_TRANSLATE_NOOP("Solar",
-        "This feature is not stable! Do not save your project while it is open. "
-        "To prevent issues, save your file before and after opening it.\n"
+        "This feature is not stable! \n"
+        "To prevent issues, save your file before and after opening it. \n"
+        "For transparent surfaces, it is recommended \n"
+        "to make them invisible before generating these shadows. \n"
         "\n"
         "Do you want to generate shadows now?"
     ))
