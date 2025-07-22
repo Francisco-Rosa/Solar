@@ -669,13 +669,6 @@ def get_sun_position():
                         - sunrise_sunset ['sunrise']))
                     # Calculate frames
                     spa.calculate_frames()
-                    # Send North value to Site
-                    """try:
-                        site_obj = FreeCAD.ActiveDocument.Site
-                        site_obj.Declination = obj.North
-                    except:
-                        pass
-                    """
                     if obj.Recompute is True:
                         FreeCAD.ActiveDocument.recompute()
                 else:
