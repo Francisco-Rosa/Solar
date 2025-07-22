@@ -3,8 +3,8 @@
 
   <name>Solar Workbench</name>
   <description>Workbench to manage solar configurations</description>
-  <version>2025.05.08</version>
-  <date>2025.05.08</date>
+  <version>2025.07.22</version>
+  <date>2025.07.22</date>
   <author email="fco.rosa@yahoo.com.br">F_Rosa</author>  
   <maintainer email="fco.rosa@yahoo.com.br">F_Rosa</maintainer>  
   <license file="LICENSE">LGPL-2.1-or-later</license>
@@ -16,7 +16,7 @@
 
   <content>
     <workbench>
-      <depend optional="true" type="python">ladybug-core</depend>
+      <depend type="python">ladybug-core</depend>
       <depend optional="True" type="addon" version_gte="2025.01.04">Movie</depend>
       <depend optional="True" type="addon" version_gte="2023.02.05">Render</depend>
       <tag>freecad</tag>
