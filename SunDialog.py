@@ -27,8 +27,8 @@ import os
 import re
 import FreeCAD
 import FreeCADGui as Gui
-from PySide2 import QtUiTools, QtCore, QtWidgets
-from PySide2.QtCore import QDate, QTime
+from PySide import QtUiTools, QtCore, QtWidgets
+from PySide.QtCore import QDate, QTime
 from PySide.QtCore import QT_TRANSLATE_NOOP
 import SunProperties as sp
 import SunPathAnimation as spa
@@ -45,6 +45,9 @@ class SunConfigurationDialog(QtWidgets.QDialog):
         ui_file_obj.open(QtCore.QFile.ReadOnly)
         self.ui = loader.load(ui_file_obj, parent)
         ui_file_obj.close()
+        # user_mod_path = os.path.join(FreeCAD.getUserAppDataDir(), "Mod")
+        # SunSetupUi = FreeCADGui.PySideUic.loadUi(user_mod_path + '/Solar/SunSetup.ui')
+        # SunSetupUi.show()
 
         # Correctly embed the loaded UI as a child widget
         self.setWindowTitle(self.ui.windowTitle())
@@ -81,10 +84,14 @@ class SunConfigurationDialog(QtWidgets.QDialog):
         )
         self.ui.label_4_Solstices_link.setOpenExternalLinks(True)
         self.ui.label_4_Solstices_link.setTextInteractionFlags(QtCore.Qt.TextBrowserInteraction)
+        # checkBox_Sun_light_config
+        self.ui.checkBox_sun_light_config.clicked.connect(self.sun_light_config_toggled)
         # colorButtonTop
         self.ui.colorButtonTop.clicked.connect(self.choose_color)
         # colorButtonTop_2
         self.ui.colorButtonTop_2.clicked.connect(self.choose_color2)
+        # comboBox_Images
+        self.ui.comboBox_Images.activated.connect(self.image_from_toggled)
         # pushButton_Apply
         self.ui.pushButton_Apply.clicked.connect(self.save_to_propeties)
         self.ui.pushButton_Apply.clicked.connect(self.get_results)
@@ -117,7 +124,7 @@ class SunConfigurationDialog(QtWidgets.QDialog):
             sp.activated_sun_properties() #Create sun properties
         open_sun_configuration()
 
-    ## Slots -------------
+    # Slots -------------
     def show_dialog(self):
         """Show dialog"""
         result = self.exec_()
@@ -202,6 +209,17 @@ class SunConfigurationDialog(QtWidgets.QDialog):
         self.ui.label_1_Get_epw_file.setEnabled(not checked)
         self.ui.label_1_epw_map_link.setEnabled(not checked)
 
+    def sun_light_config_toggled(self, checked):
+        if self.ui.checkBox_sun_light_config.isChecked() is False:
+            self.ui.checkBox_Sun_light_representation.setChecked(False)
+            self.ui.checkBox_Sun_path_diagram.setChecked(False)
+        try:
+            FreeCAD.ActiveDocument.Site
+            if self.ui.checkBox_sun_light_config.isChecked() is True:
+                self.ui.checkBox_Sun_path_diagram.setEnabled(True)
+        except Exception:
+            self.ui.checkBox_Sun_path_diagram.setEnabled(False)
+
     def choose_color(self):
         """Open color dialog; returns QColor"""
         color = QtWidgets.QColorDialog.getColor(parent=self, title="Select Color")
@@ -218,6 +236,55 @@ class SunConfigurationDialog(QtWidgets.QDialog):
         if color.isValid():
             self.ui.colorButtonTop_2.setStyleSheet(f"background-color: rgb{color_rgb};")
 
+    def image_from_toggled(self):
+        try:
+            obj1 = FreeCAD.ActiveDocument.SunProperties
+            if obj1.Image_from == "Render 3D view":
+                try:
+                    FreeCAD.ActiveDocument.Project
+                    self.ui.lineEdit_width.setEnabled(True)
+                    self.ui.lineEdit_height.setEnabled(True)
+                except:
+                    pass
+                try:
+                    FreeCAD.ActiveDocument.Project
+                    FreeCAD.ActiveDocument.Clapperboard
+                except Exception:
+                    self.ui.checkBox_Sun_path_animation.setChecked(False)
+                    self.ui.checkBox_Sun_path_animation.setEnabled(False)
+        except:
+            pass
+        if self.ui.comboBox_Images.currentText() == "Render 3D view":
+            try:
+                FreeCAD.ActiveDocument.Project
+                self.ui.lineEdit_width.setEnabled(True)
+                self.ui.lineEdit_height.setEnabled(True)
+                self.ui.label_2.setEnabled(True)
+                self.ui.label_4.setEnabled(True)
+                self.ui.checkBox_Save_to.setEnabled(True)
+
+            except:
+                self.ui.lineEdit_width.setEnabled(False)
+                self.ui.lineEdit_height.setEnabled(False)
+                self.ui.label_2.setEnabled(False)
+                self.ui.label_4.setEnabled(False)
+                self.ui.checkBox_Save_to.setEnabled(False)
+            try:
+                FreeCAD.ActiveDocument.Project
+                FreeCAD.ActiveDocument.Clapperboard
+                self.ui.checkBox_Sun_path_animation.setEnabled(True)
+            except Exception:
+                self.ui.checkBox_Sun_path_animation.setChecked(False)
+                self.ui.checkBox_Sun_path_animation.setEnabled(False)
+        else:
+            self.ui.lineEdit_width.setEnabled(False)
+            self.ui.lineEdit_height.setEnabled(False)
+            self.ui.label_2.setEnabled(False)
+            self.ui.label_4.setEnabled(False)
+            self.ui.checkBox_Save_to.setEnabled(True)
+            self.ui.checkBox_Sun_path_animation.setEnabled(True)
+
+    # conexion dialog x properties
     def get_properties_data(self):
         """Show the dialog with initial data"""
         try:
@@ -245,6 +312,7 @@ class SunConfigurationDialog(QtWidgets.QDialog):
         try:
             obj1 = FreeCAD.ActiveDocument.SunProperties
             # Sun light representation
+            self.ui.checkBox_sun_light_config.setChecked(obj1.SunLightDiagramConfig)
             self.ui.checkBox_Sun_light_representation.setChecked(obj1.SunLightRepresentation)
             self.ui.lineEdit_Radius.setText(str(int(obj1.Radius)))
             self.ui.lineEdit_Distance.setText(str(int(obj1.Distance)))
@@ -259,13 +327,18 @@ class SunConfigurationDialog(QtWidgets.QDialog):
             # Sun path diagram
             sp.get_diagram_from_site()
             self.ui.checkBox_Sun_path_diagram.setChecked(obj1.SunPathDiagram)
+            try:
+                FreeCAD.ActiveDocument.Site
+                self.ui.checkBox_Sun_path_diagram.setEnabled(True)
+            except Exception:
+                self.ui.checkBox_Sun_path_diagram.setChecked(False)
+                self.ui.checkBox_Sun_path_diagram.setEnabled(False)
             self.ui.lineEdit_Position_x.setText(str(obj1.DiagPosition.x))
             self.ui.lineEdit_Position_y.setText(str(obj1.DiagPosition.y))
             self.ui.lineEdit_Position_z.setText(str(obj1.DiagPosition.z))
             color1 = obj1.DiagColor   # (R, G, B) floats in [0,1]
             self.ui.colorButtonTop_2.setStyleSheet(
                 f"background-color: rgb({int(color1[0]*255)}, {int(color1[1]*255)}, {int(color1[2]*255)});")
-
         except:
             print ("Dialog Sun path diagram not changed from properties")
         try:
@@ -288,8 +361,9 @@ class SunConfigurationDialog(QtWidgets.QDialog):
             idx = self.ui.comboBox_Images.findText(obj1.Image_from)
             if idx >= 0:
                 self.ui.comboBox_Images.setCurrentIndex(idx)
-        except:
+        except Exception:
             print ("Dialog Show_save not changed from properties")
+        self.image_from_toggled()
 
     def save_to_propeties(self):
         """Set data to properties"""
@@ -329,6 +403,7 @@ class SunConfigurationDialog(QtWidgets.QDialog):
         try:
             obj1 = FreeCAD.ActiveDocument.SunProperties
             # Sun light representation
+            obj1.SunLightDiagramConfig = self.ui.checkBox_sun_light_config.isChecked()
             obj1.SunLightRepresentation = self.ui.checkBox_Sun_light_representation.isChecked()
             obj1.Radius  = self.ui.lineEdit_Radius.text()
             obj1.Distance  = self.ui.lineEdit_Distance.text()
@@ -350,7 +425,6 @@ class SunConfigurationDialog(QtWidgets.QDialog):
             string_rgb2 = re.findall(r'\d+', string_color2)
             rgb_color2 = (int(string_rgb2[0])/255, int(string_rgb2[1])/255, int(string_rgb2[2])/255)
             obj1.DiagColor = rgb_color2
-            sp.send_diagram_to_site()
         except:
             print ("Sun path diagram properties not changed from dialog")
         try:
@@ -381,6 +455,7 @@ class SunConfigurationDialog(QtWidgets.QDialog):
             print ("Show_save properties not changed from dialog")
 
         sp.get_sun_position()
+        sp.send_diagram_to_site()
         if obj1.Image_from == "Render 3D view" and obj1.SunPathAnimation is True:
             spa.set_render_animation()
         FreeCAD.ActiveDocument.recompute()

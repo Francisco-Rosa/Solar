@@ -201,7 +201,9 @@ def set_render_animation():
         Gui.runCommand('EnableMovieClapperboard',0)
         Gui.runCommand('PlayBackwardMovieAnimation',0)
         FreeCAD.ActiveDocument.recompute()
-        print("set render animation")
+        FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("Solar",
+            "Render animation was set! \n"
+            "Click play to start the animation.") + '\n')
     except:
         FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("Solar",
             "No Clapperboard found!") + '\n')

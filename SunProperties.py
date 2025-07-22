@@ -90,6 +90,15 @@ class SunProperties:
                 "Country of the location"
                 )
             ). Country = "BR"
+        if not "Elevation" in pl:
+            obj.addProperty(
+            "App::PropertyFloat",
+            "Elevation", "2_Location",
+            QT_TRANSLATE_NOOP(
+                "App::Property",
+                "Elevation of the location"
+                )
+            ).Elevation = 720.00
         if not "Latitude" in pl:
             obj.addProperty(
             "App::PropertyFloat",
@@ -108,15 +117,6 @@ class SunProperties:
                 "Longitude of the location"
                 )
             ).Longitude = -46.633
-        if not "Elevation" in pl:
-            obj.addProperty(
-            "App::PropertyFloat",
-            "Elevation", "2_Location",
-            QT_TRANSLATE_NOOP(
-                "App::Property",
-                "Elevation of the location"
-                )
-            ).Elevation = 720.00
         if not "TimeZone" in pl:
             obj.addProperty(
             "App::PropertyInteger",
@@ -147,24 +147,6 @@ class SunProperties:
                 "Set the day of the solar position"
                 )
             ).Day = 1
-        if not "Month" in pl:
-            obj.addProperty(
-            "App::PropertyInteger",
-            "Month", "4_Date_and_time",
-            QT_TRANSLATE_NOOP(
-                "App::Property",
-                "Set the month of the solar position"
-                )
-            ).Month = 1
-        if not "Year" in pl:
-            obj.addProperty(
-            "App::PropertyInteger",
-            "Year", "4_Date_and_time",
-            QT_TRANSLATE_NOOP(
-                "App::Property",
-                "Set the year of the solar position"
-                )
-            ).Year = 2025
         if not "DaylightSaving" in pl:
             obj.addProperty(
             "App::PropertyBool",
@@ -192,6 +174,24 @@ class SunProperties:
                 "Set the minutes of the solar position"
                 )
             ).Min = 30
+        if not "Month" in pl:
+            obj.addProperty(
+            "App::PropertyInteger",
+            "Month", "4_Date_and_time",
+            QT_TRANSLATE_NOOP(
+                "App::Property",
+                "Set the month of the solar position"
+                )
+            ).Month = 1
+        if not "Year" in pl:
+            obj.addProperty(
+            "App::PropertyInteger",
+            "Year", "4_Date_and_time",
+            QT_TRANSLATE_NOOP(
+                "App::Property",
+                "Set the year of the solar position"
+                )
+            ).Year = 2025
         # 5 Results
         if not "Altitude" in pl:
             obj.addProperty(
@@ -247,212 +247,112 @@ class SunProperties:
                 "Sunset - it is indicative only"
                 )
             )
-        # 6 Sun light representation
-        if not "SunLightRepresentation" in pl:
+        # 6 Sun light and diagram configurations
+        if not "SunLightDiagramConfig" in pl:
             obj.addProperty(
             "App::PropertyBool",
-            "SunLightRepresentation", "6_Sun_light_representation",
+            "SunLightDiagramConfig", "6_Sun_light_diagram_config",
             QT_TRANSLATE_NOOP(
                 "App::Property",
-                "Choose true if sun light representation must be visible"
+                "Choose true if you want to configurate "
+                "the sun light and/or diagram"
                 )
-            ).SunLightRepresentation = False
-        if not "SunLightColor" in pl:
-            obj.addProperty(
-            "App::PropertyColor",
-            "SunLightColor", "6_Sun_light_representation",
-            QT_TRANSLATE_NOOP(
-                "App::Property",
-                "Color of the sun light"
-                )
-             ).SunLightColor = (255, 255, 0)
+            ).SunLightDiagramConfig = False
         if not "Distance" in pl:
             obj.addProperty(
             "App::PropertyLength",
-            "Distance", "6_Sun_light_representation",
+            "Distance", "6_Sun_light_diagram_confign",
             QT_TRANSLATE_NOOP(
                 "App::Property",
                 "Light representation distance"
                  )
             ).Distance = 30000
-        if not "LightRepresentation" in pl:
-            obj.addProperty(
-            "App::PropertyBool",
-            "LightRepresentation", "6_Sun_light_representation",
-            QT_TRANSLATE_NOOP(
-                "App::Property",
-                "Choose true if light representation must be visible"
-                )
-            ).LightRepresentation = False
-        if not "SunLightPosition" in pl:
-            obj.addProperty(
-            "App::PropertyVector",
-            "SunLightPosition", "6_Sun_light_representation",
-            QT_TRANSLATE_NOOP(
-                "App::Property",
-                "Position of the sun light (x, y, z)"
-                )
-            ).SunLightPosition = (1.0, 1.0, 1.0)
         if not "Radius" in pl:
             obj.addProperty(
             "App::PropertyLength",
-            "Radius", "6_Sun_light_representation",
+            "Radius", "6_Sun_light_diagram_config",
             QT_TRANSLATE_NOOP(
                 "App::Property",
                 "Light representation radius"
                 )
             ).Radius = 700
+        if not "SunLightPosition" in pl:
+            obj.addProperty(
+            "App::PropertyVector",
+            "SunLightPosition", "6_Sun_light_diagram_config",
+            QT_TRANSLATE_NOOP(
+                "App::Property",
+                "Position of the sun light (x, y, z)"
+                )
+            ).SunLightPosition = (1.0, 1.0, 1.0)
+        if not "DiagPosition" in pl:
+            obj.addProperty(
+            "App::PropertyVector",
+            "DiagPosition", "6_Sun_light_diagram_config",
+            QT_TRANSLATE_NOOP(
+                "App::Property",
+                "Center position of center of the sun path diagram (x, y, z)"
+                )
+            ).DiagPosition = (0.0, 0.0, 0.0)
+        if not "SunLightRepresentation" in pl:
+            obj.addProperty(
+            "App::PropertyBool",
+            "SunLightRepresentation", "6_Sun_light_diagram_config",
+            QT_TRANSLATE_NOOP(
+                "App::Property",
+                "Choose true if sun light representation must be visible"
+                )
+            ).SunLightRepresentation = False
         if not "RayRepresentation" in pl:
             obj.addProperty(
             "App::PropertyBool",
-            "RayRepresentation", "6_Sun_light_representation",
+            "RayRepresentation", "6_Sun_light_diagram_config",
             QT_TRANSLATE_NOOP(
                 "App::Property",
                 "Choose true if light ray representation must be visible"
                 )
             ).RayRepresentation = False
-        # 7 Sun path diagram
+        if not "SunLightColor" in pl:
+            obj.addProperty(
+            "App::PropertyColor",
+            "SunLightColor", "6_Sun_light_diagram_config",
+            QT_TRANSLATE_NOOP(
+                "App::Property",
+                "Color of the sun light"
+                )
+             ).SunLightColor = (255, 255, 0)
         if not "SunPathDiagram" in pl:
             obj.addProperty(
             "App::PropertyBool",
-            "SunPathDiagram", "7_Sun_path_diagram",
+            "SunPathDiagram", "6_Sun_light_diagram_config",
             QT_TRANSLATE_NOOP(
                 "App::Property",
                 "Choose true if sun path diagram must be visible"
                 )
             ).SunPathDiagram = False
-        if not "DiagPosition" in pl:
-            obj.addProperty(
-            "App::PropertyVector",
-            "DiagPosition", "7_Sun_path_diagram",
-            QT_TRANSLATE_NOOP(
-                "App::Property",
-                "Center position of the sun path diagram (x, y, z)"
-                )
-            ).DiagPosition = (0.0, 0.0, 0.0)
         if not "DiagColor" in pl:
             obj.addProperty(
             "App::PropertyColor",
-            "DiagColor", "7_Sun_path_diagram",
+            "DiagColor", "6_Sun_light_diagram_config",
             QT_TRANSLATE_NOOP(
                 "App::Property",
                 "Color of sun path diagram"
                 )
              ).DiagColor = (255, 255, 0)
-        # 8 Show_save_image
-        if not "Save_to" in pl:
-            obj.addProperty(
-            "App::PropertyBool",
-            "Save_to", "8_Show_save_image",
-            QT_TRANSLATE_NOOP(
-                "App::Property",
-                "Choose true to save image"
-                )
-            ).Save_to = False
+        # 7 Show and/or save image:
         if not "Image_from" in pl:
             obj.addProperty(
             "App::PropertyEnumeration",
-            "Image_from", "8_Show_save_image",
+            "Image_from", "7_Show_save_image",
             QT_TRANSLATE_NOOP(
                 "App::Property",
                 "Choose the type of image to save"
                 )
             ).Image_from = ("None/Reset", "BW 3D view", "Color 3D view", "Render 3D view")
-        # 9 Sun_path_animation
-        if not "SunPathAnimation" in pl:
-            obj.addProperty(
-            "App::PropertyBool",
-            "SunPathAnimation", "9_Sun_path_animation",
-            QT_TRANSLATE_NOOP(
-                "App::Property",
-                "Choose true if you want sun path animation"
-                )
-            ).SunPathAnimation = False
-        if not "InitialHour" in pl:
-            obj.addProperty(
-            "App::PropertyInteger",
-            "InitialHour", "9_Sun_path_animation",
-            QT_TRANSLATE_NOOP(
-                "App::Property",
-                "Set the initial hour of the sun path animation"
-                )
-            ).InitialHour = 6
-        if not "InitialMin" in pl:
-            obj.addProperty(
-            "App::PropertyInteger",
-            "InitialMin", "9_Sun_path_animation",
-            QT_TRANSLATE_NOOP(
-                "App::Property",
-                "Set the initial minute of the sun path animation"
-                )
-            ).InitialMin = 10
-        if not "FinalHour" in pl:
-            obj.addProperty(
-            "App::PropertyInteger",
-            "FinalHour", "9_Sun_path_animation",
-            QT_TRANSLATE_NOOP(
-                "App::Property",
-                "Set the final hour of the sun path animation"
-                )
-            ).FinalHour = 18
-        if not "FinalMin" in pl:
-            obj.addProperty(
-            "App::PropertyInteger",
-            "FinalMin", "9_Sun_path_animation",
-            QT_TRANSLATE_NOOP(
-                "App::Property",
-                "Set the final minute of the sun path animation"
-                )
-            ).FinalMin = 20
-        if not "Inter_hour" in pl:
-            obj.addProperty(
-            "App::PropertyInteger",
-            "Inter_hour", "9_Sun_path_animation",
-            QT_TRANSLATE_NOOP(
-                "App::Property",
-                "Set the interval (in hours) of the sun path animation "
-                )
-            ).Inter_hour = 00
-        if not "Inter_min" in pl:
-            obj.addProperty(
-            "App::PropertyInteger",
-            "Inter_min", "9_Sun_path_animation",
-            QT_TRANSLATE_NOOP(
-                "App::Property",
-                "Set the interval (in minutes) of the sun path animation "
-                )
-            ).Inter_min = 10
-        if not "Fps" in pl:
-            obj.addProperty(
-            "App::PropertyFloat",
-            "Fps", "9_Sun_path_animation",
-            QT_TRANSLATE_NOOP(
-                "App::Property",
-                "Set the frames per second of the sun path animation"
-                )
-            ).Fps = 24.0
-        if not "Frames" in pl:
-            obj.addProperty(
-            "App::PropertyInteger",
-             "Frames", "9_Sun_path_animation",
-            QT_TRANSLATE_NOOP(
-                "App::Property",
-                 "Show total resulting frames from the sun path animation"
-                 )
-            )
-        if not "Recompute" in pl:
-            obj.addProperty(
-            "App::PropertyBool",
-            "Recompute", "9_Sun_path_animation",
-            QT_TRANSLATE_NOOP(
-                "App::Property",
-                "Choose true if is necessary to recompute between frames"
-                )
-            ).Recompute = False
         if not "Height" in pl:
             obj.addProperty(
             "App::PropertyInteger",
-            "Height", "9_Sun_path_animation",
+            "Height", "7_Show_save_image",
             QT_TRANSLATE_NOOP(
                 "App::Property",
                 "Set the height in pixels of the image to be saved"
@@ -461,12 +361,112 @@ class SunProperties:
         if not "Width" in pl:
             obj.addProperty(
             "App::PropertyInteger",
-            "Width", "9_Sun_path_animation",
+            "Width", "7_Show_save_image",
             QT_TRANSLATE_NOOP(
                 "App::Property",
                 "Set the width in pixels of the image to be saved"
                 )
             ).Width = 1920
+        if not "Save_to" in pl:
+            obj.addProperty(
+            "App::PropertyBool",
+            "Save_to", "7_Show_save_image",
+            QT_TRANSLATE_NOOP(
+                "App::Property",
+                "Choose true to save image"
+                )
+            ).Save_to = False
+        # 8 Sun path animation
+        if not "SunPathAnimation" in pl:
+            obj.addProperty(
+            "App::PropertyBool",
+            "SunPathAnimation", "8_Sun_path_animation",
+            QT_TRANSLATE_NOOP(
+                "App::Property",
+                "Choose true if you want sun path animation"
+                )
+            ).SunPathAnimation = False
+        if not "InitialHour" in pl:
+            obj.addProperty(
+            "App::PropertyInteger",
+            "InitialHour", "8_Sun_path_animation",
+            QT_TRANSLATE_NOOP(
+                "App::Property",
+                "Set the initial hour of the sun path animation"
+                )
+            ).InitialHour = 6
+        if not "InitialMin" in pl:
+            obj.addProperty(
+            "App::PropertyInteger",
+            "InitialMin", "8_Sun_path_animation",
+            QT_TRANSLATE_NOOP(
+                "App::Property",
+                "Set the initial minute of the sun path animation"
+                )
+            ).InitialMin = 10
+        if not "FinalHour" in pl:
+            obj.addProperty(
+            "App::PropertyInteger",
+            "FinalHour", "8_Sun_path_animation",
+            QT_TRANSLATE_NOOP(
+                "App::Property",
+                "Set the final hour of the sun path animation"
+                )
+            ).FinalHour = 18
+        if not "FinalMin" in pl:
+            obj.addProperty(
+            "App::PropertyInteger",
+            "FinalMin", "8_Sun_path_animation",
+            QT_TRANSLATE_NOOP(
+                "App::Property",
+                "Set the final minute of the sun path animation"
+                )
+            ).FinalMin = 20
+        if not "Inter_hour" in pl:
+            obj.addProperty(
+            "App::PropertyInteger",
+            "Inter_hour", "8_Sun_path_animation",
+            QT_TRANSLATE_NOOP(
+                "App::Property",
+                "Set the interval (in hours) of the sun path animation "
+                )
+            ).Inter_hour = 00
+        if not "Inter_min" in pl:
+            obj.addProperty(
+            "App::PropertyInteger",
+            "Inter_min", "8_Sun_path_animation",
+            QT_TRANSLATE_NOOP(
+                "App::Property",
+                "Set the interval (in minutes) of the sun path animation "
+                )
+            ).Inter_min = 10
+        if not "Recompute" in pl:
+            obj.addProperty(
+            "App::PropertyBool",
+            "Recompute", "8_Sun_path_animation",
+            QT_TRANSLATE_NOOP(
+                "App::Property",
+                "Choose true if is necessary to recompute between frames"
+                )
+            ).Recompute = False
+        if not "Fps" in pl:
+            obj.addProperty(
+            "App::PropertyFloat",
+            "Fps", "8_Sun_path_animation",
+            QT_TRANSLATE_NOOP(
+                "App::Property",
+                "Set the frames per second of the sun path animation"
+                )
+            ).Fps = 24.0
+        if not "Frames" in pl:
+            obj.addProperty(
+            "App::PropertyInteger",
+             "Frames", "8_Sun_path_animation",
+            QT_TRANSLATE_NOOP(
+                "App::Property",
+                 "Show total resulting frames from the sun path animation"
+                 )
+            )
 
 class SunPropertiesViewProvider:
     """A View Provider for the SunProperties object"""
@@ -670,11 +670,12 @@ def get_sun_position():
                     # Calculate frames
                     spa.calculate_frames()
                     # Send North value to Site
-                    try:
+                    """try:
                         site_obj = FreeCAD.ActiveDocument.Site
                         site_obj.Declination = obj.North
                     except:
                         pass
+                    """
                     if obj.Recompute is True:
                         FreeCAD.ActiveDocument.recompute()
                 else:
@@ -819,13 +820,24 @@ def send_diagram_to_site():
     """
     obj = FreeCAD.ActiveDocument.SunProperties
     try:
-        site_obj = Gui.ActiveDocument.Site
-        site_obj.SolarDiagram = obj.SunPathDiagram
+        site_obj1 = Gui.ActiveDocument.Site
+        site_obj1.SolarDiagram = obj.SunPathDiagram
         if obj.SunPathDiagram is True:
-            site_obj.SolarDiagramColor = obj.DiagColor
-            site_obj.SolarDiagramPosition = obj.DiagPosition
-            site_obj.SolarDiagramScale = float(obj.Distance)
+            site_obj1.SolarDiagramColor = obj.DiagColor
+            site_obj1.SolarDiagramPosition = obj.DiagPosition
+            site_obj1.SolarDiagramScale = float(obj.Distance)
+            site_obj2 = FreeCAD.ActiveDocument.Site
+            site_obj2.EPWFile = obj.epw_path
+            site_obj2.City = obj.City
+            site_obj2.Country = obj.Country
+            site_obj2.Latitude = obj.Latitude
+            site_obj2.Longitude = obj.Longitude
+            site_obj2.Elevation = obj.Elevation
+            site_obj2.TimeZone = obj.TimeZone
+            site_obj2.Declination = obj.North
+            #FreeCAD.ActiveDocument.recompute()
     except:
+        print("Site diagram was not updated")
         pass
 
 def save_image():

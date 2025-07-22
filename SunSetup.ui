@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>879</width>
-    <height>637</height>
+    <width>870</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -33,9 +33,6 @@
     <number>5</number>
    </property>
    <item row="0" column="0">
-    <layout class="QHBoxLayout" name="horizontalLayout_5"/>
-   </item>
-   <item row="1" column="1">
     <layout class="QVBoxLayout" name="verticalLayout_14">
      <item>
       <widget class="QScrollArea" name="scrollArea_2">
@@ -46,19 +43,1342 @@
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>-199</y>
+          <y>-312</y>
           <width>839</width>
-          <height>774</height>
+          <height>859</height>
          </rect>
         </property>
         <layout class="QGridLayout" name="gridLayout_12">
-         <item row="0" column="0">
-          <widget class="QGroupBox" name="groupBox_5">
+         <item row="0" column="1">
+          <widget class="QGroupBox" name="groupBox_12">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="font">
             <font>
              <pointsize>12</pointsize>
              <italic>true</italic>
             </font>
+           </property>
+           <property name="toolTip">
+            <string>Adjust the other aspects of the solar study here</string>
+           </property>
+           <property name="title">
+            <string>Sun additional configurations</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_14">
+            <property name="leftMargin">
+             <number>5</number>
+            </property>
+            <property name="topMargin">
+             <number>5</number>
+            </property>
+            <property name="rightMargin">
+             <number>5</number>
+            </property>
+            <property name="bottomMargin">
+             <number>5</number>
+            </property>
+            <property name="verticalSpacing">
+             <number>3</number>
+            </property>
+            <item row="2" column="0">
+             <widget class="QGroupBox" name="groupBox_11">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <italic>true</italic>
+               </font>
+              </property>
+              <property name="title">
+               <string>Show and/or save image:</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout">
+               <property name="leftMargin">
+                <number>5</number>
+               </property>
+               <property name="topMargin">
+                <number>15</number>
+               </property>
+               <property name="rightMargin">
+                <number>5</number>
+               </property>
+               <property name="bottomMargin">
+                <number>15</number>
+               </property>
+               <property name="spacing">
+                <number>5</number>
+               </property>
+               <item row="1" column="0">
+                <layout class="QVBoxLayout" name="verticalLayout_18">
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_26">
+                   <item>
+                    <layout class="QVBoxLayout" name="verticalLayout_8">
+                     <item>
+                      <widget class="QLabel" name="label_images_from">
+                       <property name="font">
+                        <font>
+                         <pointsize>10</pointsize>
+                         <italic>false</italic>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Image from:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_2">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>10</pointsize>
+                         <italic>false</italic>
+                        </font>
+                       </property>
+                       <property name="toolTip">
+                        <string>Set the resolution of the images
+Use for render images</string>
+                       </property>
+                       <property name="text">
+                        <string>Images,   w:</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QVBoxLayout" name="verticalLayout_7">
+                     <item>
+                      <widget class="QComboBox" name="comboBox_Images">
+                       <property name="font">
+                        <font>
+                         <pointsize>10</pointsize>
+                         <italic>false</italic>
+                        </font>
+                       </property>
+                       <property name="toolTip">
+                        <string>Select the scene type.
+Use None/Reset to clear the settings.
+Color 3D preview only works in FreeCAD-Link.
+For Render 3D preview, install Render WB.</string>
+                       </property>
+                       <property name="layoutDirection">
+                        <enum>Qt::LeftToRight</enum>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>None/Reset</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>BW 3D view</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Color 3D view</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Render 3D view</string>
+                        </property>
+                       </item>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="verticalSpacer">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Fixed</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>20</width>
+                         <height>10</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_25">
+                       <item>
+                        <widget class="QLineEdit" name="lineEdit_width">
+                         <property name="enabled">
+                          <bool>false</bool>
+                         </property>
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>120</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <pointsize>10</pointsize>
+                           <italic>false</italic>
+                          </font>
+                         </property>
+                         <property name="toolTip">
+                          <string>Set the width in pixels of the image
+Use for render images</string>
+                         </property>
+                         <property name="text">
+                          <string>1920</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <spacer name="horizontalSpacer_3">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="label_4">
+                         <property name="enabled">
+                          <bool>false</bool>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <pointsize>10</pointsize>
+                           <italic>true</italic>
+                          </font>
+                         </property>
+                         <property name="text">
+                          <string>h:</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="lineEdit_height">
+                         <property name="enabled">
+                          <bool>false</bool>
+                         </property>
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>120</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <pointsize>10</pointsize>
+                           <italic>false</italic>
+                          </font>
+                         </property>
+                         <property name="toolTip">
+                          <string>Set the height in pixels of the image
+Use for render images</string>
+                         </property>
+                         <property name="text">
+                          <string>1080</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_27">
+                   <item>
+                    <widget class="QCheckBox" name="checkBox_Save_to">
+                     <property name="enabled">
+                      <bool>true</bool>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                       <italic>false</italic>
+                      </font>
+                     </property>
+                     <property name="toolTip">
+                      <string>Enable it to save the images created</string>
+                     </property>
+                     <property name="layoutDirection">
+                      <enum>Qt::RightToLeft</enum>
+                     </property>
+                     <property name="text">
+                      <string>Save</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_6">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QCheckBox" name="checkBox_sun_light_config">
+              <property name="font">
+               <font>
+                <pointsize>11</pointsize>
+                <italic>false</italic>
+               </font>
+              </property>
+              <property name="toolTip">
+               <string>Enable it to view and adjust representations 
+of the sun and its path.</string>
+              </property>
+              <property name="text">
+               <string>Sun light and diagram configurations</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QCheckBox" name="checkBox_Sun_path_animation">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <italic>true</italic>
+               </font>
+              </property>
+              <property name="toolTip">
+               <string>Enable the sun path animation</string>
+              </property>
+              <property name="layoutDirection">
+               <enum>Qt::LeftToRight</enum>
+              </property>
+              <property name="text">
+               <string>Sun path animation</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QGroupBox" name="groupBox_10">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <italic>true</italic>
+               </font>
+              </property>
+              <property name="title">
+               <string/>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_11">
+               <property name="leftMargin">
+                <number>5</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>5</number>
+               </property>
+               <property name="bottomMargin">
+                <number>5</number>
+               </property>
+               <property name="verticalSpacing">
+                <number>3</number>
+               </property>
+               <item row="2" column="0">
+                <widget class="QCheckBox" name="checkBox_Sun_light_representation">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>11</pointsize>
+                   <italic>false</italic>
+                  </font>
+                 </property>
+                 <property name="toolTip">
+                  <string>Enable the sun light representation</string>
+                 </property>
+                 <property name="layoutDirection">
+                  <enum>Qt::LeftToRight</enum>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <property name="text">
+                  <string>Sun light</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QGroupBox" name="groupBox_7">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="title">
+                  <string/>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout_3">
+                  <property name="leftMargin">
+                   <number>5</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>5</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>5</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>5</number>
+                  </property>
+                  <item row="0" column="0">
+                   <layout class="QVBoxLayout" name="verticalLayout_16">
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_20">
+                      <item>
+                       <widget class="QLabel" name="label_radius">
+                        <property name="enabled">
+                         <bool>false</bool>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <pointsize>10</pointsize>
+                          <italic>false</italic>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>Radius:</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <spacer name="horizontalSpacer_2">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>40</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
+                       <widget class="QLineEdit" name="lineEdit_Radius">
+                        <property name="enabled">
+                         <bool>false</bool>
+                        </property>
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>100</width>
+                          <height>16777215</height>
+                         </size>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <pointsize>10</pointsize>
+                          <italic>false</italic>
+                         </font>
+                        </property>
+                        <property name="toolTip">
+                         <string/>
+                        </property>
+                        <property name="text">
+                         <string>500</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_21">
+                      <item>
+                       <widget class="QLabel" name="label_Distance">
+                        <property name="enabled">
+                         <bool>false</bool>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <pointsize>10</pointsize>
+                          <italic>false</italic>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>Distance:</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <spacer name="horizontalSpacer_7">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>40</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
+                       <widget class="QLineEdit" name="lineEdit_Distance">
+                        <property name="enabled">
+                         <bool>false</bool>
+                        </property>
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>100</width>
+                          <height>16777215</height>
+                         </size>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <pointsize>10</pointsize>
+                          <italic>false</italic>
+                         </font>
+                        </property>
+                        <property name="toolTip">
+                         <string/>
+                        </property>
+                        <property name="text">
+                         <string>15,000</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </item>
+                  <item row="1" column="0">
+                   <layout class="QHBoxLayout" name="horizontalLayout_22">
+                    <item>
+                     <widget class="QLabel" name="label_Position">
+                      <property name="enabled">
+                       <bool>false</bool>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                        <italic>false</italic>
+                       </font>
+                      </property>
+                      <property name="toolTip">
+                       <string>Adjust the center position according to the project</string>
+                      </property>
+                      <property name="text">
+                       <string>Center</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <layout class="QGridLayout" name="gridLayout_1">
+                      <item row="1" column="1">
+                       <widget class="QLineEdit" name="lineEdit_Position_y">
+                        <property name="enabled">
+                         <bool>false</bool>
+                        </property>
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>100</width>
+                          <height>16777215</height>
+                         </size>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <pointsize>10</pointsize>
+                          <italic>false</italic>
+                         </font>
+                        </property>
+                        <property name="toolTip">
+                         <string/>
+                        </property>
+                        <property name="text">
+                         <string>0.00</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="2" column="0">
+                       <widget class="QLabel" name="label_Position_z">
+                        <property name="enabled">
+                         <bool>false</bool>
+                        </property>
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <pointsize>12</pointsize>
+                          <italic>false</italic>
+                         </font>
+                        </property>
+                        <property name="layoutDirection">
+                         <enum>Qt::RightToLeft</enum>
+                        </property>
+                        <property name="text">
+                         <string>             z:</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="1" column="0">
+                       <widget class="QLabel" name="label_Position_y">
+                        <property name="enabled">
+                         <bool>false</bool>
+                        </property>
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <pointsize>12</pointsize>
+                          <italic>false</italic>
+                         </font>
+                        </property>
+                        <property name="layoutDirection">
+                         <enum>Qt::RightToLeft</enum>
+                        </property>
+                        <property name="text">
+                         <string>             y:</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="0" column="1">
+                       <widget class="QLineEdit" name="lineEdit_Position_x">
+                        <property name="enabled">
+                         <bool>false</bool>
+                        </property>
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>100</width>
+                          <height>16777215</height>
+                         </size>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <pointsize>10</pointsize>
+                          <italic>false</italic>
+                         </font>
+                        </property>
+                        <property name="toolTip">
+                         <string/>
+                        </property>
+                        <property name="text">
+                         <string>0.00</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="2" column="1">
+                       <widget class="QLineEdit" name="lineEdit_Position_z">
+                        <property name="enabled">
+                         <bool>false</bool>
+                        </property>
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>100</width>
+                          <height>16777215</height>
+                         </size>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <pointsize>10</pointsize>
+                          <italic>false</italic>
+                         </font>
+                        </property>
+                        <property name="toolTip">
+                         <string/>
+                        </property>
+                        <property name="text">
+                         <string>0.00</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="0" column="0">
+                       <widget class="QLabel" name="label_Position_x">
+                        <property name="enabled">
+                         <bool>false</bool>
+                        </property>
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>100</width>
+                          <height>16777215</height>
+                         </size>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <pointsize>12</pointsize>
+                          <italic>false</italic>
+                          <kerning>true</kerning>
+                         </font>
+                        </property>
+                        <property name="layoutDirection">
+                         <enum>Qt::RightToLeft</enum>
+                        </property>
+                        <property name="text">
+                         <string>             x:</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QGroupBox" name="groupBox_6">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="title">
+                  <string/>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout_2">
+                  <property name="leftMargin">
+                   <number>5</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>5</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>5</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>5</number>
+                  </property>
+                  <item row="0" column="1">
+                   <layout class="QVBoxLayout" name="verticalLayout_17">
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_23">
+                      <item>
+                       <widget class="QLabel" name="label_Ray_representation">
+                        <property name="enabled">
+                         <bool>false</bool>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <pointsize>10</pointsize>
+                          <italic>false</italic>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>Ray representation:</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QCheckBox" name="checkBox_Ray_representation">
+                        <property name="enabled">
+                         <bool>false</bool>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>100</width>
+                          <height>16777215</height>
+                         </size>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <pointsize>12</pointsize>
+                          <italic>false</italic>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>Visible</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_24">
+                      <item>
+                       <widget class="QLabel" name="label_Color">
+                        <property name="enabled">
+                         <bool>false</bool>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <pointsize>10</pointsize>
+                          <italic>false</italic>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>Color:</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="colorButtonTop">
+                        <property name="enabled">
+                         <bool>false</bool>
+                        </property>
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>100</width>
+                          <height>16777215</height>
+                         </size>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <pointsize>10</pointsize>
+                          <italic>false</italic>
+                         </font>
+                        </property>
+                        <property name="toolTip">
+                         <string>Choose the color of the sunlight representation</string>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true"/>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item row="5" column="0">
+                <widget class="QGroupBox" name="groupBox_9">
+                 <property name="title">
+                  <string/>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout_4">
+                  <property name="leftMargin">
+                   <number>5</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>5</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>5</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>5</number>
+                  </property>
+                  <item row="0" column="0">
+                   <widget class="QLabel" name="label_Color_2">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>10</pointsize>
+                      <italic>false</italic>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Color:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QPushButton" name="colorButtonTop_2">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>100</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>10</pointsize>
+                      <italic>false</italic>
+                     </font>
+                    </property>
+                    <property name="toolTip">
+                     <string>Choose the color of the sun path diagram</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QCheckBox" name="checkBox_Sun_path_diagram">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>11</pointsize>
+                   <italic>false</italic>
+                  </font>
+                 </property>
+                 <property name="toolTip">
+                  <string>To enable the sun path diagram
+it is necessary to have an Arch Site object
+For Color 3D view, leave it disabled.</string>
+                 </property>
+                 <property name="layoutDirection">
+                  <enum>Qt::LeftToRight</enum>
+                 </property>
+                 <property name="text">
+                  <string>Sun path diagram (Arch Site)</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QGroupBox" name="groupBox_8">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="title">
+               <string/>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_5">
+               <property name="leftMargin">
+                <number>5</number>
+               </property>
+               <property name="topMargin">
+                <number>5</number>
+               </property>
+               <property name="rightMargin">
+                <number>5</number>
+               </property>
+               <property name="bottomMargin">
+                <number>5</number>
+               </property>
+               <item row="1" column="0">
+                <layout class="QHBoxLayout" name="horizontalLayout_12">
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_9">
+                   <item>
+                    <widget class="QLabel" name="label_1_From_2">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>10</pointsize>
+                       <italic>false</italic>
+                      </font>
+                     </property>
+                     <property name="toolTip">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>Time  from:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_1_Interval">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>10</pointsize>
+                       <italic>false</italic>
+                      </font>
+                     </property>
+                     <property name="toolTip">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>Interval:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_2_Fps">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>10</pointsize>
+                       <italic>false</italic>
+                      </font>
+                     </property>
+                     <property name="toolTip">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>Fps:</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_11">
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_4">
+                     <item>
+                      <widget class="QTimeEdit" name="timeEdit_1_From">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>10</pointsize>
+                         <italic>false</italic>
+                        </font>
+                       </property>
+                       <property name="toolTip">
+                        <string>Adjust the time for the beginnig of the sun path</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_1_To_2">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>10</pointsize>
+                         <italic>false</italic>
+                        </font>
+                       </property>
+                       <property name="toolTip">
+                        <string/>
+                       </property>
+                       <property name="text">
+                        <string>to:</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QTimeEdit" name="timeEdit_1_To">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>10</pointsize>
+                         <italic>false</italic>
+                        </font>
+                       </property>
+                       <property name="toolTip">
+                        <string>Adjust the time for the end of the sun path</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_11">
+                     <property name="spacing">
+                      <number>0</number>
+                     </property>
+                     <item>
+                      <widget class="QTimeEdit" name="timeEdit_1_Interval">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>10</pointsize>
+                         <italic>false</italic>
+                        </font>
+                       </property>
+                       <property name="toolTip">
+                        <string>Adjust the interval between each step of the solar path</string>
+                       </property>
+                       <property name="time">
+                        <time>
+                         <hour>0</hour>
+                         <minute>0</minute>
+                         <second>0</second>
+                        </time>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_4">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="checkBox_2_Recompute">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>9</pointsize>
+                         <italic>false</italic>
+                        </font>
+                       </property>
+                       <property name="toolTip">
+                        <string>Enable it if you need to animate objects as well</string>
+                       </property>
+                       <property name="layoutDirection">
+                        <enum>Qt::RightToLeft</enum>
+                       </property>
+                       <property name="text">
+                        <string>Recompute</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_8">
+                     <item>
+                      <widget class="QLineEdit" name="lineEdit_2_Fps">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>10</pointsize>
+                         <italic>false</italic>
+                        </font>
+                       </property>
+                       <property name="toolTip">
+                        <string>Enter the frames per second of the solar path animation</string>
+                       </property>
+                       <property name="text">
+                        <string>24</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_Frames">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>10</pointsize>
+                         <italic>false</italic>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Frames:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="lineEdit_Frames">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>10</pointsize>
+                         <italic>false</italic>
+                        </font>
+                       </property>
+                       <property name="toolTip">
+                        <string>Show the resulting total frames</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QGroupBox" name="groupBox_5">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+             <italic>true</italic>
+            </font>
+           </property>
+           <property name="toolTip">
+            <string>Set all data for sun position</string>
            </property>
            <property name="styleSheet">
             <string notr="true"/>
@@ -79,6 +1399,9 @@
             <property name="bottomMargin">
              <number>5</number>
             </property>
+            <property name="verticalSpacing">
+             <number>0</number>
+            </property>
             <item row="7" column="0" colspan="2">
              <widget class="QGroupBox" name="groupBox_4">
               <property name="sizePolicy">
@@ -93,10 +1416,16 @@
                 <italic>false</italic>
                </font>
               </property>
+              <property name="toolTip">
+               <string>These are the results of the adjustments made</string>
+              </property>
               <property name="title">
                <string>Results:</string>
               </property>
               <layout class="QGridLayout" name="gridLayout_9">
+               <property name="sizeConstraint">
+                <enum>QLayout::SetFixedSize</enum>
+               </property>
                <property name="leftMargin">
                 <number>5</number>
                </property>
@@ -109,12 +1438,21 @@
                <property name="bottomMargin">
                 <number>5</number>
                </property>
-               <item row="0" column="0">
+               <item row="0" column="1">
                 <layout class="QHBoxLayout" name="horizontalLayout_2">
+                 <property name="sizeConstraint">
+                  <enum>QLayout::SetFixedSize</enum>
+                 </property>
                  <item>
                   <layout class="QVBoxLayout" name="verticalLayout">
                    <item>
                     <widget class="QLabel" name="label_5_Altitude">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="font">
                       <font>
                        <pointsize>10</pointsize>
@@ -128,6 +1466,12 @@
                    </item>
                    <item>
                     <widget class="QLabel" name="label_5_Azimuth">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="font">
                       <font>
                        <pointsize>10</pointsize>
@@ -141,6 +1485,12 @@
                    </item>
                    <item>
                     <widget class="QLabel" name="label_5_Day_hours">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="font">
                       <font>
                        <pointsize>10</pointsize>
@@ -167,6 +1517,18 @@
                        <verstretch>0</verstretch>
                       </sizepolicy>
                      </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>50</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>100</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
                      <property name="font">
                       <font>
                        <pointsize>10</pointsize>
@@ -189,6 +1551,18 @@
                        <verstretch>0</verstretch>
                       </sizepolicy>
                      </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>50</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>100</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
                      <property name="font">
                       <font>
                        <pointsize>10</pointsize>
@@ -208,6 +1582,18 @@
                        <verstretch>0</verstretch>
                       </sizepolicy>
                      </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>50</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>100</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
                      <property name="font">
                       <font>
                        <pointsize>10</pointsize>
@@ -222,6 +1608,9 @@
                </item>
                <item row="0" column="2">
                 <layout class="QHBoxLayout" name="horizontalLayout_3">
+                 <property name="sizeConstraint">
+                  <enum>QLayout::SetFixedSize</enum>
+                 </property>
                  <item>
                   <layout class="QVBoxLayout" name="verticalLayout_5">
                    <item>
@@ -267,13 +1656,16 @@
                  </item>
                  <item>
                   <layout class="QVBoxLayout" name="verticalLayout_3">
+                   <property name="sizeConstraint">
+                    <enum>QLayout::SetFixedSize</enum>
+                   </property>
                    <item>
                     <widget class="QTimeEdit" name="timeEdit_5_Sunrise_result">
                      <property name="enabled">
                       <bool>false</bool>
                      </property>
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
@@ -292,7 +1684,7 @@
                       <bool>false</bool>
                      </property>
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
@@ -311,7 +1703,7 @@
                       <bool>false</bool>
                      </property>
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
@@ -328,19 +1720,6 @@
                  </item>
                 </layout>
                </item>
-               <item row="0" column="1">
-                <spacer name="horizontalSpacer_2">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>40</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
               </layout>
              </widget>
             </item>
@@ -355,7 +1734,8 @@
                  </font>
                 </property>
                 <property name="toolTip">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Indicate the date and time &lt;/p&gt;&lt;p&gt;of the sun's position&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>Indicate the date and time 
+of the sun's position</string>
                 </property>
                 <property name="text">
                  <string>Date and time:</string>
@@ -364,6 +1744,12 @@
               </item>
               <item>
                <widget class="QDateEdit" name="dateEdit_4_Date">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
                 <property name="font">
                  <font>
                   <pointsize>10</pointsize>
@@ -387,6 +1773,12 @@
               </item>
               <item>
                <widget class="QTimeEdit" name="timeEdit_4_time">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
                 <property name="font">
                  <font>
                   <pointsize>10</pointsize>
@@ -423,7 +1815,7 @@ the sun position for a specific location</string>
             <item row="4" column="0" colspan="2">
              <widget class="QGroupBox" name="groupBox_2">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+               <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -565,6 +1957,12 @@ project orientantion and the true north</string>
                   <layout class="QVBoxLayout" name="verticalLayout_6">
                    <item>
                     <widget class="QLineEdit" name="lineEdit_2_City">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="font">
                       <font>
                        <pointsize>10</pointsize>
@@ -581,6 +1979,12 @@ project orientantion and the true north</string>
                    </item>
                    <item>
                     <widget class="QLineEdit" name="lineEdit_2_Country">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="font">
                       <font>
                        <pointsize>10</pointsize>
@@ -597,6 +2001,12 @@ project orientantion and the true north</string>
                    </item>
                    <item>
                     <widget class="QLineEdit" name="lineEdit_2_Latitude">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="font">
                       <font>
                        <pointsize>10</pointsize>
@@ -613,6 +2023,12 @@ project orientantion and the true north</string>
                    </item>
                    <item>
                     <widget class="QLineEdit" name="lineEdit_2_Longitude">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="font">
                       <font>
                        <pointsize>10</pointsize>
@@ -629,6 +2045,12 @@ project orientantion and the true north</string>
                    </item>
                    <item>
                     <widget class="QLineEdit" name="lineEdit_2_Elevation">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="font">
                       <font>
                        <pointsize>10</pointsize>
@@ -645,6 +2067,12 @@ project orientantion and the true north</string>
                    </item>
                    <item>
                     <widget class="QLineEdit" name="lineEdit_2_Time_zone">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="font">
                       <font>
                        <pointsize>10</pointsize>
@@ -661,6 +2089,12 @@ project orientantion and the true north</string>
                    </item>
                    <item>
                     <widget class="QLineEdit" name="lineEdit_3_North_angle">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="font">
                       <font>
                        <pointsize>11</pointsize>
@@ -732,11 +2166,20 @@ in the next links</string>
                   <layout class="QVBoxLayout" name="verticalLayout_13">
                    <item>
                     <widget class="QCheckBox" name="checkBox_DaylightSaving">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="font">
                       <font>
                        <pointsize>11</pointsize>
                        <italic>false</italic>
                       </font>
+                     </property>
+                     <property name="toolTip">
+                      <string>Enable it for daylight saving periods</string>
                      </property>
                      <property name="layoutDirection">
                       <enum>Qt::RightToLeft</enum>
@@ -748,6 +2191,12 @@ in the next links</string>
                    </item>
                    <item>
                     <widget class="QLabel" name="label_4_Equinoxes_link">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="font">
                       <font>
                        <pointsize>8</pointsize>
@@ -762,6 +2211,12 @@ in the next links</string>
                    </item>
                    <item>
                     <widget class="QLabel" name="label_4_Solstices_link">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="font">
                       <font>
                        <pointsize>8</pointsize>
@@ -801,10 +2256,10 @@ adjust the sun position for a location</string>
               </property>
              </widget>
             </item>
-            <item row="2" column="0">
+            <item row="2" column="0" colspan="2">
              <widget class="QGroupBox" name="groupBox">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+               <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -825,12 +2280,18 @@ adjust the sun position for a location</string>
                <property name="bottomMargin">
                 <number>5</number>
                </property>
+               <property name="verticalSpacing">
+                <number>7</number>
+               </property>
                <item row="2" column="0">
                 <layout class="QVBoxLayout" name="verticalLayout_12">
                  <item>
                   <layout class="QHBoxLayout" name="horizontalLayout_15">
                    <item>
                     <widget class="QLabel" name="label_1_Get_epw_file">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
                      <property name="font">
                       <font>
                        <pointsize>10</pointsize>
@@ -849,6 +2310,12 @@ adjust the sun position for a location</string>
                     <widget class="QLabel" name="label_1_epw_map_link">
                      <property name="enabled">
                       <bool>false</bool>
+                     </property>
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
                      </property>
                      <property name="font">
                       <font>
@@ -880,6 +2347,9 @@ adjust the sun position for a location</string>
                   <layout class="QHBoxLayout" name="horizontalLayout_14">
                    <item>
                     <widget class="QLabel" name="label_1_epw_path">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
                      <property name="font">
                       <font>
                        <pointsize>10</pointsize>
@@ -899,6 +2369,12 @@ indicate its path on your machine</string>
                     <widget class="QLineEdit" name="lineEdit_1_epw_path">
                      <property name="enabled">
                       <bool>false</bool>
+                     </property>
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
                      </property>
                      <property name="font">
                       <font>
@@ -940,1017 +2416,6 @@ indicate its path on your machine</string>
            </layout>
           </widget>
          </item>
-         <item row="0" column="1">
-          <layout class="QGridLayout" name="gridLayout_11">
-           <item row="3" column="0">
-            <widget class="QGroupBox" name="groupBox_7">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="title">
-              <string/>
-             </property>
-             <layout class="QGridLayout" name="gridLayout_3">
-              <property name="leftMargin">
-               <number>5</number>
-              </property>
-              <property name="topMargin">
-               <number>5</number>
-              </property>
-              <property name="rightMargin">
-               <number>5</number>
-              </property>
-              <property name="bottomMargin">
-               <number>5</number>
-              </property>
-              <item row="0" column="2">
-               <layout class="QGridLayout" name="gridLayout_1">
-                <item row="2" column="1">
-                 <widget class="QLineEdit" name="lineEdit_Position_z">
-                  <property name="enabled">
-                   <bool>false</bool>
-                  </property>
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="font">
-                   <font>
-                    <pointsize>10</pointsize>
-                   </font>
-                  </property>
-                  <property name="toolTip">
-                   <string/>
-                  </property>
-                  <property name="text">
-                   <string>0.00</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="2" column="0">
-                 <widget class="QLabel" name="label_Position_z">
-                  <property name="enabled">
-                   <bool>false</bool>
-                  </property>
-                  <property name="text">
-                   <string>z:</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="1" column="1">
-                 <widget class="QLineEdit" name="lineEdit_Position_y">
-                  <property name="enabled">
-                   <bool>false</bool>
-                  </property>
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="font">
-                   <font>
-                    <pointsize>10</pointsize>
-                   </font>
-                  </property>
-                  <property name="toolTip">
-                   <string/>
-                  </property>
-                  <property name="text">
-                   <string>0.00</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="1">
-                 <widget class="QLineEdit" name="lineEdit_Position_x">
-                  <property name="enabled">
-                   <bool>false</bool>
-                  </property>
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="font">
-                   <font>
-                    <pointsize>10</pointsize>
-                   </font>
-                  </property>
-                  <property name="toolTip">
-                   <string/>
-                  </property>
-                  <property name="text">
-                   <string>0.00</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="1" column="0">
-                 <widget class="QLabel" name="label_Position_y">
-                  <property name="enabled">
-                   <bool>false</bool>
-                  </property>
-                  <property name="text">
-                   <string>y:</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="0">
-                 <widget class="QLabel" name="label_Position_x">
-                  <property name="enabled">
-                   <bool>false</bool>
-                  </property>
-                  <property name="text">
-                   <string>x:</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item row="0" column="0">
-               <widget class="QLabel" name="label_Position">
-                <property name="enabled">
-                 <bool>false</bool>
-                </property>
-                <property name="font">
-                 <font>
-                  <pointsize>10</pointsize>
-                 </font>
-                </property>
-                <property name="toolTip">
-                 <string>Adjust the position according to the project terrain</string>
-                </property>
-                <property name="text">
-                 <string>Position:</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="0" colspan="3">
-               <layout class="QHBoxLayout" name="horizontalLayout_10">
-                <item>
-                 <widget class="QLabel" name="label_Color_2">
-                  <property name="enabled">
-                   <bool>false</bool>
-                  </property>
-                  <property name="font">
-                   <font>
-                    <pointsize>10</pointsize>
-                   </font>
-                  </property>
-                  <property name="text">
-                   <string>Color:</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <spacer name="horizontalSpacer_5">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeType">
-                   <enum>QSizePolicy::Fixed</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>45</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="colorButtonTop_2">
-                  <property name="enabled">
-                   <bool>false</bool>
-                  </property>
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="font">
-                   <font>
-                    <pointsize>10</pointsize>
-                   </font>
-                  </property>
-                  <property name="toolTip">
-                   <string>Choose the color of the sun path diagram</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item row="0" column="1">
-               <spacer name="horizontalSpacer_4">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeType">
-                 <enum>QSizePolicy::Fixed</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>130</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QCheckBox" name="checkBox_Sun_path_diagram">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="font">
-              <font>
-               <pointsize>12</pointsize>
-               <italic>true</italic>
-              </font>
-             </property>
-             <property name="toolTip">
-              <string>Enable the sun path diagram.
-It is necessary to have an Arch Site object
-For Color 3D view, leave it disabled.</string>
-             </property>
-             <property name="layoutDirection">
-              <enum>Qt::LeftToRight</enum>
-             </property>
-             <property name="text">
-              <string>Sun path diagram (Arch Site)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="0">
-            <widget class="QCheckBox" name="checkBox_Sun_path_animation">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="font">
-              <font>
-               <pointsize>12</pointsize>
-               <italic>true</italic>
-              </font>
-             </property>
-             <property name="toolTip">
-              <string>Enable the sun path animation</string>
-             </property>
-             <property name="layoutDirection">
-              <enum>Qt::LeftToRight</enum>
-             </property>
-             <property name="text">
-              <string>Sun path animation</string>
-             </property>
-            </widget>
-           </item>
-           <item row="8" column="0">
-            <widget class="QGroupBox" name="groupBox_8">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="title">
-              <string/>
-             </property>
-             <layout class="QGridLayout" name="gridLayout_5">
-              <property name="leftMargin">
-               <number>5</number>
-              </property>
-              <property name="topMargin">
-               <number>5</number>
-              </property>
-              <property name="rightMargin">
-               <number>5</number>
-              </property>
-              <property name="bottomMargin">
-               <number>5</number>
-              </property>
-              <item row="0" column="0">
-               <layout class="QHBoxLayout" name="horizontalLayout_12">
-                <item>
-                 <layout class="QVBoxLayout" name="verticalLayout_9">
-                  <item>
-                   <widget class="QLabel" name="label_1_From_2">
-                    <property name="enabled">
-                     <bool>false</bool>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <pointsize>10</pointsize>
-                     </font>
-                    </property>
-                    <property name="toolTip">
-                     <string/>
-                    </property>
-                    <property name="text">
-                     <string>Time  from:</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLabel" name="label_1_Interval">
-                    <property name="enabled">
-                     <bool>false</bool>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <pointsize>10</pointsize>
-                     </font>
-                    </property>
-                    <property name="toolTip">
-                     <string/>
-                    </property>
-                    <property name="text">
-                     <string>Interval:</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLabel" name="label_2_Fps">
-                    <property name="enabled">
-                     <bool>false</bool>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <pointsize>10</pointsize>
-                     </font>
-                    </property>
-                    <property name="toolTip">
-                     <string/>
-                    </property>
-                    <property name="text">
-                     <string>Fps:</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLabel" name="label_2">
-                    <property name="enabled">
-                     <bool>false</bool>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <pointsize>10</pointsize>
-                     </font>
-                    </property>
-                    <property name="toolTip">
-                     <string>Set the resolution of the images</string>
-                    </property>
-                    <property name="text">
-                     <string>Images,   w:</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </item>
-                <item>
-                 <layout class="QVBoxLayout" name="verticalLayout_11">
-                  <item>
-                   <layout class="QHBoxLayout" name="horizontalLayout_4">
-                    <item>
-                     <widget class="QTimeEdit" name="timeEdit_1_From">
-                      <property name="enabled">
-                       <bool>false</bool>
-                      </property>
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <pointsize>10</pointsize>
-                       </font>
-                      </property>
-                      <property name="toolTip">
-                       <string>Adjust the time for the beginnig of the sun path</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QLabel" name="label_1_To_2">
-                      <property name="enabled">
-                       <bool>false</bool>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <pointsize>10</pointsize>
-                       </font>
-                      </property>
-                      <property name="toolTip">
-                       <string/>
-                      </property>
-                      <property name="text">
-                       <string>to:</string>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QTimeEdit" name="timeEdit_1_To">
-                      <property name="enabled">
-                       <bool>false</bool>
-                      </property>
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <pointsize>10</pointsize>
-                       </font>
-                      </property>
-                      <property name="toolTip">
-                       <string>Adjust the time for the end of the sun path</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </item>
-                  <item>
-                   <layout class="QHBoxLayout" name="horizontalLayout_11">
-                    <item>
-                     <widget class="QTimeEdit" name="timeEdit_1_Interval">
-                      <property name="enabled">
-                       <bool>false</bool>
-                      </property>
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <pointsize>10</pointsize>
-                       </font>
-                      </property>
-                      <property name="toolTip">
-                       <string>Adjust the interval between each step of the solar path</string>
-                      </property>
-                      <property name="time">
-                       <time>
-                        <hour>0</hour>
-                        <minute>0</minute>
-                        <second>0</second>
-                       </time>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <spacer name="horizontalSpacer_7">
-                      <property name="orientation">
-                       <enum>Qt::Horizontal</enum>
-                      </property>
-                      <property name="sizeType">
-                       <enum>QSizePolicy::Minimum</enum>
-                      </property>
-                      <property name="sizeHint" stdset="0">
-                       <size>
-                        <width>50</width>
-                        <height>20</height>
-                       </size>
-                      </property>
-                     </spacer>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="checkBox_2_Recompute">
-                      <property name="enabled">
-                       <bool>false</bool>
-                      </property>
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <pointsize>10</pointsize>
-                       </font>
-                      </property>
-                      <property name="toolTip">
-                       <string>Enable it if you need to animate objects as well</string>
-                      </property>
-                      <property name="layoutDirection">
-                       <enum>Qt::RightToLeft</enum>
-                      </property>
-                      <property name="text">
-                       <string>Recompute</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </item>
-                  <item>
-                   <layout class="QHBoxLayout" name="horizontalLayout_8">
-                    <item>
-                     <widget class="QLineEdit" name="lineEdit_2_Fps">
-                      <property name="enabled">
-                       <bool>false</bool>
-                      </property>
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <pointsize>10</pointsize>
-                       </font>
-                      </property>
-                      <property name="toolTip">
-                       <string>Enter the frames per second of the solar path animation</string>
-                      </property>
-                      <property name="text">
-                       <string>24</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QLabel" name="label_Frames">
-                      <property name="enabled">
-                       <bool>false</bool>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <pointsize>10</pointsize>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>Frames:</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QLineEdit" name="lineEdit_Frames">
-                      <property name="enabled">
-                       <bool>false</bool>
-                      </property>
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <pointsize>10</pointsize>
-                       </font>
-                      </property>
-                      <property name="toolTip">
-                       <string>Show the resulting total frames</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </item>
-                  <item>
-                   <layout class="QHBoxLayout" name="horizontalLayout_9">
-                    <item>
-                     <widget class="QLineEdit" name="lineEdit_width">
-                      <property name="enabled">
-                       <bool>false</bool>
-                      </property>
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <pointsize>10</pointsize>
-                       </font>
-                      </property>
-                      <property name="toolTip">
-                       <string>Set the width in pixels of the image</string>
-                      </property>
-                      <property name="text">
-                       <string>1920</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QLabel" name="label_4">
-                      <property name="enabled">
-                       <bool>false</bool>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <pointsize>10</pointsize>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>h:</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QLineEdit" name="lineEdit_height">
-                      <property name="enabled">
-                       <bool>false</bool>
-                      </property>
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <pointsize>10</pointsize>
-                       </font>
-                      </property>
-                      <property name="toolTip">
-                       <string>Set the height in pixels of the image</string>
-                      </property>
-                      <property name="text">
-                       <string>1080</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </item>
-                 </layout>
-                </item>
-               </layout>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item row="0" column="0">
-            <widget class="QCheckBox" name="checkBox_Sun_light_representation">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="font">
-              <font>
-               <pointsize>12</pointsize>
-               <italic>true</italic>
-              </font>
-             </property>
-             <property name="toolTip">
-              <string>Enable the sun light representation</string>
-             </property>
-             <property name="layoutDirection">
-              <enum>Qt::LeftToRight</enum>
-             </property>
-             <property name="styleSheet">
-              <string notr="true"/>
-             </property>
-             <property name="text">
-              <string>Sun light representation</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QGroupBox" name="groupBox_6">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="title">
-              <string/>
-             </property>
-             <layout class="QGridLayout" name="gridLayout_2">
-              <property name="leftMargin">
-               <number>5</number>
-              </property>
-              <property name="topMargin">
-               <number>5</number>
-              </property>
-              <property name="rightMargin">
-               <number>5</number>
-              </property>
-              <property name="bottomMargin">
-               <number>5</number>
-              </property>
-              <item row="0" column="0">
-               <layout class="QGridLayout" name="gridLayout">
-                <item row="0" column="0">
-                 <layout class="QVBoxLayout" name="verticalLayout_7">
-                  <item>
-                   <widget class="QLabel" name="label_radius">
-                    <property name="enabled">
-                     <bool>false</bool>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <pointsize>10</pointsize>
-                     </font>
-                    </property>
-                    <property name="text">
-                     <string>Radius:</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLabel" name="label_Distance">
-                    <property name="enabled">
-                     <bool>false</bool>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <pointsize>10</pointsize>
-                     </font>
-                    </property>
-                    <property name="text">
-                     <string>Distance:</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLabel" name="label_Ray_representation">
-                    <property name="enabled">
-                     <bool>false</bool>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <pointsize>10</pointsize>
-                     </font>
-                    </property>
-                    <property name="text">
-                     <string>Ray representation:</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLabel" name="label_Color">
-                    <property name="enabled">
-                     <bool>false</bool>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <pointsize>10</pointsize>
-                     </font>
-                    </property>
-                    <property name="text">
-                     <string>Color:</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </item>
-                <item row="0" column="2">
-                 <layout class="QVBoxLayout" name="verticalLayout_8">
-                  <item>
-                   <widget class="QLineEdit" name="lineEdit_Radius">
-                    <property name="enabled">
-                     <bool>false</bool>
-                    </property>
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <pointsize>10</pointsize>
-                     </font>
-                    </property>
-                    <property name="toolTip">
-                     <string/>
-                    </property>
-                    <property name="text">
-                     <string>500</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLineEdit" name="lineEdit_Distance">
-                    <property name="enabled">
-                     <bool>false</bool>
-                    </property>
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <pointsize>10</pointsize>
-                     </font>
-                    </property>
-                    <property name="toolTip">
-                     <string/>
-                    </property>
-                    <property name="text">
-                     <string>15,000</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="checkBox_Ray_representation">
-                    <property name="enabled">
-                     <bool>false</bool>
-                    </property>
-                    <property name="text">
-                     <string>Visible</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QPushButton" name="colorButtonTop">
-                    <property name="enabled">
-                     <bool>false</bool>
-                    </property>
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <pointsize>10</pointsize>
-                     </font>
-                    </property>
-                    <property name="toolTip">
-                     <string>Choose the color of the sunlight representation</string>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true"/>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </item>
-                <item row="0" column="1">
-                 <spacer name="horizontalSpacer_3">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-               </layout>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item row="6" column="0">
-            <widget class="QGroupBox" name="groupBox_9">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="font">
-              <font>
-               <pointsize>12</pointsize>
-               <italic>true</italic>
-              </font>
-             </property>
-             <property name="title">
-              <string>Show and/or save image:</string>
-             </property>
-             <layout class="QGridLayout" name="gridLayout_4">
-              <property name="leftMargin">
-               <number>5</number>
-              </property>
-              <property name="topMargin">
-               <number>5</number>
-              </property>
-              <property name="rightMargin">
-               <number>5</number>
-              </property>
-              <property name="bottomMargin">
-               <number>5</number>
-              </property>
-              <item row="0" column="0">
-               <layout class="QVBoxLayout" name="verticalLayout_15">
-                <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_18">
-                  <item>
-                   <widget class="QLabel" name="label_images_from">
-                    <property name="font">
-                     <font>
-                      <pointsize>10</pointsize>
-                      <italic>false</italic>
-                     </font>
-                    </property>
-                    <property name="text">
-                     <string>Image from:</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QComboBox" name="comboBox_Images">
-                    <property name="font">
-                     <font>
-                      <pointsize>10</pointsize>
-                      <italic>false</italic>
-                     </font>
-                    </property>
-                    <property name="toolTip">
-                     <string>Select the scene type.
-Use None/Reset to clear the settings.
-Color 3D preview only works in FreeCAD-Link.
-For Render 3D preview, install Render WB.</string>
-                    </property>
-                    <item>
-                     <property name="text">
-                      <string>None/Reset</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>BW 3D view</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Color 3D view</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Render 3D view</string>
-                     </property>
-                    </item>
-                   </widget>
-                  </item>
-                 </layout>
-                </item>
-                <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_19">
-                  <item>
-                   <widget class="QCheckBox" name="checkBox_Save_to">
-                    <property name="font">
-                     <font>
-                      <pointsize>10</pointsize>
-                      <italic>false</italic>
-                     </font>
-                    </property>
-                    <property name="toolTip">
-                     <string>Enable it to save the images created</string>
-                    </property>
-                    <property name="layoutDirection">
-                     <enum>Qt::LeftToRight</enum>
-                    </property>
-                    <property name="text">
-                     <string>Save</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <spacer name="horizontalSpacer_6">
-                    <property name="orientation">
-                     <enum>Qt::Horizontal</enum>
-                    </property>
-                    <property name="sizeHint" stdset="0">
-                     <size>
-                      <width>40</width>
-                      <height>20</height>
-                     </size>
-                    </property>
-                   </spacer>
-                  </item>
-                 </layout>
-                </item>
-               </layout>
-              </item>
-             </layout>
-            </widget>
-           </item>
-          </layout>
-         </item>
         </layout>
        </widget>
       </widget>
@@ -1979,39 +2444,6 @@ For Render 3D preview, install Render WB.</string>
     </layout>
    </item>
   </layout>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>2</width>
-     <height>2</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_6"/>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>2</width>
-     <height>2</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_7"/>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>2</width>
-     <height>2</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout_10"/>
-  </widget>
  </widget>
  <tabstops>
   <tabstop>lineEdit_1_epw_path</tabstop>
@@ -2019,20 +2451,11 @@ For Render 3D preview, install Render WB.</string>
   <tabstop>lineEdit_2_Elevation</tabstop>
   <tabstop>lineEdit_2_Time_zone</tabstop>
   <tabstop>dateEdit_4_Date</tabstop>
-  <tabstop>checkBox_Sun_light_representation</tabstop>
-  <tabstop>lineEdit_Radius</tabstop>
-  <tabstop>lineEdit_Distance</tabstop>
-  <tabstop>checkBox_Ray_representation</tabstop>
-  <tabstop>checkBox_Sun_path_diagram</tabstop>
   <tabstop>lineEdit_Position_x</tabstop>
   <tabstop>lineEdit_Position_y</tabstop>
   <tabstop>lineEdit_Position_z</tabstop>
-  <tabstop>checkBox_Sun_path_animation</tabstop>
   <tabstop>timeEdit_1_From</tabstop>
   <tabstop>timeEdit_1_To</tabstop>
-  <tabstop>timeEdit_1_Interval</tabstop>
-  <tabstop>checkBox_2_Recompute</tabstop>
-  <tabstop>comboBox_Images</tabstop>
  </tabstops>
  <resources/>
  <connections>
@@ -2043,8 +2466,8 @@ For Render 3D preview, install Render WB.</string>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>672</x>
-     <y>628</y>
+     <x>811</x>
+     <y>585</y>
     </hint>
     <hint type="destinationlabel">
      <x>157</x>
@@ -2059,8 +2482,8 @@ For Render 3D preview, install Render WB.</string>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>672</x>
-     <y>628</y>
+     <x>811</x>
+     <y>585</y>
     </hint>
     <hint type="destinationlabel">
      <x>286</x>
@@ -2069,66 +2492,178 @@ For Render 3D preview, install Render WB.</string>
    </hints>
   </connection>
   <connection>
-   <sender>checkBox_Sun_light_representation</sender>
+   <sender>checkBox_sun_light_config</sender>
    <signal>toggled(bool)</signal>
    <receiver>label_radius</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>608</x>
-     <y>39</y>
+     <x>623</x>
+     <y>-232</y>
     </hint>
     <hint type="destinationlabel">
-     <x>571</x>
-     <y>112</y>
+     <x>601</x>
+     <y>-175</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>checkBox_Sun_light_representation</sender>
+   <sender>checkBox_sun_light_config</sender>
    <signal>toggled(bool)</signal>
    <receiver>lineEdit_Radius</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>629</x>
-     <y>35</y>
+     <x>677</x>
+     <y>-232</y>
     </hint>
     <hint type="destinationlabel">
-     <x>832</x>
-     <y>112</y>
+     <x>773</x>
+     <y>-175</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>checkBox_Sun_light_representation</sender>
+   <sender>checkBox_sun_light_config</sender>
    <signal>toggled(bool)</signal>
    <receiver>label_Distance</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>511</x>
-     <y>33</y>
+     <x>756</x>
+     <y>-232</y>
     </hint>
     <hint type="destinationlabel">
-     <x>525</x>
-     <y>147</y>
+     <x>615</x>
+     <y>-140</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>checkBox_Sun_light_representation</sender>
+   <sender>checkBox_sun_light_config</sender>
    <signal>toggled(bool)</signal>
    <receiver>lineEdit_Distance</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>602</x>
-     <y>38</y>
+     <x>640</x>
+     <y>-232</y>
     </hint>
     <hint type="destinationlabel">
-     <x>832</x>
-     <y>147</y>
+     <x>773</x>
+     <y>-140</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_sun_light_config</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>label_Position</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>593</x>
+     <y>-232</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>614</x>
+     <y>-33</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_sun_light_config</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>label_Position_x</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>571</x>
+     <y>-232</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>648</x>
+     <y>-104</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_sun_light_config</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>lineEdit_Position_x</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>730</x>
+     <y>-232</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>797</x>
+     <y>-104</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_sun_light_config</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>label_Position_y</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>649</x>
+     <y>-232</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>648</x>
+     <y>-69</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_sun_light_config</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>lineEdit_Position_y</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>707</x>
+     <y>-232</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>797</x>
+     <y>-69</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_sun_light_config</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>label_Position_z</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>623</x>
+     <y>-232</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>648</x>
+     <y>-34</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_sun_light_config</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>lineEdit_Position_z</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>710</x>
+     <y>-232</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>797</x>
+     <y>-34</y>
     </hint>
    </hints>
   </connection>
@@ -2139,12 +2674,12 @@ For Render 3D preview, install Render WB.</string>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>501</x>
-     <y>32</y>
+     <x>580</x>
+     <y>8</y>
     </hint>
     <hint type="destinationlabel">
-     <x>587</x>
-     <y>182</y>
+     <x>591</x>
+     <y>56</y>
     </hint>
    </hints>
   </connection>
@@ -2155,12 +2690,12 @@ For Render 3D preview, install Render WB.</string>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>545</x>
-     <y>32</y>
+     <x>755</x>
+     <y>8</y>
     </hint>
     <hint type="destinationlabel">
-     <x>832</x>
-     <y>181</y>
+     <x>796</x>
+     <y>55</y>
     </hint>
    </hints>
   </connection>
@@ -2171,300 +2706,12 @@ For Render 3D preview, install Render WB.</string>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>467</x>
-     <y>39</y>
+     <x>646</x>
+     <y>8</y>
     </hint>
     <hint type="destinationlabel">
-     <x>491</x>
-     <y>217</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>checkBox_Sun_path_diagram</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>label_Position</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>489</x>
-     <y>267</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>504</x>
-     <y>389</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>checkBox_Sun_path_diagram</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>lineEdit_Position_x</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>619</x>
-     <y>267</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>833</x>
-     <y>318</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>checkBox_Sun_path_diagram</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>lineEdit_Position_y</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>599</x>
-     <y>267</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>833</x>
-     <y>353</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>checkBox_Sun_path_diagram</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>lineEdit_Position_z</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>611</x>
-     <y>267</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>833</x>
-     <y>388</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>checkBox_Sun_path_diagram</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>label_Color_2</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>564</x>
-     <y>267</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>531</x>
-     <y>426</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>checkBox_Sun_path_diagram</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>colorButtonTop_2</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>547</x>
-     <y>267</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>833</x>
-     <y>426</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>checkBox_Sun_path_animation</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>label_1_From_2</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>539</x>
-     <y>595</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>524</x>
-     <y>650</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>checkBox_Sun_path_animation</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>timeEdit_1_From</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>580</x>
-     <y>595</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>608</x>
-     <y>649</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>checkBox_Sun_path_animation</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>timeEdit_1_To</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>675</x>
-     <y>595</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>831</x>
-     <y>649</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>checkBox_Sun_path_animation</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>label_1_Interval</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>574</x>
-     <y>595</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>510</x>
-     <y>687</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>checkBox_Sun_path_animation</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>timeEdit_1_Interval</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>569</x>
-     <y>595</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>608</x>
-     <y>687</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>checkBox_Sun_path_animation</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>label_2_Fps</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>497</x>
-     <y>595</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>510</x>
-     <y>725</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>checkBox_Sun_path_animation</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>lineEdit_2_Fps</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>473</x>
-     <y>595</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>645</x>
-     <y>724</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>checkBox_Sun_path_animation</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>checkBox_2_Recompute</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>469</x>
-     <y>595</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>831</x>
-     <y>685</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>checkBox_Sun_path_animation</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>timeEdit_4_time</receiver>
-   <slot>setDisabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>463</x>
-     <y>595</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>408</x>
-     <y>514</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>timeEdit_5_Sunrise_result</sender>
-   <signal>timeChanged(QTime)</signal>
-   <receiver>timeEdit_1_From</receiver>
-   <slot>setTime(QTime)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>399</x>
-     <y>688</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>608</x>
-     <y>649</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>timeEdit_5_Sunset_result</sender>
-   <signal>timeChanged(QTime)</signal>
-   <receiver>timeEdit_1_To</receiver>
-   <slot>setTime(QTime)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>399</x>
-     <y>760</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>831</x>
-     <y>649</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>checkBox_Sun_path_animation</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>label_1_To_2</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>721</x>
-     <y>595</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>750</x>
-     <y>649</y>
+     <x>591</x>
+     <y>91</y>
     </hint>
    </hints>
   </connection>
@@ -2475,76 +2722,188 @@ For Render 3D preview, install Render WB.</string>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>736</x>
-     <y>40</y>
+     <x>669</x>
+     <y>8</y>
     </hint>
     <hint type="destinationlabel">
-     <x>801</x>
-     <y>217</y>
+     <x>768</x>
+     <y>91</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>checkBox_Sun_path_animation</sender>
+   <sender>checkBox_Sun_path_diagram</sender>
    <signal>toggled(bool)</signal>
-   <receiver>checkBox_Save_to</receiver>
-   <slot>setDisabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>703</x>
-     <y>595</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>500</x>
-     <y>545</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>checkBox_Sun_path_animation</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>label_4</receiver>
+   <receiver>label_Color_2</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>664</x>
-     <y>595</y>
+     <x>655</x>
+     <y>134</y>
     </hint>
     <hint type="destinationlabel">
-     <x>689</x>
-     <y>761</y>
+     <x>590</x>
+     <y>171</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_Sun_path_diagram</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>colorButtonTop_2</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>806</x>
+     <y>134</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>805</x>
+     <y>171</y>
     </hint>
    </hints>
   </connection>
   <connection>
    <sender>checkBox_Sun_path_animation</sender>
    <signal>toggled(bool)</signal>
-   <receiver>lineEdit_height</receiver>
+   <receiver>label_1_From_2</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>620</x>
-     <y>595</y>
+     <x>652</x>
+     <y>378</y>
     </hint>
     <hint type="destinationlabel">
-     <x>831</x>
-     <y>761</y>
+     <x>530</x>
+     <y>429</y>
     </hint>
    </hints>
   </connection>
   <connection>
    <sender>checkBox_Sun_path_animation</sender>
    <signal>toggled(bool)</signal>
-   <receiver>lineEdit_width</receiver>
+   <receiver>timeEdit_1_From</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>764</x>
-     <y>595</y>
+     <x>691</x>
+     <y>378</y>
     </hint>
     <hint type="destinationlabel">
-     <x>668</x>
-     <y>761</y>
+     <x>614</x>
+     <y>428</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_Sun_path_animation</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>label_1_To_2</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>771</x>
+     <y>378</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>714</x>
+     <y>428</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_Sun_path_animation</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>timeEdit_1_To</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>806</x>
+     <y>378</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>795</x>
+     <y>428</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_Sun_path_animation</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>label_1_Interval</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>609</x>
+     <y>378</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>530</x>
+     <y>466</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_Sun_path_animation</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>timeEdit_1_Interval</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>618</x>
+     <y>378</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>614</x>
+     <y>466</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_Sun_path_animation</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>checkBox_2_Recompute</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>739</x>
+     <y>378</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>795</x>
+     <y>463</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_Sun_path_animation</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>label_2_Fps</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>568</x>
+     <y>378</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>530</x>
+     <y>504</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_Sun_path_animation</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>lineEdit_2_Fps</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>704</x>
+     <y>378</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>630</x>
+     <y>503</y>
     </hint>
    </hints>
   </connection>
@@ -2555,76 +2914,76 @@ For Render 3D preview, install Render WB.</string>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>749</x>
-     <y>595</y>
+     <x>717</x>
+     <y>378</y>
     </hint>
     <hint type="destinationlabel">
-     <x>712</x>
-     <y>724</y>
+     <x>698</x>
+     <y>503</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>checkBox_Sun_path_animation</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>label_2</receiver>
-   <slot>setEnabled(bool)</slot>
+   <sender>timeEdit_5_Sunrise_result</sender>
+   <signal>timeChanged(QTime)</signal>
+   <receiver>timeEdit_1_From</receiver>
+   <slot>setTime(QTime)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>622</x>
-     <y>595</y>
+     <x>386</x>
+     <y>446</y>
     </hint>
     <hint type="destinationlabel">
-     <x>524</x>
-     <y>762</y>
+     <x>614</x>
+     <y>428</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>checkBox_Sun_path_diagram</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>label_Position_x</receiver>
-   <slot>setEnabled(bool)</slot>
+   <sender>timeEdit_5_Sunset_result</sender>
+   <signal>timeChanged(QTime)</signal>
+   <receiver>timeEdit_1_To</receiver>
+   <slot>setTime(QTime)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>666</x>
-     <y>267</y>
+     <x>386</x>
+     <y>518</y>
     </hint>
     <hint type="destinationlabel">
-     <x>667</x>
-     <y>318</y>
+     <x>795</x>
+     <y>428</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>checkBox_Sun_path_diagram</sender>
+   <sender>checkBox_sun_light_config</sender>
    <signal>toggled(bool)</signal>
-   <receiver>label_Position_y</receiver>
+   <receiver>checkBox_Sun_light_representation</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>661</x>
-     <y>267</y>
+     <x>531</x>
+     <y>-232</y>
     </hint>
     <hint type="destinationlabel">
-     <x>667</x>
-     <y>353</y>
+     <x>532</x>
+     <y>8</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>checkBox_Sun_path_diagram</sender>
+   <sender>checkBox_sun_light_config</sender>
    <signal>toggled(bool)</signal>
-   <receiver>label_Position_z</receiver>
+   <receiver>checkBox_Sun_path_diagram</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>661</x>
-     <y>267</y>
+     <x>501</x>
+     <y>-232</y>
     </hint>
     <hint type="destinationlabel">
-     <x>667</x>
-     <y>388</y>
+     <x>515</x>
+     <y>134</y>
     </hint>
    </hints>
   </connection>

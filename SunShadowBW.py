@@ -27,7 +27,7 @@
 import OfflineRenderingUtils
 import FreeCAD
 import FreeCADGui as Gui
-from PySide2 import QtWidgets
+from PySide import QtWidgets
 from PySide.QtCore import QT_TRANSLATE_NOOP
 
 LIGHT = None
@@ -105,7 +105,7 @@ def show_warning_dialog():
     msg = QtWidgets.QMessageBox()
     msg.setWindowTitle("BWShadow Save Warning")
     msg.setText(QT_TRANSLATE_NOOP("Solar",
-        "This feature is not stable! \n"
+        "This feature has not been fully tested yet! \n"
         "To prevent issues, save your file before and after opening it. \n"
         "For transparent surfaces, it is recommended \n"
         "to make them invisible before generating these shadows. \n"
