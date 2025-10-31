@@ -103,8 +103,8 @@ Not yet available.
 * To use Sky Domes (still under development), you will also need to install Radiance on your computer (https://www.radiance-online.org/).
 * Download and license: https://www.radiance-online.org/download-install
 
-* If you want to use the rendered frames, you must install the Render Workbench, prepare rendering projects and test them preventively to make sure everything is working correctly (see information in [FreeCAD-Render](https://github.com/FreeCAD/FreeCAD-render)).
-* If you want to use the play and record rendered animation frames, you must install the Movie Workbench [FreeCAD-Movie](https://github.com/Francisco-Rosa/FreeCAD-Movie/tree/master).
+* If you want to use the rendered frames, you must install the Render Workbench (via Addon Manager), prepare rendering projects and test them preventively to make sure everything is working correctly (see information in [FreeCAD-Render](https://github.com/FreeCAD/FreeCAD-render)).
+* If you want to use the play and record rendered animation frames, you must install the Movie Workbench (via Addon Manager, and see information in [FreeCAD-Movie](https://github.com/Francisco-Rosa/FreeCAD-Movie/tree/master).
 
 
 ### Usage
@@ -112,6 +112,10 @@ Not yet available.
 ##### Sun configuration dialog  
 
 <img src=./Docs/Sun_dialog.jpg height=600>
+
+##### Sky domes configuration dialog
+
+(under development)
 
 ### Documentation
 Documentation will be available as soon as possible.
