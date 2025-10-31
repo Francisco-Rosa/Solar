@@ -34,14 +34,17 @@ LIGHT = None
 VIEW = None
 
 def clean_view_state():
+
     """Clean the shadow view."""
+
     global VIEW
     VIEW = None
 
 def create_shadows_black_white():
-    """
-    Sets up the black and white shadow view in the currently active 3D view.
-    """
+
+    """Sets up the black and white shadow view from
+    the currently active 3D view."""
+
     global LIGHT, VIEW
 
     obj = FreeCAD.ActiveDocument.SunProperties
@@ -53,8 +56,9 @@ def create_shadows_black_white():
             QtWidgets.QMessageBox.warning(
                 None, "No 3D View",
                 "No active 3D view found. "
-                "Please select or open a 3D view for your document and try again."
-            )
+                "Please select or open a 3D view "
+                "for your document and try again."
+                )
             return
         result = show_warning_dialog()
         if result == QtWidgets.QMessageBox.Ok:
@@ -63,25 +67,24 @@ def create_shadows_black_white():
             view2 = Gui.ActiveDocument.ActiveView
             FreeCAD.ActiveDocument.SunLight.Visibility = False
             FreeCAD.ActiveDocument.Line.Visibility = False
-            objs = [o for o in FreeCAD.ActiveDocument.Objects if o.ViewObject.Visibility is True]
+            objs = [o for o in FreeCAD.ActiveDocument.Objects
+                    if o.ViewObject.Visibility is True]
             cam = view.getCamera()
             scene = OfflineRenderingUtils.buildScene(objs)
-            shadow_group = OfflineRenderingUtils.embedLight(
-                scene,
-                (-obj.SunLightPosition.x, -obj.SunLightPosition.y, -obj.SunLightPosition.z)
-            )
+            shadow_group = OfflineRenderingUtils.embedLight(scene,
+                                        (-obj.SunLightPosition.x,
+                                         -obj.SunLightPosition.y,
+                                         -obj.SunLightPosition.z)
+                                        )
             light = shadow_group.getChild(0)
-
             view2.setCamera(cam)
             view2.getViewer().setSceneGraph(shadow_group)
             view2.setNavigationType("Trackball")
             # Update view
             view2 = Gui.ActiveDocument.ActiveView
             view2.setCamera(camera_string)
-
             LIGHT = light
             VIEW = view2
-
             if obj.SunLightRepresentation is True:
                 FreeCAD.ActiveDocument.SunLight.Visibility = True
                 if obj.RayRepresentation is True:
@@ -90,7 +93,9 @@ def create_shadows_black_white():
             print('Create BW shadows was canceled')
 
 def update_shadow_direction(light = None):
+
     """Update shadow direction"""
+
     obj = FreeCAD.ActiveDocument.SunProperties
     try:
         light = LIGHT
@@ -102,17 +107,21 @@ def update_shadow_direction(light = None):
         pass
 
 def show_warning_dialog():
+
+    """Show warning dialog"""
+
     msg = QtWidgets.QMessageBox()
     msg.setWindowTitle("BWShadow Save Warning")
-    msg.setText(QT_TRANSLATE_NOOP("Solar",
+    msg.setText(QT_TRANSLATE_NOOP('SunShadowBW',
         "This feature has not been fully tested yet! \n"
-        "To prevent issues, save your file before and after opening it. \n"
+        "To prevent issues, save your file before opening it. \n"
         "For transparent surfaces, it is recommended \n"
         "to make them invisible before generating these shadows. \n"
         "\n"
         "Do you want to generate shadows now?"
     ))
     msg.setIcon(QtWidgets.QMessageBox.Warning)
-    msg.setStandardButtons(QtWidgets.QMessageBox.Ok | QtWidgets.QMessageBox.Cancel)
+    msg.setStandardButtons(
+           QtWidgets.QMessageBox.Ok | QtWidgets.QMessageBox.Cancel)
     result = msg.exec_()
     return result
