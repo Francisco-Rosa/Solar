@@ -1,7 +1,7 @@
 ## Solar Workbench
-Workbench for configuring the sun's position and animating its path
+Workbench to manage solar analysis and configurations
 
-### Worbench Icon
+### Workbench Icon
 ![Solar Workbench Icon](./icons//SolarIcon.svg)
 
 ### Features
@@ -17,7 +17,7 @@ Workbench for configuring the sun's position and animating its path
 
 * Ability to play the sun path animations in real time prior to recording.
 
-#### Record and Play (with Movie and Render Workbenchs)
+#### Record and Play (with Movie and Render Workbenches)
 
 * Create frames from the FreeCAD 3D view or the rendered ones.   
 * Create videos from them.  
@@ -69,11 +69,11 @@ Not yet available.
 
 ### Preparation
 
-* To use this workbench, you must have the ladybug-core Python package installed. There are two basic ways to do this:
+* To use this workbench, you must have the two ladybug Python packages installed (the pysolar package is optional). There are two basic ways to do this:
 
   If your operating system's Python version is the same as FreeCAD's, simply open a terminal and type:
   
-      pip install ladybug-core pysolar # pysolar is optional
+      pip install ladybug-core ladybug-radiance pysolar
 
   If the versions are different, you'll need to use Python venv. To do this, go to the Solar Workbench folder (see the address above) or open FreeCAD and type the following expression in the Python console to find the Mod that Solar is in:
 
@@ -92,12 +92,16 @@ Not yet available.
       source AdditionalPythonPackages/bin/activate # Linux/macOS
       AdditionalPythonPackages\Scripts\activate # Windows
   
-  Install packages within the environment:
+  Install packages within the environment (pysolar is optional):
   
-      pip install ladybug-core pysolar # pysolar is optional
+      pip install ladybug-core ladybug-radiance pysolar
+      
   Deactivate the virtual environment when finished:
   
       deactivate
+      
+* To use Sky Domes (still under development), you will also need to install Radiance on your computer (https://www.radiance-online.org/).
+* Download and license: https://www.radiance-online.org/download-install
 
 * If you want to use the rendered frames, you must install the Render Workbench, prepare rendering projects and test them preventively to make sure everything is working correctly (see information in [FreeCAD-Render](https://github.com/FreeCAD/FreeCAD-render)).
 * If you want to use the play and record rendered animation frames, you must install the Movie Workbench [FreeCAD-Movie](https://github.com/Francisco-Rosa/FreeCAD-Movie/tree/master).
