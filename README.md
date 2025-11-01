@@ -115,7 +115,7 @@ Not yet available.
 
 ##### Sky domes configuration dialog
 
-(Under development, meanwhile, insert a SunProperty object and fill in the epw path field. Create a SkyDomes set; it will use the same .epw file. To modify a SkyDomes, use the properties window and click "Modify SkyDomes" (already selected). To delete SkyDomes, select them and click "Delete SkyDomes".)
+(It is under development, meanwhile, insert a SunProperty object and fill in the epw path field. Create a SkyDomes set; it will use the same .epw file. To modify a SkyDomes, use its properties window and click "Modify SkyDomes" (already selected). To delete SkyDomes, select them and click "Delete SkyDomes".)
 
 ### Documentation
 Documentation will be available as soon as possible.
