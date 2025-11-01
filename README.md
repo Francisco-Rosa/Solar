@@ -124,7 +124,7 @@ Documentation will be available as soon as possible.
 For discussion, please use the [Solar Workbench thread](https://forum.freecad.org/viewtopic.php?p=836631#p836631) in the FreeCAD forum.
 
 #### License 
-LGPL-2.1 [LICENCE](./LICENCE)
+LGPL-2.1 [LICENCE](.LICENCE)
 
 #### Author
 Francisco Rosa, 2025.
