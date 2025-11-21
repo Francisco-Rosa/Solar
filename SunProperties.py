@@ -626,7 +626,7 @@ def get_sun_position():
                     sp = Sunpath.from_location(location_data)
                     # The north angle is only used to adjust the sun_vector
                     # and does not affect the sun altitude or azimuth.
-                    sp.north_angle = obj.North
+                    sp.north_angle = -obj.North
                     sun = sp.calculate_sun(month = obj.Month,
                                            day = obj.Day,
                                            hour = tim
