@@ -100,7 +100,7 @@ Not yet available.
   
       deactivate
       
-* To use Sky Domes (still under development), you will also need to install Radiance on your computer (https://www.radiance-online.org/).
+* To use Sky Domes, you will also need to install Radiance on your computer (https://www.radiance-online.org/).
 * Download and license: https://www.radiance-online.org/download-install
 
 * If you want to use the rendered frames, you must install the Render Workbench (via Addon Manager), prepare rendering projects and test them preventively to make sure everything is working correctly (see information in [FreeCAD-Render](https://github.com/FreeCAD/FreeCAD-render)).
@@ -111,11 +111,15 @@ Not yet available.
 
 ##### Sun configuration dialog  
 
-<img src=./Docs/Sun_dialog.jpg height=600>
+<img src=./Docs/Sun_dialog.jpg width=600>
 
 ##### Sky domes configuration dialog
 
-(It is under development, meanwhile, insert a SunProperty object and fill in the epw path field. Create a SkyDomes set; it will use the same .epw file. To modify a SkyDomes, use its properties window and click "Modify SkyDomes" (already selected). To delete SkyDomes, select them and click "Delete SkyDomes".)
+<img src=./Docs/SD_dialog.jpg width=600>
+
+To create a SkyDomes, click "Create SkyDomes" button and configure them in the dialog window. To modify a SkyDomes, click "Modify SkyDomes" button with the respective SkyDomes already selected. To delete SkyDomes, select them and click "Delete SkyDomes" button.
+
+Important: Once Skydomes are created, do not modify their structure of the groups in the FreeCAD object tree, as this will prevent future modifications.
 
 ### Documentation
 Documentation will be available as soon as possible.
