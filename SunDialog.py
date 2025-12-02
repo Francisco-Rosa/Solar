@@ -100,25 +100,222 @@ class SunConfigurationDialog(QtWidgets.QDialog):
         self.ui.buttonBox_Cancel_OK.clicked.connect(self.accept)
         self.ui.buttonBox_Cancel_OK.rejected.connect(self.reject)
         # strings/translation
-        self.ui.groupBox_sun_additional_config.setToolTip(
+        #groupBox_sun_position
+        self.ui.groupBox_sun_position.setTitle(
                     QT_TRANSLATE_NOOP("SunDialog",
-                    "Adjust the other aspects of the solar study here"))
+                    "Sun position"))
+        self.ui.groupBox_sun_position.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Set all data for sun position"))
+        #radioButton_1_epw_file
+        self.ui.radioButton_1_epw_file.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "epw file:"))
+        self.ui.radioButton_1_epw_file.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Enable this button to automatically \n"
+                    "adjust the sun position for a location"))
+        #label_1_Get_epw_file
+        self.ui.label_1_Get_epw_file.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Get epw file:"))
+        self.ui.label_1_Get_epw_file.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Click the link to get the epw file"))
+        #label_1_epw_map_link
+        self.ui.label_1_epw_map_link.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Click to download the epw file"))
+        #label_1_epw_path
+        self.ui.label_1_epw_path.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "epw file path:"))
+        self.ui.label_1_epw_path.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "After downloading the epw file, \n"
+                    "indicate its path on your machine"))
+        #lineEdit_1_epw_path
+        self.ui.lineEdit_1_epw_path.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "The epw file path on your machine"))
+        #toolButton_1_epw_path
+        self.ui.toolButton_1_epw_path.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Indicate the path of the epw file"))
+        #radioButton_2_Location
+        self.ui.radioButton_2_Location.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Location:"))
+        self.ui.radioButton_2_Location.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Activate this button to adjust \n"
+                    "the sun position for a specific location"))
+        #label_2_City
+        self.ui.label_2_City.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "City:"))
+        #label_2_Country
+        self.ui.label_2_Country.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Country:"))
+        #label_2_Latitude
+        self.ui.label_2_Latitude.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Latitude:"))
+        #label_2_Longitude
+        self.ui.label_2_Longitude.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Longitude:"))
+        #label_2_Elevation
+        self.ui.label_2_Elevation.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Elevation:"))
+        #label_2_Time_zone
+        self.ui.label_2_Time_zone.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Time zone:"))
+        #label_3_North_angle
+        self.ui.label_3_North_angle.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "North angle:"))
+        self.ui.label_3_North_angle.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Indicate the true north.\n"
+                    "Clockwise with zero in \n"
+                    "the direction of the y-axis"))
+        #label_4_Date_and_time
+        self.ui.label_4_Date_and_time.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Date and time:"))
+        self.ui.label_4_Date_and_time.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Indicate the date and time \n"
+                    "of the sun's position"))
+        #label_4_Equinoxes_Solstices
+        self.ui.label_4_Equinoxes_Solstices.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Equin./Solst.:"))
+        self.ui.label_4_Equinoxes_Solstices.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Consult the equinoxes and solstices \n"
+                    "in the next links"))
+        #checkBox_DaylightSaving
+        self.ui.checkBox_DaylightSaving.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "DaylightSaving"))
+        self.ui.checkBox_DaylightSaving.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Enable it for daylight saving periods"))
+        #groupBox_results
+        self.ui.groupBox_results.setTitle(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Results:"))
+        self.ui.groupBox_results.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "These are the results of the adjustments made"))
+        #label_5_Altitude
+        self.ui.label_5_Altitude.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Altitude:"))
+        #label_5_Azimuth
+        self.ui.label_5_Azimuth.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Azimuth:"))
+        #label_5_Day_hours
+        self.ui.label_5_Day_hours.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Day hours:"))
+        #label_5_Sunrise
+        self.ui.label_5_Sunrise.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Sunrise:"))
+        #label_5_Noon
+        self.ui.label_5_Noon.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Noon:"))
+        #label_5_Sunset
+        self.ui.label_5_Sunset.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Sunset:"))
+        #groupBox_sun_additional_config
         self.ui.groupBox_sun_additional_config.setTitle(
                     QT_TRANSLATE_NOOP("SunDialog",
                     "Sun additional configurations"))
+        self.ui.groupBox_sun_additional_config.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Adjust the other aspects of the solar study here"))
+        #checkBox_sun_light_config
+        self.ui.checkBox_sun_light_config.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Sun light and diagram configurations"))
+        self.ui.checkBox_sun_light_config.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Enable it to view and adjust representations \n"
+                    "of the sun and its path."))
+        #label_radius
+        self.ui.label_radius.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Radius:"))
+        #label_Distance
+        self.ui.label_Distance.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Distance:"))
+        #label_Position
+        self.ui.label_Position.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Center"))
+        self.ui.label_Position.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Adjust the center position according to the project"))
+        #checkBox_Sun_light_representation
+        self.ui.checkBox_Sun_light_representation.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Sun light"))
+        self.ui.checkBox_Sun_light_representation.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Enable the sun light representation"))
+        #label_Ray_representation
+        self.ui.label_Ray_representation.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Ray representation:"))
+        #checkBox_Ray_representation
+        self.ui.checkBox_Ray_representation.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Visible"))
+        #label_Color
+        self.ui.label_Color.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Color:"))
+        #colorButtonTop
+        self.ui.colorButtonTop.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Choose the color of the sunlight representation"))
+        #checkBox_Sun_path_diagram
+        self.ui.checkBox_Sun_path_diagram.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Sun path diagram (Arch Site)"))
+        self.ui.checkBox_Sun_path_diagram.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "It is necessary to have an Arch Site object\n"
+                    "to enable the sun path diagram.\n"
+                    "For Color 3D view shadows, leave it disabled."))
+        #label_Color_2
+        self.ui.label_Color_2.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Color:"))
+        #colorButtonTop_2
+        self.ui.colorButtonTop_2.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Choose the color of the sun path diagram"))
+        #groupBox_show_save_image
         self.ui.groupBox_show_save_image.setTitle(
                     QT_TRANSLATE_NOOP("SunDialog",
                     "Show and/or save image:"))
+        #label_images_from
         self.ui.label_images_from.setText(
                     QT_TRANSLATE_NOOP("SunDialog",
                     "Image from:"))
-        self.ui.label_image_w_h.setToolTip(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Set the image resolution\n"
-                    "Use for render images"))
-        self.ui.label_image_w_h.setText(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Images, w:"))
+        #comboBox_Images
         self.ui.comboBox_Images.setItemText(0,
                     QT_TRANSLATE_NOOP("SunDialog",
                     "None/Reset"))
@@ -137,234 +334,99 @@ class SunConfigurationDialog(QtWidgets.QDialog):
                     "Use None/Reset to clear the settings.\n"
                     "Color 3D preview only works in FreeCAD-Link.\n"
                     "For Render 3D preview, install Render WB."))
+        #label_image_w_h
+        self.ui.label_image_w_h.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Images, w:"))
+        self.ui.label_image_w_h.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Set the image resolution\n"
+                    "Use for render images"))
+        #lineEdit_width
         self.ui.lineEdit_width.setToolTip(
                     QT_TRANSLATE_NOOP("SunDialog",
                     "Set the image width in pixels\n"
                     "Use for render images"))
+        #label_h
         self.ui.label_h.setText(
                     QT_TRANSLATE_NOOP("SunDialog",
                     "h:"))
+        #lineEdit_height
         self.ui.lineEdit_height.setToolTip(
                     QT_TRANSLATE_NOOP("SunDialog",
                     "Set the image height in pixels\n"
                     "Use for render images"))
-        self.ui.checkBox_Save_to.setToolTip(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Enable it to save the images created"))
+        #checkBox_Save_to
         self.ui.checkBox_Save_to.setText(
                     QT_TRANSLATE_NOOP("SunDialog",
                     "Save"))
-        self.ui.checkBox_sun_light_config.setToolTip(
+        self.ui.checkBox_Save_to.setToolTip(
                     QT_TRANSLATE_NOOP("SunDialog",
-                    "Enable it to view and adjust representations \n"
-                    "of the sun and its path."))
-        self.ui.checkBox_sun_light_config.setText(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Sun light and diagram configurations"))
-        self.ui.checkBox_Sun_path_animation.setToolTip(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Enable the sun path animation"))
+                    "Enable it to save the images created"))
+        #checkBox_Sun_path_animation
         self.ui.checkBox_Sun_path_animation.setText(
                     QT_TRANSLATE_NOOP("SunDialog",
                     "Sun path animation"))
-        self.ui.checkBox_Sun_path_diagram.setToolTip(
+        self.ui.checkBox_Sun_path_animation.setToolTip(
                     QT_TRANSLATE_NOOP("SunDialog",
-                    "It is necessary to have an Arch Site object\n"
-                    "to enable the sun path diagram.\n"
-                    "For Color 3D view shadows, leave it disabled."))
-        self.ui.checkBox_Sun_path_diagram.setText(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Sun path diagram (Arch Site)"))
-        self.ui.label_radius.setText(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Radius:"))
-        self.ui.label_Distance.setText(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Distance:"))
-        self.ui.label_Position.setToolTip(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Adjust the center position according to the project"))
-        self.ui.label_Position.setText(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Center"))
-        self.ui.label_Color_2.setText(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Color:"))
-        self.ui.colorButtonTop_2.setToolTip(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Choose the color of the sun path diagram"))
-        self.ui.checkBox_Sun_light_representation.setToolTip(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Enable the sun light representation"))
-        self.ui.checkBox_Sun_light_representation.setText(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Sun light"))
-        self.ui.label_Ray_representation.setText(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Ray representation:"))
-        self.ui.checkBox_Ray_representation.setText(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Visible"))
-        self.ui.label_Color.setText(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Color:"))
-        self.ui.colorButtonTop.setToolTip(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Choose the color of the sunlight representation"))
+                    "Enable the sun path animation"))
+        #label_1_From_2
         self.ui.label_1_From_2.setText(
                     QT_TRANSLATE_NOOP("SunDialog",
                     "Time from:"))
-        self.ui.label_1_Interval.setText(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Interval:"))
-        self.ui.label_2_Fps.setText(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Fps:"))
+        #timeEdit_1_From
         self.ui.timeEdit_1_From.setToolTip(
                     QT_TRANSLATE_NOOP("SunDialog",
                     "Adjust the time for the beginning of the sun path"))
+        #label_1_To_2
         self.ui.label_1_To_2.setText(
                     QT_TRANSLATE_NOOP("SunDialog",
                     "to:"))
+        #timeEdit_1_To
         self.ui.timeEdit_1_To.setToolTip(
                     QT_TRANSLATE_NOOP("SunDialog",
                     "Adjust the time for the end of the sun path"))
+        #checkBox_sunrise_sunset
+        self.ui.checkBox_sunrise_sunset.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Sunrise-Sunset"))
         self.ui.checkBox_sunrise_sunset.setToolTip(
                     QT_TRANSLATE_NOOP("SunDialog",
                     "Enable it to get the sunrise and sunset values, "
                     "then hit Apply."))
-        self.ui.checkBox_sunrise_sunset.setText(
+        #label_1_Interval
+        self.ui.label_1_Interval.setText(
                     QT_TRANSLATE_NOOP("SunDialog",
-                    "Sunrise-Sunset"))
+                    "Interval:"))
+        #timeEdit_1_Interval
         self.ui.timeEdit_1_Interval.setToolTip(
                     QT_TRANSLATE_NOOP("SunDialog",
                     "Adjust the interval between each step of the solar path.\n"
                     "Must not be zero."))
-        self.ui.checkBox_2_Recompute.setToolTip(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Enable it if you need to animate objects as well"))
+        #checkBox_2_Recompute
         self.ui.checkBox_2_Recompute.setText(
                     QT_TRANSLATE_NOOP("SunDialog",
                     "Recompute"))
+        self.ui.checkBox_2_Recompute.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Enable it if you need to animate objects as well"))
+        #label_2_Fps
+        self.ui.label_2_Fps.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Fps:"))
+        #lineEdit_2_Fps
         self.ui.lineEdit_2_Fps.setToolTip(
                     QT_TRANSLATE_NOOP("SunDialog",
                     "Enter the frames per second of the solar path animation"))
+        #label_Frames
         self.ui.label_Frames.setText(
                     QT_TRANSLATE_NOOP("SunDialog",
                     "Frames:"))
+        #lineEdit_Frames
         self.ui.lineEdit_Frames.setToolTip(
                     QT_TRANSLATE_NOOP("SunDialog",
                     "Show the resulting total frames"))
-        self.ui.groupBox_sun_position.setToolTip(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Set all data for sun position"))
-        self.ui.groupBox_sun_position.setTitle(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Sun position"))
-        self.ui.groupBox_results.setToolTip(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "These are the results of the adjustments made"))
-        self.ui.groupBox_results.setTitle(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Results:"))
-        self.ui.label_5_Sunrise.setText(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Sunrise:"))
-        self.ui.label_5_Noon.setText(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Noon:"))
-        self.ui.label_5_Sunset.setText(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Sunset:"))
-        self.ui.label_5_Altitude.setText(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Altitude:"))
-        self.ui.label_5_Azimuth.setText(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Azimuth:"))
-        self.ui.label_5_Day_hours.setText(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Day hours:"))
-        self.ui.label_4_Date_and_time.setToolTip(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Indicate the date and time \n"
-                    "of the sun's position"))
-        self.ui.label_4_Date_and_time.setText(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Date and time:"))
-        self.ui.radioButton_2_Location.setToolTip(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Activate this button to adjust \n"
-                    "the sun position for a specific location"))
-        self.ui.radioButton_2_Location.setText(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Location:"))
-        self.ui.label_2_City.setText(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "City:"))
-        self.ui.label_2_Country.setText(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Country:"))
-        self.ui.label_2_Latitude.setText(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Latitude:"))
-        self.ui.label_2_Longitude.setText(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Longitude:"))
-        self.ui.label_2_Elevation.setText(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Elevation:"))
-        self.ui.label_2_Time_zone.setText(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Time zone:"))
-        self.ui.label_3_North_angle.setToolTip(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Indicate the north angle"))
-        self.ui.label_3_North_angle.setText(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "North angle:"))
-        self.ui.label_4_Equinoxes_Solstices.setToolTip(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Consult the equinoxes and solstices \n"
-                    "in the next links"))
-        self.ui.label_4_Equinoxes_Solstices.setText(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Equin./Solst.:"))
-        self.ui.checkBox_DaylightSaving.setToolTip(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Enable it for daylight saving periods"))
-        self.ui.checkBox_DaylightSaving.setText(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "DaylightSaving"))
-        self.ui.radioButton_1_epw_file.setToolTip(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Enable this button to automatically \n"
-                    "adjust the sun position for a location"))
-        self.ui.radioButton_1_epw_file.setText(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "epw file:"))
-        self.ui.label_1_Get_epw_file.setToolTip(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Click the link to get the epw file"))
-        self.ui.label_1_Get_epw_file.setText(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Get epw file:"))
-        self.ui.label_1_epw_map_link.setToolTip(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Click to download the epw file"))
-        self.ui.label_1_epw_path.setToolTip(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "After downloading the epw file, \n"
-                    "indicate its path on your machine"))
-        self.ui.label_1_epw_path.setText(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "epw file path:"))
-        self.ui.lineEdit_1_epw_path.setToolTip(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "The epw file path on your machine"))
-        self.ui.toolButton_1_epw_path.setToolTip(
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Indicate the path of the epw file"))
+        #pushButton_Apply
         self.ui.pushButton_Apply.setText(
                     QT_TRANSLATE_NOOP("SunDialog",
                     "Apply"))
@@ -514,7 +576,6 @@ class SunConfigurationDialog(QtWidgets.QDialog):
                 self.ui.label_image_w_h.setEnabled(True)
                 self.ui.label_h.setEnabled(True)
                 self.ui.checkBox_Save_to.setEnabled(True)
-
             except:
                 self.ui.lineEdit_width.setEnabled(False)
                 self.ui.lineEdit_height.setEnabled(False)
@@ -539,7 +600,7 @@ class SunConfigurationDialog(QtWidgets.QDialog):
     # Connection dialog x properties
     def get_properties_data(self):
 
-        """Show the dialog with initial data"""
+        """Get data from sun properties and send then to dialog"""
 
         try:
             obj = FreeCAD.ActiveDocument.SunProperties
@@ -589,13 +650,12 @@ class SunConfigurationDialog(QtWidgets.QDialog):
                 self.ui.lineEdit_Distance.setText(str(int(SD.radius)))
             else:
                 self.ui.lineEdit_Distance.setText(str(int(obj.Distance)))
-
         except:
             print ("Get properties: Sun light representation not changed")
         try:
             obj = FreeCAD.ActiveDocument.SunProperties
             # Sun path diagram
-            sp.get_diagram_from_site()
+            sp.get_diagram_from_site() #get diagram from Site
             self.ui.checkBox_Sun_path_diagram.setChecked(
                                               obj.SunPathDiagram)
             try:
@@ -666,7 +726,7 @@ class SunConfigurationDialog(QtWidgets.QDialog):
 
     def save_to_propeties(self):
 
-        """Save data to properties"""
+        """Save data from dialog to sun properties"""
 
         try:
             obj = FreeCAD.ActiveDocument.SunProperties
@@ -690,7 +750,7 @@ class SunConfigurationDialog(QtWidgets.QDialog):
             # North angle
             obj.North = float(self.ui.lineEdit_3_North_angle.text())
         except:
-            print ("Save properties: "
+            print ("Save properties: \n"
                    "North angle properties not changed from dialog")
         try:
             obj = FreeCAD.ActiveDocument.SunProperties
@@ -704,7 +764,7 @@ class SunConfigurationDialog(QtWidgets.QDialog):
             obj.Min = int(time_string2[3:5])
             obj.DaylightSaving = self.ui.checkBox_DaylightSaving.isChecked()
         except:
-            print ("Save properties: "
+            print ("Save properties: \n"
                    "Date and time properties not changed from dialog")
         try:
             obj = FreeCAD.ActiveDocument.SunProperties
@@ -721,7 +781,7 @@ class SunConfigurationDialog(QtWidgets.QDialog):
                          int(string_rgb[2])/255)
             obj.SunLightColor = rgb_color
         except:
-            print ("Save properties: "
+            print ("Save properties: \n"
                    "Sun light representation properties not changed from dialog")
         try:
             obj = FreeCAD.ActiveDocument.SunProperties
@@ -737,7 +797,7 @@ class SunConfigurationDialog(QtWidgets.QDialog):
                           int(string_rgb2[2])/255)
             obj.DiagColor = rgb_color2
         except:
-            print ("Save properties: "
+            print ("Save properties: \n"
                    "Sun path diagram properties not changed from dialog")
         try:
             obj = FreeCAD.ActiveDocument.SunProperties
@@ -758,7 +818,7 @@ class SunConfigurationDialog(QtWidgets.QDialog):
             obj.Height = int(self.ui.lineEdit_height.text())
             obj.Width = int(self.ui.lineEdit_width.text())
         except:
-            print ("Save properties: "
+            print ("Save properties: \n"
                    "Sun_path_animation properties not changed from dialog")
         try:
             obj = FreeCAD.ActiveDocument.SunProperties

@@ -2208,7 +2208,7 @@ in the next links</string>
                      </property>
                      <property name="font">
                       <font>
-                       <pointsize>11</pointsize>
+                       <pointsize>10</pointsize>
                        <italic>false</italic>
                       </font>
                      </property>

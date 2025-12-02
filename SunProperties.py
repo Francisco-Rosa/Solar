@@ -552,7 +552,7 @@ def activated_sun_properties():
                                     'To configure it, '
                                     'make the adjustments in its properties window.') + '\n')
 
-def autofill_from_epw2():
+def autofill_from_epw2(obj = None):
 
     """Get the EPW file path from the properties window"""
 
@@ -593,7 +593,7 @@ def autofill_from_epw2():
                                      f"Could not read EPW file:\n{e}" + '\n'))
         return
 
-def get_sun_position():
+def get_sun_position(obj = None):
 
     """Compute the sun's position (its altitude, azimuth, and coordinates)
     for a given location and time using ladybug-core to orient the shadows'
@@ -722,7 +722,7 @@ def get_sun_position():
     else:
         print("Invalid value for minutes")
 
-def create_sun_representation():
+def create_sun_representation(obj = None):
 
     """
     Create sun and ray representation
@@ -784,7 +784,7 @@ def create_sun_representation():
             ray_1.Visibility = False
         FreeCAD.ActiveDocument.recompute()
 
-def update_sun_representation():
+def update_sun_representation(obj = None):
 
     """
     Update sun and ray representations
@@ -837,7 +837,7 @@ def update_sun_representation():
         FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP(
             'SunProperties', 'There is no sun ray to update!') + '\n')
 
-def get_diagram_from_site():
+def get_diagram_from_site(obj = None):
 
     """Get solar diagram path from Arch Site object"""
 
@@ -852,7 +852,7 @@ def get_diagram_from_site():
     except:
         pass
 
-def send_diagram_to_site():
+def send_diagram_to_site(obj = None):
 
     """Send data to solar diagram path of Arch Site object"""
 
@@ -877,7 +877,46 @@ def send_diagram_to_site():
         print("Site diagram was not updated")
         pass
 
-def save_image():
+def send_data_to_sky_domes(obj = None, SD = None):
+
+    """Send data to sky domes"""
+
+    obj = FreeCAD.ActiveDocument.SunProperties
+    if SD is not None and obj.sky_domes is True:
+        obj1 = SD
+        print (f"send data to sky domes: SD = {SD.Name}")
+    else:
+        print (f"send data to sky domes: SD = {SD}")
+        return
+    try:
+        obj1.epw_path = obj.epw_path
+        obj1.position = obj.DiagPosition
+        obj1.radius = float(obj.Distance)
+        obj1.north = obj.North
+        obj1.start_year = obj.start_year
+        obj1.end_year = obj.end_year
+        obj1.start_month = obj.start_month
+        obj1.end_month = obj.end_month
+        obj1.start_day = obj.start_day
+        obj1.end_day = obj.end_day
+        obj1.start_hour = obj.start_hour
+        obj1.end_hour =  obj.end_hour
+        obj1.start_min = obj.start_min
+        obj1.end_min = obj.end_min
+        obj1.timestep = obj.timestep
+        obj1.leap_year = obj.leap_year
+        obj1.model = obj.model
+        obj1.units = obj.units
+        obj1.sky_domes = obj.sky_domes
+        obj1.Group[0].Visibility = obj.sky_domes
+        obj1.direct_diffuse_domes = obj.direct_diffuse
+        obj1.Group[1].Visibility = obj.sky_domes and obj1.direct_diffuse_domes
+        obj1.Group[2].Visibility = obj.sky_domes and obj1.direct_diffuse_domes
+        obj1.Group[3].Visibility = obj.sky_domes
+    except Exception:
+        print("Send data: sky domes was not updated")
+
+def save_image(obj = None):
 
     """Save image"""
 
