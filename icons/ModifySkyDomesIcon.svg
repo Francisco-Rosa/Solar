@@ -24,11 +24,11 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="2.0180311"
-     inkscape:cx="51.287614"
-     inkscape:cy="0.74329875"
-     inkscape:window-width="1845"
-     inkscape:window-height="1009"
+     inkscape:zoom="8.0721244"
+     inkscape:cx="25.705749"
+     inkscape:cy="52.588387"
+     inkscape:window-width="3749"
+     inkscape:window-height="2089"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -9643,8 +9643,8 @@
       </g>
     </g>
     <path
-       style="fill:none;stroke:#008000;stroke-width:15.2119;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 75.74584,27.272013 87.766322,58.629796 145.25557,6.8894622"
+       style="fill:none;stroke:#008000;stroke-width:18.9742;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 63.05443,39.443921 78.047858,78.557215 149.75554,14.02029"
        id="path858-3"
        inkscape:connector-curvature="0" />
     <text
@@ -9654,7 +9654,7 @@
        style="font-size:40px;line-height:20;font-family:sans-serif;white-space:pre;shape-inside:url(#rect21984)"><tspan
          x="70.994141"
          y="466.91992"
-         id="tspan3796">X</tspan></text>
+         id="tspan2743">X</tspan></text>
     <g
        id="g1775"
        transform="matrix(0.58391905,0,0,0.58391905,167.5204,165.30537)" />

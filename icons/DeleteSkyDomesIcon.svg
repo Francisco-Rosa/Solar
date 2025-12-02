@@ -25,10 +25,10 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="5.594842"
-     inkscape:cx="43.343494"
+     inkscape:cx="43.52223"
      inkscape:cy="41.913605"
-     inkscape:window-width="1845"
-     inkscape:window-height="1009"
+     inkscape:window-width="3749"
+     inkscape:window-height="2089"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -9644,7 +9644,7 @@
     </g>
     <g
        id="g8516"
-       transform="matrix(3.0089058,0,0,3.0089058,-8.5845888,-47.807755)"
+       transform="matrix(2.3326922,0,0,2.3326922,13.463379,-37.848377)"
        style="stroke-width:6.29671;stroke-miterlimit:4;stroke-dasharray:none">
       <path
          style="fill:none;stroke:#ff0000;stroke-width:6.29671;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -9662,6 +9662,6 @@
        style="font-size:40px;line-height:20;font-family:sans-serif;white-space:pre;shape-inside:url(#rect21984)"><tspan
          x="70.994141"
          y="466.91992"
-         id="tspan4750">X</tspan></text>
+         id="tspan2749">X</tspan></text>
   </g>
 </svg>
