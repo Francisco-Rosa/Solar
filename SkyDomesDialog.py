@@ -483,7 +483,7 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
     # Connection dialog x sky domes properties
     def get_properties_data(self):
 
-        """Get data from sky domes properties and send then to dialog"""
+        """Get data from sky domes properties and send them to dialog"""
 
         from SkyDomes import SD, SD_NEW
         if SD is not None:
