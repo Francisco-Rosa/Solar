@@ -50,7 +50,6 @@ class Solar(Workbench):
         import SunPathAnimation
         import SunDialog
         import SkyDomes
-        #import SunAnalysis
 
         translate = FreeCAD.Qt.translate
 
@@ -59,12 +58,7 @@ class Solar(Workbench):
                        'StopSunPathAnimation',
                        'CreateSkyDomes',
                        'ModifySkyDomes',
-                       'DeleteSkyDomes',
-                       #'CreateSunAnalysis',
-                       #'SelectStudyObjects',
-                       #'SelectStudyContext',
-                       #'ModifySunAnalysis',
-                       #'DeleteSunAnalysis'
+                       'DeleteSkyDomes'
                        ] # a list of command names created in the line above
 
         default_title1 = translate("InitGui", "Solar tools")
