@@ -600,7 +600,7 @@ class SunConfigurationDialog(QtWidgets.QDialog):
     # Connection dialog x properties
     def get_properties_data(self):
 
-        """Get data from sun properties and send then to dialog"""
+        """Get data from sun properties and send them to dialog"""
 
         try:
             obj = FreeCAD.ActiveDocument.SunProperties
