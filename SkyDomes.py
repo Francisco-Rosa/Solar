@@ -453,7 +453,7 @@ def select_sky_domes():
 # B. Get data
 #=================================================
 
-def get_sky_dome_values(epw_path = "",
+def get_sky_matrix_dome_values(epw_path = "",
                         period = None,
                         sky_dome_model = "",
                         sky_dome_units = "",
@@ -477,7 +477,7 @@ def get_sky_dome_values(epw_path = "",
                                   high_density = True)
     # Irradiance
     if sky_dome_units == "Irradiance (W/m²)":
-        sky_dome_obj = lbc.get_sky_domes_values(
+        sky_dome_obj = lbc.get_sky_dome_values(
                             sky_matrix = sky_matrix_values[0],
                             plot_irradiance = True,
                             )
@@ -488,7 +488,7 @@ def get_sky_dome_values(epw_path = "",
         total_values = sky_matrix_values[1]
         direct_values = sky_matrix_values[2]
         diffuse_values = sky_matrix_values[3]
-        sky_dome_obj = lbc.get_sky_domes_values(
+        sky_dome_obj = lbc.get_sky_dome_values(
                         sky_matrix = sky_matrix_values[0])
 
     #vector values
@@ -1045,7 +1045,7 @@ def create_sky_domes():
                                )
     # Getting values
     print ("getting sky domes values...")
-    sky_dome_values = get_sky_dome_values(epw_path,
+    sky_dome_values = get_sky_matrix_dome_values(epw_path,
                                           period,
                                           sky_dome_model = SD.model,
                                           sky_dome_units = SD.units,
@@ -1275,7 +1275,7 @@ def update_values(epw_path = None, period = None):
         FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SkyDomes",
             f"Update values: Could not get Sky domes:\n{e}") + '\n')
         return
-    sky_dome_values = get_sky_dome_values(epw_path,
+    sky_dome_values = get_sky_matrix_dome_values(epw_path,
                         period,
                         sky_dome_model = SD.model,
                         sky_dome_units = SD.units,
