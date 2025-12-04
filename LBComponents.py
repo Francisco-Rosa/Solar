@@ -74,7 +74,7 @@ def get_sky_matrix_values(epw_path = "",
 # 2. Sky dome
 #=================================================
 
-def get_sky_domes_values(sky_matrix = None,
+def get_sky_dome_values(sky_matrix = None,
                          legend_parameters = None,
                          plot_irradiance = False,
                          center_point = Point3D(x=0,y=0,z=0),
