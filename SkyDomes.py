@@ -184,13 +184,13 @@ class SkyDomes:
                             "end_day", "08_Analysis_period",
                             QT_TRANSLATE_NOOP("App::Property",
                             "The final day of the analysis period")
-                            ).end_day = 30
+                            ).end_day = 31
         if not "start_hour" in pl:
             obj.addProperty("App::PropertyInteger",
                             "start_hour", "08_Analysis_period",
                             QT_TRANSLATE_NOOP("App::Property",
                             "The initial hour of the analysis period")
-                            ).start_hour = 1
+                            ).start_hour = 0
         if not "end_hour" in pl:
             obj.addProperty("App::PropertyInteger",
                             "end_hour", "08_Analysis_period",

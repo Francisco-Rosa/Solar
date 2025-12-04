@@ -547,7 +547,7 @@ def get_modify_legend_bar(bar_obj = None,
         apply_color_faces(obj = bar_obj,
                           face_colors = bar_colors,
                           transparency = 0)
-    #delete texts if seg count is differente
+    #delete texts if seg count is different
     leg_text_deleted = False
     if bar_obj is not None and len(text_leg_group.Group) != (seg_count + 1):
         for text in text_leg_group.Group:
@@ -592,7 +592,6 @@ def get_modify_legend_bar(bar_obj = None,
             doc.getObject(leg_text_group.Name).addObject(text_title)
         else:
             doc.getObject(text_leg_group.Name).addObject(text_title)
-        print(text_location)
     else:
         text_title = text_leg_group.Group[0]
         text_title.Text = text1

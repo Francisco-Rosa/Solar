@@ -696,7 +696,7 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
                 sd.modify_sky_domes(forms = dif_forms, values = dif_values)
                 print("updated sky domes data!")
         else:
-            print ("Compare sky domes data: Can not get data from sky domes!")
+            print("Compare sky domes data: Can not get data from sky domes!")
 
     def on_button_apply_clicked(self):
 

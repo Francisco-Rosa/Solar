@@ -1383,7 +1383,7 @@ dome according to the project (mm).</string>
                          <string>Indicate the start time of the analysis period.</string>
                         </property>
                         <property name="minimum">
-                         <number>1</number>
+                         <number>0</number>
                         </property>
                         <property name="maximum">
                          <number>23</number>
