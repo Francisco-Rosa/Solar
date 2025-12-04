@@ -518,7 +518,7 @@ def get_sky_matrix_dome_values(epw_path = "",
 # C. Sky domes
 #=================================================
 
-def get_sky_domes_forms(center_dome = None,
+def get_sky_dome_forms(center_dome = None,
                         radius = None,
                         north = None,
                         sky_dome_model = ""
@@ -774,7 +774,7 @@ def get_sky_domes_forms(center_dome = None,
     FreeCAD.ActiveDocument.recompute()
     return sky_domes
 
-def modify_sky_domes_forms(sky_domes_group = None,
+def modify_sky_dome_forms(sky_domes_group = None,
                            center_dome = None,
                            radius = None,
                            north = None,
@@ -1028,7 +1028,7 @@ def create_sky_domes():
                             )
     # Getting sky domes
     print ("getting sky domes...")
-    sky_domes = get_sky_domes_forms(center_dome = SD.position,
+    sky_domes = get_sky_dome_forms(center_dome = SD.position,
                               radius = float(SD.radius),
                               north = float(SD.north),
                               sky_dome_model = SD.model
@@ -1202,7 +1202,7 @@ def update_forms():
         FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SkyDomes",
             f"Update forms: Could not get Sky domes:\n{e}") + '\n')
         return
-    modify_sky_domes_forms(sky_domes_group = SD,
+    modify_sky_dome_forms(sky_domes_group = SD,
                            center_dome = SD.position,
                            radius = float(SD.radius),
                            north = float(SD.north),
@@ -1305,7 +1305,7 @@ def update_values(epw_path = None, period = None):
                               )
     color_rgb_leg = legend[1]
     print ("modifying sky domes forms...")
-    modify_sky_domes_forms(sky_domes_group = SD,
+    modify_sky_dome_forms(sky_domes_group = SD,
                            center_dome = SD.position,
                            radius = float(SD.radius),
                            north = float(SD.north),
