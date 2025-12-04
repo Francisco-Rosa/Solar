@@ -9,57 +9,53 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="66"/>
+        <location filename="../SkyDomes.py" line="64"/>
         <source>City</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="72"/>
+        <location filename="../SkyDomes.py" line="70"/>
         <source>Metadata</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="79"/>
+        <location filename="../SkyDomes.py" line="77"/>
         <source>Sky dome model</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="87"/>
+        <location filename="../SkyDomes.py" line="85"/>
         <source>Sky domes units</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="96"/>
-        <source>True, for using sky domes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="102"/>
+        <location filename="../SkyDomes.py" line="94"/>
         <source>Visualize direct and diffuse domes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="108"/>
-        <source>Skyd dome total values</source>
+        <location filename="../SkyDomes.py" line="100"/>
+        <source>Sky dome total values</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="114"/>
-        <source>Skyd ome direct values</source>
+        <location filename="../SkyDomes.py" line="106"/>
+        <source>Sky dome direct values</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="120"/>
+        <location filename="../SkyDomes.py" line="112"/>
         <source>sky dome diffuse values</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="126"/>
-        <source>Visualize the center vectors of each patch dome</source>
+        <location filename="../SkyDomes.py" line="118"/>
+        <source>Visualize the center points (vectors) 
+of each patch dome</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="132"/>
+        <location filename="../SkyDomes.py" line="125"/>
         <source>Vectors values of each patch dome</source>
         <translation type="unfinished"></translation>
     </message>
@@ -69,68 +65,96 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="146"/>
+        <location filename="../SkyDomes.py" line="139"/>
         <source>Sky domes radius (mm)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="153"/>
+        <location filename="../SkyDomes.py" line="146"/>
         <source>Center position of the sky dome total in mm (x, y, z)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="160"/>
+        <location filename="../SkyDomes.py" line="153"/>
         <source>The initial year of the analysis period</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="166"/>
+        <location filename="../SkyDomes.py" line="159"/>
         <source>The final year of the analysis period</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="172"/>
+        <location filename="../SkyDomes.py" line="165"/>
         <source>The initial month of the analysis period</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="178"/>
+        <location filename="../SkyDomes.py" line="171"/>
         <source>The final month of the analysis period</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="184"/>
+        <location filename="../SkyDomes.py" line="177"/>
         <source>The initial day of the analysis period</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="190"/>
+        <location filename="../SkyDomes.py" line="183"/>
         <source>The final day of the analysis period</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="196"/>
+        <location filename="../SkyDomes.py" line="189"/>
         <source>The initial hour of the analysis period</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="202"/>
+        <location filename="../SkyDomes.py" line="195"/>
         <source>The final hour of the analysis period</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="208"/>
+        <location filename="../SkyDomes.py" line="201"/>
         <source>Timestep per hour</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="216"/>
+        <location filename="../SkyDomes.py" line="209"/>
         <source>Leap year</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="222"/>
+        <location filename="../SkyDomes.py" line="215"/>
         <source>Sky domes transparency</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomes.py" line="222"/>
+        <source>Sun analysis legend title.
+It&apos;s read-only. It&apos;s get from the units.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomes.py" line="229"/>
+        <source>Base left position of legend bar in mm (x, y, z).
+It is read only.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomes.py" line="236"/>
+        <source>Width of legend bar in mm (x, y, z).
+It is read only.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomes.py" line="243"/>
+        <source>Number of segments of legend bar (default = 11).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomes.py" line="249"/>
+        <source>Choose the legend color set.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -368,352 +392,801 @@ or sun path animation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InitGui.py" line="88"/>
+        <location filename="../InitGui.py" line="94"/>
         <source>Solar tools</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InitGui.py" line="74"/>
+        <location filename="../InitGui.py" line="80"/>
         <source>Solar Workbench loaded</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LBComponents</name>
+    <message>
+        <location filename="../LBComponents.py" line="234"/>
+        <source>N</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LBComponents.py" line="236"/>
+        <source>E</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LBComponents.py" line="238"/>
+        <source>S</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LBComponents.py" line="240"/>
+        <source>W</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LBComponents.py" line="266"/>
+        <source>Compass_legend_total</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LBComponents.py" line="270"/>
+        <source>Compass_legend_direct</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LBComponents.py" line="274"/>
+        <source>Compass_legend_diffuse</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LBComponents.py" line="342"/>
+        <source>Compass_circles_total</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LBComponents.py" line="349"/>
+        <source>Compass_circles_direct</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LBComponents.py" line="356"/>
+        <source>Compass_circles_diffuse</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LBComponents.py" line="526"/>
+        <source>Legend_bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LBComponents.py" line="564"/>
+        <source>Legend_bar_</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LBComponents.py" line="570"/>
+        <source>Legend_text_</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LBComponents.py" line="651"/>
+        <source>Total {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LBComponents.py" line="656"/>
+        <source>Direct {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LBComponents.py" line="661"/>
+        <source>Diffuse {}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LBComponents.py" line="702"/>
+        <source>Legend_total</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LBComponents.py" line="710"/>
+        <source>Legend_direct</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LBComponents.py" line="716"/>
+        <source>Legend_diffuse</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LBComponents.py" line="721"/>
+        <source>Main_Legend_Total</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LBComponents.py" line="726"/>
+        <source>Main_Legend_Direct</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LBComponents.py" line="731"/>
+        <source>Main_Legend_Diffuse</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>SkyDomes</name>
     <message>
-        <location filename="../SkyDomes.py" line="249"/>
+        <location filename="../SkyDomes.py" line="310"/>
         <source>CreateSkyDomes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="251"/>
+        <location filename="../SkyDomes.py" line="312"/>
         <source>Create Sky Domes. 
 Open the dialog and configure its data.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="274"/>
+        <location filename="../SkyDomes.py" line="335"/>
         <source>ModifySkyDomes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="276"/>
+        <location filename="../SkyDomes.py" line="337"/>
         <source>Modify Sky Domes. 
-Select a SkyDomes group, click this button to open the dialog and modify its configuration.</source>
+Select a SkyDomes group, click this button to 
+open the dialog and modify its configuration. 
+Please note, this only works if the original 
+group (folder) structure is preserved! 
+</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="304"/>
+        <location filename="../SkyDomes.py" line="367"/>
         <source>DeleteSkyDomes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="306"/>
+        <location filename="../SkyDomes.py" line="369"/>
         <source>Delete Sky Domes. 
 Select a SkyDomes group to delete.
-Be careful, you will not be able to undo this action.!</source>
+Be careful, you will not be able to 
+undo this action.!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="355"/>
+        <location filename="../SkyDomes.py" line="414"/>
         <source>To modify a set of sky domes, first you must select one!
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="371"/>
+        <location filename="../SkyDomes.py" line="430"/>
         <source>To delete a set of sky domes, first you must select one!
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="387"/>
+        <location filename="../SkyDomes.py" line="446"/>
         <source>Warning: The object selected is not a SkyDomes!
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="390"/>
+        <location filename="../SkyDomes.py" line="449"/>
         <source>There is no selection!
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="411"/>
-        <source>Attempting to get sky domes values: Skydomes object could not be found!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="419"/>
-        <source>Getting values: to use EPW, please provide a valid file path.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="422"/>
-        <source>Could not get epw!
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="560"/>
-        <source>Sky domes geometry: Could not get sky domes properties!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="590"/>
+        <location filename="../SkyDomes.py" line="554"/>
         <source>SD_constructions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="601"/>
+        <location filename="../SkyDomes.py" line="565"/>
         <source>Model_Tregenza</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="614"/>
+        <location filename="../SkyDomes.py" line="578"/>
         <source>Model_Reinhart</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="729"/>
+        <location filename="../SkyDomes.py" line="693"/>
         <source>SD_Tregenza</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="736"/>
+        <location filename="../SkyDomes.py" line="700"/>
         <source>SD_Reinhart</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="754"/>
+        <location filename="../SkyDomes.py" line="718"/>
         <source>Sky_Dome_Total</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="771"/>
+        <location filename="../SkyDomes.py" line="737"/>
         <source>Sky_Dome_Direct</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="789"/>
+        <location filename="../SkyDomes.py" line="756"/>
         <source>Sky_Dome_Diffuse</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="822"/>
-        <source>Modify sky domes: Could not get sky domes properties!</source>
+        <location filename="../SkyDomes.py" line="890"/>
+        <source>Vectors_TR</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="880"/>
-        <source>Apply sky dome values: Could not get sky domes properties!</source>
+        <location filename="../SkyDomes.py" line="895"/>
+        <source>Vectors_RE</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="938"/>
-        <source>Get center vectors: Could not get sky domes properties!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="948"/>
-        <source>SD_Vectors_TR</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="953"/>
-        <source>SD_Vectors_RE</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="979"/>
-        <source>Modify center vectors: Could not get sky domes properties!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="1023"/>
-        <source>Get compass: Could not get sky domes properties!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="1042"/>
-        <source>N</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="1044"/>
-        <source>E</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="1046"/>
-        <source>S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="1048"/>
-        <source>W</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="1074"/>
-        <source>Compass_legend_total</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="1078"/>
-        <source>Compass_legend_direct</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="1082"/>
-        <source>Compass_legend_diffuse</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="1152"/>
-        <source>Compass_circles_total</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="1159"/>
-        <source>Compass_circles_direct</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="1166"/>
-        <source>Compass_circles_diffuse</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="1195"/>
-        <source>Modify compass: Could not get sky domes properties!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="1309"/>
-        <source>Get legend bar: Could not get sky domes properties!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="1319"/>
-        <source>Legend_bar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="1353"/>
-        <source>Sky_Dome_bar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="1434"/>
-        <source>Modify legend bar: Could not get sky domes properties!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="1516"/>
-        <source>Get main legend: Could not get sky domes properties!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="1519"/>
-        <source>Total {}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="1529"/>
-        <source>Direct {}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="1534"/>
-        <source>Diffuse {}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="1552"/>
-        <source>Create main legend: Could not get sky domes properties!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="1581"/>
-        <source>Legend_SD_total</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="1589"/>
-        <source>Legend_SD_direct</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="1595"/>
-        <source>Legend_SD_diffuse</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="1600"/>
-        <source>Legend_Total</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="1605"/>
-        <source>Legend_Direct</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="1610"/>
-        <source>Legend_Diffuse</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="1632"/>
-        <source>Modify main legend: Could not get sky domes properties!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="1691"/>
-        <source>Manage sky dome groups: Could not get sky domes properties!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="1736"/>
+        <location filename="../SkyDomes.py" line="1003"/>
         <source>Create sky domes: Could not get sky domes properties!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="1747"/>
+        <location filename="../SkyDomes.py" line="1165"/>
         <source>To create sky domes you must provide a valid epw file!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="1752"/>
+        <location filename="../SkyDomes.py" line="1169"/>
         <source>To create sky domes, you need to indicate an epw file!
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="1804"/>
-        <source>Sky domes were created! To configure it, make the adjustments in its properties window.</source>
+        <location filename="../SkyDomes.py" line="1137"/>
+        <source>Sky domes were created! To configure it, 
+do not modify the treir original structure 
+of groups (folders)! 
+Make the adjustments in its properties window.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="1842"/>
+        <location filename="../SkyDomes.py" line="1157"/>
+        <source>Modify sky domes: Could not get sky domes properties!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomes.py" line="1202"/>
         <source>Update forms: Could not get Sky domes:
 {e}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="1870"/>
+        <location filename="../SkyDomes.py" line="1275"/>
         <source>Update values: Could not get Sky domes:
 {e}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="1892"/>
+        <location filename="../SkyDomes.py" line="1343"/>
         <source>This will delete all main objects from the selected Sky Domes, 
 and you won&apos;t be able to undo it. 
 
 Are you sure you want to delete these Sky Domes? 
 </source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SkyDomesDialog</name>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="54"/>
+        <source>Sky domes configuration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="78"/>
+        <source>Epw/ Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="81"/>
+        <source>Location data get from epw file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="85"/>
+        <source>epw file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="89"/>
+        <source>Get epw file:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="92"/>
+        <source>Click the link to get the epw file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="96"/>
+        <source>Click to download the epw file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="100"/>
+        <source>epw file path:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="103"/>
+        <source>After downloading the epw file, 
+indicate its path on your machine</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="108"/>
+        <source>The epw file path on your machine</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="112"/>
+        <source>Indicate the path of the epw file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="116"/>
+        <source>Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="120"/>
+        <source>City:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="124"/>
+        <source>Country:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="128"/>
+        <source>Latitude:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="132"/>
+        <source>Longitude:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="136"/>
+        <source>Elevation:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="140"/>
+        <source>Time zone:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="144"/>
+        <source>North angle:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="148"/>
+        <source>Indicate the true north.
+Clockwise with zero in 
+the direction of the y-axis</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="154"/>
+        <source>Sky domes configurations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="158"/>
+        <source>Radius:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="162"/>
+        <source>Set the radius of the sky dome (mm).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="166"/>
+        <source>Adjust the x position of the center of the 
+dome according to the project (mm).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="171"/>
+        <source>Adjust the y position of the center of the 
+dome according to the project (mm).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="176"/>
+        <source>Adjust the z position of the center of the 
+dome according to the project (mm).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="181"/>
+        <source>Analysis period</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="184"/>
+        <source>An analysis period between two dates of the year and between certain hours.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="189"/>
+        <source>Date from:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="193"/>
+        <source>Indicate the start date of the analysis period.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="213"/>
+        <source>to:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="201"/>
+        <source>Indicate the end date of the analysis period.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="205"/>
+        <source>Time from:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="209"/>
+        <source>Indicate the start time of the analysis period.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="217"/>
+        <source>Indicate the end time of the analysis period.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="221"/>
+        <source>Timestep</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="225"/>
+        <source>Specify how many times per hour 
+the calculation will be performed. 
+Note that larger numbers will 
+increase the computation time.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="232"/>
+        <source>leap year</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="235"/>
+        <source>Indicate whether the Analysis
+Period represents a leap year.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="240"/>
+        <source>Sky domes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="244"/>
+        <source>Model:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="248"/>
+        <source>Tregenza</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="251"/>
+        <source>Reinhart</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="254"/>
+        <source>Choose between the low-resolution model (Tregenza)
+or high-resolution (Reinhart) one.
+Keep in mind that the Reinhart model can take 
+considerable time to calculate its values.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="261"/>
+        <source>Units:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="265"/>
+        <source>Radiation (kWh/m²)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="268"/>
+        <source>Irradiance (W/m²)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="271"/>
+        <source>Indicate whether the sky dome should be plotted with 
+units of total Radiation (kWh/m²) or 
+average Irradiance (W/m²).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="277"/>
+        <source>Direct and diffuse</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="280"/>
+        <source>Enable it to visualize the direct and diffuse domes values.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="284"/>
+        <source>Center vectors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="287"/>
+        <source>Enable it to visualize the center vector of each dome patch.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="291"/>
+        <source>Transparency</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="295"/>
+        <source>Adjust the transparency of the sky domes.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="299"/>
+        <source>Legend</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="303"/>
+        <source>Color count</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="306"/>
+        <source>Indicate the legend number of colors 
+(default: 11).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="311"/>
+        <source>Color_set:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="315"/>
+        <source>00 - Original Ladybug</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="318"/>
+        <source>01 - Nuanced Ladybug</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="321"/>
+        <source>02 - Multi-colored Ladybug</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="324"/>
+        <source>03 - Ecotect</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="327"/>
+        <source>04 - View Study</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="330"/>
+        <source>05 - Shadow Study</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="333"/>
+        <source>06 - Glare Study</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="336"/>
+        <source>07 - Annual Comfort</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="339"/>
+        <source>08 - Thermal Comfort</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="342"/>
+        <source>09 - Peak Load Balance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="345"/>
+        <source>10 - Heat Sensation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="348"/>
+        <source>11 - Cold Sensation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="351"/>
+        <source>12 - Benefit/Harm</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="354"/>
+        <source>13 - Harm</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="357"/>
+        <source>14 - Benefit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="360"/>
+        <source>15 - Shade Benefit/Harm</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="363"/>
+        <source>16 - Shade Harm</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="366"/>
+        <source>17 - Shade Benefit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="369"/>
+        <source>18 - Energy Balance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="372"/>
+        <source>19 - Energy Balance w/ Storage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="375"/>
+        <source>20 - THERM</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="378"/>
+        <source>21 - Cloud Cover</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="381"/>
+        <source>22 - Black to White</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="384"/>
+        <source>23 - Blue, Green, Red</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="387"/>
+        <source>24 - Multicolored 2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="390"/>
+        <source>25 - Multicolored 3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="393"/>
+        <source>26 - OpenStudio Palette</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="396"/>
+        <source>27 - Cividis (colorblind friendly)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="399"/>
+        <source>28 - Viridis (colorblind friendly)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="402"/>
+        <source>29 - Parula (colorblind friendly)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="405"/>
+        <source>30 - Energy Balance by Face Type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="408"/>
+        <source>31 - Peak Cooling by Face Type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="411"/>
+        <source>32 - Peak Hating by Face Type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="414"/>
+        <source>Choose the legend color set.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="418"/>
+        <source>Apply</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="442"/>
+        <source>Select epw file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="459"/>
+        <source>Warning</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="459"/>
+        <source>Indicate a epw file before close the dialog sky domes!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="555"/>
+        <source>Get properties: There is no SkyDomes group!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="604"/>
+        <source>Save properties: There is no SkyDomes group!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -725,58 +1198,307 @@ Are you sure you want to delete these Sky Domes?
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="103"/>
-        <source>Adjust the other aspects of the solar study here</source>
+        <location filename="../SunDialog.py" line="104"/>
+        <source>Sun position</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="106"/>
-        <source>Sun additional configurations</source>
+        <location filename="../SunDialog.py" line="107"/>
+        <source>Set all data for sun position</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="109"/>
-        <source>Show and/or save image:</source>
+        <location filename="../SunDialog.py" line="111"/>
+        <source>epw file:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="112"/>
-        <source>Image from:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="115"/>
-        <source>Set the image resolution
-Use for render images</source>
+        <location filename="../SunDialog.py" line="114"/>
+        <source>Enable this button to automatically 
+adjust the sun position for a location</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="119"/>
-        <source>Images, w:</source>
+        <source>Get epw file:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="122"/>
+        <source>Click the link to get the epw file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="126"/>
+        <source>Click to download the epw file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="130"/>
+        <source>epw file path:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="133"/>
+        <source>After downloading the epw file, 
+indicate its path on your machine</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="138"/>
+        <source>The epw file path on your machine</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="142"/>
+        <source>Indicate the path of the epw file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="146"/>
+        <source>Location:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="149"/>
+        <source>Activate this button to adjust 
+the sun position for a specific location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="154"/>
+        <source>City:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="158"/>
+        <source>Country:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="162"/>
+        <source>Latitude:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="166"/>
+        <source>Longitude:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="170"/>
+        <source>Elevation:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="174"/>
+        <source>Time zone:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="178"/>
+        <source>North angle:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="181"/>
+        <source>Indicate the true north.
+Clockwise with zero in 
+the direction of the y-axis</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="187"/>
+        <source>Date and time:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="190"/>
+        <source>Indicate the date and time 
+of the sun&apos;s position</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="195"/>
+        <source>Equin./Solst.:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="198"/>
+        <source>Consult the equinoxes and solstices 
+in the next links</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="203"/>
+        <source>DaylightSaving</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="206"/>
+        <source>Enable it for daylight saving periods</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="210"/>
+        <source>Results:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="213"/>
+        <source>These are the results of the adjustments made</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="217"/>
+        <source>Altitude:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="221"/>
+        <source>Azimuth:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="225"/>
+        <source>Day hours:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="229"/>
+        <source>Sunrise:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="233"/>
+        <source>Noon:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="237"/>
+        <source>Sunset:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="241"/>
+        <source>Sun additional configurations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="244"/>
+        <source>Adjust the other aspects of the solar study here</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="248"/>
+        <source>Sun light and diagram configurations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="251"/>
+        <source>Enable it to view and adjust representations 
+of the sun and its path.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="256"/>
+        <source>Radius:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="260"/>
+        <source>Distance:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="264"/>
+        <source>Center</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="267"/>
+        <source>Adjust the center position according to the project</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="271"/>
+        <source>Sun light</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="274"/>
+        <source>Enable the sun light representation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="278"/>
+        <source>Ray representation:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="282"/>
+        <source>Visible</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="303"/>
+        <source>Color:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="290"/>
+        <source>Choose the color of the sunlight representation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="294"/>
+        <source>Sun path diagram (Arch Site)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="297"/>
+        <source>It is necessary to have an Arch Site object
+to enable the sun path diagram.
+For Color 3D view shadows, leave it disabled.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="307"/>
+        <source>Choose the color of the sun path diagram</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="311"/>
+        <source>Show and/or save image:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="315"/>
+        <source>Image from:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="319"/>
         <source>None/Reset</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="125"/>
+        <location filename="../SunDialog.py" line="322"/>
         <source>BW 3D view</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="128"/>
+        <location filename="../SunDialog.py" line="325"/>
         <source>Color 3D view</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="131"/>
+        <location filename="../SunDialog.py" line="328"/>
         <source>Render 3D view</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="134"/>
+        <location filename="../SunDialog.py" line="331"/>
         <source>Select the scene type.
 Use None/Reset to clear the settings.
 Color 3D preview only works in FreeCAD-Link.
@@ -784,403 +1506,156 @@ For Render 3D preview, install Render WB.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="140"/>
+        <location filename="../SunDialog.py" line="338"/>
+        <source>Images, w:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="341"/>
+        <source>Set the image resolution
+Use for render images</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="346"/>
         <source>Set the image width in pixels
 Use for render images</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="144"/>
+        <location filename="../SunDialog.py" line="351"/>
         <source>h:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="147"/>
+        <location filename="../SunDialog.py" line="355"/>
         <source>Set the image height in pixels
 Use for render images</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="151"/>
-        <source>Enable it to save the images created</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="154"/>
+        <location filename="../SunDialog.py" line="360"/>
         <source>Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="157"/>
-        <source>Enable it to view and adjust representations 
-of the sun and its path.</source>
+        <location filename="../SunDialog.py" line="363"/>
+        <source>Enable it to save the images created</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="161"/>
-        <source>Sun light and diagram configurations</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="164"/>
-        <source>Enable the sun path animation</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="167"/>
+        <location filename="../SunDialog.py" line="367"/>
         <source>Sun path animation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="170"/>
-        <source>It is necessary to have an Arch Site object
-to enable the sun path diagram.
-For Color 3D view shadows, leave it disabled.</source>
+        <location filename="../SunDialog.py" line="370"/>
+        <source>Enable the sun path animation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="175"/>
-        <source>Sun path diagram (Arch Site)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="178"/>
-        <source>Radius:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="181"/>
-        <source>Distance:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="184"/>
-        <source>Adjust the center position according to the project</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="187"/>
-        <source>Center</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="208"/>
-        <source>Color:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="193"/>
-        <source>Choose the color of the sun path diagram</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="196"/>
-        <source>Enable the sun light representation</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="199"/>
-        <source>Sun light</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="202"/>
-        <source>Ray representation:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="205"/>
-        <source>Visible</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="211"/>
-        <source>Choose the color of the sunlight representation</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="214"/>
+        <location filename="../SunDialog.py" line="374"/>
         <source>Time from:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="217"/>
-        <source>Interval:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="220"/>
-        <source>Fps:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="223"/>
+        <location filename="../SunDialog.py" line="378"/>
         <source>Adjust the time for the beginning of the sun path</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="226"/>
+        <location filename="../SunDialog.py" line="382"/>
         <source>to:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="229"/>
+        <location filename="../SunDialog.py" line="386"/>
         <source>Adjust the time for the end of the sun path</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="232"/>
-        <source>Enable it to get the sunrise and sunset values, then hit Apply.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="236"/>
+        <location filename="../SunDialog.py" line="390"/>
         <source>Sunrise-Sunset</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="239"/>
+        <location filename="../SunDialog.py" line="393"/>
+        <source>Enable it to get the sunrise and sunset values, then hit Apply.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="398"/>
+        <source>Interval:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="402"/>
         <source>Adjust the interval between each step of the solar path.
 Must not be zero.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="243"/>
-        <source>Enable it if you need to animate objects as well</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="246"/>
+        <location filename="../SunDialog.py" line="407"/>
         <source>Recompute</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="249"/>
+        <location filename="../SunDialog.py" line="410"/>
+        <source>Enable it if you need to animate objects as well</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="414"/>
+        <source>Fps:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunDialog.py" line="418"/>
         <source>Enter the frames per second of the solar path animation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="252"/>
+        <location filename="../SunDialog.py" line="422"/>
         <source>Frames:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="255"/>
+        <location filename="../SunDialog.py" line="426"/>
         <source>Show the resulting total frames</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="258"/>
-        <source>Set all data for sun position</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="261"/>
-        <source>Sun position</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="264"/>
-        <source>These are the results of the adjustments made</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="267"/>
-        <source>Results:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="270"/>
-        <source>Sunrise:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="273"/>
-        <source>Noon:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="276"/>
-        <source>Sunset:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="279"/>
-        <source>Altitude:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="282"/>
-        <source>Azimuth:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="285"/>
-        <source>Day hours:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="288"/>
-        <source>Indicate the date and time 
-of the sun&apos;s position</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="292"/>
-        <source>Date and time:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="295"/>
-        <source>Activate this button to adjust 
-the sun position for a specific location</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="299"/>
-        <source>Location:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="302"/>
-        <source>City:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="305"/>
-        <source>Country:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="308"/>
-        <source>Latitude:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="311"/>
-        <source>Longitude:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="314"/>
-        <source>Elevation:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="317"/>
-        <source>Time zone:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="320"/>
-        <source>Indicate the north angle</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="323"/>
-        <source>North angle:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="326"/>
-        <source>Consult the equinoxes and solstices 
-in the next links</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="330"/>
-        <source>Equin./Solst.:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="333"/>
-        <source>Enable it for daylight saving periods</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="336"/>
-        <source>DaylightSaving</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="339"/>
-        <source>Enable this button to automatically 
-adjust the sun position for a location</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="343"/>
-        <source>epw file:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="346"/>
-        <source>Click the link to get the epw file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="349"/>
-        <source>Get epw file:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="352"/>
-        <source>Click to download the epw file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="355"/>
-        <source>After downloading the epw file, 
-indicate its path on your machine</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="359"/>
-        <source>epw file path:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="362"/>
-        <source>The epw file path on your machine</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="365"/>
-        <source>Indicate the path of the epw file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog.py" line="368"/>
+        <location filename="../SunDialog.py" line="430"/>
         <source>Apply</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="416"/>
+        <location filename="../SunDialog.py" line="478"/>
         <source>Select epw file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="416"/>
+        <location filename="../SunDialog.py" line="478"/>
         <source>EPW Files (*.epw);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="436"/>
+        <location filename="../SunDialog.py" line="498"/>
         <source>Warning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="436"/>
+        <location filename="../SunDialog.py" line="498"/>
         <source>If you want to use EPW, provide a valid file path.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="456"/>
+        <location filename="../SunDialog.py" line="518"/>
         <source>File Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="456"/>
+        <location filename="../SunDialog.py" line="518"/>
         <source>Could not read EPW file:
 {e}</source>
         <translation type="unfinished"></translation>
