@@ -33,20 +33,6 @@ from ladybug.legend import Legend, LegendParameters
 from ladybug_geometry.geometry3d import Point3D
 from ladybug_radiance.visualize.skydome import SkyDome
 from ladybug_radiance.skymatrix import SkyMatrix
-#from ladybug.epw import EPW
-#from ladybug.wea import Wea
-#from ladybug.analysisperiod import AnalysisPeriod
-#from ladybug.header import Header
-#from ladybug.sunpath import Sunpath
-#from ladybug.compass import Compass
-#from ladybug_geometry.geometry2d.pointvector import Point2D, Vector2D
-#from ladybug_geometry.geometry2d.line import LineSegment2D
-#from ladybug_geometry.geometry2d.arc import Arc2D
-#from ladybug_geometry.geometry3d.face import Face3D
-#from ladybug_geometry.geometry3d.pointvector import Vector3D
-#from ladybug_geometry.geometry3d.mesh import Mesh3D
-#from ladybug_radiance.study.directsun import DirectSunStudy
-#from ladybug_radiance.intersection import intersection_matrix, sky_intersection_matrix
 
 #=================================================
 # 1. Sky matrix
@@ -138,7 +124,7 @@ def get_sky_domes_values(sky_matrix = None,
 # 3. Inter matrix and sky inter matrix
 #=================================================
 
-#SunAnalysis.py
+#Future SunAnalysis
 
 #=================================================
 # 4. Color range and others
