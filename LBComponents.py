@@ -144,7 +144,7 @@ def get_face_colors(sun_analysis_results = None,
     color_range = []
     color_range = ColorRange()
     color_range.colors = leg_colors
-    color_range.domain = [min(domain), max(domain)]
+    color_range.domain = [0, max(domain)]
     face_colors = []
     for value in sun_analysis_results:
         color = color_range.color(value)
