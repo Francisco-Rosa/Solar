@@ -1137,7 +1137,7 @@ def create_sky_domes():
     FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP(
                                 'SkyDomes',
                                 'Sky domes were created! To configure it, \n'
-                                'do not modify the treir original structure \n'
+                                'do not modify the their original structure \n'
                                 'of groups (folders)! \n'
                                 'Make the adjustments in its properties window.'
                                  ) + '\n')
