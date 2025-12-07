@@ -75,14 +75,14 @@ def get_sky_matrix_values(epw_path = "",
                        analysis_period,
                        metadata_dic
                        )
-        #get continuos irradiance values
+        #get continuous irradiance values
         location = epw.location
         #update timestep > 1
-        direct_normal_irradiance = get_continuos_values(header = header,
+        direct_normal_irradiance = get_continuous_values(header = header,
                                                         values = dnr_values,
                                                         timestep = timestep
                                                         )
-        diffuse_horizontal_irradiance = get_continuos_values(header = header,
+        diffuse_horizontal_irradiance = get_continuous_values(header = header,
                                                         values = dhr_values,
                                                         timestep =  timestep
                                                         )
@@ -827,7 +827,7 @@ def get_header(data_type=None,
 # 9. HourlyContinuousCollection
 #=================================================
 
-def get_continuos_values(header = None,
+def get_continuous_values(header = None,
                          values = None,
                          timestep = None
                          ):
