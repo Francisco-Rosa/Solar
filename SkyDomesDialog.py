@@ -66,7 +66,10 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
         )
         self.ui.label_epw_map_link.setOpenExternalLinks(True)
         self.ui.label_epw_map_link.setTextInteractionFlags(QtCore.Qt.TextBrowserInteraction)
-        # pushButton create sky domes
+        # time to and from
+        self.ui.spinBox_time_from.valueChanged.connect(self.time_toggled)
+        self.ui.spinBox_time_to.valueChanged.connect(self.time_toggled)
+        # horizontalSlider_transparency
         self.ui.horizontalSlider_transparency.valueChanged.connect(self.value_changed)
         # pushButton_Apply
         self.ui.pushButton_Apply.clicked.connect(self.on_button_apply_clicked)
@@ -224,10 +227,14 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
         #comboBox_timestep
         self.ui.comboBox_timestep.setToolTip(
                        QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "Specify how many times per hour \n"
-                       "the calculation will be performed. \n"
-                       "Note that larger numbers will \n"
-                       "increase the computation time."))
+                       "Specify the number of times per hour \n"
+                       "the linear interpolation of sub-hourly \n"
+                       "values ​​will be performed. \n"
+                       "Works only with time intervals \n"
+                       "from 0 to 23 hours. \n"
+                       "Note that larger numbers \n"
+                       "will increase the computation time. \n"
+                       ))
         #checkBox_leap_year
         self.ui.checkBox_leap_year.setText(
                        QT_TRANSLATE_NOOP("SkyDomesDialog",
@@ -422,7 +429,7 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
     def QT_TRANSLATE_NOOP(self, text):
         return text
 
-    # Slots -------------
+    # Slots
     def show_dialog(self):
 
         """Show dialog"""
@@ -475,6 +482,13 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
         except Exception as e:
             QtWidgets.QMessageBox.warning(self, "File Error", f"Could not read EPW file:\n{e}")
             return
+
+    def time_toggled(self):
+        if self.ui.spinBox_time_from.value() == 0 and self.ui.spinBox_time_to.value() == 23:
+            self.ui.comboBox_timestep.setEnabled(True)
+        else:
+            self.ui.comboBox_timestep.setCurrentIndex(0)
+            self.ui.comboBox_timestep.setEnabled(False)
 
     def value_changed(self):
         value = str(self.ui.horizontalSlider_transparency.value())

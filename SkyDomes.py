@@ -457,6 +457,7 @@ def get_sky_matrix_dome_values(epw_path = "",
                         period = None,
                         sky_dome_model = "",
                         sky_dome_units = "",
+                        timestep = 1,
                         center_vectors = False,
                         ):
 
@@ -469,12 +470,16 @@ def get_sky_matrix_dome_values(epw_path = "",
     if sky_dome_model == "Tregenza":
         sky_matrix_values = lbc.get_sky_matrix_values(epw_path,
                                   period,
-                                  high_density = False)
+                                  high_density = False,
+                                  timestep = timestep
+                                  )
     # Model Reinhart
     if sky_dome_model == "Reinhart":
         sky_matrix_values = lbc.get_sky_matrix_values(epw_path,
                                   period,
-                                  high_density = True)
+                                  high_density = True,
+                                  timestep = timestep
+                                  )
     # Irradiance
     if sky_dome_units == "Irradiance (W/m²)":
         sky_dome_obj = lbc.get_sky_dome_values(
@@ -1023,7 +1028,8 @@ def create_sky_domes():
                             SD.end_month,
                             SD.end_day,
                             SD.end_hour,
-                            int(SD.timestep),
+                            #int(SD.timestep),
+                            1,
                             SD.leap_year
                             )
     # Getting sky domes
@@ -1049,6 +1055,7 @@ def create_sky_domes():
                                           period,
                                           sky_dome_model = SD.model,
                                           sky_dome_units = SD.units,
+                                          timestep = int(SD.timestep),
                                           center_vectors = SD.center_vectors,
                                           )
     SD.total_values = sky_dome_values[0]
@@ -1177,7 +1184,8 @@ def modify_sky_domes(forms = False, values = False):
                             SD.end_month,
                             SD.end_day,
                             SD.end_hour,
-                            int(SD.timestep),
+                            #int(SD.timestep),
+                            1,
                             SD.leap_year
                             )
     if forms is True:
@@ -1276,10 +1284,11 @@ def update_values(epw_path = None, period = None):
             f"Update values: Could not get Sky domes:\n{e}") + '\n')
         return
     sky_dome_values = get_sky_matrix_dome_values(epw_path,
-                        period,
-                        sky_dome_model = SD.model,
-                        sky_dome_units = SD.units,
-                        )
+                                                 period,
+                                                 sky_dome_model = SD.model,
+                                                 sky_dome_units = SD.units,
+                                                 timestep = int(SD.timestep)
+                                                  )
     SD.total_values = sky_dome_values[0]
     SD.direct_values = sky_dome_values[1]
     SD.diffuse_values = sky_dome_values[2]
