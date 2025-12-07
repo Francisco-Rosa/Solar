@@ -1391,3 +1391,4 @@ if FreeCAD.GuiUp:
     FreeCAD.Gui.addCommand('CreateSkyDomes', CreateSkyDomes())
     FreeCAD.Gui.addCommand('ModifySkyDomes', ModifySkyDomes())
     FreeCAD.Gui.addCommand('DeleteSkyDomes', DeleteSkyDomes())
+

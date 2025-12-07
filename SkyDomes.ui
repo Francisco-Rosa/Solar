@@ -1456,7 +1456,13 @@ dome according to the project (mm).</string>
                          </font>
                         </property>
                         <property name="toolTip">
-                         <string>Indicate the number of timesteps per hour.</string>
+                         <string>Specify the number of times per hour 
+the linear interpolation of sub-hourly 
+values ​​will be performed. 
+It works only with time intervals 
+from 0 to 23 hours. 
+Note that larger numbers 
+will increase the computation time.</string>
                         </property>
                         <item>
                          <property name="text">

@@ -35,6 +35,7 @@ from ladybug_radiance.visualize.skydome import SkyDome
 from ladybug_radiance.skymatrix import SkyMatrix
 from ladybug.epw import EPW
 from ladybug.datacollection import HourlyContinuousCollection
+from ladybug.datatype.base import DataTypeBase
 from ladybug.header import Header
 from ladybug.datatype.energy import Energy
 
@@ -223,10 +224,10 @@ def apply_color_faces(obj = None,
     obj.ViewObject.ShapeAppearance = (
                  FreeCAD.Material(SpecularColor=(0.33,0.33,0.33))
                  )
-    obj.ViewObject.Transparency = transparency
     obj.ViewObject.LineWidth = 1
     obj.ViewObject.PointSize = 1
     obj.ViewObject.DiffuseColor = face_colors
+    obj.ViewObject.Transparency = transparency
     return obj
     FreeCAD.ActiveDocument.recompute()
 
@@ -804,9 +805,16 @@ def modify_main_legends(sky_domes_group = None,
 
     FreeCAD.ActiveDocument.recompute()
 
+
 #=================================================
 # 8. Header
 #=================================================
+
+def get_lab_datatype():
+    DataTypeBase(name=None)
+
+
+
 
 def get_header(data_type=None,
                unit=None,
@@ -839,7 +847,11 @@ def get_continuous_values(header = None,
                                      values,
                                      )
     values_rate = hcc.to_time_rate_of_change() # kWh to W
+
     values_rate2 = values_rate.to_unit("kW") # W to kW
     #hcc.interpolate_to_timestep(timestep, cumulative=None)
     values_continuos = values_rate2.interpolate_to_timestep(timestep)
     return values_continuos
+
+
+

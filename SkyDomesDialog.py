@@ -69,6 +69,8 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
         # time to and from
         self.ui.spinBox_time_from.valueChanged.connect(self.time_toggled)
         self.ui.spinBox_time_to.valueChanged.connect(self.time_toggled)
+        # checkBox_center_vectors
+        self.ui.checkBox_center_vectors.toggled.connect(self.bool_changed)
         # horizontalSlider_transparency
         self.ui.horizontalSlider_transparency.valueChanged.connect(self.value_changed)
         # pushButton_Apply
@@ -490,9 +492,33 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
             self.ui.comboBox_timestep.setCurrentIndex(0)
             self.ui.comboBox_timestep.setEnabled(False)
 
+    def bool_changed(self):
+        from SkyDomes import SD
+        if SD is not None:
+            try:
+                SD.Group[0].Group[3]
+                if self.ui.checkBox_center_vectors.isChecked() is True:
+                    SD.Group[0].Group[3].Visibility = True
+                else:
+                    SD.Group[0].Group[3].Visibility = False
+            except Exception:
+                print("No center vectors was found!")
+
     def value_changed(self):
         value = str(self.ui.horizontalSlider_transparency.value())
         self.ui.label_transp_value.setText(value)
+        from SkyDomes import SD
+        if SD is not None:
+            try:
+                SD.Group[0].Group[0].ViewObject.Transparency = int(value)
+                SD.Group[1].Group[0].ViewObject.Transparency = int(value)
+                SD.Group[2].Group[0].ViewObject.Transparency = int(value)
+                SD.transparency = int(value)
+                FreeCAD.ActiveDocument.recompute()
+            except Exception:
+                print("There are no clones to modify transparency!")
+        else:
+            print("Try modify transparency, but SD is None!")
 
     # Connection dialog x sky domes properties
     def get_properties_data(self):
@@ -631,7 +657,6 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
         z2 = float(self.ui.lineEdit_Position_z.text())
         direct_diffuse2 = self.ui.checkBox_direct_diffuse.isChecked()
         center_vectors2 = self.ui.checkBox_center_vectors.isChecked()
-        transparency2 = self.ui.horizontalSlider_transparency.value()
         #values
         epw_path2 = self.ui.lineEdit_epw_path.text()
         date_string1 = self.ui.dateEdit_date_from.text()
@@ -660,16 +685,19 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
             y1 = float(SD.position.y)
             z1 = float(SD.position.z)
             direct_diffuse1 = SD.direct_diffuse_domes
-            center_vectors1 = SD.center_vectors
-            transparency1 = SD.transparency
+            try:
+                SD.Group[0].Group[3]
+                center_vectors1 = center_vectors2
+            except Exception:
+                center_vectors1 = SD.center_vectors
             if any(condition for condition in [north1 != north2,
                                                radius1 != radius2,
                                                x1 != x2,
                                                y1 != y2,
                                                z1 != z2,
                                                direct_diffuse1 != direct_diffuse2,
-                                               transparency1 != transparency2,
-                                               center_vectors1 != center_vectors2]
+                                               center_vectors1 != center_vectors2
+                                               ]
                 ):
                 dif_forms = True
             epw_path1 = SD.epw_path
