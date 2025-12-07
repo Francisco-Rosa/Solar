@@ -230,7 +230,7 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
                        "Specify the number of times per hour \n"
                        "the linear interpolation of sub-hourly \n"
                        "values ​​will be performed. \n"
-                       "Works only with time intervals \n"
+                       "It works only with time intervals \n"
                        "from 0 to 23 hours. \n"
                        "Note that larger numbers \n"
                        "will increase the computation time. \n"
