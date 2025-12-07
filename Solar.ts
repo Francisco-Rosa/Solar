@@ -647,6 +647,14 @@ undo this action.!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../SkyDomes.py" line="1144"/>
+        <source>Sky domes were created! To configure it, 
+do not modify the their original structure 
+of groups (folders)! 
+Make the adjustments in its properties window.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../SkyDomes.py" line="1164"/>
         <source>Modify sky domes: Could not get sky domes properties!</source>
         <translation type="unfinished"></translation>
@@ -670,14 +678,6 @@ and you won&apos;t be able to undo it.
 
 Are you sure you want to delete these Sky Domes? 
 </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="1144"/>
-        <source>Sky domes were created! To configure it, 
-do not modify the their original structure 
-of groups (folders)! 
-Make the adjustments in its properties window.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -867,6 +867,18 @@ dome according to the project (mm).</source>
     <message>
         <location filename="../SkyDomesDialog.py" line="224"/>
         <source>Timestep</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomesDialog.py" line="228"/>
+        <source>Specify the number of times per hour 
+the linear interpolation of sub-hourly 
+values ​​will be performed. 
+Works only with time intervals 
+from 0 to 23 hours. 
+Note that larger numbers 
+will increase the computation time. 
+</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1179,18 +1191,6 @@ average Irradiance (W/m²).</source>
     <message>
         <location filename="../SkyDomesDialog.py" line="618"/>
         <source>Save properties: There is no SkyDomes group!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomesDialog.py" line="228"/>
-        <source>Specify the number of times per hour 
-the linear interpolation of sub-hourly 
-values ​​will be performed. 
-Works only with time intervals 
-from 0 to 23 hours. 
-Note that larger numbers 
-will increase the computation time. 
-</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
