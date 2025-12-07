@@ -33,6 +33,10 @@ from ladybug.legend import Legend, LegendParameters
 from ladybug_geometry.geometry3d import Point3D
 from ladybug_radiance.visualize.skydome import SkyDome
 from ladybug_radiance.skymatrix import SkyMatrix
+from ladybug.epw import EPW
+from ladybug.datacollection import HourlyContinuousCollection
+from ladybug.header import Header
+from ladybug.datatype.energy import Energy
 
 #=================================================
 # 1. Sky matrix
@@ -40,7 +44,10 @@ from ladybug_radiance.skymatrix import SkyMatrix
 
 def get_sky_matrix_values(epw_path = "",
                           period = None,
-                          high_density = False):
+                          high_density = False,
+                          timestep = 1,
+                          ground_reflectance=0.2
+                          ):
 
     """Get solar radiation (kWh/m2)
     from ladybug sky matrix Tregenza or Reinhart
@@ -50,12 +57,45 @@ def get_sky_matrix_values(epw_path = "",
               high_density,
               ground_reflectance=0.2)"""
 
-    hoys = [h for h in period.hoys]
-    #print(f"len hoys: {len(hoys)}")
-    sky_matrix = SkyMatrix.from_epw(epw_path, hoys)
-    sky_matrix.high_density = high_density
+    hoys = [h for h in period.hoys] # timestep = 1
+    epw = EPW(epw_path)
+    metadata_dic = epw.metadata
+    if timestep == 1:
+        sky_matrix = SkyMatrix.from_epw(epw_path, hoys)
+        sky_matrix.high_density = high_density
+    if timestep > 1:
+        dnr_values = [epw.direct_normal_radiation[int(hoy % 8760)] for hoy in hoys] # timestep = 1
+        dhr_values = [epw.diffuse_horizontal_radiation[int(hoy % 8760)] for hoy in hoys] # timestep = 1
+        #get header
+        data_type = Energy(name = "Energy")
+        unit = "kWh"
+        analysis_period=period
+        header = get_header(data_type,
+                       unit,
+                       analysis_period,
+                       metadata_dic
+                       )
+        #get continuos irradiance values
+        location = epw.location
+        #update timestep > 1
+        direct_normal_irradiance = get_values_continuos(header = header,
+                                                        values = dnr_values,
+                                                        timestep = timestep
+                                                        )
+        diffuse_horizontal_irradiance = get_values_continuos(header = header,
+                                                        values = dhr_values,
+                                                        timestep =  timestep
+                                                        )
+        sky_matrix = SkyMatrix.from_components(location,
+                                  direct_normal_irradiance,
+                                  diffuse_horizontal_irradiance,
+                                  #hoys = None,
+                                  #north=0,
+                                  high_density = high_density,
+                                  ground_reflectance=0.2
+                                  )
+    metadata = sky_matrix.metadata #tuple
     #(If True, Radiance must be installed)
-    metadata = sky_matrix.metadata
     #get sky matrix values
     direct_values = list(sky_matrix.direct_values)
     diffuse_values = list(sky_matrix.diffuse_values)
@@ -124,7 +164,7 @@ def get_sky_dome_values(sky_matrix = None,
 # 3. Inter matrix and sky inter matrix
 #=================================================
 
-#Future SunAnalysis
+#SunAnalysis.py
 
 #=================================================
 # 4. Color range and others
@@ -144,6 +184,7 @@ def get_face_colors(sun_analysis_results = None,
     color_range = []
     color_range = ColorRange()
     color_range.colors = leg_colors
+    #color_range.domain = [min(domain), max(domain)]
     color_range.domain = [0, max(domain)]
     face_colors = []
     for value in sun_analysis_results:
@@ -763,3 +804,42 @@ def modify_main_legends(sky_domes_group = None,
 
     FreeCAD.ActiveDocument.recompute()
 
+#=================================================
+# 8. Header
+#=================================================
+
+def get_header(data_type=None,
+               unit=None,
+               analysis_period=None,
+               metadata=None #EPW.metadata or sky_matrix.metadata (dict)
+               ):
+
+    """Get LB header from data, unit, period and metada."""
+
+    header = Header(data_type,
+                    unit,
+                    analysis_period,
+                    metadata
+                    )
+    return header
+
+#=================================================
+# 9. HourlyContinuousCollection
+#=================================================
+
+def get_values_continuos(header = None,
+                         values = None,
+                         timestep = None
+                         ):
+
+    """Get LB Hourly Discontinuous Collection
+    from header, values, datetimes and timesteps"""
+
+    hcc = HourlyContinuousCollection(header,
+                                     values,
+                                     )
+    values_rate = hcc.to_time_rate_of_change() # kWh to W
+    values_rate2 = values_rate.to_unit("kW") # W to kW
+    #hcc.interpolate_to_timestep(timestep, cumulative=None)
+    values_continuos = values_rate2.interpolate_to_timestep(timestep)
+    return values_continuos
