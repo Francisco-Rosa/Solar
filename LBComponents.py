@@ -70,7 +70,7 @@ def get_sky_matrix_values(epw_path = "",
         #get header
         data_type = Energy(name = "Energy")
         unit = "kWh"
-        analysis_period=period
+        analysis_period = period
         header = get_header(data_type,
                        unit,
                        analysis_period,
@@ -810,16 +810,10 @@ def modify_main_legends(sky_domes_group = None,
 # 8. Header
 #=================================================
 
-def get_lab_datatype():
-    DataTypeBase(name=None)
-
-
-
-
 def get_header(data_type=None,
                unit=None,
                analysis_period=None,
-               metadata=None #EPW.metadata or sky_matrix.metadata (dict)
+               metadata=None #EPW.metadata (dict)
                ):
 
     """Get LB header from data, unit, period and metada."""
@@ -852,6 +846,3 @@ def get_continuous_values(header = None,
     #hcc.interpolate_to_timestep(timestep, cumulative=None)
     values_continuos = values_rate2.interpolate_to_timestep(timestep)
     return values_continuos
-
-
-
