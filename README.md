@@ -25,7 +25,7 @@ Workbench to manage solar analysis and configurations
 
 ### Tutorials
 
-##### Using sun configuration
+##### Sun path shadows study
 
 * BW 3D view option
 
@@ -45,6 +45,11 @@ Workbench to manage solar analysis and configurations
 
 (Watch the [sample video](https://youtu.be/nT1_mGFQwXE?si=TemWHlLiOsnyXDa8))
 
+##### Sky domes analysis
+
+<img src=./Docs/Skydomes_Barcelona_Sao_Paulo_New_York_011.jpg width=800>
+
+<img src=./Docs/Skydomes_Barcelona_Sao_Paulo_New_York_021.jpg width=800>
 
 ### Prerequisites 
 FreeCAD ≥ v1.0 
