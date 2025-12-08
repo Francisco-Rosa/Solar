@@ -33,10 +33,13 @@ from PySide.QtCore import QT_TRANSLATE_NOOP
 import SunProperties as sp
 import SunPathAnimation as spa
 
+SD = None
+
 class SunConfigurationDialog(QtWidgets.QDialog):
     """A sun configuration dialog"""
+
     def __init__(self, parent = None):
-        super(SunConfigurationDialog, self).__init__(parent)
+        super().__init__(parent)
 
         # Load the UI
         loader = QtUiTools.QUiLoader()
@@ -45,22 +48,19 @@ class SunConfigurationDialog(QtWidgets.QDialog):
         ui_file_obj.open(QtCore.QFile.ReadOnly)
         self.ui = loader.load(ui_file_obj, parent)
         ui_file_obj.close()
-        # user_mod_path = os.path.join(FreeCAD.getUserAppDataDir(), "Mod")
-        # SunSetupUi = FreeCADGui.PySideUic.loadUi(user_mod_path + '/Solar/SunSetup.ui')
-        # SunSetupUi.show()
 
-        # Correctly embed the loaded UI as a child widget
-        self.setWindowTitle(self.ui.windowTitle())
+        # user_mod_path = os.path.join(FreeCAD.getUserAppDataDir(), "Mod")
+        # SunSetupUi = FreeCADGui.PySideUic.loadUi(
+                                  #user_mod_path + '/Solar/SunSetup.ui')
+        # SunSetupUi.show()
+        # self.ui = SunSetupUi
+
+        self.setWindowTitle(QT_TRANSLATE_NOOP("SunDialog", "Sun configuration"))
         layout = QtWidgets.QVBoxLayout(self)
         layout.addWidget(self.ui)
         self.resize(self.ui.size())
 
         # Connect signals/slots
-        # radioButton_1_epw_file and radioButton_2_Location
-        self.ui.radioButton_1_epw_file.toggled.connect(self.epw_radio_toggled)
-        # radioButton_2_Location
-        self.ui.radioButton_2_Location.setEnabled(True)
-        self.ui.radioButton_2_Location.toggled.connect(self.location_radio_toggled)
         # toolButton_1_epw_path
         self.ui.toolButton_1_epw_path.clicked.connect(self.open_epw_file_dialog)
         # Make label_1_epw_map_link clickable:
@@ -69,23 +69,24 @@ class SunConfigurationDialog(QtWidgets.QDialog):
             '>https://www.ladybug.tools/epwmap/</a>'
         )
         self.ui.label_1_epw_map_link.setOpenExternalLinks(True)
-        self.ui.label_1_epw_map_link.setTextInteractionFlags(QtCore.Qt.TextBrowserInteraction)
+        self.ui.label_1_epw_map_link.setTextInteractionFlags(
+                                     QtCore.Qt.TextBrowserInteraction)
         # Make label_4_Equinoxes_link clickable:
         self.ui.label_4_Equinoxes_link.setText(
             '<a href="https://en.wikipedia.org/wiki/Equinox"'
             '>https://en.wikipedia.org/wiki/Equinox</a>'
         )
         self.ui.label_4_Equinoxes_link.setOpenExternalLinks(True)
-        self.ui.label_4_Equinoxes_link.setTextInteractionFlags(QtCore.Qt.TextBrowserInteraction)
+        self.ui.label_4_Equinoxes_link.setTextInteractionFlags(
+                                       QtCore.Qt.TextBrowserInteraction)
         # Make label_4_Solstices_link clickable:
         self.ui.label_4_Solstices_link.setText(
             '<a href="https://en.wikipedia.org/wiki/Solstice"'
             '>https://en.wikipedia.org/wiki/Solstice</a>'
         )
         self.ui.label_4_Solstices_link.setOpenExternalLinks(True)
-        self.ui.label_4_Solstices_link.setTextInteractionFlags(QtCore.Qt.TextBrowserInteraction)
-        # checkBox_Sun_light_config
-        self.ui.checkBox_sun_light_config.clicked.connect(self.sun_light_config_toggled)
+        self.ui.label_4_Solstices_link.setTextInteractionFlags(
+                                       QtCore.Qt.TextBrowserInteraction)
         # colorButtonTop
         self.ui.colorButtonTop.clicked.connect(self.choose_color)
         # colorButtonTop_2
@@ -98,6 +99,337 @@ class SunConfigurationDialog(QtWidgets.QDialog):
         # buttonBox_Cancel_OK
         self.ui.buttonBox_Cancel_OK.clicked.connect(self.accept)
         self.ui.buttonBox_Cancel_OK.rejected.connect(self.reject)
+        # strings/translation
+        #groupBox_sun_position
+        self.ui.groupBox_sun_position.setTitle(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Sun position"))
+        self.ui.groupBox_sun_position.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Set all data for sun position"))
+        #radioButton_1_epw_file
+        self.ui.radioButton_1_epw_file.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "epw file:"))
+        self.ui.radioButton_1_epw_file.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Enable this button to automatically \n"
+                    "adjust the sun position for a location"))
+        #label_1_Get_epw_file
+        self.ui.label_1_Get_epw_file.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Get epw file:"))
+        self.ui.label_1_Get_epw_file.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Click the link to get the epw file"))
+        #label_1_epw_map_link
+        self.ui.label_1_epw_map_link.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Click to download the epw file"))
+        #label_1_epw_path
+        self.ui.label_1_epw_path.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "epw file path:"))
+        self.ui.label_1_epw_path.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "After downloading the epw file, \n"
+                    "indicate its path on your machine"))
+        #lineEdit_1_epw_path
+        self.ui.lineEdit_1_epw_path.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "The epw file path on your machine"))
+        #toolButton_1_epw_path
+        self.ui.toolButton_1_epw_path.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Indicate the path of the epw file"))
+        #radioButton_2_Location
+        self.ui.radioButton_2_Location.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Location:"))
+        self.ui.radioButton_2_Location.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Activate this button to adjust \n"
+                    "the sun position for a specific location"))
+        #label_2_City
+        self.ui.label_2_City.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "City:"))
+        #label_2_Country
+        self.ui.label_2_Country.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Country:"))
+        #label_2_Latitude
+        self.ui.label_2_Latitude.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Latitude:"))
+        #label_2_Longitude
+        self.ui.label_2_Longitude.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Longitude:"))
+        #label_2_Elevation
+        self.ui.label_2_Elevation.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Elevation:"))
+        #label_2_Time_zone
+        self.ui.label_2_Time_zone.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Time zone:"))
+        #label_3_North_angle
+        self.ui.label_3_North_angle.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "North angle:"))
+        self.ui.label_3_North_angle.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Indicate the true north.\n"
+                    "Clockwise with zero in \n"
+                    "the direction of the y-axis"))
+        #label_4_Date_and_time
+        self.ui.label_4_Date_and_time.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Date and time:"))
+        self.ui.label_4_Date_and_time.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Indicate the date and time \n"
+                    "of the sun's position"))
+        #label_4_Equinoxes_Solstices
+        self.ui.label_4_Equinoxes_Solstices.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Equin./Solst.:"))
+        self.ui.label_4_Equinoxes_Solstices.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Consult the equinoxes and solstices \n"
+                    "in the next links"))
+        #checkBox_DaylightSaving
+        self.ui.checkBox_DaylightSaving.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "DaylightSaving"))
+        self.ui.checkBox_DaylightSaving.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Enable it for daylight saving periods"))
+        #groupBox_results
+        self.ui.groupBox_results.setTitle(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Results:"))
+        self.ui.groupBox_results.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "These are the results of the adjustments made"))
+        #label_5_Altitude
+        self.ui.label_5_Altitude.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Altitude:"))
+        #label_5_Azimuth
+        self.ui.label_5_Azimuth.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Azimuth:"))
+        #label_5_Day_hours
+        self.ui.label_5_Day_hours.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Day hours:"))
+        #label_5_Sunrise
+        self.ui.label_5_Sunrise.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Sunrise:"))
+        #label_5_Noon
+        self.ui.label_5_Noon.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Noon:"))
+        #label_5_Sunset
+        self.ui.label_5_Sunset.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Sunset:"))
+        #groupBox_sun_additional_config
+        self.ui.groupBox_sun_additional_config.setTitle(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Sun additional configurations"))
+        self.ui.groupBox_sun_additional_config.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Adjust the other aspects of the solar study here"))
+        #checkBox_sun_light_config
+        self.ui.checkBox_sun_light_config.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Sun light and diagram configurations"))
+        self.ui.checkBox_sun_light_config.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Enable it to view and adjust representations \n"
+                    "of the sun and its path."))
+        #label_radius
+        self.ui.label_radius.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Radius:"))
+        #label_Distance
+        self.ui.label_Distance.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Distance:"))
+        #label_Position
+        self.ui.label_Position.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Center"))
+        self.ui.label_Position.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Adjust the center position according to the project"))
+        #checkBox_Sun_light_representation
+        self.ui.checkBox_Sun_light_representation.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Sun light"))
+        self.ui.checkBox_Sun_light_representation.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Enable the sun light representation"))
+        #label_Ray_representation
+        self.ui.label_Ray_representation.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Ray representation:"))
+        #checkBox_Ray_representation
+        self.ui.checkBox_Ray_representation.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Visible"))
+        #label_Color
+        self.ui.label_Color.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Color:"))
+        #colorButtonTop
+        self.ui.colorButtonTop.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Choose the color of the sunlight representation"))
+        #checkBox_Sun_path_diagram
+        self.ui.checkBox_Sun_path_diagram.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Sun path diagram (Arch Site)"))
+        self.ui.checkBox_Sun_path_diagram.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "It is necessary to have an Arch Site object\n"
+                    "to enable the sun path diagram.\n"
+                    "For Color 3D view shadows, leave it disabled."))
+        #label_Color_2
+        self.ui.label_Color_2.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Color:"))
+        #colorButtonTop_2
+        self.ui.colorButtonTop_2.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Choose the color of the sun path diagram"))
+        #groupBox_show_save_image
+        self.ui.groupBox_show_save_image.setTitle(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Show and/or save image:"))
+        #label_images_from
+        self.ui.label_images_from.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Image from:"))
+        #comboBox_Images
+        self.ui.comboBox_Images.setItemText(0,
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "None/Reset"))
+        self.ui.comboBox_Images.setItemText(1,
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "BW 3D view"))
+        self.ui.comboBox_Images.setItemText(2,
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Color 3D view"))
+        self.ui.comboBox_Images.setItemText(3,
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Render 3D view"))
+        self.ui.comboBox_Images.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Select the scene type.\n"
+                    "Use None/Reset to clear the settings.\n"
+                    "Color 3D preview only works in FreeCAD-Link.\n"
+                    "For Render 3D preview, install Render WB."))
+        #label_image_w_h
+        self.ui.label_image_w_h.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Images, w:"))
+        self.ui.label_image_w_h.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Set the image resolution\n"
+                    "Use for render images"))
+        #lineEdit_width
+        self.ui.lineEdit_width.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Set the image width in pixels\n"
+                    "Use for render images"))
+        #label_h
+        self.ui.label_h.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "h:"))
+        #lineEdit_height
+        self.ui.lineEdit_height.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Set the image height in pixels\n"
+                    "Use for render images"))
+        #checkBox_Save_to
+        self.ui.checkBox_Save_to.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Save"))
+        self.ui.checkBox_Save_to.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Enable it to save the images created"))
+        #checkBox_Sun_path_animation
+        self.ui.checkBox_Sun_path_animation.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Sun path animation"))
+        self.ui.checkBox_Sun_path_animation.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Enable the sun path animation"))
+        #label_1_From_2
+        self.ui.label_1_From_2.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Time from:"))
+        #timeEdit_1_From
+        self.ui.timeEdit_1_From.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Adjust the time for the beginning of the sun path"))
+        #label_1_To_2
+        self.ui.label_1_To_2.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "to:"))
+        #timeEdit_1_To
+        self.ui.timeEdit_1_To.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Adjust the time for the end of the sun path"))
+        #checkBox_sunrise_sunset
+        self.ui.checkBox_sunrise_sunset.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Sunrise-Sunset"))
+        self.ui.checkBox_sunrise_sunset.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Enable it to get the sunrise and sunset values, "
+                    "then hit Apply."))
+        #label_1_Interval
+        self.ui.label_1_Interval.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Interval:"))
+        #timeEdit_1_Interval
+        self.ui.timeEdit_1_Interval.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Adjust the interval between each step of the solar path.\n"
+                    "Must not be zero."))
+        #checkBox_2_Recompute
+        self.ui.checkBox_2_Recompute.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Recompute"))
+        self.ui.checkBox_2_Recompute.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Enable it if you need to animate objects as well"))
+        #label_2_Fps
+        self.ui.label_2_Fps.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Fps:"))
+        #lineEdit_2_Fps
+        self.ui.lineEdit_2_Fps.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Enter the frames per second of the solar path animation"))
+        #label_Frames
+        self.ui.label_Frames.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Frames:"))
+        #lineEdit_Frames
+        self.ui.lineEdit_Frames.setToolTip(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Show the resulting total frames"))
+        #pushButton_Apply
+        self.ui.pushButton_Apply.setText(
+                    QT_TRANSLATE_NOOP("SunDialog",
+                    "Apply"))
 
     def QT_TRANSLATE_NOOP(self, text):
         return text
@@ -106,8 +438,10 @@ class SunConfigurationDialog(QtWidgets.QDialog):
         __dir__ = os.path.dirname(__file__)
         return {'Pixmap': __dir__ + '/icons/SunDialogIcon.svg',
                 'MenuText': QT_TRANSLATE_NOOP(self, 'SunDialog'),
-                'ToolTip': QT_TRANSLATE_NOOP(self, 'Create and manage the SunDialog. '
-                            'After the sun configuration created, configure its properties'
+                'ToolTip': QT_TRANSLATE_NOOP(self,
+                           'Create and manage the SunDialog. '
+                           'After the sun configuration created, '
+                           'configure its properties'
                 )
         }
 
@@ -121,60 +455,55 @@ class SunConfigurationDialog(QtWidgets.QDialog):
         try:
             FreeCAD.ActiveDocument.SunProperties
         except:
-            sp.activated_sun_properties() #Create sun properties
+            sp.activated_sun_properties()
         open_sun_configuration()
 
     # Slots -------------
     def show_dialog(self):
+
         """Show dialog"""
+
         result = self.exec_()
         return result == QtWidgets.QDialog.Accepted
 
-    def epw_radio_toggled(self, checked):
-        """When EPW radio is checked, enable its fields and disable the others
-        self.ui.radioButton_2_Location.setEnabled(not checked)
-        Enable/disable fields for epw file"""
-        self.ui.label_1_epw_path.setEnabled(checked)
-        self.ui.toolButton_1_epw_path.setEnabled(checked)
-        self.ui.lineEdit_1_epw_path.setEnabled(checked)
-        self.ui.label_1_Get_epw_file.setEnabled(checked)
-        self.ui.label_1_epw_map_link.setEnabled(checked)
-        # Disable fields for location
-        for w in [
-            self.ui.label_2_City, self.ui.lineEdit_2_City,
-            self.ui.label_2_Country, self.ui.lineEdit_2_Country,
-            self.ui.label_2_Latitude, self.ui.lineEdit_2_Latitude,
-            self.ui.label_2_Longitude, self.ui.lineEdit_2_Longitude,
-            self.ui.label_2_Elevation, self.ui.lineEdit_2_Elevation,
-            self.ui.label_2_Time_zone, self.ui.lineEdit_2_Time_zone,
-            ]:
-            w.setEnabled(not checked)
     def open_epw_file_dialog(self):
+
         """Open epw file dialog"""
+
         parent = None
         try:
             parent = Gui.getMainWindow()
         except Exception:
             parent = None
         fname, _ = QtWidgets.QFileDialog.getOpenFileName(
-            parent,  # parent window
-            "Select epw file",
-            "",
-            "EPW Files (*.epw);;All Files (*)"
-        )
+                                 parent,
+                                 QT_TRANSLATE_NOOP("SunDialog",
+                                 "Select epw file"),
+                                 "",
+                                 QT_TRANSLATE_NOOP("SunDialog",
+                                 "EPW Files (*.epw);;All Files (*)")
+                                 )
         if fname:
             self.ui.lineEdit_1_epw_path.setText(fname)
             self.autofill_from_epw()
 
     def autofill_from_epw(self):
+
         """Get the EPW file path from the UI"""
+
         from ladybug.epw import EPW
-        epw_path = self.ui.findChild(QtWidgets.QLineEdit, "lineEdit_1_epw_path").text()
+        epw_path = self.ui.findChild(QtWidgets.QLineEdit,
+                                     "lineEdit_1_epw_path").text()
         if not epw_path or not os.path.isfile(epw_path):
             QtWidgets.QMessageBox.warning(
-                self, "File Error",
-                "If you want to use EPW, provide a valid file path."
-            )
+                                self, QT_TRANSLATE_NOOP(
+                                        "SunDialog",
+                                        "Warning"),
+                                QT_TRANSLATE_NOOP(
+                                        "SunDialog",
+                                        "If you want to use EPW, "
+                                        "provide a valid file path.")
+                                )
             return
         try:
             epw = EPW(epw_path)
@@ -186,60 +515,45 @@ class SunConfigurationDialog(QtWidgets.QDialog):
             self.ui.lineEdit_2_Elevation.setText(str(epw.location.elevation))
             self.ui.lineEdit_2_Time_zone.setText(str(epw.location.time_zone))
         except Exception as e:
-            QtWidgets.QMessageBox.warning(self, "File Error", f"Could not read EPW file:\n{e}")
+            QtWidgets.QMessageBox.warning(self,
+                                          QT_TRANSLATE_NOOP(
+                                                "SunDialog",
+                                                "File Error"),
+                                          QT_TRANSLATE_NOOP(
+                                                "SunDialog",
+                                                f"Could not read EPW file:\n{e}"))
             return
 
-    def location_radio_toggled(self, checked):
-        """When Location radio is checked, enable its fields and disable the others
-        self.ui.radioButton_1_epw_file.setEnabled(not checked)
-        Enable/disable fields for location"""
-        for w in [
-            self.ui.label_2_City, self.ui.lineEdit_2_City,
-            self.ui.label_2_Country, self.ui.lineEdit_2_Country,
-            self.ui.label_2_Latitude, self.ui.lineEdit_2_Latitude,
-            self.ui.label_2_Longitude, self.ui.lineEdit_2_Longitude,
-            self.ui.label_2_Elevation, self.ui.lineEdit_2_Elevation,
-            self.ui.label_2_Time_zone, self.ui.lineEdit_2_Time_zone,
-            ]:
-            w.setEnabled(checked)
-        # Disable fields for epw file
-        self.ui.label_1_epw_path.setEnabled(not checked)
-        self.ui.toolButton_1_epw_path.setEnabled(not checked)
-        self.ui.lineEdit_1_epw_path.setEnabled(not checked)
-        self.ui.label_1_Get_epw_file.setEnabled(not checked)
-        self.ui.label_1_epw_map_link.setEnabled(not checked)
-
-    def sun_light_config_toggled(self, checked):
-        if self.ui.checkBox_sun_light_config.isChecked() is False:
-            self.ui.checkBox_Sun_light_representation.setChecked(False)
-            self.ui.checkBox_Sun_path_diagram.setChecked(False)
-        try:
-            FreeCAD.ActiveDocument.Site
-            if self.ui.checkBox_sun_light_config.isChecked() is True:
-                self.ui.checkBox_Sun_path_diagram.setEnabled(True)
-        except Exception:
-            self.ui.checkBox_Sun_path_diagram.setEnabled(False)
-
     def choose_color(self):
-        """Open color dialog; returns QColor"""
-        color = QtWidgets.QColorDialog.getColor(parent=self, title="Select Color")
+
+        """Open color dialog, returns QColor"""
+
+        color = QtWidgets.QColorDialog.getColor(
+                                       parent=self,
+                                       title="Select Color")
         color_rgba = color.getRgb()
         color_rgb = (color_rgba[0], color_rgba[1], color_rgba[2])
         if color.isValid():
-            self.ui.colorButtonTop.setStyleSheet(f"background-color: rgb{color_rgb};")
+            self.ui.colorButtonTop.setStyleSheet(
+                                       f"background-color: rgb{color_rgb};")
 
     def choose_color2(self):
-        """Open color dialog; returns QColor"""
-        color = QtWidgets.QColorDialog.getColor(parent=self, title="Select Color")
+
+        """Open color dialog, returns QColor"""
+
+        color = QtWidgets.QColorDialog.getColor(
+                                       parent=self,
+                                       title="Select Color")
         color_rgba = color.getRgb()
         color_rgb = (color_rgba[0], color_rgba[1], color_rgba[2])
         if color.isValid():
-            self.ui.colorButtonTop_2.setStyleSheet(f"background-color: rgb{color_rgb};")
+            self.ui.colorButtonTop_2.setStyleSheet(
+                                       f"background-color: rgb{color_rgb};")
 
     def image_from_toggled(self):
         try:
-            obj1 = FreeCAD.ActiveDocument.SunProperties
-            if obj1.Image_from == "Render 3D view":
+            obj = FreeCAD.ActiveDocument.SunProperties
+            if obj.Image_from == "Render 3D view":
                 try:
                     FreeCAD.ActiveDocument.Project
                     self.ui.lineEdit_width.setEnabled(True)
@@ -259,15 +573,14 @@ class SunConfigurationDialog(QtWidgets.QDialog):
                 FreeCAD.ActiveDocument.Project
                 self.ui.lineEdit_width.setEnabled(True)
                 self.ui.lineEdit_height.setEnabled(True)
-                self.ui.label_2.setEnabled(True)
-                self.ui.label_4.setEnabled(True)
+                self.ui.label_image_w_h.setEnabled(True)
+                self.ui.label_h.setEnabled(True)
                 self.ui.checkBox_Save_to.setEnabled(True)
-
             except:
                 self.ui.lineEdit_width.setEnabled(False)
                 self.ui.lineEdit_height.setEnabled(False)
-                self.ui.label_2.setEnabled(False)
-                self.ui.label_4.setEnabled(False)
+                self.ui.label_image_w_h.setEnabled(False)
+                self.ui.label_h.setEnabled(False)
                 self.ui.checkBox_Save_to.setEnabled(False)
             try:
                 FreeCAD.ActiveDocument.Project
@@ -279,215 +592,290 @@ class SunConfigurationDialog(QtWidgets.QDialog):
         else:
             self.ui.lineEdit_width.setEnabled(False)
             self.ui.lineEdit_height.setEnabled(False)
-            self.ui.label_2.setEnabled(False)
-            self.ui.label_4.setEnabled(False)
+            self.ui.label_image_w_h.setEnabled(False)
+            self.ui.label_h.setEnabled(False)
             self.ui.checkBox_Save_to.setEnabled(True)
             self.ui.checkBox_Sun_path_animation.setEnabled(True)
 
-    # conexion dialog x properties
+    # Connection dialog x properties
     def get_properties_data(self):
-        """Show the dialog with initial data"""
+
+        """Get data from sun properties and send them to dialog"""
+
         try:
-            obj1 = FreeCAD.ActiveDocument.SunProperties
-            # epw file
-            self.ui.lineEdit_1_epw_path.setText(obj1.epw_path)
-            # Location
-            self.ui.lineEdit_2_City.setText(obj1.City)
-            self.ui.lineEdit_2_Country.setText(obj1.Country)
-            self.ui.lineEdit_2_Latitude.setText(str(obj1.Latitude))
-            self.ui.lineEdit_2_Longitude.setText(str(obj1.Longitude))
-            self.ui.lineEdit_2_Elevation.setText(str(obj1.Elevation))
-            self.ui.lineEdit_2_Time_zone.setText(str(obj1.TimeZone))
-            self.ui.lineEdit_3_North_angle.setText((str(float(obj1.North))))
+            obj = FreeCAD.ActiveDocument.SunProperties
+            from SkyDomes import SD # import epw_path and north from Skydomes
+            if SD is not None:
+                self.ui.lineEdit_1_epw_path.setText(SD.epw_path)
+                self.autofill_from_epw()
+                print("epw path get from SkyDomes")
+                self.ui.lineEdit_3_North_angle.setText((str(float(SD.north))))
+            else:
+                # Location
+                self.ui.lineEdit_1_epw_path.setText(obj.epw_path)
+                self.ui.lineEdit_2_City.setText(obj.City)
+                self.ui.lineEdit_2_Country.setText(obj.Country)
+                self.ui.lineEdit_2_Latitude.setText(str(obj.Latitude))
+                self.ui.lineEdit_2_Longitude.setText(str(obj.Longitude))
+                self.ui.lineEdit_2_Elevation.setText(str(obj.Elevation))
+                self.ui.lineEdit_2_Time_zone.setText(str(obj.TimeZone))
+                self.ui.lineEdit_3_North_angle.setText((str(float(obj.North))))
+                print("epw path get from SunProperties")
         except:
-            print ("Dialog epw file or Location not changed from properties")
+            print ("Get properties: Dialog epw file or Location not changed")
         try:
-            obj1 = FreeCAD.ActiveDocument.SunProperties
+            obj = FreeCAD.ActiveDocument.SunProperties
             # Date and time
-            self.ui.dateEdit_4_Date.setDate(QDate(obj1.Year, obj1.Month, obj1.Day))
-            self.ui.timeEdit_4_time.setTime(QTime(obj1.Hour, obj1.Min))
-            self.ui.checkBox_DaylightSaving.setChecked(obj1.DaylightSaving)
+            self.ui.dateEdit_4_Date.setDate(QDate(obj.Year, obj.Month, obj.Day))
+            self.ui.timeEdit_4_time.setTime(QTime(obj.Hour, obj.Min))
+            self.ui.checkBox_DaylightSaving.setChecked(obj.DaylightSaving)
         except:
-            print ("Dialog date and time not changed from properties")
+            print ("Get properties: Date and time not changed")
         try:
-            obj1 = FreeCAD.ActiveDocument.SunProperties
+            obj = FreeCAD.ActiveDocument.SunProperties
             # Sun light representation
-            self.ui.checkBox_sun_light_config.setChecked(obj1.SunLightDiagramConfig)
-            self.ui.checkBox_Sun_light_representation.setChecked(obj1.SunLightRepresentation)
-            self.ui.lineEdit_Radius.setText(str(int(obj1.Radius)))
-            self.ui.lineEdit_Distance.setText(str(int(obj1.Distance)))
-            self.ui.checkBox_Ray_representation.setChecked(obj1.RayRepresentation)
-            color = obj1.SunLightColor  # (R, G, B) floats in [0,1]
+            self.ui.checkBox_sun_light_config.setChecked(
+                                            obj.SunLightDiagramConfig)
+            self.ui.checkBox_Sun_light_representation.setChecked(
+                                            obj.SunLightRepresentation)
+            self.ui.checkBox_Ray_representation.setChecked(
+                                            obj.RayRepresentation)
+            self.ui.lineEdit_Radius.setText(str(int(obj.Radius)))
+            color = obj.SunLightColor  # (R, G, B) floats in [0,1]
             self.ui.colorButtonTop.setStyleSheet(
-                f"background-color: rgb({int(color[0]*255)}, {int(color[1]*255)}, {int(color[2]*255)});")
+                f"background-color: rgb({int(color[0]*255)}, "
+                f"{int(color[1]*255)}, {int(color[2]*255)});")
+            from SkyDomes import SD #import radius and distance from Skydomes
+            if SD is not None:
+                self.ui.lineEdit_Distance.setText(str(int(SD.radius)))
+            else:
+                self.ui.lineEdit_Distance.setText(str(int(obj.Distance)))
         except:
-            print ("Dialog Sun light representation not changed from properties")
+            print ("Get properties: Sun light representation not changed")
         try:
-            obj1 = FreeCAD.ActiveDocument.SunProperties
+            obj = FreeCAD.ActiveDocument.SunProperties
             # Sun path diagram
-            sp.get_diagram_from_site()
-            self.ui.checkBox_Sun_path_diagram.setChecked(obj1.SunPathDiagram)
+            sp.get_diagram_from_site() #get diagram from Site
+            self.ui.checkBox_Sun_path_diagram.setChecked(
+                                              obj.SunPathDiagram)
             try:
                 FreeCAD.ActiveDocument.Site
                 self.ui.checkBox_Sun_path_diagram.setEnabled(True)
             except Exception:
                 self.ui.checkBox_Sun_path_diagram.setChecked(False)
                 self.ui.checkBox_Sun_path_diagram.setEnabled(False)
-            self.ui.lineEdit_Position_x.setText(str(obj1.DiagPosition.x))
-            self.ui.lineEdit_Position_y.setText(str(obj1.DiagPosition.y))
-            self.ui.lineEdit_Position_z.setText(str(obj1.DiagPosition.z))
-            color1 = obj1.DiagColor   # (R, G, B) floats in [0,1]
+            from SkyDomes import SD #import position form Skydomes
+            if SD is not None:
+                self.ui.lineEdit_Position_x.setText(str(
+                                        SD.position.x))
+                self.ui.lineEdit_Position_y.setText(str(
+                                        SD.position.y))
+                self.ui.lineEdit_Position_z.setText(str(
+                                        SD.position.z))
+            else:
+                self.ui.lineEdit_Position_x.setText(str(
+                                        obj.DiagPosition.x))
+                self.ui.lineEdit_Position_y.setText(str(
+                                        obj.DiagPosition.y))
+                self.ui.lineEdit_Position_z.setText(str(
+                                        obj.DiagPosition.z))
+            color1 = obj.DiagColor   # (R, G, B) floats in [0,1]
             self.ui.colorButtonTop_2.setStyleSheet(
-                f"background-color: rgb({int(color1[0]*255)}, {int(color1[1]*255)}, {int(color1[2]*255)});")
+                f"background-color: rgb({int(color1[0]*255)}, "
+                f"{int(color1[1]*255)}, {int(color1[2]*255)});")
         except:
-            print ("Dialog Sun path diagram not changed from properties")
+            print ("Get properties: Sun path diagram not changed")
         try:
-            obj1 = FreeCAD.ActiveDocument.SunProperties
+            obj = FreeCAD.ActiveDocument.SunProperties
             # Sun_path_animation
-            self.ui.checkBox_Sun_path_animation.setChecked(obj1.SunPathAnimation)
-            self.ui.timeEdit_1_From.setTime(QTime(obj1.InitialHour, obj1.InitialMin))
-            self.ui.timeEdit_1_To.setTime(QTime(obj1.FinalHour, obj1.FinalMin))
-            self.ui.timeEdit_1_Interval.setTime(QTime(obj1.Inter_hour, obj1.Inter_min))
-            self.ui.lineEdit_2_Fps.setText(str(obj1.Fps))
-            self.ui.checkBox_2_Recompute.setChecked(obj1.Recompute)
-            self.ui.lineEdit_height.setText(str(obj1.Height))
-            self.ui.lineEdit_width.setText(str(obj1.Width))
+            self.ui.checkBox_Sun_path_animation.setChecked(
+                                    obj.SunPathAnimation)
+            self.ui.timeEdit_1_From.setTime(QTime(
+                                    obj.start_hour,
+                                    obj.start_min))
+            self.ui.timeEdit_1_To.setTime(QTime(
+                                    obj.end_hour,
+                                    obj.end_min))
+            self.ui.checkBox_sunrise_sunset.setChecked(
+                                    obj.sunrise_sunset)
+            self.ui.timeEdit_1_Interval.setTime(QTime(
+                                    obj.inter_hour,
+                                    obj.inter_min))
+            self.ui.lineEdit_2_Fps.setText(str(
+                                    obj.Fps))
+            self.ui.checkBox_2_Recompute.setChecked(
+                                    obj.Recompute)
+            self.ui.lineEdit_height.setText(str(
+                                    obj.Height))
+            self.ui.lineEdit_width.setText(str(
+                                    obj.Width))
         except:
-            print ("Dialog Sun_path_animation not changed from properties")
+            print ("Get properties: Sun_path_animation not changed")
         try:
-            obj1 = FreeCAD.ActiveDocument.SunProperties
+            obj = FreeCAD.ActiveDocument.SunProperties
             # Show_save
-            self.ui.checkBox_Save_to.setChecked(obj1.Save_to)
-            idx = self.ui.comboBox_Images.findText(obj1.Image_from)
-            if idx >= 0:
-                self.ui.comboBox_Images.setCurrentIndex(idx)
+            self.ui.checkBox_Save_to.setChecked(
+                                    obj.Save_to)
+            idx1 = self.ui.comboBox_Images.findText(
+                                    obj.Image_from)
+            if idx1 >= 0:
+                self.ui.comboBox_Images.setCurrentIndex(idx1)
         except Exception:
             print ("Dialog Show_save not changed from properties")
         self.image_from_toggled()
 
     def save_to_propeties(self):
-        """Set data to properties"""
+
+        """Save data from dialog to sun properties"""
+
         try:
-            obj1 = FreeCAD.ActiveDocument.SunProperties
+            obj = FreeCAD.ActiveDocument.SunProperties
             # epw file
             epw_path = self.ui.lineEdit_1_epw_path.text()
-            obj1.epw_path = epw_path
+            obj.epw_path = epw_path
         except:
-            print ("epw file properties not changed from dialog")
+            print ("Save properties: epw path not changed from dialog")
         try:
-            obj1 = FreeCAD.ActiveDocument.SunProperties
+            obj = FreeCAD.ActiveDocument.SunProperties
             # Location
-            obj1.City = self.ui.lineEdit_2_City.text()
-            obj1.Country = self.ui.lineEdit_2_Country.text()
-            obj1.Latitude  = float(self.ui.lineEdit_2_Latitude.text())
-            obj1.Longitude  = float(self.ui.lineEdit_2_Longitude.text())
-            obj1.Elevation  = float(self.ui.lineEdit_2_Elevation.text())
-            obj1.TimeZone  = int(self.ui.lineEdit_2_Time_zone.text())
-            # North angle
-            obj1.North  = float(self.ui.lineEdit_3_North_angle.text())
+            obj.City = self.ui.lineEdit_2_City.text()
+            obj.Country = self.ui.lineEdit_2_Country.text()
+            obj.Latitude  = float(self.ui.lineEdit_2_Latitude.text())
+            obj.Longitude  = float(self.ui.lineEdit_2_Longitude.text())
+            obj.Elevation  = float(self.ui.lineEdit_2_Elevation.text())
+            obj.TimeZone  = int(self.ui.lineEdit_2_Time_zone.text())
         except:
-            print ("Location or North angle properties not changed from dialog")
+            print ("Save properties: Location properties not changed from dialog")
         try:
-            obj1 = FreeCAD.ActiveDocument.SunProperties
+            # North angle
+            obj.North = float(self.ui.lineEdit_3_North_angle.text())
+        except:
+            print ("Save properties: \n"
+                   "North angle properties not changed from dialog")
+        try:
+            obj = FreeCAD.ActiveDocument.SunProperties
             # Date and time
             date_string2 = self.ui.dateEdit_4_Date.text()
             time_string2 = self.ui.timeEdit_4_time.text()
-            obj1.Day = int(date_string2[0:2])
-            obj1.Month = int(date_string2[3:5])
-            obj1.Year = int(date_string2[6:10])
-            obj1.Hour = int(time_string2[0:2])
-            obj1.Min = int(time_string2[3:5])
-            obj1.DaylightSaving = self.ui.checkBox_DaylightSaving.isChecked()
+            obj.Day = int(date_string2[0:2])
+            obj.Month = int(date_string2[3:5])
+            obj.Year = int(date_string2[6:10])
+            obj.Hour = int(time_string2[0:2])
+            obj.Min = int(time_string2[3:5])
+            obj.DaylightSaving = self.ui.checkBox_DaylightSaving.isChecked()
         except:
-            print ("Date and time properties not changed from dialog")
+            print ("Save properties: \n"
+                   "Date and time properties not changed from dialog")
         try:
-            obj1 = FreeCAD.ActiveDocument.SunProperties
+            obj = FreeCAD.ActiveDocument.SunProperties
             # Sun light representation
-            obj1.SunLightDiagramConfig = self.ui.checkBox_sun_light_config.isChecked()
-            obj1.SunLightRepresentation = self.ui.checkBox_Sun_light_representation.isChecked()
-            obj1.Radius  = self.ui.lineEdit_Radius.text()
-            obj1.Distance  = self.ui.lineEdit_Distance.text()
-            obj1.RayRepresentation = self.ui.checkBox_Ray_representation.isChecked()
+            obj.SunLightDiagramConfig = self.ui.checkBox_sun_light_config.isChecked()
+            obj.SunLightRepresentation = self.ui.checkBox_Sun_light_representation.isChecked()
+            obj.Radius = self.ui.lineEdit_Radius.text()
+            obj.Distance = self.ui.lineEdit_Distance.text()
+            obj.RayRepresentation = self.ui.checkBox_Ray_representation.isChecked()
             string_color = self.ui.colorButtonTop.styleSheet()
             string_rgb = re.findall(r'\d+', string_color)
-            rgb_color = (int(string_rgb[0])/255, int(string_rgb[1])/255, int(string_rgb[2])/255)
-            obj1.SunLightColor = rgb_color
+            rgb_color = (int(string_rgb[0])/255,
+                         int(string_rgb[1])/255,
+                         int(string_rgb[2])/255)
+            obj.SunLightColor = rgb_color
         except:
-            print ("Sun light representation properties not changed from dialog")
+            print ("Save properties: \n"
+                   "Sun light representation properties not changed from dialog")
         try:
-            obj1 = FreeCAD.ActiveDocument.SunProperties
+            obj = FreeCAD.ActiveDocument.SunProperties
             # Sun path diagram
-            obj1.SunPathDiagram = self.ui.checkBox_Sun_path_diagram.isChecked()
-            obj1.DiagPosition.x  = self.ui.lineEdit_Position_x.text()
-            obj1.DiagPosition.y  = self.ui.lineEdit_Position_y.text()
-            obj1.DiagPosition.z  = self.ui.lineEdit_Position_z.text()
+            obj.SunPathDiagram = self.ui.checkBox_Sun_path_diagram.isChecked()
+            obj.DiagPosition.x = self.ui.lineEdit_Position_x.text()
+            obj.DiagPosition.y = self.ui.lineEdit_Position_y.text()
+            obj.DiagPosition.z = self.ui.lineEdit_Position_z.text()
             string_color2 = self.ui.colorButtonTop_2.styleSheet()
             string_rgb2 = re.findall(r'\d+', string_color2)
-            rgb_color2 = (int(string_rgb2[0])/255, int(string_rgb2[1])/255, int(string_rgb2[2])/255)
-            obj1.DiagColor = rgb_color2
+            rgb_color2 = (int(string_rgb2[0])/255,
+                          int(string_rgb2[1])/255,
+                          int(string_rgb2[2])/255)
+            obj.DiagColor = rgb_color2
         except:
-            print ("Sun path diagram properties not changed from dialog")
+            print ("Save properties: \n"
+                   "Sun path diagram properties not changed from dialog")
         try:
-            obj1 = FreeCAD.ActiveDocument.SunProperties
+            obj = FreeCAD.ActiveDocument.SunProperties
             # Sun_path_animation
-            obj1.SunPathAnimation = self.ui.checkBox_Sun_path_animation.isChecked()
+            obj.SunPathAnimation = self.ui.checkBox_Sun_path_animation.isChecked()
             time_string3 = self.ui.timeEdit_1_From.text()
-            obj1.InitialHour = int(time_string3[0:2])
-            obj1.InitialMin = int(time_string3[3:5])
+            obj.start_hour = int(time_string3[0:2])
+            obj.start_min = int(time_string3[3:5])
             time_string4 = self.ui.timeEdit_1_To.text()
-            obj1.FinalHour  = int(time_string4[0:2])
-            obj1.FinalMin = int(time_string4[3:5])
+            obj.end_hour  = int(time_string4[0:2])
+            obj.end_min = int(time_string4[3:5])
+            obj.sunrise_sunset = self.ui.checkBox_sunrise_sunset.isChecked()
             time_string5 = self.ui.timeEdit_1_Interval.text()
-            obj1.Inter_hour = int(time_string5[0:2])
-            obj1.Inter_min = int(time_string5[3:5])
-            obj1.Fps = float(self.ui.lineEdit_2_Fps.text())
-            obj1.Recompute = self.ui.checkBox_2_Recompute.isChecked()
-            obj1.Height = int(self.ui.lineEdit_height.text())
-            obj1.Width = int(self.ui.lineEdit_width.text())
+            obj.inter_hour = int(time_string5[0:2])
+            obj.inter_min = int(time_string5[3:5])
+            obj.Fps = float(self.ui.lineEdit_2_Fps.text())
+            obj.Recompute = self.ui.checkBox_2_Recompute.isChecked()
+            obj.Height = int(self.ui.lineEdit_height.text())
+            obj.Width = int(self.ui.lineEdit_width.text())
         except:
-            print ("Sun_path_animation properties not changed from dialog")
+            print ("Save properties: \n"
+                   "Sun_path_animation properties not changed from dialog")
         try:
-            obj1 = FreeCAD.ActiveDocument.SunProperties
+            obj = FreeCAD.ActiveDocument.SunProperties
             # Show_save
-            obj1.Image_from = self.ui.comboBox_Images.currentText()
-            obj1.Save_to = self.ui.checkBox_Save_to.isChecked()
+            obj.Image_from = self.ui.comboBox_Images.currentText()
+            obj.Save_to = self.ui.checkBox_Save_to.isChecked()
         except:
-            print ("Show_save properties not changed from dialog")
+            print ("Save properties: Show_save properties not changed from dialog")
 
         sp.get_sun_position()
         sp.send_diagram_to_site()
-        if obj1.Image_from == "Render 3D view" and obj1.SunPathAnimation is True:
+        if obj.Image_from == "Render 3D view" and obj.SunPathAnimation is True:
             spa.set_render_animation()
         FreeCAD.ActiveDocument.recompute()
 
     def get_results(self):
+
         """Get results"""
+
         try:
-            obj1 = FreeCAD.ActiveDocument.SunProperties
-            self.ui.lineEdit_5_Altitude_result.setText(str(round(obj1.Altitude, 2)))
-            self.ui.lineEdit_5_Azimuth_result.setText(str(round(obj1.Azimuth, 2)))
-            self.ui.lineEdit_5_Day_hours_result.setText(str(obj1.DaylightHours))
-            sun_rise_hour = int(obj1.Sunrise[0:2])
-            sun_rise_min = int(obj1.Sunrise[3:5])
-            self.ui.timeEdit_5_Sunrise_result.setTime(QTime(sun_rise_hour, sun_rise_min))
-            noon_hour = int(obj1.Noon[0:2])
-            noon_min = int(obj1.Noon[3:5])
-            self.ui.timeEdit_5_Noon_result.setTime(QTime(noon_hour, noon_min))
-            sun_set_hour = int(obj1.Sunset[0:2])
-            sun_set_min = int(obj1.Sunset[3:5])
-            self.ui.timeEdit_5_Sunset_result.setTime(QTime(sun_set_hour, sun_set_min))
-            self.ui.lineEdit_Frames.setText(str(obj1.Frames))
+            obj = FreeCAD.ActiveDocument.SunProperties
+            self.ui.label_altitude_result.setText(str(
+                                        round(obj.Altitude, 2)))
+            self.ui.label_azimute_result.setText(str(
+                                        round(obj.Azimuth, 2)))
+            self.ui.label_day_hours_result.setText(
+                                        obj.DaylightHours)
+            self.ui.label_sunrise_result.setText(
+                                        obj.Sunrise)
+            self.ui.label_noon_result.setText(
+                                        obj.Noon)
+            self.ui.label_sunset_result.setText(
+                                        obj.Sunset)
+            # Update animation date
+            if obj.sunrise_sunset is True:
+                sunrise_hour = int(obj.Sunrise[0:2])
+                sunrise_min = int(obj.Sunrise[3:5])
+                self.ui.timeEdit_1_From.setTime(QTime(
+                                        sunrise_hour, sunrise_min))
+                sunset_hour = int(obj.Sunset[0:2])
+                sunset_min = int(obj.Sunset[3:5])
+                self.ui.timeEdit_1_To.setTime(
+                                        QTime(sunset_hour, sunset_min))
+            self.ui.lineEdit_Frames.setText(str(obj.Frames))
         except:
             print ("Dialog Results not changed from properties")
 
 def open_sun_configuration():
+
     """Open sun configuration"""
+
     dlg = SunConfigurationDialog()
-    # Pre-fill data
     dlg.get_properties_data()
     dlg.get_results()
     if dlg.show_dialog():
         dlg.save_to_propeties()
 
 if FreeCAD.GuiUp:
-    FreeCAD.Gui.addCommand('SunConfigurationDialog', SunConfigurationDialog())
+    FreeCAD.Gui.addCommand('SunConfigurationDialog',
+                           SunConfigurationDialog())

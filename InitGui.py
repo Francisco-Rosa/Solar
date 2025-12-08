@@ -28,17 +28,17 @@ import FreeCAD
 import FreeCADGui as Gui
 import SunProperties as sp
 
-
 Gui.addLanguagePath(sp.LanguagePath)
 Gui.updateLocale()
 
-class Solar (Workbench):
+class Solar(Workbench):
     """The Solar Workbench."""
 
     translate = FreeCAD.Qt.translate
 
     MenuText = translate("InitGui", "Solar")
-    ToolTip = translate("InitGui", "Workbench to manage solar configuration in FreeCAD")
+    ToolTip = translate("InitGui",
+                        "Workbench to manage solar analysis and configurations")
     from SunProperties import IconPath
     Icon = os.path.join(IconPath, "SolarIcon.svg")
 
@@ -49,12 +49,16 @@ class Solar (Workbench):
         # import here all the needed files that create your FreeCAD commands
         import SunPathAnimation
         import SunDialog
+        import SkyDomes
 
         translate = FreeCAD.Qt.translate
 
         self.list1 = ['SunConfigurationDialog',
                        'StartSunPathAnimation',
                        'StopSunPathAnimation',
+                       'CreateSkyDomes',
+                       'ModifySkyDomes',
+                       'DeleteSkyDomes'
                        ] # a list of command names created in the line above
 
         default_title1 = translate("InitGui", "Solar tools")
@@ -67,7 +71,8 @@ class Solar (Workbench):
 
         translate = FreeCAD.Qt.translate
 
-        FreeCAD.Console.PrintMessage(translate("InitGui","Solar Workbench loaded") + "\n")
+        FreeCAD.Console.PrintMessage(translate(
+                                     "InitGui","Solar Workbench loaded") + "\n")
         return
 
     def Deactivated(self):
@@ -80,13 +85,14 @@ class Solar (Workbench):
         translate = FreeCAD.Qt.translate
 
         # "recipient" will be either "view" or "tree"
-        default_title1 = translate("ContextMenu", "Solar tools")
-
-        self.appendContextMenu(default_title1, self.list1) # add commands to the context menu
+        default_title1 = translate("InitGui", "Solar tools")
+        # add commands to the context menu
+        self.appendContextMenu(default_title1, self.list1)
 
     def GetClassName(self):
         # This function is mandatory if this is a full Python workbench
-        # This is not a template, the returned string should be exactly "Gui::PythonWorkbench"
+        # This is not a template,
+        # the returned string should be exactly "Gui::PythonWorkbench"
         return "Gui::PythonWorkbench"
 
 Gui.addWorkbench(Solar())

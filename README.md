@@ -1,7 +1,7 @@
 ## Solar Workbench
-Workbench for configuring the sun's position and animating its path
+Workbench to manage solar analysis and configurations
 
-### Worbench Icon
+### Workbench Icon
 ![Solar Workbench Icon](./icons//SolarIcon.svg)
 
 ### Features
@@ -17,7 +17,7 @@ Workbench for configuring the sun's position and animating its path
 
 * Ability to play the sun path animations in real time prior to recording.
 
-#### Record and Play (with Movie and Render Workbenchs)
+#### Record and Play (with Movie and Render Workbenches)
 
 * Create frames from the FreeCAD 3D view or the rendered ones.   
 * Create videos from them.  
@@ -69,11 +69,11 @@ Not yet available.
 
 ### Preparation
 
-* To use this workbench, you must have the ladybug-core Python package installed. There are two basic ways to do this:
+* To use this workbench, you must have the two ladybug Python packages installed (the pysolar package is optional). There are two basic ways to do this:
 
   If your operating system's Python version is the same as FreeCAD's, simply open a terminal and type:
   
-      pip install ladybug-core pysolar # pysolar is optional
+      pip install ladybug-core ladybug-radiance pysolar
 
   If the versions are different, you'll need to use Python venv. To do this, go to the Solar Workbench folder (see the address above) or open FreeCAD and type the following expression in the Python console to find the Mod that Solar is in:
 
@@ -92,22 +92,34 @@ Not yet available.
       source AdditionalPythonPackages/bin/activate # Linux/macOS
       AdditionalPythonPackages\Scripts\activate # Windows
   
-  Install packages within the environment:
+  Install packages within the environment (pysolar is optional):
   
-      pip install ladybug-core pysolar # pysolar is optional
+      pip install ladybug-core ladybug-radiance pysolar
+      
   Deactivate the virtual environment when finished:
   
       deactivate
+      
+* To use Sky Domes, you will also need to install Radiance on your computer (https://www.radiance-online.org/).
+* Download and license: https://www.radiance-online.org/download-install
 
-* If you want to use the rendered frames, you must install the Render Workbench, prepare rendering projects and test them preventively to make sure everything is working correctly (see information in [FreeCAD-Render](https://github.com/FreeCAD/FreeCAD-render)).
-* If you want to use the play and record rendered animation frames, you must install the Movie Workbench [FreeCAD-Movie](https://github.com/Francisco-Rosa/FreeCAD-Movie/tree/master).
+* If you want to use the rendered frames, you must install the Render Workbench (via Addon Manager), prepare rendering projects and test them preventively to make sure everything is working correctly (see information in [FreeCAD-Render](https://github.com/FreeCAD/FreeCAD-render)).
+* If you want to use the play and record rendered animation frames, you must install the Movie Workbench (via Addon Manager, and see information in [FreeCAD-Movie](https://github.com/Francisco-Rosa/FreeCAD-Movie/tree/master).
 
 
 ### Usage
 
 ##### Sun configuration dialog  
 
-<img src=./Docs/Sun_dialog.jpg height=600>
+<img src=./Docs/Sun_dialog.jpg width=600>
+
+##### Sky domes configuration dialog
+
+<img src=./Docs/SD_dialog.jpg width=600>
+
+To create a SkyDomes, click "Create SkyDomes" button and configure them in the dialog window. To modify a SkyDomes, click "Modify SkyDomes" button with the respective SkyDomes already selected. To delete SkyDomes, select them and click "Delete SkyDomes" button.
+
+Important: Once Skydomes are created, do not modify their structure of the groups in the FreeCAD object tree, as this will prevent future modifications.
 
 ### Documentation
 Documentation will be available as soon as possible.
@@ -116,7 +128,7 @@ Documentation will be available as soon as possible.
 For discussion, please use the [Solar Workbench thread](https://forum.freecad.org/viewtopic.php?p=836631#p836631) in the FreeCAD forum.
 
 #### License 
-LGPL-2.1 [LICENCE](./LICENCE)
+LGPL-2.1 [LICENSE](./LICENSE)
 
 #### Author
 Francisco Rosa, 2025.

@@ -2,9 +2,9 @@
 <package format="1" xmlns="https://wiki.freecad.org/Package_Metadata">
 
   <name>Solar Workbench</name>
-  <description>Workbench to manage solar configurations</description>
-  <version>2025.07.22</version>
-  <date>2025.07.22</date>
+  <description>Workbench to manage solar analysis and configurations</description>
+  <version>2025.11.07</version>
+  <date>2025.11.07</date>
   <author email="fco.rosa@yahoo.com.br">F_Rosa</author>  
   <maintainer email="fco.rosa@yahoo.com.br">F_Rosa</maintainer>  
   <license file="LICENSE">LGPL-2.1-or-later</license>
@@ -17,6 +17,8 @@
   <content>
     <workbench>
       <depend type="python">ladybug-core</depend>
+      <depend type="python">ladybug-radiance</depend>
+      <depend >Radiance</depend>
       <depend optional="True" type="addon" version_gte="2025.01.04">Movie</depend>
       <depend optional="True" type="addon" version_gte="2023.02.05">Render</depend>
       <tag>freecad</tag>
