@@ -1,32 +1,112 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<package format="1" xmlns="https://wiki.freecad.org/Package_Metadata">
+<?xml
+    version = '1.0'
+    encoding = 'UTF-8'
+    standalone = 'no'
+?>
+<package
+    format = '1'
+    xmlns = 'https://wiki.freecad.org/Package_Metadata'
+>
 
-  <name>Solar Workbench</name>
-  <description>Workbench to manage solar analysis and configurations</description>
-  <version>2025.11.09</version>
-  <date>2025.11.09</date>
-  <author email="fco.rosa@yahoo.com.br">F_Rosa</author>  
-  <maintainer email="fco.rosa@yahoo.com.br">F_Rosa</maintainer>  
-  <license file="LICENSE">LGPL-2.1-or-later</license>
-  <freecadmin>1.0.0</freecadmin>
-  <url type="repository" branch="master">https://github.com/Francisco-Rosa/Solar</url>
-  <url type="readme">https://github.com/Francisco-Rosa/Solar/blob/main/README.md</url>
-  <url type="discussion">https://forum.freecad.org/viewtopic.php?p=836631#p836631</url>
-  <icon>icons/SunPositionIcon.svg</icon>
+    <!--[ Versions ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
-  <content>
-    <workbench>
-      <depend type="python">ladybug-core</depend>
-      <depend type="python">ladybug-radiance</depend>
-      <depend >Radiance</depend>
-      <depend optional="True" type="addon" version_gte="2025.01.04">Movie</depend>
-      <depend optional="True" type="addon" version_gte="2023.02.05">Render</depend>
-      <tag>freecad</tag>
-      <tag>addons</tag>
-      <tag>workbench</tag>
-      <tag>solar</tag>
-      <classname>Solar</classname>
-    </workbench>
-  </content>
+    <freecadmin>1.0.0</freecadmin>
+    <version>2025.11.09</version>
+    <date>2025.11.09</date>
+
+    <!--[ Dependencies - Python ]――――――――――――――――――――――――――――――――――――――――――――-->
+
+    <depend
+        type = 'python'
+    >ladybug-core</depend>
+
+    <depend
+        type = 'python'
+    >ladybug-radiance</depend>
+
+    <!--[ Dependencies - Addons ]――――――――――――――――――――――――――――――――――――――――――――-->
+
+    <depend
+        type = 'addon'
+    >Radiance</depend>
+
+    <depend
+        version_gte = '2023.02.05'
+        optional = 'True'
+        type = 'addon'
+    >Render</depend>
+
+    <depend
+        version_gte = '2025.01.04'
+        optional = 'True'
+        type = 'addon'
+    >Movie</depend>
+
+    <!--[ Info ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
+
+    <description>Workbench to manage solar analysis and configurations.</description>
+    <name>Solar</name>
+
+    <!--[ Tags ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
+
+    <tag>Visualize</tag>
+    <tag>Configure</tag>
+    <tag>Analyze</tag>
+    <tag>Solar</tag>
+    <tag>Sun</tag>
+
+    <!--[ Maintainers ]――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
+
+    <maintainer
+        email = 'fco.rosa@yahoo.com.br'
+    >Francisco Rosa</maintainer>
+
+    <!--[ Authors ]――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
+
+    <author
+        email = 'fco.rosa@yahoo.com.br'
+    >Francisco Rosa</author>
+
+    <!--[ Licenses ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
+
+    <license
+        file = 'LICENSE'
+    >LGPL-2.1-or-later</license>
+
+    <!--[ Icon ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
+
+    <icon>icons/SunPositionIcon.svg</icon>
+
+    <!--[ Urls ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
+
+    <url
+        type = 'documentation'
+    >https://github.com/Francisco-Rosa/Solar</url>
+
+    <url
+        type = 'discussion'
+    >https://forum.freecad.org/viewtopic.php?p=836631#p836631</url>
+
+    <url
+        branch = 'master'
+        type = 'repository'
+    >https://github.com/Francisco-Rosa/Solar</url>
+
+    <url
+        type = 'bugtracker'
+    >https://github.comFrancisco-Rosa/Solar/issues</url>
+
+    <url
+        type = 'readme'
+    >https://github.com/Francisco-Rosa/Solar/blob/main/README.md</url>
+
+    <!--[ Content ]――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
+
+    <content>
+        <workbench>
+            <subdirectory>.</subdirectory>
+            <classname>Solar</classname>
+        </workbench>
+    </content>
 
 </package>
