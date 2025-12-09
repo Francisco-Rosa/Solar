@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: LGPL-2.1-or-later
+
 # ***************************************************************************
 # *   Copyright (c) 2025 Francisco Rosa                                     *
 # *                                                                         *
@@ -488,7 +490,7 @@ def get_sky_matrix_dome_values(epw_path = "",
                             )
         total_values = sky_dome_obj[1]
         direct_values = sky_dome_obj[2]
-        diffuse_values = sky_dome_obj[3]    
+        diffuse_values = sky_dome_obj[3]
     else:
         total_values = sky_matrix_values[1]
         direct_values = sky_matrix_values[2]
