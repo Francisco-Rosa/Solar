@@ -11,8 +11,8 @@
     <!--[ Versions ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
     <freecadmin>1.0.0</freecadmin>
-    <version>2025.11.09</version>
-    <date>2025.11.09</date>
+    <version>2025.11.15</version>
+    <date>2025.11.15</date>
 
     <!--[ Dependencies - Python ]――――――――――――――――――――――――――――――――――――――――――――-->
 
@@ -88,13 +88,13 @@
     >https://forum.freecad.org/viewtopic.php?p=836631#p836631</url>
 
     <url
-        branch = 'master'
+        branch = 'main'
         type = 'repository'
     >https://github.com/Francisco-Rosa/Solar</url>
 
     <url
         type = 'bugtracker'
-    >https://github.comFrancisco-Rosa/Solar/issues</url>
+    >https://github.com/Francisco-Rosa/Solar/issues</url>
 
     <url
         type = 'readme'
