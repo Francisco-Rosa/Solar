@@ -49,47 +49,73 @@
     </message>
     <message>
         <location filename="../LBComponents.py" line="294"/>
-        <source>Compass_legend_total</source>
+        <source>Compass legend total</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="298"/>
-        <source>Compass_legend_direct</source>
+        <source>Compass legend direct</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="302"/>
-        <source>Compass_legend_diffuse</source>
+        <source>Compass legend diffuse</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="370"/>
-        <source>Compass_circles_total</source>
+        <source>Compass circles total</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="377"/>
-        <source>Compass_circles_direct</source>
+        <source>Compass circles direct</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="384"/>
-        <source>Compass_circles_diffuse</source>
+        <source>Compass circles diffuse</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="554"/>
-        <source>Legend_bar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../LBComponents.py" line="592"/>
-        <source>Legend_bar_</source>
+        <source>Legend bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="598"/>
-        <source>Legend_text_</source>
+        <source>Legend text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LBComponents.py" line="729"/>
+        <source>Legend total</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LBComponents.py" line="737"/>
+        <source>Legend direct</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LBComponents.py" line="743"/>
+        <source>Legend diffuse</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LBComponents.py" line="748"/>
+        <source>Main Legend Total</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LBComponents.py" line="753"/>
+        <source>Main Legend Direct</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LBComponents.py" line="758"/>
+        <source>Main Legend Diffuse</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -105,36 +131,6 @@
     <message>
         <location filename="../LBComponents.py" line="688"/>
         <source>Diffuse {}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../LBComponents.py" line="729"/>
-        <source>Legend_total</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../LBComponents.py" line="737"/>
-        <source>Legend_direct</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../LBComponents.py" line="743"/>
-        <source>Legend_diffuse</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../LBComponents.py" line="748"/>
-        <source>Main_Legend_Total</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../LBComponents.py" line="753"/>
-        <source>Main_Legend_Direct</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../LBComponents.py" line="758"/>
-        <source>Main_Legend_Diffuse</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -162,67 +158,67 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="698"/>
-        <source>SD_Tregenza</source>
+        <location filename="../SkyDomes.py" line="701"/>
+        <source>SD Tregenza</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="705"/>
-        <source>SD_Reinhart</source>
+        <location filename="../SkyDomes.py" line="708"/>
+        <source>SD Reinhart</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="720"/>
-        <location filename="../SkyDomes.py" line="724"/>
-        <source>Sky_Dome_Total</source>
+        <location filename="../SkyDomes.py" line="723"/>
+        <location filename="../SkyDomes.py" line="727"/>
+        <source>Sky Dome Total</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="739"/>
-        <location filename="../SkyDomes.py" line="743"/>
-        <source>Sky_Dome_Direct</source>
+        <location filename="../SkyDomes.py" line="742"/>
+        <location filename="../SkyDomes.py" line="746"/>
+        <source>Sky Dome Direct</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="758"/>
-        <location filename="../SkyDomes.py" line="762"/>
-        <source>Sky_Dome_Diffuse</source>
+        <location filename="../SkyDomes.py" line="761"/>
+        <location filename="../SkyDomes.py" line="765"/>
+        <source>Sky Dome Diffuse</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="895"/>
-        <source>Vectors_TR</source>
+        <location filename="../SkyDomes.py" line="898"/>
+        <source>Vectors TR</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="900"/>
-        <source>Vectors_RE</source>
+        <location filename="../SkyDomes.py" line="903"/>
+        <source>Vectors RE</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="1008"/>
+        <location filename="../SkyDomes.py" line="1011"/>
         <source>Create sky domes: Could not get sky domes properties!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="1016"/>
-        <location filename="../SkyDomes.py" line="1172"/>
+        <location filename="../SkyDomes.py" line="1019"/>
+        <location filename="../SkyDomes.py" line="1176"/>
         <source>To create sky domes you must provide a valid epw file!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="1020"/>
-        <location filename="../SkyDomes.py" line="1176"/>
+        <location filename="../SkyDomes.py" line="1023"/>
+        <location filename="../SkyDomes.py" line="1180"/>
         <source>To create sky domes, you need to indicate an epw file!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="1164"/>
+        <location filename="../SkyDomes.py" line="1168"/>
         <source>Modify sky domes: Could not get sky domes properties!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="1352"/>
+        <location filename="../SkyDomes.py" line="1357"/>
         <source>This will delete all main objects from the selected Sky Domes, 
 and you won&apos;t be able to undo it. 
 
