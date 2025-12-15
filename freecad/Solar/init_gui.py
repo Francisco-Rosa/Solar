@@ -26,12 +26,13 @@
 import os
 import FreeCAD
 import FreeCADGui as Gui
-import SunProperties as sp
 
-Gui.addLanguagePath(sp.LanguagePath)
+from .SunProperties import LanguagePath
+
+Gui.addLanguagePath(LanguagePath)
 Gui.updateLocale()
 
-class Solar(Workbench):
+class Solar(Gui.Workbench):
     """The Solar Workbench."""
 
     translate = FreeCAD.Qt.translate
@@ -39,7 +40,7 @@ class Solar(Workbench):
     MenuText = translate("InitGui", "Solar")
     ToolTip = translate("InitGui",
                         "Workbench to manage solar analysis and configurations")
-    from SunProperties import IconPath
+    from .SunProperties import IconPath
     Icon = os.path.join(IconPath, "SolarIcon.svg")
 
     def Initialize(self):
@@ -47,9 +48,9 @@ class Solar(Workbench):
         It is executed once in a FreeCAD session followed by the Activated function.
         """
         # import here all the needed files that create your FreeCAD commands
-        import SunPathAnimation
-        import SunDialog
-        import SkyDomes
+        import freecad.Solar.SunPathAnimation
+        import freecad.Solar.SunDialog
+        import freecad.Solar.SkyDomes
 
         translate = FreeCAD.Qt.translate
 

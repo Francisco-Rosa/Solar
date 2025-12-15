@@ -29,7 +29,7 @@ import FreeCADGui as Gui
 from PySide import QtCore, QtWidgets
 from PySide.QtCore import QDate
 from PySide.QtCore import QT_TRANSLATE_NOOP
-import SkyDomes as sd
+import freecad.Solar.SkyDomes as SkyDomes
 
 SD = None
 
@@ -493,7 +493,7 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
             self.ui.comboBox_timestep.setEnabled(False)
 
     def bool_changed(self):
-        from SkyDomes import SD
+        from .SkyDomes import SD
         if SD is not None:
             try:
                 SD.Group[0].Group[3]
@@ -507,7 +507,7 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
     def value_changed(self):
         value = str(self.ui.horizontalSlider_transparency.value())
         self.ui.label_transp_value.setText(value)
-        from SkyDomes import SD
+        from .SkyDomes import SD
         if SD is not None:
             try:
                 SD.Group[0].Group[0].ViewObject.Transparency = int(value)
@@ -525,7 +525,7 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
 
         """Get data from sky domes properties and send them to dialog"""
 
-        from SkyDomes import SD, SD_NEW
+        from .SkyDomes import SD, SD_NEW
         if SD is not None:
             # epw file
             if SD_NEW is True:
@@ -599,7 +599,7 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
 
         """Save data from dialog to sky domes properties"""
 
-        from SkyDomes import SD, SD_NEW
+        from .SkyDomes import SD, SD_NEW
         if SD is not None:
 
             # epw file
@@ -677,7 +677,7 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
 
         dif_forms = False
         dif_values = False
-        from SkyDomes import SD
+        from .SkyDomes import SD
         if SD is not None:
             north1 = float(SD.north)
             radius1 = float(SD.radius)
@@ -735,7 +735,7 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
             print("send data to sky domes!")
             print(f"dif_forms: {dif_forms}, dif_values: {dif_values}")
             if dif_forms is True or dif_values is True:
-                sd.modify_sky_domes(forms = dif_forms, values = dif_values)
+                SkyDomes.modify_sky_domes(forms = dif_forms, values = dif_values)
                 print("updated sky domes data!")
         else:
             print("Compare sky domes data: Can not get data from sky domes!")
@@ -744,7 +744,7 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
 
         """Apply button actions"""
 
-        from SkyDomes import SD_NEW
+        from .SkyDomes import SD_NEW
         if SD_NEW is True:
             self.save_to_propeties()
         else:
@@ -757,12 +757,12 @@ def open_sky_domes_configuration():
     dlg = SkyDomesConfigurationDialog()
     dlg.get_properties_data()
     if dlg.show_dialog():
-        from SkyDomes import SD_NEW
+        from .SkyDomes import SD_NEW
         if SD_NEW is True:
             dlg.save_to_propeties()
-            sd.create_sky_domes()
+            SkyDomes.create_sky_domes()
         else:
             dlg.compare_sky_domes_data()
-    from SkyDomes import SD, SD_NEW
+    from .SkyDomes import SD, SD_NEW
     if SD_NEW is True:
         FreeCAD.ActiveDocument.removeObject(SD.Name)
