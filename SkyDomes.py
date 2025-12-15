@@ -459,6 +459,7 @@ def get_sky_matrix_dome_values(epw_path = "",
                         sky_dome_units = "",
                         timestep = 1,
                         center_vectors = False,
+                        ground_reflectance = 0.2
                         ):
 
     """Obtains the necessary data (epw file, analysis period, model,
@@ -471,14 +472,16 @@ def get_sky_matrix_dome_values(epw_path = "",
         sky_matrix_values = lbc.get_sky_matrix_values(epw_path,
                                   period,
                                   high_density = False,
-                                  timestep = timestep
+                                  timestep = timestep,
+                                  ground_reflectance = ground_reflectance
                                   )
     # Model Reinhart
     if sky_dome_model == "Reinhart":
         sky_matrix_values = lbc.get_sky_matrix_values(epw_path,
                                   period,
                                   high_density = True,
-                                  timestep = timestep
+                                  timestep = timestep,
+                                  ground_reflectance = ground_reflectance
                                   )
     # Irradiance
     if sky_dome_units == "Irradiance (W/m²)":
@@ -488,7 +491,7 @@ def get_sky_matrix_dome_values(epw_path = "",
                             )
         total_values = sky_dome_obj[1]
         direct_values = sky_dome_obj[2]
-        diffuse_values = sky_dome_obj[3]
+        diffuse_values = sky_dome_obj[3]    
     else:
         total_values = sky_matrix_values[1]
         direct_values = sky_matrix_values[2]
@@ -557,7 +560,7 @@ def get_sky_dome_forms(center_dome = None,
         dome_const_group = doc.addObject('App::DocumentObjectGroup',
                                          'SD_construction')
         dome_const_group.Label = QT_TRANSLATE_NOOP('SkyDomes',
-                                         'SD_constructions')
+                                         'SD constructions')
     if sky_dome_model == "Tregenza":
         try:
             doc.Model_Tregenza
@@ -568,7 +571,7 @@ def get_sky_dome_forms(center_dome = None,
             dome_model_group = doc.addObject('App::DocumentObjectGroup',
                                              'Model_Tregenza')
             dome_model_group.Label = QT_TRANSLATE_NOOP('SkyDomes',
-                                             'Model_Tregenza')
+                                             'Model Tregenza')
             doc.getObject(dome_const_group.Name).addObject(dome_model_group)
             create_surfaces = True
     if sky_dome_model == "Reinhart":
@@ -581,7 +584,7 @@ def get_sky_dome_forms(center_dome = None,
             dome_model_group = doc.addObject('App::DocumentObjectGroup',
                                              'Model_Reinhart')
             dome_model_group.Label = QT_TRANSLATE_NOOP('SkyDomes',
-                                             'Model_Reinhart')
+                                             'Model Reinhart')
             doc.getObject(dome_const_group.Name).addObject(dome_model_group)
             create_surfaces = True
     # Get the patch surfaces
@@ -696,14 +699,14 @@ def get_sky_dome_forms(center_dome = None,
                                            "Part::Compound",
                                            "SD_Tregenza")
             dome.Label = QT_TRANSLATE_NOOP("SkyDomes",
-                                           "SD_Tregenza")
+                                           "SD Tregenza")
             dome.Links = surfaces
         if sky_dome_model == "Reinhart":
             dome = FreeCAD.activeDocument().addObject(
                                            "Part::Compound",
                                            "SD_Reinhart")
             dome.Label = QT_TRANSLATE_NOOP("SkyDomes",
-                                           "SD_Reinhart")
+                                           "SD Reinhart")
             dome.Links = surfaces
         doc.getObject(dome_model_group.Name).addObject(dome)
         # Group visibility
@@ -718,12 +721,12 @@ def get_sky_dome_forms(center_dome = None,
     dome_total_group = doc.addObject("App::DocumentObjectGroup",
                                            "Sky_Dome_Total")
     dome_total_group.Label = QT_TRANSLATE_NOOP("SkyDomes",
-                                           "Sky_Dome_Total")
+                                           "Sky Dome Total")
     # total values - clone1
     dome_total = lbc.get_analysis_clone(compound = dome_compound,
                            obj_label = QT_TRANSLATE_NOOP(
                                             "SkyDomes",
-                                            "Sky_Dome_Total"),
+                                            "Sky Dome Total"),
                            analysis_group = dome_total_group
                            )
     # clone total position, rotation and scale
@@ -737,12 +740,12 @@ def get_sky_dome_forms(center_dome = None,
     dome_direct_group = doc.addObject('App::DocumentObjectGroup',
                                             'Sky_Dome_Direct')
     dome_direct_group.Label = QT_TRANSLATE_NOOP("SkyDomes",
-                                            "Sky_Dome_Direct")
+                                            "Sky Dome Direct")
     # direct values - clone2
     dome_direct = lbc.get_analysis_clone(compound = dome_compound,
                            obj_label = QT_TRANSLATE_NOOP(
                                             "SkyDomes",
-                                            "Sky_Dome_Direct"),
+                                            "Sky Dome Direct"),
                            analysis_group = dome_direct_group
                            )
     # clone direct position, rotation and scale
@@ -756,12 +759,12 @@ def get_sky_dome_forms(center_dome = None,
     dome_diffuse_group = doc.addObject('App::DocumentObjectGroup',
                                        'Sky_Dome_Diffuse')
     dome_diffuse_group.Label = QT_TRANSLATE_NOOP("SkyDomes",
-                                                 "Sky_Dome_Diffuse")
+                                                 "Sky Dome Diffuse")
     # diffuse values - clone3
     dome_diffuse = lbc.get_analysis_clone(compound = dome_compound,
                            obj_label = QT_TRANSLATE_NOOP(
                                             "SkyDomes",
-                                            "Sky_Dome_Diffuse"),
+                                            "Sky Dome Diffuse"),
                            analysis_group = dome_diffuse_group
                            )
     # clone diffuse position, rotation and scale
@@ -893,12 +896,12 @@ def get_center_vectors(center = (0.0, 0.0, 0.0),
         dome_vectors_group = doc.addObject('App::DocumentObjectGroup',
                                            'Vectors_TR')
         dome_vectors_group.Label = QT_TRANSLATE_NOOP("SkyDomes",
-                                                     "Vectors_TR")
+                                                     "Vectors TR")
     if model == "Reinhart":
         dome_vectors_group = doc.addObject('App::DocumentObjectGroup',
                                            'Vectors_RE')
         dome_vectors_group.Label = QT_TRANSLATE_NOOP("SkyDomes",
-                                                     "Vectors_RE")
+                                                     "Vectors RE")
     #modify scale and position
     for i in range(len(vector_values)):
         point = Draft.make_point(
@@ -1057,6 +1060,7 @@ def create_sky_domes():
                                           sky_dome_units = SD.units,
                                           timestep = int(SD.timestep),
                                           center_vectors = SD.center_vectors,
+                                          ground_reflectance = 0.2
                                           )
     SD.total_values = sky_dome_values[0]
     SD.direct_values = sky_dome_values[1]
@@ -1137,10 +1141,9 @@ def create_sky_domes():
                           direct_values = SD.direct_values,
                           diffuse_values = SD.diffuse_values,
                           leg_colors = color_rgb_leg,
-                          label = f"SD_{SD.city}_{SD.units}",
+                          label = f"SD {SD.city} {SD.units}",
                           transparency = SD.transparency
                           )
-    Gui.SendMsgToActiveView("ViewFit")
     FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP(
                                 'SkyDomes',
                                 'Sky domes were created! To configure it, \n'
@@ -1149,6 +1152,7 @@ def create_sky_domes():
                                 'Make the adjustments in its properties window.'
                                  ) + '\n')
     SD_NEW = False
+    Gui.SendMsgToActiveView("ViewFit")
     Gui.runCommand('Std_ViewGroup',2)
     Gui.Selection.clearSelection()
     Gui.Selection.addSelection(SD)
@@ -1287,8 +1291,9 @@ def update_values(epw_path = None, period = None):
                                                  period,
                                                  sky_dome_model = SD.model,
                                                  sky_dome_units = SD.units,
-                                                 timestep = int(SD.timestep)
-                                                  )
+                                                 timestep = int(SD.timestep),
+                                                 ground_reflectance = 0.2
+                                                )
     SD.total_values = sky_dome_values[0]
     SD.direct_values = sky_dome_values[1]
     SD.diffuse_values = sky_dome_values[2]
@@ -1328,7 +1333,7 @@ def update_values(epw_path = None, period = None):
                           direct_values = SD.direct_values,
                           diffuse_values = SD.diffuse_values,
                           leg_colors = color_rgb_leg,
-                          label = f"SD_{SD.city}_{SD.units}",
+                          label = f"SD {SD.city} {SD.units}",
                           transparency = SD.transparency
                           )
     print("modifying main legend...")
