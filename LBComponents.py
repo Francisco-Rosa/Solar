@@ -292,15 +292,15 @@ def get_compass(center = None,
     dome_leg1_group = doc.addObject('App::DocumentObjectGroup',
                                     'Compass_legend_total')
     dome_leg1_group.Label = QT_TRANSLATE_NOOP("LBComponents",
-                                              "Compass_legend_total")
+                                              "Compass legend total")
     dome_leg2_group = doc.addObject('App::DocumentObjectGroup',
                                     'Compass_legend_direct')
     dome_leg2_group.Label = QT_TRANSLATE_NOOP("LBComponents",
-                                              "Compass_legend_direct")
+                                              "Compass legend direct")
     dome_leg3_group = doc.addObject('App::DocumentObjectGroup',
                                     'Compass_legend_diffuse')
     dome_leg3_group.Label = QT_TRANSLATE_NOOP("LBComponents",
-                                              "Compass_legend_diffuse")
+                                              "Compass legend diffuse")
     # Create lines and texts
     for i in range(n_angles):
         # lines
@@ -368,7 +368,7 @@ def get_compass(center = None,
     compass_total = doc.addObject("Part::Compound",
                                   "Compass_circles_total")
     compass_total.Label = QT_TRANSLATE_NOOP("LBComponents",
-                                            "Compass_circles_total")
+                                            "Compass circles total")
     doc.getObject(compass_total.Name).Links = compass_list
     doc.getObject(dome_total_group.Name).addObject(compass_total)
     # Compass direct values - clones
@@ -376,14 +376,14 @@ def get_compass(center = None,
     doc.getObject(compass_direct.Name).Placement.Base = (radius*3, 0,0)
     doc.getObject(compass_direct.Name).Label = QT_TRANSLATE_NOOP(
                                                "LBComponents",
-                                               "Compass_circles_direct")
+                                               "Compass circles direct")
     doc.getObject(dome_direct_group.Name).addObject(compass_direct)
     # Compass diffuse values - clone
     compass_diffuse = Draft.make_clone(doc.getObject(compass_total.Name))
     doc.getObject(compass_diffuse.Name).Placement.Base = (radius*6, 0,0)
     doc.getObject(compass_diffuse.Name).Label = QT_TRANSLATE_NOOP(
                                                 "LBComponents",
-                                                "Compass_circles_diffuse")
+                                                "Compass circles diffuse")
     doc.getObject(dome_diffuse_group.Name).addObject(compass_diffuse)
     # Save and return data
     compass_data = []
@@ -552,7 +552,7 @@ def get_modify_legend_bar(bar_obj = None,
                                     use_link = False
                                     )
         bar_new.Label = QT_TRANSLATE_NOOP("LBComponents",
-                                          "Legend_bar")
+                                          "Legend bar")
     else:
         bar_obj.Base.Length = seg_width
         bar_obj.Base.Height = seg_heith
@@ -590,13 +590,13 @@ def get_modify_legend_bar(bar_obj = None,
         leg_bar_group = doc.addObject("App::DocumentObjectGroup",
                                         "SA_Legend_bar")
         leg_bar_group.Label = QT_TRANSLATE_NOOP("LBComponents",
-                                                 "Legend_bar_")
+                                                 "Legend bar")
         doc.getObject(leg_bar_group.Name).addObject(bar_new)
         # create legend text group
         leg_text_group = doc.addObject("App::DocumentObjectGroup",
                                         "Legend_text")
         leg_text_group.Label = QT_TRANSLATE_NOOP("LBComponents",
-                                                 "Legend_text_")
+                                                 "Legend text")
     else:
         pass
     #get title positions
@@ -727,7 +727,7 @@ def get_main_legends(pos1 = (0.0, 0.0, 0.0),
                                 line_spacing=1.2
                                 )
     text_leg1.Label = QT_TRANSLATE_NOOP("LBComponents",
-                                        "Legend_total")
+                                        "Legend total")
     text_leg2 = Draft.make_text(text_direct,
                                 placement=pl2_leg,
                                 screen=None,
@@ -735,28 +735,28 @@ def get_main_legends(pos1 = (0.0, 0.0, 0.0),
                                 line_spacing=1.2
                                 )
     text_leg2.Label = QT_TRANSLATE_NOOP("LBComponents",
-                                        "Legend_direct")
+                                        "Legend direct")
     text_leg3 = Draft.make_text(text_diffuse, placement=pl3_leg,
                                 screen=None, height=text_high,
                                 line_spacing=1.2
                                 )
     text_leg3.Label = QT_TRANSLATE_NOOP("LBComponents",
-                                        "Legend_diffuse")
+                                        "Legend diffuse")
     #create groups and put main legends into correspondent ones
     leg_total_group = doc.addObject('App::DocumentObjectGroup',
                                     'Main_Legend_Total')
     leg_total_group.Label = QT_TRANSLATE_NOOP("LBComponents",
-                                              "Main_Legend_Total")
+                                              "Main Legend Total")
     doc.getObject(leg_total_group.Name).addObject(text_leg1)
     leg_direct_group = doc.addObject('App::DocumentObjectGroup',
-                                     'Main_Legend_Direct')
+                                     'Main Legend Direct')
     leg_direct_group.Label = QT_TRANSLATE_NOOP("LBComponents",
-                                               "Main_Legend_Direct")
+                                               "Main Legend Direct")
     doc.getObject(leg_direct_group.Name).addObject(text_leg2)
     leg_diffuse_group = doc.addObject('App::DocumentObjectGroup',
                                       'Main_Legend_Diffuse')
     leg_diffuse_group.Label = QT_TRANSLATE_NOOP("LBComponents",
-                                                "Main_Legend_Diffuse")
+                                                "Main Legend Diffuse")
     doc.getObject(leg_diffuse_group.Name).addObject(text_leg3)
     FreeCAD.ActiveDocument.recompute()
     return [leg_total_group, #[0]
