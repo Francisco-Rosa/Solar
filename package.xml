@@ -17,12 +17,19 @@
     <!--[ Dependencies - Python ]――――――――――――――――――――――――――――――――――――――――――――-->
 
     <depend
+        version_gte = '0.2.11'
+        type = 'python'
+    >ladybug-radiance</depend>
+
+    <depend
+        version_gte = '0.44.29'
         type = 'python'
     >ladybug-core</depend>
 
     <depend
+        version_gte = '0.13'
         type = 'python'
-    >ladybug-radiance</depend>
+    >pysolar</depend>
 
     <!--[ Dependencies - Addons ]――――――――――――――――――――――――――――――――――――――――――――-->
 
