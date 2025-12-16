@@ -614,15 +614,21 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
             SD.position.x  = self.ui.lineEdit_Position_x.text()
             SD.position.y  = self.ui.lineEdit_Position_y.text()
             SD.position.z  = self.ui.lineEdit_Position_z.text()
+
             # Analysis period
-            date_string1 = self.ui.dateEdit_date_from.text()
-            SD.start_day = int(date_string1[0:2])
-            SD.start_month = int(date_string1[3:5])
-            SD.start_year = int(date_string1[6:10])
-            date_string2 = self.ui.dateEdit_date_to.text()
-            SD.end_day = int(date_string2[0:2])
-            SD.end_month = int(date_string2[3:5])
-            SD.end_year = int(date_string2[6:10])
+
+            date_string1 = self.ui.dateEdit_date_from.date()
+
+            SD.start_month = date_string1.month()
+            SD.start_year = date_string1.year()
+            SD.start_day = date_string1.day()
+
+            date_string2 = self.ui.dateEdit_date_to.date()
+
+            SD.end_month = date_string2.month()
+            SD.end_year = date_string2.year()
+            SD.end_day = date_string2.day()
+
             SD.start_hour = self.ui.spinBox_time_from.value()
             SD.end_hour = self.ui.spinBox_time_to.value()
             # Sky domes
@@ -659,14 +665,19 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
         center_vectors2 = self.ui.checkBox_center_vectors.isChecked()
         #values
         epw_path2 = self.ui.lineEdit_epw_path.text()
-        date_string1 = self.ui.dateEdit_date_from.text()
-        start_day2 = int(date_string1[0:2])
-        start_month2 = int(date_string1[3:5])
-        start_year2 = int(date_string1[6:10])
-        date_string2 = self.ui.dateEdit_date_to.text()
-        end_day2 = int(date_string2[0:2])
-        end_month2 = int(date_string2[3:5])
-        end_year2 = int(date_string2[6:10])
+
+        date_string1 = self.ui.dateEdit_date_from.date()
+
+        start_month2 = date_string1.month()
+        start_year2 = date_string1.year()
+        start_day2 = date_string1.day()
+
+        date_string2 = self.ui.dateEdit_date_to.date()
+
+        end_month2 = date_string2.month()
+        end_year2 = date_string2.year()
+        end_day2 = date_string2.day()
+
         start_hour2 = int(self.ui.spinBox_time_from.text())
         end_hour2 = int(self.ui.spinBox_time_to.text())
         timestep2 = self.ui.comboBox_timestep.currentText()
