@@ -44,8 +44,9 @@ except:
     pass
 from ladybug.location import Location
 from ladybug.sunpath import Sunpath
-import SunShadowBW as sh
-import SunPathAnimation as spa
+
+import freecad.Solar.SunPathAnimation as SunPathAnimation
+import freecad.Solar.SunShadowBW as SunShadow
 
 SUNLIGHT = None
 RAY = None
@@ -510,9 +511,9 @@ class SunPropertiesViewProvider:
 
         if prop in ["Image_from"]:
             if obj.Image_from == "None/Reset":
-                sh.clean_view_state()
+                SunShadow.clean_view_state()
             if obj.Image_from == "BW 3D view":
-                sh.create_shadows_black_white()
+                SunShadow.create_shadows_black_white()
             if obj.Image_from == "Color 3D view":
                 try:
                     site_obj = Gui.ActiveDocument.Site
@@ -640,7 +641,7 @@ def get_sun_position(obj = None):
                     update_sun_representation()
                     # Update BW shadows
                     if obj.Image_from == "BW 3D view":
-                        sh.update_shadow_direction()
+                        SunShadow.update_shadow_direction()
                         if obj.Save_to is True and obj.SunPathAnimation is False:
                             save_image()
                     # Update Color shadows - until now, only for FreeCAD-Link
@@ -659,7 +660,7 @@ def get_sun_position(obj = None):
                             pass
                     # Update render shadows - only with Render WB installed
                     if obj.Image_from == "Render 3D view":
-                        from SunPathAnimation import ANIMATION
+                        from .SunPathAnimation import ANIMATION
                         try: # Render image
                             obj_render_sun = FreeCAD.ActiveDocument.SunskyLight
                             obj_render_sun.SunDirection = obj.SunLightPosition
@@ -710,7 +711,7 @@ def get_sun_position(obj = None):
                     obj.DaylightHours = str((sunrise_sunset ['sunset']
                         - sunrise_sunset ['sunrise']))
                     # Calculate frames
-                    spa.calculate_frames()
+                    SunPathAnimation.calculate_frames()
                     if obj.Recompute is True:
                         FreeCAD.ActiveDocument.recompute()
                 else:
@@ -925,7 +926,7 @@ def save_image(obj = None):
         obj = FreeCAD.ActiveDocument.SunProperties
         if obj.Save_to is True:
             if obj.Image_from == "BW 3D view":
-                from SunShadowBW import VIEW
+                from .SunShadowBW import VIEW
                 if VIEW is not None:
                     # outputfile = "/tmp/freecad_shadow.png"
                     # width = 1920

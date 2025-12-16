@@ -28,9 +28,10 @@ import time
 import FreeCAD
 import FreeCADGui as Gui
 from PySide.QtCore import QT_TRANSLATE_NOOP
-import SunProperties as sp
 
-Gui.addLanguagePath(sp.LanguagePath)
+import freecad.Solar.SunProperties as Properties
+
+Gui.addLanguagePath(Properties.LanguagePath)
 
 class StartSunPathAnimation:
 
@@ -154,7 +155,7 @@ def sun_path_animation():
                 "SunPathAnimation", "A path to save images is required! \n"
                 "Click stop animation to start again.") + '\n')
             return
-    sp.get_sun_position() # First step
+    Properties.get_sun_position() # First step
     Gui.updateGui()
     print(f'{obj.City}, {obj.Day:0>2}/{obj.Month:0>2}/{obj.Year}, '
           f'{obj.Hour:0>2}:{obj.Min:0>2}')
@@ -177,7 +178,7 @@ def sun_path_animation():
         else:
             print("Hour is higher then 24")
             pass
-        sp.get_sun_position()
+        Properties.get_sun_position()
         Gui.updateGui()
         print(f'{obj.City}, {obj.Day:0>2}/{obj.Month:0>2}/{obj.Year}, '
               f'{obj.Hour:0>2}:{obj.Min:0>2}')
