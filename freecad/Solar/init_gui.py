@@ -41,7 +41,7 @@ class Solar(Gui.Workbench):
     ToolTip = translate("InitGui",
                         "Workbench to manage solar analysis and configurations")
     from .SunProperties import IconPath
-    Icon = os.path.join(IconPath, "SolarIcon.svg")
+    Icon = os.path.join(IconPath, "Logo.svg")
 
     def Initialize(self):
         """This function is executed when the workbench is first activated.

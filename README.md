@@ -1,8 +1,13 @@
-## Solar Workbench
-Workbench to manage solar analysis and configurations
 
-### Workbench Icon
-![Solar Workbench Icon](./freecad/Solar/icons//SolarIcon.svg)
+<div align = 'center' >
+
+<img width = '100' src = './freecad/Solar/icons/Logo.svg' />
+
+## Solar Workbench
+Workbench to manage solar  
+analysis and configurations.
+
+</div>
 
 ### Features
 #### Configure the sun position
