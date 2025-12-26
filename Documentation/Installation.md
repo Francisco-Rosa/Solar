@@ -30,17 +30,20 @@ In Flatseal find the FreeCAD entry and scroll to
 the section named `Filesystem`, there you can  
 give FreeCAD access to additional directories.
 
-Add a directory called `/usr/local/radiance`
+Add a directory called `~/ladybug_tools`
 
 <img width = '300' src = '../Resources/Media/Installation/Flatpak-FileSystem.webp' />
 
 ### Snap
 
-Similar to Flatpak, Snaps don't have access to  
-files outside by default, however I couldn't find  
-a proper way to change this.
+Snaps don't have access to files outside by default.  
+To determine where the Radiance files should go, run  
+the following code inside of FreeCAD Python console.
 
-Let us know if you know how to configure it!
+```Python
+from ladybug.config import folders
+print(f'{ folders.ladybug_tools_folder }')
+```
 
 <br/>
 
