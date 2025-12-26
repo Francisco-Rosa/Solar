@@ -1,8 +1,13 @@
-## Solar Workbench
-Workbench to manage solar analysis and configurations
 
-### Workbench Icon
-![Solar Workbench Icon](./icons//SolarIcon.svg)
+<div align = 'center' >
+
+<img width = '100' src = './freecad/Solar/icons/Logo.svg' />
+
+## Solar Workbench
+Workbench to manage solar  
+analysis and configurations.
+
+</div>
 
 ### Features
 #### Configure the sun position
@@ -25,7 +30,7 @@ Workbench to manage solar analysis and configurations
 
 ### Tutorials
 
-##### Using sun configuration
+##### Sun path shadows study
 
 * BW 3D view option
 
@@ -45,6 +50,11 @@ Workbench to manage solar analysis and configurations
 
 (Watch the [sample video](https://youtu.be/nT1_mGFQwXE?si=TemWHlLiOsnyXDa8))
 
+##### Sky domes analysis
+
+<img src=./Docs/Skydomes_Barcelona_Sao_Paulo_New_York_011.jpg width=800>
+
+<img src=./Docs/Skydomes_Barcelona_Sao_Paulo_New_York_021.jpg width=800>
 
 ### Prerequisites 
 FreeCAD ≥ v1.0 
@@ -119,7 +129,13 @@ Not yet available.
 
 To create a SkyDomes, click "Create SkyDomes" button and configure them in the dialog window. To modify a SkyDomes, click "Modify SkyDomes" button with the respective SkyDomes already selected. To delete SkyDomes, select them and click "Delete SkyDomes" button.
 
-Important: Once Skydomes are created, do not modify their structure of the groups in the FreeCAD object tree, as this will prevent future modifications.
+IMPORTANT: 
+
+* Once Skydomes are created, do not modify their structure of the groups in the FreeCAD object tree, as this will prevent future modifications.
+
+* This is the first implementation of solar domes using the ladybug libraries; therefore, the results obtained may still contain errors or deviations.
+
+* If this occurs, please report it in the forum link indicated below.
 
 ### Documentation
 Documentation will be available as soon as possible.

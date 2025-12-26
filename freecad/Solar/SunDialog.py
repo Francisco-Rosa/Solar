@@ -1,25 +1,25 @@
-# ***************************************************************************
-# *   Copyright (c) 2025 Francisco Rosa                                     *
-# *                                                                         *
-# *   This file is part of the FreeCAD CAx development system.              *
-# *                                                                         *
-# *   This program is free software; you can redistribute it and/or modify  *
-# *   it under the terms of the GNU Lesser General Public License (LGPL)    *
-# *   as published by the Free Software Foundation; either version 2 of     *
-# *   the License, or (at your option) any later version.                   *
-# *   for detail see the LICENSE text file.                                 *
-# *                                                                         *
-# *   FreeCAD is distributed in the hope that it will be useful,            *
-# *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
-# *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
-# *   GNU Lesser General Public License for more details.                   *
-# *                                                                         *
-# *   You should have received a copy of the GNU Library General Public     *
-# *   License along with FreeCAD; if not, write to the Free Software        *
-# *   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  *
-# *   USA                                                                   *
-# *                                                                         *
-# ***************************************************************************
+# SPDX-License-Identifier: LGPL-2.1-or-later
+# SPDX-FileNotice: Part of the Solar addon.
+
+################################################################################
+#                                                                              #
+#   Copyright (c) 2025 Francisco Rosa                                          #
+#                                                                              #
+#   This addon is free software; you can redistribute it and/or modify it      #
+#   under the terms of the GNU Lesser General Public License as published      #
+#   by the Free Software Foundation; either version 2.1 of the License, or     #
+#   (at your option) any later version.                                        #
+#                                                                              #
+#   This addon is distributed in the hope that it will be useful,              #
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of             #
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.                       #
+#                                                                              #
+#   See the GNU Lesser General Public License for more details.                #
+#                                                                              #
+#   You should have received a copy of the GNU Lesser General Public           #
+#   License along with this addon. If not, see https://www.gnu.org/licenses    #
+#                                                                              #
+################################################################################
 
 """This module implements the sun configuration dialog"""
 
@@ -30,8 +30,9 @@ import FreeCADGui as Gui
 from PySide import QtUiTools, QtCore, QtWidgets
 from PySide.QtCore import QDate, QTime
 from PySide.QtCore import QT_TRANSLATE_NOOP
-import SunProperties as sp
-import SunPathAnimation as spa
+
+import freecad.Solar.SunPathAnimation as SunPathAnimation
+import freecad.Solar.SunProperties as SunProperties
 
 SD = None
 
@@ -455,7 +456,7 @@ class SunConfigurationDialog(QtWidgets.QDialog):
         try:
             FreeCAD.ActiveDocument.SunProperties
         except:
-            sp.activated_sun_properties()
+            SunProperties.activated_sun_properties()
         open_sun_configuration()
 
     # Slots -------------
@@ -604,7 +605,7 @@ class SunConfigurationDialog(QtWidgets.QDialog):
 
         try:
             obj = FreeCAD.ActiveDocument.SunProperties
-            from SkyDomes import SD # import epw_path and north from Skydomes
+            from .SkyDomes import SD # import epw_path and north from Skydomes
             if SD is not None:
                 self.ui.lineEdit_1_epw_path.setText(SD.epw_path)
                 self.autofill_from_epw()
@@ -645,7 +646,7 @@ class SunConfigurationDialog(QtWidgets.QDialog):
             self.ui.colorButtonTop.setStyleSheet(
                 f"background-color: rgb({int(color[0]*255)}, "
                 f"{int(color[1]*255)}, {int(color[2]*255)});")
-            from SkyDomes import SD #import radius and distance from Skydomes
+            from .SkyDomes import SD #import radius and distance from Skydomes
             if SD is not None:
                 self.ui.lineEdit_Distance.setText(str(int(SD.radius)))
             else:
@@ -655,7 +656,7 @@ class SunConfigurationDialog(QtWidgets.QDialog):
         try:
             obj = FreeCAD.ActiveDocument.SunProperties
             # Sun path diagram
-            sp.get_diagram_from_site() #get diagram from Site
+            SunProperties.get_diagram_from_site() #get diagram from Site
             self.ui.checkBox_Sun_path_diagram.setChecked(
                                               obj.SunPathDiagram)
             try:
@@ -664,7 +665,7 @@ class SunConfigurationDialog(QtWidgets.QDialog):
             except Exception:
                 self.ui.checkBox_Sun_path_diagram.setChecked(False)
                 self.ui.checkBox_Sun_path_diagram.setEnabled(False)
-            from SkyDomes import SD #import position form Skydomes
+            from .SkyDomes import SD #import position form Skydomes
             if SD is not None:
                 self.ui.lineEdit_Position_x.setText(str(
                                         SD.position.x))
@@ -828,10 +829,10 @@ class SunConfigurationDialog(QtWidgets.QDialog):
         except:
             print ("Save properties: Show_save properties not changed from dialog")
 
-        sp.get_sun_position()
-        sp.send_diagram_to_site()
+        SunProperties.get_sun_position()
+        SunProperties.send_diagram_to_site()
         if obj.Image_from == "Render 3D view" and obj.SunPathAnimation is True:
-            spa.set_render_animation()
+            SunPathAnimation.set_render_animation()
         FreeCAD.ActiveDocument.recompute()
 
     def get_results(self):

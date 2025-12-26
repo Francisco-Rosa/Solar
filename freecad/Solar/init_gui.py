@@ -1,37 +1,38 @@
-# ***************************************************************************
-# *   Copyright (c) 2025 Francisco Rosa                                     *
-# *                                                                         *
-# *   This file is part of the FreeCAD CAx development system.              *
-# *                                                                         *
-# *   This program is free software; you can redistribute it and/or modify  *
-# *   it under the terms of the GNU Lesser General Public License (LGPL)    *
-# *   as published by the Free Software Foundation; either version 2 of     *
-# *   the License, or (at your option) any later version.                   *
-# *   for detail see the LICENCE text file.                                 *
-# *                                                                         *
-# *   FreeCAD is distributed in the hope that it will be useful,            *
-# *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
-# *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
-# *   GNU Lesser General Public License for more details.                   *
-# *                                                                         *
-# *   You should have received a copy of the GNU Library General Public     *
-# *   License along with FreeCAD; if not, write to the Free Software        *
-# *   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  *
-# *   USA                                                                   *
-# *                                                                         *
-# ***************************************************************************
+# SPDX-License-Identifier: LGPL-2.1-or-later
+# SPDX-FileNotice: Part of the Solar addon.
+
+################################################################################
+#                                                                              #
+#   Copyright (c) 2025 Francisco Rosa                                          #
+#                                                                              #
+#   This addon is free software; you can redistribute it and/or modify it      #
+#   under the terms of the GNU Lesser General Public License as published      #
+#   by the Free Software Foundation; either version 2.1 of the License, or     #
+#   (at your option) any later version.                                        #
+#                                                                              #
+#   This addon is distributed in the hope that it will be useful,              #
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of             #
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.                       #
+#                                                                              #
+#   See the GNU Lesser General Public License for more details.                #
+#                                                                              #
+#   You should have received a copy of the GNU Lesser General Public           #
+#   License along with this addon. If not, see https://www.gnu.org/licenses    #
+#                                                                              #
+################################################################################
 
 """Gui initialization module for Solar Workbench."""
 
 import os
 import FreeCAD
 import FreeCADGui as Gui
-import SunProperties as sp
 
-Gui.addLanguagePath(sp.LanguagePath)
+from .SunProperties import LanguagePath
+
+Gui.addLanguagePath(LanguagePath)
 Gui.updateLocale()
 
-class Solar(Workbench):
+class Solar(Gui.Workbench):
     """The Solar Workbench."""
 
     translate = FreeCAD.Qt.translate
@@ -39,17 +40,17 @@ class Solar(Workbench):
     MenuText = translate("InitGui", "Solar")
     ToolTip = translate("InitGui",
                         "Workbench to manage solar analysis and configurations")
-    from SunProperties import IconPath
-    Icon = os.path.join(IconPath, "SolarIcon.svg")
+    from .SunProperties import IconPath
+    Icon = os.path.join(IconPath, "Logo.svg")
 
     def Initialize(self):
         """This function is executed when the workbench is first activated.
         It is executed once in a FreeCAD session followed by the Activated function.
         """
         # import here all the needed files that create your FreeCAD commands
-        import SunPathAnimation
-        import SunDialog
-        import SkyDomes
+        import freecad.Solar.SunPathAnimation
+        import freecad.Solar.SunDialog
+        import freecad.Solar.SkyDomes
 
         translate = FreeCAD.Qt.translate
 

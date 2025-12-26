@@ -1,25 +1,25 @@
-# ***************************************************************************
-# *   Copyright (c) 2025 Francisco Rosa                                     *
-# *                                                                         *
-# *   This file is part of the FreeCAD CAx development system.              *
-# *                                                                         *
-# *   This program is free software; you can redistribute it and/or modify  *
-# *   it under the terms of the GNU Lesser General Public License (LGPL)    *
-# *   as published by the Free Software Foundation; either version 2 of     *
-# *   the License, or (at your option) any later version.                   *
-# *   for detail see the LICENSE text file.                                 *
-# *                                                                         *
-# *   FreeCAD is distributed in the hope that it will be useful,            *
-# *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
-# *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
-# *   GNU Lesser General Public License for more details.                   *
-# *                                                                         *
-# *   You should have received a copy of the GNU Library General Public     *
-# *   License along with FreeCAD; if not, write to the Free Software        *
-# *   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  *
-# *   USA                                                                   *
-# *                                                                         *
-# ***************************************************************************/
+# SPDX-License-Identifier: LGPL-2.1-or-later
+# SPDX-FileNotice: Part of the Solar addon.
+
+################################################################################
+#                                                                              #
+#   Copyright (c) 2025 Francisco Rosa                                          #
+#                                                                              #
+#   This addon is free software; you can redistribute it and/or modify it      #
+#   under the terms of the GNU Lesser General Public License as published      #
+#   by the Free Software Foundation; either version 2.1 of the License, or     #
+#   (at your option) any later version.                                        #
+#                                                                              #
+#   This addon is distributed in the hope that it will be useful,              #
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of             #
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.                       #
+#                                                                              #
+#   See the GNU Lesser General Public License for more details.                #
+#                                                                              #
+#   You should have received a copy of the GNU Lesser General Public           #
+#   License along with this addon. If not, see https://www.gnu.org/licenses    #
+#                                                                              #
+################################################################################
 
 """Create and modify a sky matrix as colored domes, subdivided into patches."""
 
@@ -31,8 +31,9 @@ import Draft
 from PySide import QtWidgets
 from PySide.QtCore import QT_TRANSLATE_NOOP
 from ladybug.analysisperiod import AnalysisPeriod
-import SkyDomesDialog as sdd
-import LBComponents as lbc
+
+import freecad.Solar.SkyDomesDialog as SkyDomesDialog
+import freecad.Solar.LBComponents as LBComponents
 
 #=================================================
 # A. Main classes
@@ -397,7 +398,7 @@ def activated_create_sky_domes(self):
     SD = folder
     print(f"create sky domes: SD = {SD.Name}")
     SD_NEW = True
-    sdd.open_sky_domes_configuration()
+    SkyDomesDialog.open_sky_domes_configuration()
 
 def activated_modify_sky_domes(self):
 
@@ -409,7 +410,7 @@ def activated_modify_sky_domes(self):
     SD = select_sky_domes()
     if SD is not None:
         print(f"activated modify sky domes: SD = {SD.Name}")
-        sdd.open_sky_domes_configuration()
+        SkyDomesDialog.open_sky_domes_configuration()
     else:
         FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SkyDomes",
             "To modify a set of sky domes, first you must select one!" + '\n'))
@@ -459,6 +460,7 @@ def get_sky_matrix_dome_values(epw_path = "",
                         sky_dome_units = "",
                         timestep = 1,
                         center_vectors = False,
+                        ground_reflectance = 0.2
                         ):
 
     """Obtains the necessary data (epw file, analysis period, model,
@@ -468,32 +470,34 @@ def get_sky_matrix_dome_values(epw_path = "",
     #total_values, direct_values, diffuse_values
     # Model Tregenza
     if sky_dome_model == "Tregenza":
-        sky_matrix_values = lbc.get_sky_matrix_values(epw_path,
+        sky_matrix_values = LBComponents.get_sky_matrix_values(epw_path,
                                   period,
                                   high_density = False,
-                                  timestep = timestep
+                                  timestep = timestep,
+                                  ground_reflectance = ground_reflectance
                                   )
     # Model Reinhart
     if sky_dome_model == "Reinhart":
-        sky_matrix_values = lbc.get_sky_matrix_values(epw_path,
+        sky_matrix_values = LBComponents.get_sky_matrix_values(epw_path,
                                   period,
                                   high_density = True,
-                                  timestep = timestep
+                                  timestep = timestep,
+                                  ground_reflectance = ground_reflectance
                                   )
     # Irradiance
     if sky_dome_units == "Irradiance (W/m²)":
-        sky_dome_obj = lbc.get_sky_dome_values(
+        sky_dome_obj = LBComponents.get_sky_dome_values(
                             sky_matrix = sky_matrix_values[0],
                             plot_irradiance = True,
                             )
         total_values = sky_dome_obj[1]
         direct_values = sky_dome_obj[2]
-        diffuse_values = sky_dome_obj[3]    
+        diffuse_values = sky_dome_obj[3]
     else:
         total_values = sky_matrix_values[1]
         direct_values = sky_matrix_values[2]
         diffuse_values = sky_matrix_values[3]
-        sky_dome_obj = lbc.get_sky_dome_values(
+        sky_dome_obj = LBComponents.get_sky_dome_values(
                         sky_matrix = sky_matrix_values[0])
 
     #vector values
@@ -557,7 +561,7 @@ def get_sky_dome_forms(center_dome = None,
         dome_const_group = doc.addObject('App::DocumentObjectGroup',
                                          'SD_construction')
         dome_const_group.Label = QT_TRANSLATE_NOOP('SkyDomes',
-                                         'SD_constructions')
+                                         'SD constructions')
     if sky_dome_model == "Tregenza":
         try:
             doc.Model_Tregenza
@@ -568,7 +572,7 @@ def get_sky_dome_forms(center_dome = None,
             dome_model_group = doc.addObject('App::DocumentObjectGroup',
                                              'Model_Tregenza')
             dome_model_group.Label = QT_TRANSLATE_NOOP('SkyDomes',
-                                             'Model_Tregenza')
+                                             'Model Tregenza')
             doc.getObject(dome_const_group.Name).addObject(dome_model_group)
             create_surfaces = True
     if sky_dome_model == "Reinhart":
@@ -581,7 +585,7 @@ def get_sky_dome_forms(center_dome = None,
             dome_model_group = doc.addObject('App::DocumentObjectGroup',
                                              'Model_Reinhart')
             dome_model_group.Label = QT_TRANSLATE_NOOP('SkyDomes',
-                                             'Model_Reinhart')
+                                             'Model Reinhart')
             doc.getObject(dome_const_group.Name).addObject(dome_model_group)
             create_surfaces = True
     # Get the patch surfaces
@@ -696,14 +700,14 @@ def get_sky_dome_forms(center_dome = None,
                                            "Part::Compound",
                                            "SD_Tregenza")
             dome.Label = QT_TRANSLATE_NOOP("SkyDomes",
-                                           "SD_Tregenza")
+                                           "SD Tregenza")
             dome.Links = surfaces
         if sky_dome_model == "Reinhart":
             dome = FreeCAD.activeDocument().addObject(
                                            "Part::Compound",
                                            "SD_Reinhart")
             dome.Label = QT_TRANSLATE_NOOP("SkyDomes",
-                                           "SD_Reinhart")
+                                           "SD Reinhart")
             dome.Links = surfaces
         doc.getObject(dome_model_group.Name).addObject(dome)
         # Group visibility
@@ -718,12 +722,12 @@ def get_sky_dome_forms(center_dome = None,
     dome_total_group = doc.addObject("App::DocumentObjectGroup",
                                            "Sky_Dome_Total")
     dome_total_group.Label = QT_TRANSLATE_NOOP("SkyDomes",
-                                           "Sky_Dome_Total")
+                                           "Sky Dome Total")
     # total values - clone1
-    dome_total = lbc.get_analysis_clone(compound = dome_compound,
+    dome_total = LBComponents.get_analysis_clone(compound = dome_compound,
                            obj_label = QT_TRANSLATE_NOOP(
                                             "SkyDomes",
-                                            "Sky_Dome_Total"),
+                                            "Sky Dome Total"),
                            analysis_group = dome_total_group
                            )
     # clone total position, rotation and scale
@@ -737,12 +741,12 @@ def get_sky_dome_forms(center_dome = None,
     dome_direct_group = doc.addObject('App::DocumentObjectGroup',
                                             'Sky_Dome_Direct')
     dome_direct_group.Label = QT_TRANSLATE_NOOP("SkyDomes",
-                                            "Sky_Dome_Direct")
+                                            "Sky Dome Direct")
     # direct values - clone2
-    dome_direct = lbc.get_analysis_clone(compound = dome_compound,
+    dome_direct = LBComponents.get_analysis_clone(compound = dome_compound,
                            obj_label = QT_TRANSLATE_NOOP(
                                             "SkyDomes",
-                                            "Sky_Dome_Direct"),
+                                            "Sky Dome Direct"),
                            analysis_group = dome_direct_group
                            )
     # clone direct position, rotation and scale
@@ -756,12 +760,12 @@ def get_sky_dome_forms(center_dome = None,
     dome_diffuse_group = doc.addObject('App::DocumentObjectGroup',
                                        'Sky_Dome_Diffuse')
     dome_diffuse_group.Label = QT_TRANSLATE_NOOP("SkyDomes",
-                                                 "Sky_Dome_Diffuse")
+                                                 "Sky Dome Diffuse")
     # diffuse values - clone3
-    dome_diffuse = lbc.get_analysis_clone(compound = dome_compound,
+    dome_diffuse = LBComponents.get_analysis_clone(compound = dome_compound,
                            obj_label = QT_TRANSLATE_NOOP(
                                             "SkyDomes",
-                                            "Sky_Dome_Diffuse"),
+                                            "Sky Dome Diffuse"),
                            analysis_group = dome_diffuse_group
                            )
     # clone diffuse position, rotation and scale
@@ -850,29 +854,29 @@ def apply_sky_dome_values(sky_domes_group = None,
     colors_seq1 = []
     colors_seq2 = []
     colors_seq3 = []
-    colors_seq1 = lbc.get_face_colors(
+    colors_seq1 = LBComponents.get_face_colors(
                             sun_analysis_results = total_values,
                             domain = total_values,
                             leg_colors = leg_colors
                             )
-    colors_seq2 = lbc.get_face_colors(
+    colors_seq2 = LBComponents.get_face_colors(
                             sun_analysis_results = direct_values,
                             domain = total_values,
                             leg_colors = leg_colors
                             )
-    colors_seq3 = lbc.get_face_colors(
+    colors_seq3 = LBComponents.get_face_colors(
                             sun_analysis_results = diffuse_values,
                             domain = total_values,
                             leg_colors = leg_colors
                             )
     # Apply the colors of each patch in sky domes clones
-    lbc.apply_color_faces(obj = dome_total,
+    LBComponents.apply_color_faces(obj = dome_total,
                           face_colors = colors_seq1,
                           transparency = transparency)
-    lbc.apply_color_faces(obj = dome_direct,
+    LBComponents.apply_color_faces(obj = dome_direct,
                           face_colors = colors_seq2,
                           transparency = transparency)
-    lbc.apply_color_faces(obj = dome_diffuse,
+    LBComponents.apply_color_faces(obj = dome_diffuse,
                           face_colors = colors_seq3,
                           transparency = transparency)
     FreeCAD.ActiveDocument.recompute()
@@ -893,12 +897,12 @@ def get_center_vectors(center = (0.0, 0.0, 0.0),
         dome_vectors_group = doc.addObject('App::DocumentObjectGroup',
                                            'Vectors_TR')
         dome_vectors_group.Label = QT_TRANSLATE_NOOP("SkyDomes",
-                                                     "Vectors_TR")
+                                                     "Vectors TR")
     if model == "Reinhart":
         dome_vectors_group = doc.addObject('App::DocumentObjectGroup',
                                            'Vectors_RE')
         dome_vectors_group.Label = QT_TRANSLATE_NOOP("SkyDomes",
-                                                     "Vectors_RE")
+                                                     "Vectors RE")
     #modify scale and position
     for i in range(len(vector_values)):
         point = Draft.make_point(
@@ -1041,7 +1045,7 @@ def create_sky_domes():
                               )
     # Getting compass
     print ("compass_data...")
-    compass_data = lbc.get_compass(center = SD.position,
+    compass_data = LBComponents.get_compass(center = SD.position,
                                radius = float(SD.radius),
                                north = float(SD.north),
                                variation_angle = 10,
@@ -1057,6 +1061,7 @@ def create_sky_domes():
                                           sky_dome_units = SD.units,
                                           timestep = int(SD.timestep),
                                           center_vectors = SD.center_vectors,
+                                          ground_reflectance = 0.2
                                           )
     SD.total_values = sky_dome_values[0]
     SD.direct_values = sky_dome_values[1]
@@ -1072,7 +1077,7 @@ def create_sky_domes():
         bar_x = float(SD.radius) * 1.3 + float(SD.position[0])
     bar_y = -float(SD.radius) + float(SD.position[1])
     SD.leg_position = (bar_x, bar_y, 0.0)
-    legend = lbc.get_modify_legend_bar(bar_obj = None,
+    legend = LBComponents.get_modify_legend_bar(bar_obj = None,
                               text_leg_group = None,
                               title = SD.units,
                               values = SD.total_values,
@@ -1107,7 +1112,7 @@ def create_sky_domes():
     pos3 = (float(SD.radius)*5 + SD.position[0],
             -float(SD.radius)*1.4 + SD.position[1],
              SD.position[2])
-    main_leg_groups = lbc.get_main_legends(pos1,
+    main_leg_groups = LBComponents.get_main_legends(pos1,
                                            pos2,
                                            pos3,
                                            units = SD.units,
@@ -1137,10 +1142,9 @@ def create_sky_domes():
                           direct_values = SD.direct_values,
                           diffuse_values = SD.diffuse_values,
                           leg_colors = color_rgb_leg,
-                          label = f"SD_{SD.city}_{SD.units}",
+                          label = f"SD {SD.city} {SD.units}",
                           transparency = SD.transparency
                           )
-    Gui.SendMsgToActiveView("ViewFit")
     FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP(
                                 'SkyDomes',
                                 'Sky domes were created! To configure it, \n'
@@ -1149,6 +1153,7 @@ def create_sky_domes():
                                 'Make the adjustments in its properties window.'
                                  ) + '\n')
     SD_NEW = False
+    Gui.SendMsgToActiveView("ViewFit")
     Gui.runCommand('Std_ViewGroup',2)
     Gui.Selection.clearSelection()
     Gui.Selection.addSelection(SD)
@@ -1240,7 +1245,7 @@ def update_forms():
                                model = SD.model
                                )
             doc.getObject(SD.Group[0].Name).addObject(vectors_group)
-    lbc.modify_compass(center = SD.position,
+    LBComponents.modify_compass(center = SD.position,
                        radius = float(SD.radius),
                        north = float(SD.north),
                        variation_angle = 10,
@@ -1253,7 +1258,7 @@ def update_forms():
         bar_x = float(SD.radius) * 1.3 + float(SD.position[0])
     bar_y = -float(SD.radius) + float(SD.position[1])
     SD.leg_position = (bar_x, bar_y, 0.0)
-    lbc.get_modify_legend_bar(bar_obj = SD.Group[3].Group[0],
+    LBComponents.get_modify_legend_bar(bar_obj = SD.Group[3].Group[0],
                               text_leg_group = SD.Group[3].Group[1],
                               title = SD.units,
                               values = SD.total_values,
@@ -1263,7 +1268,7 @@ def update_forms():
                               seg_count = SD.color_count,
                               color_leg_set = int(SD.color_set[0:2])
                               )
-    lbc.modify_main_legends(sky_domes_group = SD,
+    LBComponents.modify_main_legends(sky_domes_group = SD,
                         position = SD.position,
                         radius_dome = float(SD.radius),
                         modify_position = True,
@@ -1287,8 +1292,9 @@ def update_values(epw_path = None, period = None):
                                                  period,
                                                  sky_dome_model = SD.model,
                                                  sky_dome_units = SD.units,
-                                                 timestep = int(SD.timestep)
-                                                  )
+                                                 timestep = int(SD.timestep),
+                                                 ground_reflectance = 0.2
+                                                )
     SD.total_values = sky_dome_values[0]
     SD.direct_values = sky_dome_values[1]
     SD.diffuse_values = sky_dome_values[2]
@@ -1302,7 +1308,7 @@ def update_values(epw_path = None, period = None):
         bar_x = float(SD.radius) * 1.3 + float(SD.position[0])
     bar_y = -float(SD.radius) + float(SD.position[1])
     SD.leg_position = (bar_x, bar_y, 0.0)
-    legend = lbc.get_modify_legend_bar(bar_obj = SD.Group[3].Group[0],
+    legend = LBComponents.get_modify_legend_bar(bar_obj = SD.Group[3].Group[0],
                               text_leg_group = SD.Group[3].Group[1],
                               title = SD.units,
                               values = SD.total_values,
@@ -1328,11 +1334,11 @@ def update_values(epw_path = None, period = None):
                           direct_values = SD.direct_values,
                           diffuse_values = SD.diffuse_values,
                           leg_colors = color_rgb_leg,
-                          label = f"SD_{SD.city}_{SD.units}",
+                          label = f"SD {SD.city} {SD.units}",
                           transparency = SD.transparency
                           )
     print("modifying main legend...")
-    lbc.modify_main_legends(sky_domes_group = SD,
+    LBComponents.modify_main_legends(sky_domes_group = SD,
                         position = SD.position,
                         radius_dome = float(SD.radius),
                         modify_position = False,
