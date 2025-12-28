@@ -19,13 +19,24 @@ analysis and configurations.
 
 ## Features
 
+### Sun Path
+
+Visualize the path the sun takes in real-time.
+
+<img width = '360' src = './Resources/Media/Preview/Animation.webp' />
+
+#### Record & Play
+
+Integrates with the `Movie` & `Render` workbenches.
+
+
 ### Sky Domes
 
 Generate sky dome diagrams for your models.
 
 <img width = '360' src = './Resources/Media/Preview/SkyDomes.webp' />
 
-### Dialogs
+#### Dialogs
 
 -   Pre-configure the sun from `.epw` files.
 
@@ -39,15 +50,9 @@ Generate sky dome diagrams for your models.
 
 <img width = '360' src = './Resources/Media/Preview/Dialogs.webp' />
 
-### Sun Path
 
-Visualize the path the sun takes in real-time.
 
-<img width = '360' src = './Resources/Media/Preview/Animation.webp' />
 
-### Record & Play
-
-Integrates with the `Movie` & `Render` workbenches.
 
 <br/>
 
