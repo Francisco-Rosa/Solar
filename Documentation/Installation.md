@@ -20,31 +20,35 @@ currently has to be done using their installers.
 Head over to their **[Releases]** page, download  
 the installer for your system and go through it.
 
-### Flatpak
+### Windows and macOS
 
-If you are using the Flatpak version of FreeCAD  
-you have to also give it access to the Radiance  
-files, the easiest way is to use **[Flatseal]**.
+Use the corresponding installers.
 
-In Flatseal find the FreeCAD entry and scroll to  
-the section named `Filesystem`, there you can  
-give FreeCAD access to additional directories.
+### Linux
 
-Add a directory called `~/ladybug_tools`
+Since the Linux version does not have an installer, 
+it must be done manually.
 
-<img width = '300' src = '../Resources/Media/Installation/Flatpak-FileSystem.webp' />
+Unzip the "Radiance_xx_Linux.zip" file, then the 
+.tar.gz file. Go to the "radiance" folder inside the
+"radiance-xxx-Linux" (radiance-xxx-Linux/user/local/radiance).
 
-### Snap
-
-Snaps don't have access to files outside by default.  
-To determine where the Radiance files should go, run  
-the following code inside of FreeCAD Python console.
+Run FreeCAD and open the Solar Workbench so that 
+the ladybug libraries are executed. This will 
+create a folder called "ladybug_tools",
+this is where the radiance should be placed. 
+But, its location may vary, to find its path, 
+run the following commands 
+in the FreeCAD Python console:
 
 ```Python
 from ladybug.config import folders
 print(f'{ folders.ladybug_tools_folder }')
 ```
+Insert the radiance folder into the path indicated by the mentioned commands. Restart FreeCAD to use the new features.
 
+Obs.: If you are using different FreeCAD packages (especially Snaps), 
+the procedure must be performed for each one.
 <br/>
 
 ## 3. Integrations
