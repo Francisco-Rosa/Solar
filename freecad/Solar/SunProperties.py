@@ -36,7 +36,7 @@ LanguagePath = os.path.join(_dir, 'translations')
 Gui.addLanguagePath(LanguagePath)
 
 try:
-    for root, dirs, files in os.walk(os.path.join(_dir,
+    for root, dirs, files in os.walk(os.path.join(FreeCAD.getUserAppDataDir(),
                                      "AdditionalPythonPackages")):
         if os.path.basename(root) == "site-packages":
             sys.path.append(root)
