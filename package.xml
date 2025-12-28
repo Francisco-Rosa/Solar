@@ -88,11 +88,11 @@
 
     <url
         type = 'documentation'
-    >https://github.com/Francisco-Rosa/Solar</url>
+    >https://github.com/Francisco-Rosa/Solar/Documentation</url>
 
     <url
         type = 'discussion'
-    >https://forum.freecad.org/viewtopic.php?p=836631#p836631</url>
+    >https://forum.freecad.org/viewtopic.php?p=836631</url>
 
     <url
         branch = 'main'
@@ -105,7 +105,7 @@
 
     <url
         type = 'readme'
-    >https://github.com/Francisco-Rosa/Solar/blob/main/README.md</url>
+    >https://github.com/Francisco-Rosa/Solar/blob/main/Resources/Documents/Overview.md</url>
 
     <!--[ Content ]――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
