@@ -29,24 +29,15 @@ import FreeCAD
 import FreeCADGui as Gui
 from PySide.QtCore import QT_TRANSLATE_NOOP
 from PySide.QtGui import QFileDialog
+from ladybug.location import Location
+from ladybug.sunpath import Sunpath
+import freecad.Solar.SunPathAnimation as SunPathAnimation
+import freecad.Solar.SunShadowBW as SunShadow
 
 _dir = os.path.dirname(__file__)
 IconPath = os.path.join(_dir, 'icons')
 LanguagePath = os.path.join(_dir, 'translations')
 Gui.addLanguagePath(LanguagePath)
-
-try:
-    for root, dirs, files in os.walk(os.path.join(_dir,
-                                     "AdditionalPythonPackages")):
-        if os.path.basename(root) == "site-packages":
-            sys.path.append(root)
-except:
-    pass
-from ladybug.location import Location
-from ladybug.sunpath import Sunpath
-
-import freecad.Solar.SunPathAnimation as SunPathAnimation
-import freecad.Solar.SunShadowBW as SunShadow
 
 SUNLIGHT = None
 RAY = None
