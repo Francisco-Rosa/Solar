@@ -234,27 +234,6 @@ wheels = [
 ]
 
 [[package]]
-name = "polyhedra"
-version = "0.0.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "freecad-stubs" },
-    { name = "ladybug-core" },
-    { name = "ladybug-radiance" },
-    { name = "pyside6" },
-    { name = "pysolar" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "freecad-stubs", specifier = ">=1.0.21" },
-    { name = "ladybug-core", specifier = ">=0.44.29" },
-    { name = "ladybug-radiance", specifier = ">=0.2.11" },
-    { name = "pyside6", specifier = ">=6.9.2" },
-    { name = "pysolar", specifier = ">=0.13" },
-]
-
-[[package]]
 name = "pyside6"
 version = "6.10.1"
 source = { registry = "https://pypi.org/simple" }
@@ -337,4 +316,25 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/16/b8/939c24ebd662b0aa5c945443d0973145b3fb7079f0196274ef7bb4b98f73/shiboken6-6.10.1-cp39-abi3-manylinux_2_39_aarch64.whl", hash = "sha256:c095b00f4d6bf578c0b2464bb4e264b351a99345374478570f69e2e679a2a1d0", size = 268691, upload-time = "2025-11-20T10:08:55.639Z" },
     { url = "https://files.pythonhosted.org/packages/cf/a6/8c65ee0fa5e172ebcca03246b1bc3bd96cdaf1d60537316648536b7072a5/shiboken6-6.10.1-cp39-abi3-win_amd64.whl", hash = "sha256:c1601d3cda1fa32779b141663873741b54e797cb0328458d7466281f117b0a4e", size = 1234704, upload-time = "2025-11-20T10:08:57.417Z" },
     { url = "https://files.pythonhosted.org/packages/7b/6a/c0fea2f2ac7d9d96618c98156500683a4d1f93fea0e8c5a2bc39913d7ef1/shiboken6-6.10.1-cp39-abi3-win_arm64.whl", hash = "sha256:5cf800917008587b551005a45add2d485cca66f5f7ecd5b320e9954e40448cc9", size = 1795567, upload-time = "2025-11-20T10:08:59.184Z" },
+]
+
+[[package]]
+name = "solar"
+version = "0.0.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "freecad-stubs" },
+    { name = "ladybug-core" },
+    { name = "ladybug-radiance" },
+    { name = "pyside6" },
+    { name = "pysolar" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "freecad-stubs", specifier = ">=1.0.21" },
+    { name = "ladybug-core", specifier = ">=0.44.29" },
+    { name = "ladybug-radiance", specifier = ">=0.2.11" },
+    { name = "pyside6", specifier = ">=6.9.2" },
+    { name = "pysolar", specifier = ">=0.13" },
 ]

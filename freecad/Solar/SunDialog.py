@@ -33,6 +33,8 @@ from PySide.QtCore import QT_TRANSLATE_NOOP
 
 import freecad.Solar.SunPathAnimation as SunPathAnimation
 import freecad.Solar.SunProperties as SunProperties
+from .SunPosition import get_sun_position
+
 
 SD = None
 
@@ -829,7 +831,7 @@ class SunConfigurationDialog(QtWidgets.QDialog):
         except:
             print ("Save properties: Show_save properties not changed from dialog")
 
-        SunProperties.get_sun_position()
+        get_sun_position()
         SunProperties.send_diagram_to_site()
         if obj.Image_from == "Render 3D view" and obj.SunPathAnimation is True:
             SunPathAnimation.set_render_animation()
