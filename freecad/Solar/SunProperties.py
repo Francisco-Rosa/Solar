@@ -31,13 +31,14 @@ from PySide.QtCore import QT_TRANSLATE_NOOP
 from PySide.QtGui import QFileDialog
 from ladybug.location import Location
 from ladybug.sunpath import Sunpath
-import freecad.Solar.SunPathAnimation as SunPathAnimation
-import freecad.Solar.SunShadowBW as SunShadow
 
 _dir = os.path.dirname(__file__)
 IconPath = os.path.join(_dir, 'icons')
 LanguagePath = os.path.join(_dir, 'translations')
 Gui.addLanguagePath(LanguagePath)
+
+import freecad.Solar.SunPathAnimation as SunPathAnimation
+import freecad.Solar.SunShadowBW as SunShadow
 
 SUNLIGHT = None
 RAY = None
