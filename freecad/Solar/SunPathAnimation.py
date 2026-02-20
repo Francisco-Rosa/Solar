@@ -147,7 +147,8 @@ def sun_path_animation():
     pause = 1/fps
     obj.Hour = obj.start_hour
     obj.Min = obj.start_min
-    if obj.SunPathAnimation is True and obj.Image_from == "Render 3D view":
+    #if obj.SunPathAnimation is True and obj.Image_from == "03 - Render 3D view":
+    if obj.SunPathAnimation is True and obj.Image_from[0:2] == "03":
         Gui.runCommand('StartRecordRender',0)
         CL = FreeCAD.ActiveDocument.Clapperboard
         if CL.Frame_04OutputPath == "":

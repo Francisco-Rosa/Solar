@@ -17,7 +17,7 @@
    </sizepolicy>
   </property>
   <property name="windowTitle">
-   <string>Sun configuration</string>
+   <string>Sun path configuration</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_13">
    <property name="leftMargin">
@@ -43,9 +43,9 @@
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>-309</y>
-          <width>910</width>
-          <height>856</height>
+          <y>0</y>
+          <width>913</width>
+          <height>754</height>
          </rect>
         </property>
         <layout class="QGridLayout" name="gridLayout_12">
@@ -180,22 +180,22 @@ For Render 3D preview, install Render WB.</string>
                        </property>
                        <item>
                         <property name="text">
-                         <string>None/Reset</string>
+                         <string>00 - None/Reset</string>
                         </property>
                        </item>
                        <item>
                         <property name="text">
-                         <string>BW 3D view</string>
+                         <string>01 - BW 3D view</string>
                         </property>
                        </item>
                        <item>
                         <property name="text">
-                         <string>Color 3D view</string>
+                         <string>02 - Color 3D view</string>
                         </property>
                        </item>
                        <item>
                         <property name="text">
-                         <string>Render 3D view</string>
+                         <string>03 - Render 3D view</string>
                         </property>
                        </item>
                       </widget>
