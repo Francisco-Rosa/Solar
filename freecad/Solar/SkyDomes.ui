@@ -1736,12 +1736,12 @@ average Irradiance (W/m2).</string>
                         </property>
                         <item>
                          <property name="text">
-                          <string>Radiation (kWh/m²)</string>
+                          <string>00 - Radiation (kWh/m²)</string>
                          </property>
                         </item>
                         <item>
                          <property name="text">
-                          <string>Irradiance (W/m²)</string>
+                          <string>01 - Irradiance (W/m²)</string>
                          </property>
                         </item>
                        </widget>

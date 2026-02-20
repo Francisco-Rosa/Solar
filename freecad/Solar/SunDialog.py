@@ -36,7 +36,7 @@ import freecad.Solar.SunProperties as SunProperties
 
 SD = None
 
-class SunConfigurationDialog(QtWidgets.QDialog):
+class SunPathDialog(QtWidgets.QDialog):
     """A sun configuration dialog"""
 
     def __init__(self, parent = None):
@@ -56,7 +56,7 @@ class SunConfigurationDialog(QtWidgets.QDialog):
         # SunSetupUi.show()
         # self.ui = SunSetupUi
 
-        self.setWindowTitle(QT_TRANSLATE_NOOP("SunDialog", "Sun configuration"))
+        self.setWindowTitle(QT_TRANSLATE_NOOP("SunDialog", "Sun path configuration"))
         layout = QtWidgets.QVBoxLayout(self)
         layout.addWidget(self.ui)
         self.resize(self.ui.size())
@@ -317,18 +317,11 @@ class SunConfigurationDialog(QtWidgets.QDialog):
                     QT_TRANSLATE_NOOP("SunDialog",
                     "Image from:"))
         #comboBox_Images
-        self.ui.comboBox_Images.setItemText(0,
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "None/Reset"))
-        self.ui.comboBox_Images.setItemText(1,
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "BW 3D view"))
-        self.ui.comboBox_Images.setItemText(2,
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Color 3D view"))
-        self.ui.comboBox_Images.setItemText(3,
-                    QT_TRANSLATE_NOOP("SunDialog",
-                    "Render 3D view"))
+        from freecad.Solar.LBComponents import IMAGE_00, IMAGE_01, IMAGE_02, IMAGE_03
+        self.ui.comboBox_Images.setItemText(0, f"00 - {IMAGE_00}")
+        self.ui.comboBox_Images.setItemText(1, f"01 - {IMAGE_01}")
+        self.ui.comboBox_Images.setItemText(2, f"02 - {IMAGE_02}")
+        self.ui.comboBox_Images.setItemText(3, f"03 - {IMAGE_03}")
         self.ui.comboBox_Images.setToolTip(
                     QT_TRANSLATE_NOOP("SunDialog",
                     "Select the scene type.\n"
@@ -438,7 +431,7 @@ class SunConfigurationDialog(QtWidgets.QDialog):
     def GetResources(self):
         __dir__ = os.path.dirname(__file__)
         return {'Pixmap': __dir__ + '/icons/SunDialogIcon.svg',
-                'MenuText': QT_TRANSLATE_NOOP(self, 'SunDialog'),
+                'MenuText': QT_TRANSLATE_NOOP(self, 'SunPathDialog'),
                 'ToolTip': QT_TRANSLATE_NOOP(self,
                            'Create and manage the SunDialog. '
                            'After the sun configuration created, '
@@ -554,7 +547,8 @@ class SunConfigurationDialog(QtWidgets.QDialog):
     def image_from_toggled(self):
         try:
             obj = FreeCAD.ActiveDocument.SunProperties
-            if obj.Image_from == "Render 3D view":
+            #if obj.Image_from == "03 - Render 3D view":
+            if obj.Image_from[0:2] == "03":
                 try:
                     FreeCAD.ActiveDocument.Project
                     self.ui.lineEdit_width.setEnabled(True)
@@ -569,7 +563,8 @@ class SunConfigurationDialog(QtWidgets.QDialog):
                     self.ui.checkBox_Sun_path_animation.setEnabled(False)
         except:
             pass
-        if self.ui.comboBox_Images.currentText() == "Render 3D view":
+        #if self.ui.comboBox_Images.currentText() == "03 - Render 3D view":
+        if self.ui.comboBox_Images.currentText()[0:2] == "03":
             try:
                 FreeCAD.ActiveDocument.Project
                 self.ui.lineEdit_width.setEnabled(True)
@@ -831,7 +826,8 @@ class SunConfigurationDialog(QtWidgets.QDialog):
 
         SunProperties.get_sun_position()
         SunProperties.send_diagram_to_site()
-        if obj.Image_from == "Render 3D view" and obj.SunPathAnimation is True:
+        #if obj.Image_from == "03 - Render 3D view" and obj.SunPathAnimation is True:
+        if obj.Image_from[0:2] == "03" and obj.SunPathAnimation is True:
             SunPathAnimation.set_render_animation()
         FreeCAD.ActiveDocument.recompute()
 
@@ -871,12 +867,12 @@ def open_sun_configuration():
 
     """Open sun configuration"""
 
-    dlg = SunConfigurationDialog()
+    dlg = SunPathDialog()
     dlg.get_properties_data()
     dlg.get_results()
     if dlg.show_dialog():
         dlg.save_to_propeties()
 
 if FreeCAD.GuiUp:
-    FreeCAD.Gui.addCommand('SunConfigurationDialog',
-                           SunConfigurationDialog())
+    FreeCAD.Gui.addCommand('SunPathDialog',
+                           SunPathDialog())
