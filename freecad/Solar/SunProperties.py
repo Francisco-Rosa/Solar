@@ -29,15 +29,24 @@ import FreeCAD
 import FreeCADGui as Gui
 from PySide.QtCore import QT_TRANSLATE_NOOP
 from PySide.QtGui import QFileDialog
-from ladybug.location import Location
-from ladybug.sunpath import Sunpath
-import freecad.Solar.SunPathAnimation as SunPathAnimation
-import freecad.Solar.SunShadowBW as SunShadow
 
 _dir = os.path.dirname(__file__)
 IconPath = os.path.join(_dir, 'icons')
 LanguagePath = os.path.join(_dir, 'translations')
 Gui.addLanguagePath(LanguagePath)
+
+try:
+    for root, dirs, files in os.walk(os.path.join(FreeCAD.getUserAppDataDir(),
+                                     "AdditionalPythonPackages")):
+        if os.path.basename(root) == "site-packages":
+            sys.path.append(root)
+except:
+    pass
+from ladybug.location import Location
+from ladybug.sunpath import Sunpath
+
+import freecad.Solar.SunPathAnimation as SunPathAnimation
+import freecad.Solar.SunShadowBW as SunShadow
 
 SUNLIGHT = None
 RAY = None
@@ -336,6 +345,7 @@ class SunProperties:
                 )
              ).DiagColor = (255, 255, 0)
         # 07 Show and/or save image:
+        from freecad.Solar.LBComponents import IMAGE_00, IMAGE_01, IMAGE_02, IMAGE_03
         if not "Image_from" in pl:
             obj.addProperty(
             "App::PropertyEnumeration",
@@ -344,10 +354,10 @@ class SunProperties:
                 "App::Property",
                 "The image type to save"
                 )
-            ).Image_from = ("None/Reset",
-                            "BW 3D view",
-                            "Color 3D view",
-                            "Render 3D view")
+            ).Image_from = (f"00 - {IMAGE_00}",
+                            f"01 - {IMAGE_01}",
+                            f"02 - {IMAGE_02}",
+                            f"03 - {IMAGE_03}",)
         if not "Height" in pl:
             obj.addProperty(
             "App::PropertyInteger",
@@ -501,11 +511,14 @@ class SunPropertiesViewProvider:
         If the epw path has changed, set the autofill location data."""
 
         if prop in ["Image_from"]:
-            if obj.Image_from == "None/Reset":
+            #if obj.Image_from == "00 - None/Reset":
+            if obj.Image_from[0:2] == "00":
                 SunShadow.clean_view_state()
-            if obj.Image_from == "BW 3D view":
+            #if obj.Image_from == "01 - BW 3D view":
+            if obj.Image_from[0:2] == "01":
                 SunShadow.create_shadows_black_white()
-            if obj.Image_from == "Color 3D view":
+            #if obj.Image_from == "02 - Color 3D view":
+            if obj.Image_from[0:2] == "02":
                 try:
                     site_obj = Gui.ActiveDocument.Site
                     if site_obj.SolarDiagram is True:
@@ -524,6 +537,9 @@ class SunPropertiesViewProvider:
             if obj.epw_path is not None:
                 autofill_from_epw2()
                 get_sun_position()
+        if prop in ["City"]:
+            obj.Label = QT_TRANSLATE_NOOP("SunProperties",
+            "SunPath {}").format(obj.City)
 
 def activated_sun_properties():
 
@@ -631,12 +647,13 @@ def get_sun_position(obj = None):
                     # Update Sun representation
                     update_sun_representation()
                     # Update BW shadows
-                    if obj.Image_from == "BW 3D view":
+                    #if obj.Image_from == "01 - BW 3D view":
+                    if obj.Image_from[0:2] == "01":
                         SunShadow.update_shadow_direction()
                         if obj.Save_to is True and obj.SunPathAnimation is False:
                             save_image()
                     # Update Color shadows - until now, only for FreeCAD-Link
-                    if obj.Image_from == "Color 3D view":
+                    if obj.Image_from == "02 - Color 3D view":
                         if obj.SunPathDiagram is True:
                             obj.SunPathDiagram = False # Avoid sun path diagram
                         try:
@@ -650,7 +667,8 @@ def get_sun_position(obj = None):
                         except:
                             pass
                     # Update render shadows - only with Render WB installed
-                    if obj.Image_from == "Render 3D view":
+                    #if obj.Image_from == "03 - Render 3D view":
+                    if obj.Image_from[0:2] == "03":
                         from .SunPathAnimation import ANIMATION
                         try: # Render image
                             obj_render_sun = FreeCAD.ActiveDocument.SunskyLight
@@ -707,12 +725,16 @@ def get_sun_position(obj = None):
                         FreeCAD.ActiveDocument.recompute()
                 else:
                     print("Invalid value for month")
+                    return
             else:
                 print("Invalid value for day")
+                return
         else:
             print("Invalid value for hours")
+            return
     else:
         print("Invalid value for minutes")
+        return
 
 def create_sun_representation(obj = None):
 
@@ -767,6 +789,8 @@ def create_sun_representation(obj = None):
         if hasattr(RAY, "ViewObject"):
             ray_1.ViewObject.LineColor = obj.SunLightColor
             ray_1.ViewObject.PointColor = obj.SunLightColor
+            ray_1.ViewObject.ArrowSizeStart = obj.Radius/3
+            ray_1.ViewObject.ArrowTypeStart = "Arrow"
         if obj.SunLightRepresentation is True:
             if obj.RayRepresentation is True:
                 ray_1.Visibility = True
@@ -815,6 +839,8 @@ def update_sun_representation(obj = None):
                 ray_2.Visibility = True
                 ray_2.Start = pt1_vector
                 ray_2.End = pt2_vector
+                ray_2.ViewObject.ArrowSizeStart = obj.Radius/3
+                ray_2.ViewObject.ArrowTypeStart = "Arrow"
                 Gui.ActiveDocument.getObject(
                             ray_2.Name).LineColor = obj.SunLightColor
                 Gui.ActiveDocument.getObject(
@@ -916,7 +942,8 @@ def save_image(obj = None):
     try:
         obj = FreeCAD.ActiveDocument.SunProperties
         if obj.Save_to is True:
-            if obj.Image_from == "BW 3D view":
+            #if obj.Image_from == "01 - BW 3D view":
+            if obj.Image_from[0:2] == "01":
                 from .SunShadowBW import VIEW
                 if VIEW is not None:
                     # outputfile = "/tmp/freecad_shadow.png"
@@ -937,10 +964,11 @@ def save_image(obj = None):
                     # print(f"Saved 3D view image to {output_path}")
                     VIEW.printPdf() # Save a pdf image
                     print("save BW image was call")
-            if obj.Image_from == "Color 3D view":
+            if obj.Image_from == "02 - Color 3D view":
                 print("saveColorPdf")
                 Gui.runCommand('Std_PrintPdf',0)
-            if obj.Image_from == "Render 3D view":
+            #if obj.Image_from == "03 - Render 3D view":
+            if obj.Image_from[0:2] == "03":
                 print("save render")
                 output_file_name, _ = QFileDialog.getSaveFileName(
                     None, "Save render image", "", " image file (*png)"

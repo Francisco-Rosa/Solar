@@ -117,6 +117,7 @@ def show_warning_dialog():
         "To prevent issues, save your file before opening it. \n"
         "For transparent surfaces, it is recommended \n"
         "to make them invisible before generating these shadows. \n"
+        "Avoid spherical or complex surfaces. \n"
         "\n"
         "Do you want to generate shadows now?"
     ))

@@ -271,12 +271,9 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
                        QT_TRANSLATE_NOOP("SkyDomesDialog",
                        "Units:"))
         #comboBox_units
-        self.ui.comboBox_units.setItemText(0,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "Radiation (kWh/m²)"))
-        self.ui.comboBox_units.setItemText(1,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "Irradiance (W/m²)"))
+        from freecad.Solar.LBComponents import RESUL_01, RESUL_02
+        self.ui.comboBox_units.setItemText(0, f"00 - {RESUL_01}")
+        self.ui.comboBox_units.setItemText(1, f"01 - {RESUL_02}")
         self.ui.comboBox_units.setToolTip(
                        QT_TRANSLATE_NOOP("SkyDomesDialog",
                        "Indicate whether the sky dome should be plotted with \n"
@@ -321,105 +318,48 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
                        QT_TRANSLATE_NOOP("SkyDomesDialog",
                        "Color_set:"))
         #comboBox_color_set
-        self.ui.comboBox_color_set.setItemText(0,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "00 - Original Ladybug"))
-        self.ui.comboBox_color_set.setItemText(1,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "01 - Nuanced Ladybug"))
-        self.ui.comboBox_color_set.setItemText(2,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "02 - Multi-colored Ladybug"))
-        self.ui.comboBox_color_set.setItemText(3,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "03 - Ecotect"))
-        self.ui.comboBox_color_set.setItemText(4,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "04 - View Study"))
-        self.ui.comboBox_color_set.setItemText(5,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "05 - Shadow Study"))
-        self.ui.comboBox_color_set.setItemText(6,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "06 - Glare Study"))
-        self.ui.comboBox_color_set.setItemText(7,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "07 - Annual Comfort"))
-        self.ui.comboBox_color_set.setItemText(8,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "08 - Thermal Comfort"))
-        self.ui.comboBox_color_set.setItemText(9,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "09 - Peak Load Balance"))
-        self.ui.comboBox_color_set.setItemText(10,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "10 - Heat Sensation"))
-        self.ui.comboBox_color_set.setItemText(11,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "11 - Cold Sensation"))
-        self.ui.comboBox_color_set.setItemText(12,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "12 - Benefit/Harm"))
-        self.ui.comboBox_color_set.setItemText(13,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "13 - Harm"))
-        self.ui.comboBox_color_set.setItemText(14,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "14 - Benefit"))
-        self.ui.comboBox_color_set.setItemText(15,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "15 - Shade Benefit/Harm"))
-        self.ui.comboBox_color_set.setItemText(16,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "16 - Shade Harm"))
-        self.ui.comboBox_color_set.setItemText(17,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "17 - Shade Benefit"))
-        self.ui.comboBox_color_set.setItemText(18,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "18 - Energy Balance"))
-        self.ui.comboBox_color_set.setItemText(19,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "19 - Energy Balance w/ Storage"))
-        self.ui.comboBox_color_set.setItemText(20,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "20 - THERM"))
-        self.ui.comboBox_color_set.setItemText(21,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "21 - Cloud Cover"))
-        self.ui.comboBox_color_set.setItemText(22,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "22 - Black to White"))
-        self.ui.comboBox_color_set.setItemText(23,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "23 - Blue, Green, Red"))
-        self.ui.comboBox_color_set.setItemText(24,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "24 - Multicolored 2"))
-        self.ui.comboBox_color_set.setItemText(25,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "25 - Multicolored 3"))
-        self.ui.comboBox_color_set.setItemText(26,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "26 - OpenStudio Palette"))
-        self.ui.comboBox_color_set.setItemText(27,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "27 - Cividis (colorblind friendly)"))
-        self.ui.comboBox_color_set.setItemText(28,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "28 - Viridis (colorblind friendly)"))
-        self.ui.comboBox_color_set.setItemText(29,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "29 - Parula (colorblind friendly)"))
-        self.ui.comboBox_color_set.setItemText(30,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "30 - Energy Balance by Face Type"))
-        self.ui.comboBox_color_set.setItemText(31,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "31 - Peak Cooling by Face Type"))
-        self.ui.comboBox_color_set.setItemText(32,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "32 - Peak Hating by Face Type"))
+        from freecad.Solar.LBComponents import COLORS_00, COLORS_01, COLORS_02, COLORS_03
+        from freecad.Solar.LBComponents import COLORS_04, COLORS_05, COLORS_06, COLORS_07
+        from freecad.Solar.LBComponents import COLORS_08, COLORS_09, COLORS_10, COLORS_11
+        from freecad.Solar.LBComponents import COLORS_12, COLORS_13, COLORS_14, COLORS_15
+        from freecad.Solar.LBComponents import COLORS_16, COLORS_17, COLORS_18, COLORS_19
+        from freecad.Solar.LBComponents import COLORS_20, COLORS_21, COLORS_22, COLORS_23
+        from freecad.Solar.LBComponents import COLORS_24, COLORS_25, COLORS_26, COLORS_27
+        from freecad.Solar.LBComponents import COLORS_28, COLORS_29, COLORS_30, COLORS_31
+        from freecad.Solar.LBComponents import COLORS_32
+        self.ui.comboBox_color_set.setItemText(0, f"00 - {COLORS_00}")
+        self.ui.comboBox_color_set.setItemText(1, f"01 - {COLORS_01}")
+        self.ui.comboBox_color_set.setItemText(2, f"02 - {COLORS_02}")
+        self.ui.comboBox_color_set.setItemText(3, f"03 - {COLORS_03}")
+        self.ui.comboBox_color_set.setItemText(4, f"04 - {COLORS_04}")
+        self.ui.comboBox_color_set.setItemText(5, f"05 - {COLORS_05}")
+        self.ui.comboBox_color_set.setItemText(6, f"06 - {COLORS_06}")
+        self.ui.comboBox_color_set.setItemText(7, f"07 - {COLORS_07}")
+        self.ui.comboBox_color_set.setItemText(8, f"08 - {COLORS_08}")
+        self.ui.comboBox_color_set.setItemText(9, f"09 - {COLORS_09}")
+        self.ui.comboBox_color_set.setItemText(10, f"10 - {COLORS_10}")
+        self.ui.comboBox_color_set.setItemText(11, f"11 - {COLORS_11}")
+        self.ui.comboBox_color_set.setItemText(12, f"12 - {COLORS_12}")
+        self.ui.comboBox_color_set.setItemText(13, f"13 - {COLORS_13}")
+        self.ui.comboBox_color_set.setItemText(14, f"14 - {COLORS_14}")
+        self.ui.comboBox_color_set.setItemText(15, f"15 - {COLORS_15}")
+        self.ui.comboBox_color_set.setItemText(16, f"16 - {COLORS_16}")
+        self.ui.comboBox_color_set.setItemText(17, f"17 - {COLORS_17}")
+        self.ui.comboBox_color_set.setItemText(18, f"18 - {COLORS_18}")
+        self.ui.comboBox_color_set.setItemText(19, f"19 - {COLORS_19}")
+        self.ui.comboBox_color_set.setItemText(20, f"20 - {COLORS_20}")
+        self.ui.comboBox_color_set.setItemText(21, f"21 - {COLORS_21}")
+        self.ui.comboBox_color_set.setItemText(22, f"22 - {COLORS_22}")
+        self.ui.comboBox_color_set.setItemText(23, f"23 - {COLORS_23}")
+        self.ui.comboBox_color_set.setItemText(24, f"24 - {COLORS_24}")
+        self.ui.comboBox_color_set.setItemText(25, f"25 - {COLORS_25}")
+        self.ui.comboBox_color_set.setItemText(26, f"26 - {COLORS_26}")
+        self.ui.comboBox_color_set.setItemText(27, f"27 - {COLORS_27}")
+        self.ui.comboBox_color_set.setItemText(28, f"28 - {COLORS_28}")
+        self.ui.comboBox_color_set.setItemText(29, f"29 - {COLORS_29}")
+        self.ui.comboBox_color_set.setItemText(30, f"30 - {COLORS_30}")
+        self.ui.comboBox_color_set.setItemText(31, f"31 - {COLORS_31}")
+        self.ui.comboBox_color_set.setItemText(32, f"32 - {COLORS_32}")
         self.ui.comboBox_color_set.setToolTip(
                        QT_TRANSLATE_NOOP("SkyDomesDialog",
                        "Choose the legend color set."))
@@ -635,7 +575,10 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
             SD.timestep = self.ui.comboBox_timestep.currentText()
             SD.leap_year = self.ui.checkBox_leap_year.isChecked()
             SD.model = self.ui.comboBox_model.currentText()
-            SD.units = self.ui.comboBox_units.currentText()
+            #SD.units = self.ui.comboBox_units.currentText()
+            prefix1 = int(self.ui.comboBox_units.currentText()[0:2])
+            units_list = SD.getEnumerationsOfProperty("units")
+            SD.units = units_list[prefix1]
             SD.direct_diffuse_domes = self.ui.checkBox_direct_diffuse.isChecked()
             SD.center_vectors = self.ui.checkBox_center_vectors.isChecked()
             if SD_NEW is False:
@@ -643,9 +586,12 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
                 SD.Group[2].Visibility = SD.direct_diffuse_domes
             SD.transparency = self.ui.horizontalSlider_transparency.value()
             # Legend
-            SD.leg_title = self.ui.comboBox_units.currentText()
+            SD.leg_title = self.ui.comboBox_units.currentText()[5:-1]
             SD.color_count = self.ui.spinBox_color_count.value()
-            SD.color_set = self.ui.comboBox_color_set.currentText()
+            #SD.color_set = self.ui.comboBox_color_set.currentText()
+            prefix2 = int(self.ui.comboBox_color_set.currentText()[0:2])
+            color_set_list = SD.getEnumerationsOfProperty("color_set")
+            SD.color_set = color_set_list[prefix2]
         else:
             FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP(
                 'SkyDomesDialog', 'Save properties: There is no SkyDomes group!') + '\n')
@@ -682,9 +628,9 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
         end_hour2 = int(self.ui.spinBox_time_to.text())
         timestep2 = self.ui.comboBox_timestep.currentText()
         leap_year2 = self.ui.checkBox_leap_year.isChecked()
-        units2 = self.ui.comboBox_units.currentText()
+        units2 = self.ui.comboBox_units.currentText()[0:2]
         color_count2 = self.ui.spinBox_color_count.value()
-        color_set2 = self.ui.comboBox_color_set.currentText()
+        color_set2 = self.ui.comboBox_color_set.currentText()[0:2]
 
         dif_forms = False
         dif_values = False
@@ -722,9 +668,9 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
             end_hour1 = SD.end_hour
             timestep1 = SD.timestep
             leap_year1 = SD.leap_year
-            units1 = SD.units
+            units1 = SD.units[0:2]
             color_count1 = SD.color_count
-            color_set1 = SD.color_set
+            color_set1 = SD.color_set[0:2]
             if any(condition for condition in [epw_path1 != epw_path2,
                                                start_year1 != start_year2,
                                                end_year1 != end_year2,
