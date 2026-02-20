@@ -51,21 +51,24 @@ class Solar(Gui.Workbench):
         import freecad.Solar.SunPathAnimation
         import freecad.Solar.SunDialog
         import freecad.Solar.SkyDomes
+        import freecad.Solar.SunAnalysis
 
         translate = FreeCAD.Qt.translate
 
-        self.list1 = ['SunConfigurationDialog',
+        self.list1 = ['SunPathDialog',
                        'StartSunPathAnimation',
                        'StopSunPathAnimation',
                        'CreateSkyDomes',
                        'ModifySkyDomes',
-                       'DeleteSkyDomes'
+                       'DeleteSkyDomes',
+                       'CreateSunAnalysis',
+                       'ModifySunAnalysis',
+                       'DeleteSunAnalysis'
                        ] # a list of command names created in the line above
 
         default_title1 = translate("InitGui", "Solar tools")
         self.appendToolbar(default_title1, self.list1) # creates the solar toolbar
         self.appendMenu(default_title1, self.list1) # creates the Solar tools menu
-
 
     def Activated(self):
         """This function is executed whenever the workbench is activated"""
