@@ -756,19 +756,19 @@ def modify_compass(center = None,
         deltx2 = radius*3
         deltx3 = radius*6
     elif sun_analysis_group is not None and deltx is not None:
-        circ_lines_list1 = sun_analysis_group.Group[0].Group[2].Group[1].Group[0].Links
+        circ_lines_list1 = sun_analysis_group.Group[1].Group[1].Group[1].Group[0].Links
         compass_triangle = circ_lines_list1[-1]
         compass_triangle.Points
         circ_lines_list = circ_lines_list1[0:-1]
-        text_list1 = sun_analysis_group.Group[0].Group[2].Group[1].Group[1].Group
-        compass_original = sun_analysis_group.Group[0].Group[2].Group[1].Group[0]
+        text_list1 = sun_analysis_group.Group[1].Group[1].Group[1].Group[1].Group
+        compass_original = sun_analysis_group.Group[1].Group[1].Group[1].Group[0]
         deltx2 = deltx
         deltx3 = 2*deltx
         try:
-            text_list2 = sun_analysis_group.Group[1].Group[1].Group[1].Group[1].Group
-            text_list3 = sun_analysis_group.Group[2].Group[1].Group[1].Group[1].Group
-            compass_clone1 = sun_analysis_group.Group[1].Group[1].Group[1].Group[0]
-            compass_clone2 = sun_analysis_group.Group[2].Group[1].Group[1].Group[0]
+            text_list2 = sun_analysis_group.Group[2].Group[1].Group[1].Group[1].Group
+            text_list3 = sun_analysis_group.Group[3].Group[1].Group[1].Group[1].Group
+            compass_clone1 = sun_analysis_group.Group[2].Group[1].Group[1].Group[0]
+            compass_clone2 = sun_analysis_group.Group[3].Group[1].Group[1].Group[0]
         except:
             pass
     else:
