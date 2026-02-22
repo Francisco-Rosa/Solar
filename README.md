@@ -36,6 +36,12 @@ Generate sky dome diagrams for your models.
 
 <img width = '360' src = './Resources/Media/Preview/SkyDomes.webp' />
 
+### Sun Analysis
+
+Generate sun irradiation analysis diagrams for your models.
+
+<img width = '360' src = './Resources/Media/Preview/SunAnalysis.webp' />
+
 #### Dialogs
 
 -   Pre-configure the sun from `.epw` files.
@@ -51,8 +57,7 @@ Generate sky dome diagrams for your models.
 <img width = '360' src = './Resources/Media/Preview/Dialogs.webp' />
 
 
-
-
+<img width = '360' src = './Resources/Media/Preview/Dialog_SA.webp' />
 
 <br/>
 
