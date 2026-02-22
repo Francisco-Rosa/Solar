@@ -791,7 +791,8 @@ def create_sun_analysis(study_objs = None,
                                      'SA_total_group')
     study_total_group.Label = QT_TRANSLATE_NOOP('SunAnalysis',
                                      'SA Total group')
-    doc.getObject(study_total_group.Name).addObject(SA.study_compound)
+    #doc.getObject(study_total_group.Name).addObject(SA.study_compound)
+    SA.addObject(SA.study_compound)
     SA.addObject(study_total_group)
     #get study faces
     faces_tris = SA.study_compound.Shape.Faces
@@ -905,7 +906,7 @@ def get_modify_sun_hours(period = None,
     SA.leg_width = leg_pos[2]
     compass_main_leg_created = False
     try:
-        SA.Group[0].Group[2].Group[0] #main legend
+        SA.Group[1].Group[1].Group[0] #main legend
     except Exception:
         print ("getting main legends...")
         main_leg_groups = LBComponents.get_main_legends(pos1,
@@ -948,8 +949,8 @@ def get_modify_sun_hours(period = None,
         #Update leg bar data
         seg_height = SA.leg_height/SA.color_count
         SA.leg_width = seg_height
-        bar_leg = LBComponents.get_modify_legend_bar(bar_obj = SA.Group[0].Group[1].Group[0],
-                                                   text_leg_group = SA.Group[0].Group[1].Group[1],
+        bar_leg = LBComponents.get_modify_legend_bar(bar_obj = SA.Group[1].Group[0].Group[0],
+                                                   text_leg_group = SA.Group[1].Group[0].Group[1],
                                                    title = title,
                                                    values = SA.sun_hour_values,
                                                    position = SA.leg_position,
@@ -961,7 +962,7 @@ def get_modify_sun_hours(period = None,
         if compass_main_leg_created == False:
             print ("updating main legends...")
             LBComponents.modify_main_legends(
-                                     main_leg1 = SA.Group[0].Group[2].Group[0],
+                                     main_leg1 = SA.Group[1].Group[1].Group[0],
                                      main_leg2 = None,
                                      main_leg3 = None,
                                      pos1 = pos1,
@@ -984,12 +985,12 @@ def get_modify_sun_hours(period = None,
                                         )
         #remove direct an diffuse groups and clones
         try:
-            doc.getObject(SA.Group[1].Group[1].Name).removeObjectsFromDocument()#direct main leg group content
-            doc.getObject(SA.Group[2].Group[1].Name).removeObjectsFromDocument()#diffuse main leg group content
-            doc.getObject(SA.Group[1].Name).removeObjectsFromDocument()#direct group content
+            doc.getObject(SA.Group[2].Group[1].Name).removeObjectsFromDocument()#direct main leg group content
+            doc.getObject(SA.Group[3].Group[1].Name).removeObjectsFromDocument()#diffuse main leg group content
             doc.getObject(SA.Group[2].Name).removeObjectsFromDocument()#direct group content
-            doc.removeObject(SA.Group[1].Name)#direct group
-            doc.removeObject(SA.Group[1].Name)#direct group
+            doc.getObject(SA.Group[3].Name).removeObjectsFromDocument()#direct group content
+            doc.removeObject(SA.Group[2].Name)#direct group
+            doc.removeObject(SA.Group[2].Name)#direct group
             doc.recompute()
         except:
             pass
@@ -1004,7 +1005,7 @@ def get_modify_sun_hours(period = None,
     try:
         total_compass = compass_groups[3]
     except Exception:
-        total_compass = SA.Group[0].Group[2].Group[1].Group[0]
+        total_compass = SA.Group[1].Group[1].Group[1].Group[0]
     color = bar_leg[-1][-1]
     color_rgb = (color[0], color[1], color[2])
     total_compass.ViewObject.ShapeAppearance = FreeCAD.Material(
@@ -1029,8 +1030,8 @@ def get_modify_sun_radiation(epw_path = "",
     pos3 = leg_pos[8]
     #Verify direc study clones
     try:
-        study_direct_clone = SA.Group[1].Group[0]
-        study_diffuse_clone = SA.Group[2].Group[0]
+        study_direct_clone = SA.Group[2].Group[0]
+        study_diffuse_clone = SA.Group[3].Group[0]
     except Exception:
         #create direc study clone and group, rename total
         direct_diffuse_clones_groups = get_direct_diffuse_analysis(SA.study_compound,
@@ -1123,17 +1124,17 @@ def get_modify_sun_radiation(epw_path = "",
     SA.leg_width = leg_pos[2]
     compass_main_leg_created = False
     try:
-        SA.Group[1].Group[1].Group[0] #direct main legend
-        SA.Group[2].Group[1].Group[0] #diffuse main legend
+        SA.Group[2].Group[1].Group[0] #direct main legend
+        SA.Group[3].Group[1].Group[0] #diffuse main legend
     except Exception:
         try:
-            SA.Group[0].Group[2].Group[0] #total main legend
-            compass_links = SA.Group[0].Group[2].Group[1].Group[0].Links
+            SA.Group[1].Group[1].Group[0] #total main legend
+            compass_links = SA.Group[1].Group[1].Group[1].Group[0].Links
             links1 = len(compass_links)
             for i in range(links1):
-                doc.removeObject(SA.Group[0].Group[2].Group[1].Group[0].Links[0].Name) #compass link
-            doc.getObject(SA.Group[0].Group[2].Name).removeObjectsFromDocument() #Total main legend group content
-            doc.removeObject(SA.Group[0].Group[2].Name) #Total main legend group
+                doc.removeObject(SA.Group[1].Group[1].Group[1].Group[0].Links[0].Name) #compass link
+            doc.getObject(SA.Group[1].Group[1].Name).removeObjectsFromDocument() #Total main legend group content
+            doc.removeObject(SA.Group[1].Group[1].Name) #Total main legend group
             doc.recompute()
         except:
             pass
@@ -1176,15 +1177,15 @@ def get_modify_sun_radiation(epw_path = "",
         leg_bar_group = bar_leg[0]
         doc.getObject(study_total_group.Name).addObject(leg_bar_group)
     else:
-        study_direct_group = SA.Group[1]
-        study_diffuse_group = SA.Group[2]
+        study_direct_group = SA.Group[2]
+        study_diffuse_group = SA.Group[3]
         print("updating legend bar and colors...")
         #Update leg bar data
         seg_height = SA.leg_height/SA.color_count
         SA.leg_width = seg_height
         SA.leg_title = title
-        bar_leg = LBComponents.get_modify_legend_bar(bar_obj = SA.Group[0].Group[1].Group[0],
-                                                   text_leg_group = SA.Group[0].Group[1].Group[1],
+        bar_leg = LBComponents.get_modify_legend_bar(bar_obj = SA.Group[1].Group[0].Group[0],
+                                                   text_leg_group = SA.Group[1].Group[0].Group[1],
                                                    title = title,
                                                    values = SA.total_values,
                                                    position = SA.leg_position,
@@ -1196,9 +1197,9 @@ def get_modify_sun_radiation(epw_path = "",
         if compass_main_leg_created is False:
             print ("updating main legends...")
             LBComponents.modify_main_legends(
-                                         main_leg1 = SA.Group[0].Group[2].Group[0],
-                                         main_leg2 = SA.Group[1].Group[1].Group[0],
-                                         main_leg3 = SA.Group[2].Group[1].Group[0],
+                                         main_leg1 = SA.Group[1].Group[1].Group[0],
+                                         main_leg2 = SA.Group[2].Group[1].Group[0],
+                                         main_leg3 = SA.Group[3].Group[1].Group[0],
                                          pos1 = pos1,
                                          pos2 = pos2,
                                          pos3 = pos3,
@@ -1222,9 +1223,9 @@ def get_modify_sun_radiation(epw_path = "",
         direct_main_leg_group = main_leg_groups[1]
         diffuse_main_leg_group = main_leg_groups[2]
     except Exception:
-        total_main_leg_group = SA.Group[0].Group[2]
-        direct_main_leg_group = SA.Group[1].Group[1]
-        diffuse_main_leg_group = SA.Group[2].Group[1]
+        total_main_leg_group = SA.Group[1].Group[1]
+        direct_main_leg_group = SA.Group[2].Group[1]
+        diffuse_main_leg_group = SA.Group[3].Group[1]
     doc.getObject(study_total_group.Name).addObject(total_main_leg_group)
     doc.getObject(study_direct_group.Name).addObject(direct_main_leg_group)
     doc.getObject(study_diffuse_group.Name).addObject(diffuse_main_leg_group)
@@ -1253,9 +1254,9 @@ def get_modify_sun_radiation(epw_path = "",
         direct_compass = compass_groups[4]
         diffuse_compass = compass_groups[5]
     except Exception:
-        total_compass = SA.Group[0].Group[2].Group[1].Group[0]
-        direct_compass = SA.Group[1].Group[1].Group[1].Group[0]
-        diffuse_compass = SA.Group[2].Group[1].Group[1].Group[0]
+        total_compass = SA.Group[1].Group[1].Group[1].Group[0]
+        direct_compass = SA.Group[2].Group[1].Group[1].Group[0]
+        diffuse_compass = SA.Group[3].Group[1].Group[1].Group[0]
     color = bar_leg[-1][-1]
     color_rgb = (color[0], color[1], color[2])
     total_compass.ViewObject.ShapeAppearance = FreeCAD.Material(
@@ -1267,9 +1268,6 @@ def get_modify_sun_radiation(epw_path = "",
     #groups
     doc.getObject(study_direct_group.Name).Visibility = SA.direct_diffuse_values
     doc.getObject(study_diffuse_group.Name).Visibility = SA.direct_diffuse_values
-
-def get_modify_clones_analysis():
-    pass
 
 def get_direct_diffuse_analysis(study_compound = None,
                            leg_pos = None
@@ -1356,8 +1354,8 @@ def direct_diffuse_visualization():
     #update direct and diffuse analysis visualization
     try:
         doc = FreeCAD.ActiveDocument
-        doc.getObject(SA.Group[1].Name).Visibility = SA.direct_diffuse_values #direct group
-        doc.getObject(SA.Group[2].Name).Visibility = SA.direct_diffuse_values #diffuse group
+        doc.getObject(SA.Group[2].Name).Visibility = SA.direct_diffuse_values #direct group
+        doc.getObject(SA.Group[3].Name).Visibility = SA.direct_diffuse_values #diffuse group
         try:
             #update legend and bar positions
             leg_pos = get_leg_pos(study_objs = SA.study_objs,
@@ -1370,10 +1368,10 @@ def direct_diffuse_visualization():
                 SA.leg_position = leg_pos[0]
             else:
                 SA.leg_position = leg_pos[1]
-            bar_obj = SA.Group[0].Group[1].Group[0]
+            bar_obj = SA.Group[1].Group[0].Group[0]
             bar_obj.Base.Placement.Base = FreeCAD.Vector(SA.leg_position)
             #update text leg bar positions
-            text_leg = SA.Group[0].Group[1].Group[1].Group
+            text_leg = SA.Group[1].Group[0].Group[1].Group
             for i in range(len(text_leg)):
                 text = text_leg[i]
                 text.Placement.Base.x = SA.leg_position.x + SA.leg_width
@@ -1454,13 +1452,18 @@ def update_sun_analys_forms(epw_path = None,
         FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SunAnalysis",
             "Update SunAnalys forms: There is no study objects!") + "\n")
         return
-    #remove compound objects
+    obj_list1 = []
+    obj_list2 = []
     for dep_obj in SA.study_compound.OutList:
-        FreeCAD.ActiveDocument.removeObject(dep_obj.Name)
-    #update study compound
-    SA.study_compound.Links = tessellate_to_compound(selection = SA.study_objs,
+        obj_list1.append(dep_obj)
+    #update study compound - obj_list2
+    obj_list2 = tessellate_to_compound(selection = SA.study_objs,
                                                max_length = SA.max_length,
                                                only_objs = True)
+    SA.study_compound.Links = obj_list2
+    #remove compound obj_list1
+    for objs1 in obj_list1:
+        FreeCAD.ActiveDocument.removeObject(objs1.Name)
     FreeCAD.ActiveDocument.recompute()
     try:
         #update legend and bar positions
@@ -1470,8 +1473,8 @@ def update_sun_analys_forms(epw_path = None,
                                   )
         SA.leg_height = leg_pos[3]
         #update clone positions
-        study_direct_clone = SA.Group[1].Group[0]
-        study_diffuse_clone = SA.Group[2].Group[0]
+        study_direct_clone = SA.Group[2].Group[0]
+        study_diffuse_clone = SA.Group[3].Group[0]
         study_direct_clone.Placement.Base = FreeCAD.Vector(leg_pos[4])
         study_diffuse_clone.Placement.Base = FreeCAD.Vector(leg_pos[5])
     except Exception:
@@ -1505,7 +1508,7 @@ def update_sun_analysis_values_colors(epw_path = None,
                               )
     SA.leg_height = leg_pos[3]
     title = ""
-    study_total_group = SA.Group[0]
+    study_total_group = SA.Group[1]
     #get direct sunlight (Sun hours)
     if SA.results[0:2] == "00":
         get_modify_sun_hours(period,
@@ -1559,8 +1562,8 @@ def update_sun_analysis_colors():
     seg_height = SA.leg_height/SA.color_count
     SA.leg_width = seg_height
     SA.leg_title = title1
-    bar_leg = LBComponents.get_modify_legend_bar(bar_obj = SA.Group[0].Group[1].Group[0],
-                                               text_leg_group = SA.Group[0].Group[1].Group[1],
+    bar_leg = LBComponents.get_modify_legend_bar(bar_obj = SA.Group[1].Group[0].Group[0],
+                                               text_leg_group = SA.Group[1].Group[0].Group[1],
                                                title = title1,
                                                values = sun_analysis_results,
                                                position = SA.leg_position,
@@ -1575,17 +1578,17 @@ def update_sun_analysis_colors():
                                                 )
     LBComponents.apply_color_faces(obj = SA.study_compound,
                                    face_colors = f_colors_total)
-    total_compass = SA.Group[0].Group[2].Group[1].Group[0]
+    total_compass = SA.Group[1].Group[1].Group[1].Group[0]
     color = bar_leg[-1][-1]
     color_rgb = (color[0], color[1], color[2])
     total_compass.ViewObject.ShapeAppearance = FreeCAD.Material(
                                     DiffuseColor = color_rgb)
     if SA.results[0:2] == "01" or SA.results[0:2] == "02":
         try:
-            study_direct_group = doc.getObject(SA.Group[1].Name)
-            study_diffuse_group = doc.getObject(SA.Group[2].Name)
-            study_direct_clone = doc.getObject(SA.Group[1].Group[0].Name)
-            study_diffuse_clone = doc.getObject(SA.Group[2].Group[0].Name)
+            study_direct_group = doc.getObject(SA.Group[2].Name)
+            study_diffuse_group = doc.getObject(SA.Group[3].Name)
+            study_direct_clone = doc.getObject(SA.Group[2].Group[0].Name)
+            study_diffuse_clone = doc.getObject(SA.Group[3].Group[0].Name)
             f_colors_direct = LBComponents.get_face_colors(sun_analysis_results = SA.direct_values,
                                                            domain = SA.total_values,
                                                            leg_colors = bar_leg[1]
@@ -1600,8 +1603,8 @@ def update_sun_analysis_colors():
                                            face_colors = f_colors_diffuse)
             doc.getObject(study_direct_group.Name).Visibility = SA.direct_diffuse_values
             doc.getObject(study_diffuse_group.Name).Visibility = SA.direct_diffuse_values
-            direct_compass = SA.Group[1].Group[1].Group[1].Group[0]
-            diffuse_compass = SA.Group[2].Group[1].Group[1].Group[0]
+            direct_compass = SA.Group[2].Group[1].Group[1].Group[0]
+            diffuse_compass = SA.Group[3].Group[1].Group[1].Group[0]
             direct_compass.ViewObject.ShapeAppearance = FreeCAD.Material(
                                             DiffuseColor = color_rgb)
             diffuse_compass.ViewObject.ShapeAppearance = FreeCAD.Material(
@@ -1639,15 +1642,15 @@ def delete_sun_analysis(SA = None):
     result = show_warning_dialog()
     if result == QtWidgets.QMessageBox.Ok:
         doc = FreeCAD.ActiveDocument
-        compass_links = SA.Group[0].Group[2].Group[1].Group[0].Links
-        compound_links = SA.Group[0].Group[0].Links
+        compass_links = SA.Group[1].Group[1].Group[1].Group[0].Links
+        compound_links = SA.Group[0].Links
         links1 = len(compass_links)
         links2 = len(compound_links)
         for i in range(links1):
-            doc.removeObject(SA.Group[0].Group[2].Group[1].Group[0].Links[0].Name) #compass link
+            doc.removeObject(SA.Group[1].Group[1].Group[1].Group[0].Links[0].Name) #compass link
         for i in range(links2):
-            doc.removeObject(SA.Group[0].Group[0].Links[0].Name) #compound link
-        doc.removeObject(SA.Group[0].Group[1].Group[0].Base.Name) #rectangle
+            doc.removeObject(SA.Group[0].Links[0].Name) #compound link
+        doc.removeObject(SA.Group[1].Group[0].Group[0].Base.Name) #rectangle
         doc.getObject(SA.Name).removeObjectsFromDocument() #SA content
         doc.removeObject(SA.Name) #SA
         doc.recompute()
