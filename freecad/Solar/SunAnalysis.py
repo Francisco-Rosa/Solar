@@ -1465,8 +1465,6 @@ def update_sun_analys_forms(epw_path = None,
     for objs1 in obj_list1:
         FreeCAD.ActiveDocument.removeObject(objs1.Name)
     FreeCAD.ActiveDocument.recompute()
-    """for dep_obj in SA.study_compound.OutList:
-        FreeCAD.ActiveDocument.removeObject(dep_obj.Name)"""
     try:
         #update legend and bar positions
         leg_pos = get_leg_pos(study_objs = SA.study_objs,
