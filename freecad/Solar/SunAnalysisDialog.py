@@ -21,7 +21,7 @@
 #                                                                              #
 ################################################################################
 
-"""This module implements the sun analysis configuration dialog"""
+"""This module implements the Sun Analysis configuration dialog"""
 
 import os
 import FreeCAD
@@ -37,7 +37,7 @@ NEW_GEOM = False
 
 class SunAnalysisConfigurationDialog(QtWidgets.QDialog):
 
-    """A sun analysis configuration dialog"""
+    """A Sun Analysis configuration dialog"""
 
     def __init__(self, parent = None):
 
@@ -53,7 +53,7 @@ class SunAnalysisConfigurationDialog(QtWidgets.QDialog):
                                   #user_mod_path + '/Solar/freecad/Solar/SunAnalysis.ui')
         # SunAnalysisUi.show()
 
-        self.setWindowTitle(QT_TRANSLATE_NOOP("SunAnalysisDialog", "Sun analysis configuration"))
+        self.setWindowTitle(QT_TRANSLATE_NOOP("SunAnalysisDialog", "Sun Analysis configuration"))
         layout = QtWidgets.QVBoxLayout(self)
         layout.addWidget(self.ui)
         self.resize(self.ui.size())
@@ -211,11 +211,11 @@ class SunAnalysisConfigurationDialog(QtWidgets.QDialog):
         #groupBox_Sun_analysis_configuration
         self.ui.groupBox_Sun_analysis_configuration.setTitle(
                         QT_TRANSLATE_NOOP("SunAnalysisDialog",
-                        "Sun analysis configurations"))
+                        "Sun Analysis configurations"))
         #groupBox_sun_analysis_period
         self.ui.groupBox_Sun_analysis_period.setTitle(
                         QT_TRANSLATE_NOOP("SunAnalysisDialog",
-                        "Sun analysis period"))
+                        "Sun Analysis period"))
         self.ui.groupBox_Sun_analysis_period.setToolTip(
                         QT_TRANSLATE_NOOP("SunAnalysisDialog",
                         "An analysis period between two dates of the "
@@ -274,15 +274,15 @@ class SunAnalysisConfigurationDialog(QtWidgets.QDialog):
         #groupBox_Sun_analysis_results
         self.ui.groupBox_Sun_analysis_results.setTitle(
                        QT_TRANSLATE_NOOP("SunAnalysisDialog",
-                       "Sun analysis results"))
+                       "Sun Analysis results"))
         #checkBox_sky_matrix_high_density
         self.ui.checkBox_sky_matrix_high_density.setText(
                         QT_TRANSLATE_NOOP("SunAnalysisDialog",
                         "Sky matrix high density"))
         self.ui.checkBox_sky_matrix_high_density.setToolTip(
                         QT_TRANSLATE_NOOP("SunAnalysisDialog",
-                        "Enable sky matrix high density (for Reinhart model) \n"
-                        "or not (for Tregenza one)."))
+                        "Enable sky matrix high density (Reinhart model) \n"
+                        "or not (Tregenza one)."))
         #label_Results
         self.ui.label_Results.setText(
                        QT_TRANSLATE_NOOP("SunAnalysisDialog",
@@ -294,10 +294,9 @@ class SunAnalysisConfigurationDialog(QtWidgets.QDialog):
         self.ui.comboBox_results.setItemText(2, f"02 - {RESUL_02}")
         self.ui.comboBox_results.setToolTip(
                        QT_TRANSLATE_NOOP("SunAnalysisDialog",
-                       "Indicate whether the sun analysis results \n"
-                       "should be plotted with units of hours, \n"
-                       "total Radiation (kWh/m²) or \n"
-                       "Irradiance (W/m²)."))
+                       "Indicate whether the Solar Analysis results \n"
+                       "should be presented in sun hours, \n"
+                       "Radiation (kWh/m²) or Irradiance (W/m²)."))
         #checkBox_direct_diffuse
         self.ui.checkBox_direct_diffuse.setText(
                        QT_TRANSLATE_NOOP("SunAnalysisDialog",
@@ -413,7 +412,7 @@ class SunAnalysisConfigurationDialog(QtWidgets.QDialog):
                 self, QT_TRANSLATE_NOOP("SunAnalysisDialog", "Warning"),
                 QT_TRANSLATE_NOOP("SunAnalysisDialog",
                 "Indicate a epw file before "
-                "close the dialog sun analysis!")
+                "close the dialog Sun Analysis!")
             )
             return
         try:
@@ -467,7 +466,7 @@ class SunAnalysisConfigurationDialog(QtWidgets.QDialog):
     # Connection dialog x sun analysis properties
     def get_properties_data(self):
 
-        """Get data from sun analysis properties and send them to dialog"""
+        """Get data from Sun Analysis properties and send them to dialog"""
 
         from freecad.Solar.SunAnalysis import SA, SA_NEW
         if SA is not None:
@@ -542,12 +541,12 @@ class SunAnalysisConfigurationDialog(QtWidgets.QDialog):
             self.ui.checkBox_direct_diffuse.setChecked(SA.direct_diffuse_values)
             self.results_toggled()
         else:
-            FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP(
-                'SunAnalysisDialog', 'Get properties: There is no SunAnalysis group!') + '\n')
+            FreeCAD.Console.PrintMessage('Get properties: ' + QT_TRANSLATE_NOOP(
+                'SunAnalysisDialog', 'There is no Sun Analysis group!') + '\n')
 
     def save_to_propeties(self):
 
-        """Save data from dialog to sun analysis properties"""
+        """Save data from dialog to Sun Analysis properties"""
 
         from freecad.Solar.SunAnalysis import SA
         if SA is not None:
@@ -590,13 +589,13 @@ class SunAnalysisConfigurationDialog(QtWidgets.QDialog):
             SA.results = resul_list[prefix2]
             SA.direct_diffuse_values = self.ui.checkBox_direct_diffuse.isChecked()
         else:
-            FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP(
-                'SunAnalysisDialog', 'Save properties: There is no SunAnalysis group!') + '\n')
+            FreeCAD.Console.PrintMessage('Save properties: '+ QT_TRANSLATE_NOOP(
+                'SunAnalysisDialog', 'There is no Sun Analysis group!') + '\n')
         FreeCAD.ActiveDocument.recompute()
 
     def compare_sun_analysis_data(self):
 
-        """Compares and activates the update of sun analysis data."""
+        """Compares and activates the update of Sun Analysis data."""
 
         #forms
         max_length2 = float(self.ui.lineEdit_max_length.text())
@@ -712,16 +711,16 @@ class SunAnalysisConfigurationDialog(QtWidgets.QDialog):
 
             #update properties
             self.save_to_propeties()
-            #print("send data to sun analysis!")
+            #print("send data to Sun Analysis!")
             print(f"dif_forms: {dif_forms}, dif_values_colors: {dif_values_colors}, dif_colors: {dif_colors}")
             if dif_forms is True or dif_values_colors is True or dif_colors is True:
-                #print("try to update sun analysis data!")
+                #print("try to update Sun Analysis data!")
                 SunAnalysis.modify_sun_analysis(forms = dif_forms,
                                                 values_colors = dif_values_colors,
                                                 colors = dif_colors)
-                print("updated sun analysis data!")
+                print("updated Sun Analysis data!")
         else:
-            print ("Compare sun analysis data: Can not get data from sun analysis!")
+            print ("Compare sun analysis data: Can not get data from Sun Analysis!")
 
     def on_button_apply_clicked(self):
 
@@ -735,7 +734,7 @@ class SunAnalysisConfigurationDialog(QtWidgets.QDialog):
 
 def open_sun_analysis_configuration():
 
-    """Open sun analysis configuration"""
+    """Open Sun Analysis configuration"""
 
     global NEW_GEOM
     dlg = SunAnalysisConfigurationDialog()

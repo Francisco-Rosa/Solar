@@ -44,10 +44,10 @@ class StartSunPathAnimation:
         __dir__ = os.path.dirname(__file__)
         return {'Pixmap': __dir__ + '/icons/StartSunPathAnimationIcon.svg',
                 'MenuText': QT_TRANSLATE_NOOP(
-                'SunPathAnimation', 'StartSunPathAnimation'),
+                'SunPathAnimation', 'Start Sun Path Animation'),
                 'ToolTip': QT_TRANSLATE_NOOP(
-                'SunPathAnimation', 'Start a sun path animation. \n'
-                'To use it, open the SunDialog and enable Sun path animation. \n'
+                'SunPathAnimation', 'Starts a sun path animation.\n'
+                'To use it, open the dialog and enable Sun Path animation.\n'
                 'To view shadow projection, choose the image other than None.\n'
                 'Click this button to get started its animation')}
 
@@ -78,9 +78,9 @@ class StopSunPathAnimation:
         __dir__ = os.path.dirname(__file__)
         return {'Pixmap': __dir__ + '/icons/StopSunPathAnimationIcon.svg',
                 'MenuText': QT_TRANSLATE_NOOP(
-                'SunPathAnimation', 'StopSunPathAnimation'),
+                'SunPathAnimation', 'Stop SunPath Animation'),
                 'ToolTip': QT_TRANSLATE_NOOP(
-                'SunPathAnimation', 'Stop a sun path animation. '
+                'SunPathAnimation', 'Stops a sun path animation. '
                 'After the sun path animation started, '
                 'click this button to stop it.')}
 
@@ -114,11 +114,11 @@ def modify_anim_indicator(animation = False):
     if animation is False:
         ANIMATION = False
         FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP(
-            'SunPathAnimation', 'SunPathAnimation, Animation off.') + '\n')
+            'SunPathAnimation', 'Sun Path animation, animation off.') + '\n')
     if animation is True:
         ANIMATION = True
         FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP(
-            'SunPathAnimation', 'SunPathAnimation, Animation on.') + '\n')
+            'SunPathAnimation', 'Sun Path animation, animation on.') + '\n')
     FreeCAD.ActiveDocument.recompute()
 
 def calculate_frames():
@@ -154,7 +154,7 @@ def sun_path_animation():
         if CL.Frame_04OutputPath == "":
             FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP(
                 "SunPathAnimation", "A path to save images is required! \n"
-                "Click stop animation to start again.") + '\n')
+                "Click 'Stop Animation' to start again.") + '\n')
             return
     Properties.get_sun_position() # First step
     Gui.updateGui()

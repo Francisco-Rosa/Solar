@@ -45,7 +45,7 @@ SA_NEW = False
 
 class SunAnalysis:
 
-    """Visualize and configure Sun analysis in FreeCAD's 3D view."""
+    """Visualize and configure Sun Analysis in FreeCAD's 3D view."""
 
     def __init__(self,obj):
         obj.Proxy = self
@@ -53,7 +53,7 @@ class SunAnalysis:
 
     def setProperties(self,obj):
 
-        """Gives the object properties to sun analysis."""
+        """Gives the object properties to Sun Analysis."""
 
         pl = obj.PropertiesList
         # 01 epw and location
@@ -267,7 +267,7 @@ class SunAnalysis:
             obj.addProperty("App::PropertyVectorList",
                             "sun_vector_values", "04_Analysis_results",
                             QT_TRANSLATE_NOOP("App::Property",
-                            "sun path vectors values - read only")
+                            "Sun path vectors values - read only")
                             ).sun_vector_values = []
         if not "sun_hour_values" in pl:
             obj.addProperty("App::PropertyFloatList",
@@ -384,15 +384,12 @@ class CreateSunAnalysis:
     def GetResources(self):
         __dir__ = os.path.dirname(__file__)
         return {'Pixmap': __dir__ + '/icons/CreateSunAnalysisIcon.svg',
-                'MenuText': QT_TRANSLATE_NOOP(
-                'SunAnalysis', 'CreateSunAnalysis'),
-                'ToolTip': QT_TRANSLATE_NOOP(
-                'SunAnalysis', 'Create Sun Analysis. \n'
-                'Select the group of objects to analyze, \n'
-                'which was previously created, then click this button \n'
-                'to open the dialog to configure its data. \n'
-                'You have to select an epw file and choose the objects to be \n'
-                'analyzed and also its context.')}
+                'MenuText': QT_TRANSLATE_NOOP('SunAnalysis', 'Create a Sun Analysis'),
+                'ToolTip': QT_TRANSLATE_NOOP('SunAnalysis',
+                           'First, select the group containing the objects to be analyzed, '
+                           'created previously, then click this button to configure the analysis.\n'
+                           'You need to select an epw file and choose the objects to be analyzed, \n'
+                           'as well as their context.')}
 
     def IsActive(self):
         if Gui.ActiveDocument:
@@ -414,9 +411,9 @@ class ModifySunAnalysis:
         __dir__ = os.path.dirname(__file__)
         return {'Pixmap': __dir__ + '/icons/ModifySunAnalysisIcon.svg',
                 'MenuText': QT_TRANSLATE_NOOP(
-                           'SunAnalysis', 'ModifySunAnalysis'),
+                           'SunAnalysis', 'Modify a Sun Analysis'),
                            'ToolTip': QT_TRANSLATE_NOOP(
-                                      'SunAnalysis', 'Modify Sun Analysis. \n'
+                                      'SunAnalysis',
                                       'Select a Sun Analysis, click this button to '
                                       'open the dialog and modify its configuration.')}
 
@@ -444,12 +441,13 @@ class DeleteSunAnalysis:
         __dir__ = os.path.dirname(__file__)
         return {'Pixmap': __dir__ + '/icons/DeleteSunAnalysisIcon.svg',
                 'MenuText': QT_TRANSLATE_NOOP(
-                            'SunAnalysis', 'DeleteSunAnalysis'),
+                            'SunAnalysis', 'Delete a Sun Analysis'),
                              'ToolTip': QT_TRANSLATE_NOOP(
-                                        'SunAnalysis', 'Delete Sun Analysis. \n'
-                                        'Select a Sun Analysis to delete.\n'
+                                        'SunAnalysis',
+                                        'Select a Sun Analysis, click this button '
+                                        'to delete it.\n'
                                         'Be careful, you will not be able to '
-                                        'undo this action.!')}
+                                        'undo this action!')}
 
     def IsActive(self):
         if Gui.ActiveDocument:
@@ -476,8 +474,8 @@ def activated_create_sun_analysis(self):
         objs_group = sel_objs_group[0]
     except Exception:
         FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SunAnalysis",
-            "To create a new SunAnalysis, you must select a group \n"
-            "that contents all objects to analysed!" + '\n'))
+            "To create a new Sun Analysis, you must select a group \n"
+            "that contents all objects to be analyzed!" + '\n'))
         return
     folder = FreeCAD.ActiveDocument.addObject(
              'App::DocumentObjectGroupPython',
@@ -493,7 +491,7 @@ def activated_create_sun_analysis(self):
 
 def activated_modify_sun_analysis(self):
 
-    """Modify the SunAnalysis selected"""
+    """Modify the Sun Analysis selected"""
 
     global SA
     global SA_NEW
@@ -504,7 +502,7 @@ def activated_modify_sun_analysis(self):
         SunAnalysisDialog.open_sun_analysis_configuration()
     else:
         FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SunAnalysis",
-            "To modify a set of SunAnalysis, first you must select one!" + '\n'))
+            "To modify a set of Sun Analysis, first you must select one!" + '\n'))
 
 def activated_delete_sun_analysis(self):
 
@@ -517,14 +515,14 @@ def activated_delete_sun_analysis(self):
             delete_sun_analysis(selection)
         else:
             FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SunAnalysis",
-             "To delete a sun analysis, first you must select one!" + '\n'))
+             "To delete a Sun Analysis, first you must select one!" + '\n'))
     except Exception:
         FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SunAnalysis",
-            "To delete a set of sun analysis, first you must select one!" + '\n'))
+            "To delete a set of Sun Analysis, first you must select one!" + '\n'))
 
 def select_sun_analysis():
 
-    """Select a SunAnalysis"""
+    """Select a Sun Analysis"""
 
     SA = None
     selection = []
@@ -536,7 +534,7 @@ def select_sun_analysis():
             return SA
         else:
             FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SunAnalysis",
-                "Warning: The object selected is not a SunAnalysis!" + '\n'))
+                "Warning: The object selected is not a Sun Analysis!" + '\n'))
     except:
         FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SunAnalysis",
                               "There is no selection!" + '\n'))
@@ -588,9 +586,9 @@ def tessellate_to_compound(selection = None,
     else:
         faces_compound = FreeCAD.activeDocument().addObject(
                                        "Part::Compound",
-                                       "Analysis_study_compound")
+                                       "Analysis_compound")
         faces_compound.Label = QT_TRANSLATE_NOOP("SunAnalysis",
-                                       "Analysis study compound")
+                                       "Analysis compound")
         faces_compound.Links = total_objs_tris
         FreeCAD.ActiveDocument.recompute()
         return faces_compound
@@ -726,7 +724,7 @@ def create_sun_analysis(study_objs = None,
                         ground_reflectance = 0.2
                         ):
 
-    """Create sun analysis object.
+    """Create Sun Analysis object.
     Set the analysis data (EPW, period, location, and north)
     Create the analysis surfaces from target and context objects
     Calculate sun hours or radiations/irradiaces
@@ -744,17 +742,18 @@ def create_sun_analysis(study_objs = None,
     if SA is not None:
         pass
     else:
-        FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SunAnalysis",
-            "Create sun analysis: "
-            "SunAnalysis object could not be found!") + "\n")
+        FreeCAD.Console.PrintMessage("create sun analysis: " + QT_TRANSLATE_NOOP(
+            "SunAnalysis",
+            "Sun Analysis object could not be found!") + "\n")
         return
     global SA_NEW
     #epw_path
     if SA.epw_path != "":
         epw_path = SA.epw_path
         if not epw_path or not os.path.isfile(epw_path):
-            FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SunAnalysis",
-                "Create sun analysis: to use EPW, please provide a valid file path.") + '\n')
+            FreeCAD.Console.PrintMessage("create sun analysis: " + QT_TRANSLATE_NOOP(
+                "SunAnalysis",
+                "For using EPW, please provide a valid file path.") + '\n')
     else:
         FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SunAnalysis",
             "Could not get epw!" + '\n'))
@@ -776,9 +775,9 @@ def create_sun_analysis(study_objs = None,
     #print(f"SA.metadata: {SA.metadata}")
     #geometries
     if SA.study_objs == [] or SA.study_context == []:
-        FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SunAnalysis",
-                "Create Sun analysis: There is no study objects or \n"
-                "study context selected!") + "\n")
+        FreeCAD.Console.PrintMessage("create sun analysis: " + QT_TRANSLATE_NOOP("SunAnalysis",
+                "There is no study objects or \n"
+                "context selected!") + "\n")
         return
     #get study compound
     SA.study_compound = None
@@ -834,7 +833,7 @@ def create_sun_analysis(study_objs = None,
                                  modify = False
                                  )
     SA.Label = QT_TRANSLATE_NOOP("SunAnalysis",
-               "SunAnalysis {} - {}").format(SA.city, title)
+               "Sun Analysis {} - {}").format(SA.city, title)
     SA.leg_title = title
     SA_NEW = False
     Gui.SendMsgToActiveView("ViewFit")
@@ -856,9 +855,9 @@ def get_modify_sun_hours(period = None,
     if SA is not None:
         pass
     else:
-        FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SunAnalysis",
-            "Get modify sun hours: "
-            "SunAnalysis object could not be found!") + "\n")
+        FreeCAD.Console.PrintMessage("get modify sun hours: " + QT_TRANSLATE_NOOP(
+            "SunAnalysis",
+            "Sun Analysis object could not be found!") + "\n")
         return
 
     doc = FreeCAD.ActiveDocument
@@ -994,7 +993,7 @@ def get_modify_sun_hours(period = None,
             doc.recompute()
         except:
             pass
-    print("getting sun analysis colors...")
+    print("getting Sun Analysis colors...")
     f_colors_total = LBComponents.get_face_colors(sun_analysis_results = SA.sun_hour_values,
                                                    domain = SA.sun_hour_values,
                                                    leg_colors = bar_leg[1]
@@ -1080,9 +1079,8 @@ def get_modify_sun_radiation(epw_path = "",
         sky_matrix = SkyMatrix.from_epw(SA.epw_path, hoys) # Radiance must be installed
         sky_matrix.north = - float(SA.north)
     except Exception:
-        FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SunAnalysis",
-            "Get modify Sun Radiation: "
-            "To get irradiance values, Radiance software must be \n"
+        FreeCAD.Console.PrintMessage("get modify Sun Radiation: " + QT_TRANSLATE_NOOP("SunAnalysis",
+            "For getting irradiance values, Radiance software must be \n"
             "installed in your machine.\n"))
         return
     #get sky matrix cosine intersections
@@ -1229,7 +1227,7 @@ def get_modify_sun_radiation(epw_path = "",
     doc.getObject(study_total_group.Name).addObject(total_main_leg_group)
     doc.getObject(study_direct_group.Name).addObject(direct_main_leg_group)
     doc.getObject(study_diffuse_group.Name).addObject(diffuse_main_leg_group)
-    print("getting sun analysis colors...")
+    print("getting Sun Analysis colors...")
     f_colors_total = LBComponents.get_face_colors(sun_analysis_results = total_values,
                                                domain = total_values,
                                                leg_colors = bar_leg[1]
@@ -1347,9 +1345,9 @@ def direct_diffuse_visualization():
     if SA is not None:
         pass
     else:
-        FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SunAnalysis",
-            "Direct diffuse visualization: "
-            "SunAnalysis object could not be found!") + "\n")
+        FreeCAD.Console.PrintMessage("direct diffuse visualization: " + QT_TRANSLATE_NOOP(
+            "SunAnalysis",
+            "Sun Analysis object could not be found!") + "\n")
         return
     #update direct and diffuse analysis visualization
     try:
@@ -1376,12 +1374,12 @@ def direct_diffuse_visualization():
                 text = text_leg[i]
                 text.Placement.Base.x = SA.leg_position.x + SA.leg_width
         except Exception:
-            FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SunAnalysis",
-                "Direct and diffuse visualization: "
+            FreeCAD.Console.PrintMessage("direct and diffuse visualization: " + QT_TRANSLATE_NOOP(
+                "SunAnalysis",
                 "It was not possible to update bar legend position!") + "\n")
     except Exception:
-        FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SunAnalysis",
-            "Direct and diffuse visualization: "
+        FreeCAD.Console.PrintMessage("direct and diffuse visualization: " + QT_TRANSLATE_NOOP(
+            "SunAnalysis",
             "There is no direct and diffuse analysis!") + "\n")
     doc.recompute()
 
@@ -1393,25 +1391,28 @@ def modify_sun_analysis(forms = False,
                         colors = False
                         ):
 
-    """Modify a selected sun analysis object"""
+    """Modify a selected Sun Analysis object"""
 
     if SA is not None:
         pass
     else:
-        FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SunAnalysis",
-            "Modify sun analysis: Attempting to get sun analysis values: "
-            "SunAnalysis object could not be found!") + "\n")
+        FreeCAD.Console.PrintMessage("modify sun analysis: " + QT_TRANSLATE_NOOP(
+            "SunAnalysis",
+            "Attempting to get Sun Analysis values: "
+            "Sun Analysis object could not be found!") + "\n")
         return
     global SA_NEW
     #epw_path
     if SA.epw_path != "":
         epw_path = SA.epw_path
         if not epw_path or not os.path.isfile(epw_path):
-            FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SunAnalysis",
-                "Modify sun analysis: to use EPW, please provide a valid file path.") + '\n')
+            FreeCAD.Console.PrintMessage("modify sun analysis: " + QT_TRANSLATE_NOOP(
+                "SunAnalysis",
+                "For using EPW, please provide a valid file path.") + '\n')
     else:
-        FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SunAnalysis",
-            "Modify sun analysis: Could not get epw!" + '\n'))
+        FreeCAD.Console.PrintMessage("modify sun analysis: " + QT_TRANSLATE_NOOP(
+            "SunAnalysis",
+            "Could not get epw!" + '\n'))
         return
     #period
     period = None
@@ -1442,15 +1443,16 @@ def update_sun_analys_forms(epw_path = None,
                             period = None
                             ):
 
-    """Update forms in a selected sun analysis object"""
+    """Update forms in a selected Sun Analysis object"""
 
     #check geometries
     if SA.study_objs != [] and SA.study_context != []:
         for o in range(len(SA.study_context)):
             SA.study_context[o].Visibility = True
     else:
-        FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SunAnalysis",
-            "Update SunAnalys forms: There is no study objects!") + "\n")
+        FreeCAD.Console.PrintMessage("update sun analys forms: " + QT_TRANSLATE_NOOP(
+            "SunAnalysis",
+            "There is no study objects!") + "\n")
         return
     obj_list1 = []
     obj_list2 = []
@@ -1478,8 +1480,8 @@ def update_sun_analys_forms(epw_path = None,
         study_direct_clone.Placement.Base = FreeCAD.Vector(leg_pos[4])
         study_diffuse_clone.Placement.Base = FreeCAD.Vector(leg_pos[5])
     except Exception:
-        FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SunAnalysis",
-                "Update SunAnalys forms: There is no leg pos!") + "\n")
+        FreeCAD.Console.PrintMessage("update sun analys forms: " + QT_TRANSLATE_NOOP("SunAnalysis",
+                "There is no legend position!") + "\n")
     FreeCAD.ActiveDocument.recompute()
     #Get direct sunlight (Sun hours) or radiations
     update_sun_analysis_values_colors(epw_path,
@@ -1490,7 +1492,7 @@ def update_sun_analysis_values_colors(epw_path = None,
                                       period = None
                                       ):
 
-    """Update the values and colors applied in a selected sun analysis object"""
+    """Update the values and colors applied in a selected Sun Analysis object"""
 
     #doc = FreeCAD.ActiveDocument
     from freecad.Solar.LBComponents import RESUL_00, RESUL_01, RESUL_02
@@ -1537,11 +1539,11 @@ def update_sun_analysis_values_colors(epw_path = None,
                                      modify = True
                                      )
     SA.Label = QT_TRANSLATE_NOOP("SunAnalysis",
-    "SunAnalysis {} - {}").format(SA.city, title)
+    "Sun Analysis {} - {}").format(SA.city, title)
 
 def update_sun_analysis_colors():
 
-    """Update the colors applied in a selected sun analysis object"""
+    """Update the colors applied in a selected Sun Analysis object"""
 
     doc = FreeCAD.ActiveDocument
     from freecad.Solar.LBComponents import RESUL_01, RESUL_02
@@ -1622,7 +1624,7 @@ def update_sun_analysis_colors():
 
 def delete_sun_analysis(SA = None):
 
-    """Delete a complete sun analysis objects"""
+    """Delete a complete Sun Analysis objects"""
 
     def show_warning_dialog():
         msg = QtWidgets.QMessageBox()
@@ -1632,7 +1634,7 @@ def delete_sun_analysis(SA = None):
             "the selected Sun Analysis, \n"
             "and you won't be able to undo it. \n"
             "\n"
-            "Are you sure you want to delete these Sun Analysis? \n"
+            "Are you sure you want to delete these Sun Analysis?\n"
         ))
         msg.setIcon(QtWidgets.QMessageBox.Warning)
         msg.setStandardButtons(

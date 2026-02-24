@@ -114,9 +114,9 @@ def show_warning_dialog():
     msg.setWindowTitle("BWShadow Save Warning")
     msg.setText(QT_TRANSLATE_NOOP('SunShadowBW',
         "This feature has not been fully tested yet! \n"
-        "To prevent issues, save your file before opening it. \n"
+        "To prevent issues, save your file before using it. \n"
         "For transparent surfaces, it is recommended \n"
-        "to make them invisible before generating these shadows. \n"
+        "to make them invisible before generating the shadows. \n"
         "Avoid spherical or complex surfaces. \n"
         "\n"
         "Do you want to generate shadows now?"

@@ -21,7 +21,7 @@
 #                                                                              #
 ################################################################################
 
-"""This module implements the sky domes configuration dialog"""
+"""This module implements the Sky Domes configuration dialog"""
 
 import os
 import FreeCAD
@@ -35,7 +35,7 @@ SD = None
 
 class SkyDomesConfigurationDialog(QtWidgets.QDialog):
 
-    """A sky domes configuration dialog"""
+    """A Sky Domes configuration dialog"""
 
     def __init__(self, parent = None):
 
@@ -51,7 +51,7 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
         # SkyDomesUi.show()
 
         # Correctly embed the loaded UI as a child widget
-        self.setWindowTitle(QT_TRANSLATE_NOOP("SkyDomesDialog", "Sky domes configuration"))
+        self.setWindowTitle(QT_TRANSLATE_NOOP("SkyDomesDialog", "Sky Domes configuration"))
         layout = QtWidgets.QVBoxLayout(self)
         layout.addWidget(self.ui)
         self.resize(self.ui.size())
@@ -116,7 +116,7 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
         #toolButton_epw_path
         self.ui.toolButton_epw_path.setToolTip(
                         QT_TRANSLATE_NOOP("SkyDomesDialog",
-                        "Indicate the path of the epw file"))
+                        "Indicate the epw file path"))
         #groupBox_location
         self.ui.groupBox_location.setTitle(
                         QT_TRANSLATE_NOOP("SkyDomesDialog",
@@ -158,7 +158,7 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
         #groupBox_sky_domes_configuration
         self.ui.groupBox_sky_domes_configuration.setTitle(
                         QT_TRANSLATE_NOOP("SkyDomesDialog",
-                        "Sky domes configurations"))
+                        "Sky Domes configurations"))
         #label_radius
         self.ui.label_radius.setText(
                         QT_TRANSLATE_NOOP("SkyDomesDialog",
@@ -231,11 +231,11 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
                        QT_TRANSLATE_NOOP("SkyDomesDialog",
                        "Specify the number of times per hour \n"
                        "the linear interpolation of sub-hourly \n"
-                       "values ​​will be performed. \n"
+                       "values ​​will be performed.\n"
                        "It works only with time intervals \n"
-                       "from 0 to 23 hours. \n"
+                       "from 0 to 23 hours.\n"
                        "Note that larger numbers \n"
-                       "will increase the computation time. \n"
+                       "will increase the computation time.\n"
                        ))
         #checkBox_leap_year
         self.ui.checkBox_leap_year.setText(
@@ -248,7 +248,7 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
         #groupBox_sky_domes
         self.ui.groupBox_sky_domes.setTitle(
                        QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "Sky domes"))
+                       "Sky Domes"))
         #label_model
         self.ui.label_model.setText(
                        QT_TRANSLATE_NOOP("SkyDomesDialog",
@@ -264,8 +264,8 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
                        QT_TRANSLATE_NOOP("SkyDomesDialog",
                        "Choose between the low-resolution model (Tregenza)\n"
                        "or high-resolution (Reinhart) one.\n"
-                       "Keep in mind that the Reinhart model can take \n"
-                       "considerable time to calculate its values."))
+                       "Remember that the Reinhart model can take a \n"
+                       "considerable amount of time to calculate."))
         #label_Units
         self.ui.label_Units.setText(
                        QT_TRANSLATE_NOOP("SkyDomesDialog",
@@ -300,7 +300,7 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
         #horizontalSlider_transparency
         self.ui.horizontalSlider_transparency.setToolTip(
                        QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "Adjust the transparency of the sky domes."))
+                       "Adjust the transparency of the Sky Domes."))
         #groupBox_Legend
         self.ui.groupBox_Legend.setTitle(
                         QT_TRANSLATE_NOOP("SkyDomesDialog",
@@ -316,7 +316,7 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
         #label_color_set
         self.ui.label_color_set.setText(
                        QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "Color_set:"))
+                       "Color set:"))
         #comboBox_color_set
         from freecad.Solar.LBComponents import COLORS_00, COLORS_01, COLORS_02, COLORS_03
         from freecad.Solar.LBComponents import COLORS_04, COLORS_05, COLORS_06, COLORS_07
@@ -409,7 +409,7 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
                 self, QT_TRANSLATE_NOOP("SkyDomesDialog", "Warning"),
                 QT_TRANSLATE_NOOP("SkyDomesDialog",
                                   "Indicate a epw file before "
-                                  "close the dialog sky domes!")
+                                  "close the dialog Sky Domes!")
             )
             return
         try:
@@ -463,7 +463,7 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
     # Connection dialog x sky domes properties
     def get_properties_data(self):
 
-        """Get data from sky domes properties and send them to dialog"""
+        """Get data from Sky Domes properties and send them to dialog"""
 
         from .SkyDomes import SD, SD_NEW
         if SD is not None:
@@ -532,12 +532,12 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
             if idx3 >= 0:
                 self.ui.comboBox_color_set.setCurrentIndex(idx3)
         else:
-            FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP(
-                'SkyDomesDialog', 'Get properties: There is no SkyDomes group!') + '\n')
+            FreeCAD.Console.PrintMessage('get properties: ' + QT_TRANSLATE_NOOP(
+                'SkyDomesDialog', 'There is no Sky Domes group!') + '\n')
 
     def save_to_propeties(self):
 
-        """Save data from dialog to sky domes properties"""
+        """Save data from dialog to Sky Domes properties"""
 
         from .SkyDomes import SD, SD_NEW
         if SD is not None:
@@ -593,8 +593,8 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
             color_set_list = SD.getEnumerationsOfProperty("color_set")
             SD.color_set = color_set_list[prefix2]
         else:
-            FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP(
-                'SkyDomesDialog', 'Save properties: There is no SkyDomes group!') + '\n')
+            FreeCAD.Console.PrintMessage('save to properties: ' + QT_TRANSLATE_NOOP(
+                'SkyDomesDialog', 'There is no Sky Domes group!') + '\n')
         FreeCAD.ActiveDocument.recompute()
 
     def compare_sky_domes_data(self):
@@ -689,13 +689,13 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
                 ):
                 dif_values = True
             self.save_to_propeties()
-            print("send data to sky domes!")
+            print("send data to Sky Domes!")
             print(f"dif_forms: {dif_forms}, dif_values: {dif_values}")
             if dif_forms is True or dif_values is True:
                 SkyDomes.modify_sky_domes(forms = dif_forms, values = dif_values)
-                print("updated sky domes data!")
+                print("updated Sky Domes data!")
         else:
-            print("Compare sky domes data: Can not get data from sky domes!")
+            print("Compare sky domes data: Can not get data from Sky Domes!")
 
     def on_button_apply_clicked(self):
 
@@ -709,7 +709,7 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
 
 def open_sky_domes_configuration():
 
-    """Open sky domes configuration"""
+    """Open Sky Domes configuration"""
 
     dlg = SkyDomesConfigurationDialog()
     dlg.get_properties_data()

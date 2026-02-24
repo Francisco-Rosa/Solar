@@ -312,7 +312,7 @@ def get_sky_dome_values(sky_matrix = None,
     except Exception:
         FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("LBComponents",
             "To get irradiance values, it is necessary \n"
-            "to install Radiance in your machine.  \n"))
+            "to install Radiance in your machine.\n"))
         return
     # Get and convert lb values
     #values
@@ -375,8 +375,8 @@ def get_sky_matrix_dome_values(epw_path = "",
             direct_values = sky_dome_obj[2]
             diffuse_values = sky_dome_obj[3]
         except Exception:
-            FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SunAnalysis",
-                "Get sky Matrix Dome values:"
+            FreeCAD.Console.PrintMessage(
+                "get sky matrix dome values: " + QT_TRANSLATE_NOOP("LBComponents",
                 "To get irradiance values, Radiance software must be \n"
                 "installed in your machine.\n"))
             return
@@ -1061,15 +1061,15 @@ def get_metadata(epw_path = "", period = None):
     epw_metadata = epw.metadata
     source_name = epw_metadata["source"]
     source_str = QT_TRANSLATE_NOOP("LBComponents",
-                                   "Source : {}").format(source_name)
+                                   "Source: {}").format(source_name)
     metadata.append(source_str)
     country_name = epw_metadata["country"]
     country_str = QT_TRANSLATE_NOOP("LBComponents",
-                                     "Country : {}").format(country_name)
+                                     "Country: {}").format(country_name)
     metadata.append(country_str)
     city_name = epw_metadata["city"]
     city_str = QT_TRANSLATE_NOOP("LBComponents",
-                                 "City : {}").format(city_name)
+                                 "City: {}").format(city_name)
     metadata.append(city_str)
     time_zone_name = epw_metadata["time-zone"]
     time_zone_str = QT_TRANSLATE_NOOP("LBComponents",

@@ -203,7 +203,7 @@ class SunPathDialog(QtWidgets.QDialog):
         #checkBox_DaylightSaving
         self.ui.checkBox_DaylightSaving.setText(
                     QT_TRANSLATE_NOOP("SunDialog",
-                    "DaylightSaving"))
+                    "Daylight saving"))
         self.ui.checkBox_DaylightSaving.setToolTip(
                     QT_TRANSLATE_NOOP("SunDialog",
                     "Enable it for daylight saving periods"))
@@ -268,13 +268,13 @@ class SunPathDialog(QtWidgets.QDialog):
         self.ui.label_Position.setToolTip(
                     QT_TRANSLATE_NOOP("SunDialog",
                     "Adjust the center position according to the project"))
-        #checkBox_Sun_light_representation
+        #checkBox_Sunlight_representation
         self.ui.checkBox_Sun_light_representation.setText(
                     QT_TRANSLATE_NOOP("SunDialog",
-                    "Sun light"))
+                    "Sunlight"))
         self.ui.checkBox_Sun_light_representation.setToolTip(
                     QT_TRANSLATE_NOOP("SunDialog",
-                    "Enable the sun light representation"))
+                    "Enable the sunlight representation"))
         #label_Ray_representation
         self.ui.label_Ray_representation.setText(
                     QT_TRANSLATE_NOOP("SunDialog",
@@ -334,12 +334,12 @@ class SunPathDialog(QtWidgets.QDialog):
                     "Images, w:"))
         self.ui.label_image_w_h.setToolTip(
                     QT_TRANSLATE_NOOP("SunDialog",
-                    "Set the image resolution\n"
+                    "Set the image resolution.\n"
                     "Use for render images"))
         #lineEdit_width
         self.ui.lineEdit_width.setToolTip(
                     QT_TRANSLATE_NOOP("SunDialog",
-                    "Set the image width in pixels\n"
+                    "Set the image width in pixels.\n"
                     "Use for render images"))
         #label_h
         self.ui.label_h.setText(
@@ -348,7 +348,7 @@ class SunPathDialog(QtWidgets.QDialog):
         #lineEdit_height
         self.ui.lineEdit_height.setToolTip(
                     QT_TRANSLATE_NOOP("SunDialog",
-                    "Set the image height in pixels\n"
+                    "Set the image height in pixels.\n"
                     "Use for render images"))
         #checkBox_Save_to
         self.ui.checkBox_Save_to.setText(
@@ -431,10 +431,10 @@ class SunPathDialog(QtWidgets.QDialog):
     def GetResources(self):
         __dir__ = os.path.dirname(__file__)
         return {'Pixmap': __dir__ + '/icons/SunDialogIcon.svg',
-                'MenuText': QT_TRANSLATE_NOOP(self, 'SunPathDialog'),
+                'MenuText': QT_TRANSLATE_NOOP(self, 'Sun Path Dialog'),
                 'ToolTip': QT_TRANSLATE_NOOP(self,
-                           'Create and manage the SunDialog. '
-                           'After the sun configuration created, '
+                           'Creates and manages the Sun Path Dialog. '
+                           'After the sun path created, '
                            'configure its properties'
                 )
         }
@@ -515,7 +515,7 @@ class SunPathDialog(QtWidgets.QDialog):
                                                 "File Error"),
                                           QT_TRANSLATE_NOOP(
                                                 "SunDialog",
-                                                f"Could not read EPW file:\n{e}"))
+                                                "Could not read EPW file:\n{}").format(e))
             return
 
     def choose_color(self):

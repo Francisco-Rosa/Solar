@@ -305,7 +305,7 @@ class SunProperties:
             "SunLightRepresentation", "06_Sun_light_diagram_config",
             QT_TRANSLATE_NOOP(
                 "App::Property",
-                "True, for sun light representation to be visibled"
+                "True, for sunlight representation to be visible"
                 )
             ).SunLightRepresentation = False
         if not "RayRepresentation" in pl:
@@ -402,7 +402,7 @@ class SunProperties:
             QT_TRANSLATE_NOOP(
                 "App::Property",
                 "The initial hour of the analysis period \n"
-                "or sun path animation"
+                "or of the sun path animation"
                 )
             ).start_hour = 6
         if not "end_hour" in pl:
@@ -412,7 +412,7 @@ class SunProperties:
             QT_TRANSLATE_NOOP(
                 "App::Property",
                 "The final hour of the analysis period \n"
-                "or sun path animation"
+                "or of the sun path animation"
                 )
             ).end_hour = 18
         if not "start_min" in pl:
@@ -422,7 +422,7 @@ class SunProperties:
             QT_TRANSLATE_NOOP(
                 "App::Property",
                 "The initial minute of the analysis period \n"
-                "or sun path animation"
+                "or of the sun path animation"
                 )
             ).start_min = 0
         if not "end_min" in pl:
@@ -432,7 +432,7 @@ class SunProperties:
             QT_TRANSLATE_NOOP(
                 "App::Property",
                 "The final minute of the analysis period \n"
-                "or sun path animation"
+                "or of the sun path animation"
                 )
             ).end_min = 0
         if not "sunrise_sunset" in pl:
@@ -451,7 +451,7 @@ class SunProperties:
             QT_TRANSLATE_NOOP(
                 "App::Property",
                 "The interval (in hours) of the analysis period \n"
-                "or sun path animation"
+                "or of the sun path animation"
                 )
             ).inter_hour = 0
         if not "inter_min" in pl:
@@ -461,7 +461,7 @@ class SunProperties:
             QT_TRANSLATE_NOOP(
                 "App::Property",
                 "The interval (in minutes) of the analysis period \n"
-                "or sun path animation"
+                "or of the sun path animation"
                 )
             ).inter_min = 10
         if not "Recompute" in pl:
@@ -551,12 +551,12 @@ def activated_sun_properties():
     except Exception:
         folder = FreeCAD.ActiveDocument.addObject('App::DocumentObjectGroupPython',
                                                   'SunProperties')
-        folder.Label = QT_TRANSLATE_NOOP('SunProperties', 'SunProperties')
+        folder.Label = 'SunProperties'
         SunProperties(folder)
         SunPropertiesViewProvider(folder.ViewObject)
         create_sun_representation()
         FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP('SunProperties',
-                                    'A sun position was created! '
+                                    'A Sun Path was created! '
                                     'To configure it, '
                                     'make the adjustments in its properties window.') + '\n')
 
@@ -598,7 +598,7 @@ def autofill_from_epw2(obj = None):
                                      "File Error"),
                                      QT_TRANSLATE_NOOP(
                                      "SunProperties",
-                                     f"Could not read EPW file:\n{e}" + '\n'))
+                                     "Could not read EPW file:\n{}").format(e) + '\n')
         return
 
 def get_sun_position(obj = None):
