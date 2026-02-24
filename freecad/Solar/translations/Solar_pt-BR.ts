@@ -6,176 +6,179 @@
     <message>
         <location filename="../SunProperties.py" line="72"/>
         <source>Path to epw file</source>
-        <translation type="unfinished"></translation>
+        <translation>Caminho para o arquivo epw</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="64"/>
         <source>City</source>
-        <translation type="unfinished"></translation>
+        <translation>Cidade</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="70"/>
         <source>Metadata</source>
-        <translation type="unfinished"></translation>
+        <translation>Metadados</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="77"/>
         <source>Sky dome model</source>
-        <translation type="unfinished"></translation>
+        <translation>Modelo da cúpula celeste</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="86"/>
         <source>Sky Domes units</source>
-        <translation type="unfinished"></translation>
+        <translation>Unidades da cúpula celeste</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="95"/>
         <source>Visualize direct and diffuse domes</source>
-        <translation type="unfinished"></translation>
+        <translation>Visualize as cúpulas celestes direta e difusa</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="119"/>
         <source>Visualize the center points (vectors) 
 of each patch dome</source>
-        <translation type="unfinished"></translation>
+        <translation>Visualize os pontos centrais (vetores) de cada parte da cúpula</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="126"/>
         <source>Vectors values of each patch dome</source>
-        <translation type="unfinished"></translation>
+        <translation>Valores vetoriais de cada parte da cúpula</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="137"/>
         <source>North angle (clockwise)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ângulo do norte (sentido horário)</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="140"/>
         <source>Sky Domes radius (mm)</source>
-        <translation type="unfinished"></translation>
+        <translation>Raios das cúpulas celestes (mm)</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="163"/>
         <source>The initial year of the analysis period</source>
-        <translation type="unfinished"></translation>
+        <translation>Ano inicial do período de análise</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="169"/>
         <source>The final year of the analysis period</source>
-        <translation type="unfinished"></translation>
+        <translation>Ano final do período de análise</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="175"/>
         <source>The initial month of the analysis period</source>
-        <translation type="unfinished"></translation>
+        <translation>Mês inicial do período de análise</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="181"/>
         <source>The final month of the analysis period</source>
-        <translation type="unfinished"></translation>
+        <translation>Mês final do período de análise</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="187"/>
         <source>The initial day of the analysis period</source>
-        <translation type="unfinished"></translation>
+        <translation>Dia inicial do período de análise</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="193"/>
         <source>The final day of the analysis period</source>
-        <translation type="unfinished"></translation>
+        <translation>Dia final do período de análise</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="199"/>
         <source>The initial hour of the analysis period</source>
-        <translation type="unfinished"></translation>
+        <translation>Hora inicial do período de análise</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="205"/>
         <source>The final hour of the analysis period</source>
-        <translation type="unfinished"></translation>
+        <translation>Hora final do período de análise</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="211"/>
         <source>Timestep per hour</source>
-        <translation type="unfinished"></translation>
+        <translation>Invervalos por hora</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="219"/>
         <source>Leap year</source>
-        <translation type="unfinished"></translation>
+        <translation>Ano bissexto</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="216"/>
         <source>Sky Domes transparency</source>
-        <translation type="unfinished"></translation>
+        <translation>Transparência das cúpulas celestes</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="223"/>
         <source>Sun analysis legend title.
 It&apos;s read-only. It&apos;s get from the units.</source>
-        <translation type="unfinished"></translation>
+        <translation>Título da legenda da análise solar.
+Somente leitura. Obtido das unidades.</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="230"/>
         <source>Base left position of legend bar in mm (x, y, z).
 It is read only.</source>
-        <translation type="unfinished"></translation>
+        <translation>Posição esquerda da base da barra de legenda em mm (x, y, z).
+Somente leitura.</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="237"/>
         <source>Width of legend bar in mm (x, y, z).
 It is read only.</source>
-        <translation type="unfinished"></translation>
+        <translation>Largura da barra de legenda em mm (x, y, z).
+Somente leitura.</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="305"/>
         <source>Number of segments of legend bar (default = 11).</source>
-        <translation type="unfinished"></translation>
+        <translation>Número de segmentos da barra de legenda (padrão = 11).</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="326"/>
         <source>Choose the legend color set.</source>
-        <translation type="unfinished"></translation>
+        <translation>Escolha o conjunto de cores da legenda.</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="67"/>
         <source>City - read only</source>
-        <translation type="unfinished"></translation>
+        <translation>Cidade - somente leitura</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="73"/>
         <source>Country of the location - read only</source>
-        <translation type="unfinished"></translation>
+        <translation>País do local - somente leitura</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="80"/>
         <source>Elevation of the location - read only</source>
-        <translation type="unfinished"></translation>
+        <translation>Altitude do local - somente leitura</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="87"/>
         <source>Latitude of the location - read only</source>
-        <translation type="unfinished"></translation>
+        <translation>Latitude do local - somente leitura</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="94"/>
         <source>Longitude of the location - read only</source>
-        <translation type="unfinished"></translation>
+        <translation>Longitude do local - somente leitura</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="101"/>
         <source>UTC location - read only</source>
-        <translation type="unfinished"></translation>
+        <translation>UTC local - somente leitura</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="116"/>
         <source>Group of objects to be analyzed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Grupo dos objetos a serem analisados.</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="123"/>
         <source>Select the objects to be analyzed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecione os objetos a serem analisados.</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="130"/>
@@ -183,331 +186,340 @@ It is read only.</source>
 of the analysis.
 If there isn&apos;t one, adopt 
 the objects of study.</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecione os objetos de contexto da análise.
+Se não houver nenhum, adote os objetos de estudo.</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="140"/>
         <source>Maximum value for the 
 triangular sub faces (mm).</source>
-        <translation type="unfinished"></translation>
+        <translation>Valor máximo para as subfaces triangulares (mm).</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="148"/>
         <source>Offset distance (mm).</source>
-        <translation type="unfinished"></translation>
+        <translation>Distância de deslocamento (mm).</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="155"/>
         <source>Compound of object study sub faces - read only</source>
-        <translation type="unfinished"></translation>
+        <translation>Composição de estudo de objetos subfaces - somente leitura</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="227"/>
         <source>Sun analysis results</source>
-        <translation type="unfinished"></translation>
+        <translation>Resultados da análise solar</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="236"/>
         <source>Enable sky matrix high density (Reinhart model) 
 or not (Tregenza one).</source>
-        <translation type="unfinished"></translation>
+        <translation>Habilitar matriz celeste de alta densidade (modelo Reinhart)
+ou não (modelo Tregenza).</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="243"/>
         <source>Visualize direct and diffuse analysis</source>
-        <translation type="unfinished"></translation>
+        <translation>Visualize análises diretas e difusas</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="249"/>
         <source>Direct radiation/irradiance values - read only</source>
-        <translation type="unfinished"></translation>
+        <translation>Valores de radiação/irradiância direta - somente leitura</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="255"/>
         <source>Diffuse radiation/irradiance values - read only</source>
-        <translation type="unfinished"></translation>
+        <translation>Valores de radiação difusa/irradiância - somente leitura</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="261"/>
         <source>Total radiation/irradiance values - read only</source>
-        <translation type="unfinished"></translation>
+        <translation>Valores totais de radiação/irradiância - somente leitura</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="273"/>
         <source>Sun hour value values - read only</source>
-        <translation type="unfinished"></translation>
+        <translation>Valores de horas de sol - somente leitura</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="280"/>
         <source>Sun analysis legend title - read only</source>
-        <translation type="unfinished"></translation>
+        <translation>Título da legenda da análise solar - somente leitura</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="286"/>
         <source>Base left position of legend bar in mm (x, y, z) 
 - read only</source>
-        <translation type="unfinished"></translation>
+        <translation>Posição base esquerda da barra de legenda em mm (x, y, z)
+- somente leitura</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="293"/>
         <source>Height of legend bar in mm (x, y, z) - read only</source>
-        <translation type="unfinished"></translation>
+        <translation>Altura da barra de legenda em mm (x, y, z) - somente leitura</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="299"/>
         <source>Width of legend bar in mm (x, y, z) - read only</source>
-        <translation type="unfinished"></translation>
+        <translation>Largura da barra de legenda em mm (x, y, z) - somente leitura</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="311"/>
         <source>Metadata - read only</source>
-        <translation type="unfinished"></translation>
+        <translation>Metadados - somente leitura</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="82"/>
         <source>City of the location</source>
-        <translation type="unfinished"></translation>
+        <translation>Cidade do local</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="91"/>
         <source>Country of the location</source>
-        <translation type="unfinished"></translation>
+        <translation>País do local</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="100"/>
         <source>Elevation of the location</source>
-        <translation type="unfinished"></translation>
+        <translation>Altitude do local</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="109"/>
         <source>Latitude of the location</source>
-        <translation type="unfinished"></translation>
+        <translation>Latitude do local</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="118"/>
         <source>Longitude of the location</source>
-        <translation type="unfinished"></translation>
+        <translation>Longitude do local</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="127"/>
         <source>UTC location</source>
-        <translation type="unfinished"></translation>
+        <translation>UTC local</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="147"/>
         <source>The day of the sun&apos;s position</source>
-        <translation type="unfinished"></translation>
+        <translation>Dia da posição do sol</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="156"/>
         <source>True, for daylight saving time to be applied.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sim, para que o horário de verão seja aplicado.</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="165"/>
         <source>The hour of the sun&apos;s position</source>
-        <translation type="unfinished"></translation>
+        <translation>Hora da posição do sol</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="174"/>
         <source>The minutes of the sun&apos;s position</source>
-        <translation type="unfinished"></translation>
+        <translation>Minutos da posição do sol</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="183"/>
         <source>The month of the sun&apos;s position</source>
-        <translation type="unfinished"></translation>
+        <translation>Mês da posição do sol</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="192"/>
         <source>The year of the sun&apos;s position</source>
-        <translation type="unfinished"></translation>
+        <translation>Ano da posição do sol</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="202"/>
         <source>Sun altitude - it is indicative only</source>
-        <translation type="unfinished"></translation>
+        <translation>Altitude solar - é apenas indicativa</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="211"/>
         <source>Sun azimuth - it is indicative only</source>
-        <translation type="unfinished"></translation>
+        <translation>Azimute solar - é apenas indicativo</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="220"/>
         <source>Daylight hours - it is indicative only</source>
-        <translation type="unfinished"></translation>
+        <translation>Horas de luz do dia - é apenas indicativo</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="229"/>
         <source>Noon - it is indicative only</source>
-        <translation type="unfinished"></translation>
+        <translation>Meio-dia - é apenas indicativo</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="238"/>
         <source>Sunrise - it is indicative only</source>
-        <translation type="unfinished"></translation>
+        <translation>Nascer do sol - é apenas indicativo</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="247"/>
         <source>Sunset - it is indicative only</source>
-        <translation type="unfinished"></translation>
+        <translation>Pôr do sol - é apenas indicativo</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="257"/>
         <source>True, for configuring the sun light and/or diagram</source>
-        <translation type="unfinished"></translation>
+        <translation>Verdade, para configurar a luz solar e/ou o diagrama</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="267"/>
         <source>Light representation distance</source>
-        <translation type="unfinished"></translation>
+        <translation>Distância de representação da luz</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="276"/>
         <source>Light representation radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Raio de representação da luz</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="285"/>
         <source>Position of the sun light (x, y, z)</source>
-        <translation type="unfinished"></translation>
+        <translation>Posição da luz solar (x, y, z)</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="294"/>
         <source>The center position of the sun path diagram (x, y, z)</source>
-        <translation type="unfinished"></translation>
+        <translation>Posição central do diagrama da trajetória solar (x, y, z)</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="312"/>
         <source>True, for light ray representation to be visible</source>
-        <translation type="unfinished"></translation>
+        <translation>Verdadeiro, para que a representação do raio de luz seja visível</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="321"/>
         <source>Color of the sun light</source>
-        <translation type="unfinished"></translation>
+        <translation>Cor da luz solar</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="330"/>
         <source>True, for sun path diagram to be visible</source>
-        <translation type="unfinished"></translation>
+        <translation>Verdadeiro, para que o diagrama da trajetória solar seja visível</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="339"/>
         <source>Color of sun path diagram</source>
-        <translation type="unfinished"></translation>
+        <translation>Diagrama da trajetória solar</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="350"/>
         <source>The image type to save</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipo de imagem a ser salva</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="362"/>
         <source>The image height to be saved in pixels</source>
-        <translation type="unfinished"></translation>
+        <translation>Altura da imagem a ser salva em pixels</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="371"/>
         <source>The image width to be saved in pixels</source>
-        <translation type="unfinished"></translation>
+        <translation>Largura da imagem a ser salva em pixels</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="380"/>
         <source>True, for saving image</source>
-        <translation type="unfinished"></translation>
+        <translation>Verdadeiro, para salvar a imagem</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="390"/>
         <source>True, for sun path animation</source>
-        <translation type="unfinished"></translation>
+        <translation>Verdadeiro, para animação da trajetória solar</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="439"/>
         <source>True, for getting sunrise and sunset data</source>
-        <translation type="unfinished"></translation>
+        <translation>Verdadeiro, para obter dados sobre o nascer e o pôr do sol</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="468"/>
         <source>True, when necessary to recompute between frames</source>
-        <translation type="unfinished"></translation>
+        <translation>Verdadeiro, quando necessário recalcular entre quadros</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="477"/>
         <source>The frames per second of the sun path animation</source>
-        <translation type="unfinished"></translation>
+        <translation>Taxa de quadros por segundo da animação da trajetória solar</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="486"/>
         <source>Total resulting frames from the sun path animation</source>
-        <translation type="unfinished"></translation>
+        <translation>Total de quadros resultantes da animação da trajetória solar</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="101"/>
         <source>Total sky dome values</source>
-        <translation type="unfinished"></translation>
+        <translation>Valores da cúpula celeste total</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="107"/>
         <source>Direct sky dome values</source>
-        <translation type="unfinished"></translation>
+        <translation>Valores da cúpula celeste directa</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="113"/>
         <source>Diffuse sky dome values</source>
-        <translation type="unfinished"></translation>
+        <translation>Valores de cúpula celeste difusa</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="147"/>
         <source>Center position of the total sky dome in mm (x, y, z)</source>
-        <translation type="unfinished"></translation>
+        <translation>Posição central da cúpula celeste total em mm (x, y, z)</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="267"/>
         <source>Sun path vectors values - read only</source>
-        <translation type="unfinished"></translation>
+        <translation>Valores dos vetores da trajetória solar - somente leitura</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="303"/>
         <source>True, for sunlight representation to be visible</source>
-        <translation type="unfinished"></translation>
+        <translation>Verdadeiro, para que a representação da luz solar seja visível</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="399"/>
         <source>The initial hour of the analysis period 
 or of the sun path animation</source>
-        <translation type="unfinished"></translation>
+        <translation>Hora inicial do período de análise
+ou da animação da trajetória solar</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="409"/>
         <source>The final hour of the analysis period 
 or of the sun path animation</source>
-        <translation type="unfinished"></translation>
+        <translation>Hora final do período de análise
+ou da animação da trajetória solar</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="419"/>
         <source>The initial minute of the analysis period 
 or of the sun path animation</source>
-        <translation type="unfinished"></translation>
+        <translation>Minuto inicial do período de análise
+ou da animação da trajetória solar</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="429"/>
         <source>The final minute of the analysis period 
 or of the sun path animation</source>
-        <translation type="unfinished"></translation>
+        <translation>Minuto final do período de análise
+ou da animação da trajetória solar</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="448"/>
         <source>The interval (in hours) of the analysis period 
 or of the sun path animation</source>
-        <translation type="unfinished"></translation>
+        <translation>Intervalo (em horas) do período de análise
+ou da animação da trajetória solar</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="458"/>
         <source>The interval (in minutes) of the analysis period 
 or of the sun path animation</source>
-        <translation type="unfinished"></translation>
+        <translation>Intervalo (em minutos) do período de análise
+ou da animação da trajetória solar</translation>
     </message>
 </context>
 <context>
@@ -515,22 +527,22 @@ or of the sun path animation</source>
     <message>
         <location filename="../init_gui.py" line="40"/>
         <source>Solar</source>
-        <translation type="unfinished"></translation>
+        <translation>Solar</translation>
     </message>
     <message>
         <location filename="../init_gui.py" line="41"/>
         <source>Workbench to manage solar analysis and configurations</source>
-        <translation type="unfinished"></translation>
+        <translation>Bancada de trabalho para gerenciar análises e configurações solares</translation>
     </message>
     <message>
         <location filename="../init_gui.py" line="92"/>
         <source>Solar tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Ferramentas solares</translation>
     </message>
     <message>
         <location filename="../init_gui.py" line="78"/>
         <source>Solar Workbench loaded</source>
-        <translation type="unfinished"></translation>
+        <translation>Bancada de trabalho Solar carregada</translation>
     </message>
 </context>
 <context>
@@ -538,361 +550,362 @@ or of the sun path animation</source>
     <message>
         <location filename="../LBComponents.py" line="48"/>
         <source>Direct Sunlight (Sun hours)</source>
-        <translation type="unfinished"></translation>
+        <translation>Luz Solar Direta (horas de sol)</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="49"/>
         <source>Radiation (kWh/m²)</source>
-        <translation type="unfinished"></translation>
+        <translation>Radiação (kWh/m²)</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="50"/>
         <source>Irradiance (W/m²)</source>
-        <translation type="unfinished"></translation>
+        <translation>Irradiância (W/m²)</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="52"/>
         <source>None/Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Nenhum/Redefinir</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="53"/>
         <source>BW 3D view</source>
-        <translation type="unfinished"></translation>
+        <translation>Vista 3D PB</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="54"/>
         <source>Color 3D view</source>
-        <translation type="unfinished"></translation>
+        <translation>Vista 3D colorida</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="55"/>
         <source>Render 3D view</source>
-        <translation type="unfinished"></translation>
+        <translation>Vista 3D Renderizada</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="57"/>
         <source>Original Ladybug</source>
-        <translation type="unfinished"></translation>
+        <translation>Joaninha Original</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="58"/>
         <source>Nuanced Ladybug</source>
-        <translation type="unfinished"></translation>
+        <translation>Ladybug Nuances</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="59"/>
         <source>Multi-colored Ladybug</source>
-        <translation type="unfinished"></translation>
+        <translation>Joaninha Multicolorido</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="60"/>
         <source>Ecotect</source>
-        <translation type="unfinished"></translation>
+        <translation>Ecotect</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="61"/>
         <source>View Study</source>
-        <translation type="unfinished"></translation>
+        <translation>Vista Estudo</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="62"/>
         <source>Shadow Study</source>
-        <translation type="unfinished"></translation>
+        <translation>Estudo de Sombras</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="63"/>
         <source>Glare Study</source>
-        <translation type="unfinished"></translation>
+        <translation>Estudo Brilho</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="64"/>
         <source>Annual Comfort</source>
-        <translation type="unfinished"></translation>
+        <translation>Conforto Anual</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="65"/>
         <source>Thermal Comfort</source>
-        <translation type="unfinished"></translation>
+        <translation>Conforto Térmico</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="66"/>
         <source>Peak Load Balance</source>
-        <translation type="unfinished"></translation>
+        <translation>Equilíbrio Carga de Pico</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="67"/>
         <source>Heat Sensation</source>
-        <translation type="unfinished"></translation>
+        <translation>Sensação Calor</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="68"/>
         <source>Cold Sensation</source>
-        <translation type="unfinished"></translation>
+        <translation>Sensação Frio</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="69"/>
         <source>Benefit/Harm</source>
-        <translation type="unfinished"></translation>
+        <translation>Benefício/Prejuízo</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="70"/>
         <source>Harm</source>
-        <translation type="unfinished"></translation>
+        <translation>Prejuízo</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="71"/>
         <source>Benefit</source>
-        <translation type="unfinished"></translation>
+        <translation>Benefício</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="72"/>
         <source>Shade Benefit/Harm</source>
-        <translation type="unfinished"></translation>
+        <translation>Benefício/Prejuízo Sombreamento</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="73"/>
         <source>Shade Harm</source>
-        <translation type="unfinished"></translation>
+        <translation>Prejuízo Sombreamento</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="74"/>
         <source>Shade Benefit</source>
-        <translation type="unfinished"></translation>
+        <translation>Benefício Sombreamento</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="75"/>
         <source>Energy Balance</source>
-        <translation type="unfinished"></translation>
+        <translation>Balanço Energético</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="76"/>
         <source>Energy Balance w/ Storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Equilíbrio Energético c/Acúmulo</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="77"/>
         <source>THERM</source>
-        <translation type="unfinished"></translation>
+        <translation>THERM</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="78"/>
         <source>Cloud Cover</source>
-        <translation type="unfinished"></translation>
+        <translation>Cobertura Nuvens</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="79"/>
         <source>Black to White</source>
-        <translation type="unfinished"></translation>
+        <translation>Preto para Branco</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="80"/>
         <source>Blue, Green, Red</source>
-        <translation type="unfinished"></translation>
+        <translation>Azul, Verde, Vermelho</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="81"/>
         <source>Multicolored 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Multicolorido 2</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="82"/>
         <source>Multicolored 3</source>
-        <translation type="unfinished"></translation>
+        <translation>Multicolorido 3</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="83"/>
         <source>OpenStudio Palette</source>
-        <translation type="unfinished"></translation>
+        <translation>Paleta OpenStudio</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="84"/>
         <source>Cividis (colorblind friendly)</source>
-        <translation type="unfinished"></translation>
+        <translation>Cividis (amigável a daltônicos)</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="85"/>
         <source>Viridis (colorblind friendly)</source>
-        <translation type="unfinished"></translation>
+        <translation>Viridis (amigável a daltônicos)</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="86"/>
         <source>Parula (colorblind friendly)</source>
-        <translation type="unfinished"></translation>
+        <translation>Parula (amigável a daltônicos)</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="87"/>
         <source>Energy Balance by Face Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Equilíbrio Energético por Tipo de Face</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="88"/>
         <source>Peak Cooling by Face Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Pico de Resfriamento por Tipo de Face</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="89"/>
         <source>Peak Hating by Face Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Pico de Aquecimento por tipo de rosto</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="313"/>
         <source>To get irradiance values, it is necessary 
 to install Radiance in your machine.
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Para obter os valores de irradiância, é necessário
+instalar o Radiance em sua máquina.</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="378"/>
         <source>To get irradiance values, Radiance software must be 
 installed in your machine.
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Para obter os valores de irradiância, o aplicativo Radiance deve estar instalado em sua máquina.</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="556"/>
         <source>N</source>
-        <translation type="unfinished"></translation>
+        <translation>N</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="561"/>
         <source>E</source>
-        <translation type="unfinished"></translation>
+        <translation>L</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="566"/>
         <source>S</source>
-        <translation type="unfinished"></translation>
+        <translation>S</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="570"/>
         <source>W</source>
-        <translation type="unfinished"></translation>
+        <translation>O</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="638"/>
         <source>Total compass circles</source>
-        <translation type="unfinished"></translation>
+        <translation>Círculos da bússola total</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="646"/>
         <source>Direct compass circles</source>
-        <translation type="unfinished"></translation>
+        <translation>Círculos da bússola direta</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="653"/>
         <source>Diffuse compass circles</source>
-        <translation type="unfinished"></translation>
+        <translation>Círculos da bússola difusa</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="659"/>
         <source>Total Compass Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Grupo Búlssola Total</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="664"/>
         <source>Total Compass Legend Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Grupo Legenda Bússola Total</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="669"/>
         <source>Direct Compass Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Grupo Búlssola Direta</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="673"/>
         <source>Diffuse Compass Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Grupo Búlssola Difusa</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="678"/>
         <source>Direct Compass Legend Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Grupo Búlssola Direta</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="682"/>
         <source>Diffuse Compass Legend Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Grupo Legenda Búlssola Difusa</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="932"/>
         <source>Legend bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Barra Legenda</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="936"/>
         <source>Legend Bar Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Grupo Barra Legenda</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="944"/>
         <source>Legend bar text</source>
-        <translation type="unfinished"></translation>
+        <translation>Texto Barra Legenda</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="1098"/>
         <source>Total {}</source>
-        <translation type="unfinished"></translation>
+        <translation>{} Total</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="1103"/>
         <source>Direct {}</source>
-        <translation type="unfinished"></translation>
+        <translation>{} Direta</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="1108"/>
         <source>Diffuse {}</source>
-        <translation type="unfinished"></translation>
+        <translation>{} Difusa</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="1142"/>
         <source>Total legend</source>
-        <translation type="unfinished"></translation>
+        <translation>Legenda total</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="1145"/>
         <source>Total Legend Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Grupo Legenda Total</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="1170"/>
         <source>Direct legend</source>
-        <translation type="unfinished"></translation>
+        <translation>Legenda Direta</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="1176"/>
         <source>Diffuse legend</source>
-        <translation type="unfinished"></translation>
+        <translation>Legenda Difusa</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="1179"/>
         <source>Direct Legend Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Grupo Legenda Direta</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="1186"/>
         <source>Diffuse Legend Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Grupo Legenda Difusa</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="1063"/>
         <source>Source: {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Fonte: {}</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="1067"/>
         <source>Country: {}</source>
-        <translation type="unfinished"></translation>
+        <translation>País: {}</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="1071"/>
         <source>City: {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Cidade: {}</translation>
     </message>
     <message>
         <location filename="../LBComponents.py" line="1075"/>
         <source>Time-zone: {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Fuso horário: {}</translation>
     </message>
 </context>
 <context>
@@ -900,133 +913,133 @@ installed in your machine.
     <message>
         <location filename="../SkyDomes.py" line="320"/>
         <source>Create Sky Domes</source>
-        <translation type="unfinished"></translation>
+        <translation>Criar Cúpulas Celestes</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="322"/>
         <source>Click this button to open the dialog and configure 
 the data for new Sky Domes.</source>
-        <translation type="unfinished"></translation>
+        <translation>Clique neste botão para abrir a caixa de diálogo e configurar os dados para novas Cúpulas Celestes.</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="346"/>
         <source>Modify Sky Domes</source>
-        <translation type="unfinished"></translation>
+        <translation>Modificar Cúpulas Celestes</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="378"/>
         <source>Delete Sky Domes</source>
-        <translation type="unfinished"></translation>
+        <translation>Excluir Cúpulas Celestes</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="425"/>
         <source>To modify a set of Sky Domes, first you must select one!
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Para modificar um conjunto de Cúpulas Celestes, primeiro você deve selecionar um!</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="441"/>
         <source>To delete a set of Sky Domes, first you must select one!
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Para excluir um conjunto de Cúpulas Celestes, primeiro você deve selecionar um!</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="460"/>
         <source>There is no selection!
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Não há seleção!</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="500"/>
         <source>SD Constructions Group</source>
-        <translation type="unfinished"></translation>
+        <translation>CC Grupo Construções</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="511"/>
         <source>Model Tregenza</source>
-        <translation type="unfinished"></translation>
+        <translation>Modelo Tregenza</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="524"/>
         <source>Model Reinhart</source>
-        <translation type="unfinished"></translation>
+        <translation>Modelo Reinhart</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="639"/>
         <source>SD Tregenza</source>
-        <translation type="unfinished"></translation>
+        <translation>CC Tregenza</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="646"/>
         <source>SD Reinhart</source>
-        <translation type="unfinished"></translation>
+        <translation>CC Reinhart</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="661"/>
         <source>Total Sky Dome Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Grupo Cúpula Celeste Total</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="664"/>
         <source>Total Sky Dome</source>
-        <translation type="unfinished"></translation>
+        <translation>Cúpula Celeste Total</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="680"/>
         <source>Direct Sky Dome Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Grupo Cúpula Celeste Direta</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="683"/>
         <source>Direct Sky Dome</source>
-        <translation type="unfinished"></translation>
+        <translation>Cúpula Celeste Direta</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="699"/>
         <source>Diffuse Sky Dome Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Grupo Cúpula Celeste Difusa</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="702"/>
         <source>Diffuse Sky Dome</source>
-        <translation type="unfinished"></translation>
+        <translation>Cúpula Celeste Difusa</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="836"/>
         <source>Vectors TR</source>
-        <translation type="unfinished"></translation>
+        <translation>Vetores TR</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="841"/>
         <source>Vectors RE</source>
-        <translation type="unfinished"></translation>
+        <translation>Vetores RE</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="948"/>
         <source>Could not get Sky Domes properties!</source>
-        <translation type="unfinished"></translation>
+        <translation>Propriedades de Cúpulas Celestes não encontradas!</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="1123"/>
         <source>To create Sky Domes you must provide a valid epw file!</source>
-        <translation type="unfinished"></translation>
+        <translation>Para criar Cúpulas Celestes, você precisa fornecer um arquivo epw válido!</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="1127"/>
         <source>To create Sky Domes, you need to indicate an epw file!
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Para criar Cúpulas Celestes, você precisa indicar um arquivo epw!</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="1301"/>
         <source>Sky Domes {} {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Cúpulas Celestes {} {}</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="1250"/>
         <source>Could not get Sky Domes:
 {e}</source>
-        <translation type="unfinished"></translation>
+        <translation>Não foi possível obter Cúpulas Celestes:</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="1341"/>
@@ -1035,7 +1048,10 @@ and you won&apos;t be able to undo it.
 
 Are you sure you want to delete these Sky Domes?
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Isso excluirá todos os objetos principais das Cúpulas Celestes selecionadas,
+e você não poderá desfazer a ação.
+
+Tem certeza de que deseja excluir essas Cúpulas Celestes?</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="348"/>
@@ -1044,38 +1060,44 @@ open the dialog and modify its configuration.
 Please note, this only works if the original 
 group structure is preserved! 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Selecione um grupo de Cúpulas Celestes, clique neste botão para
+abrir a caixa de diálogo e modificar sua configuração.
+Observe que isso só funciona se a estrutura original do grupo for preservada!</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="380"/>
         <source>Select a Sky Domes group to delete.
 Be careful, you will not be able to 
 undo this action!</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecione um grupo de Cúpulas Celestes para excluir.
+Cuidado, você não poderá desfazer esta ação!</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="457"/>
         <source>Warning: The objects selected are not Sky Domes!
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Aviso: Os objetos selecionados não são Cúpulas Celestes!</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="1095"/>
         <source>Sky Domes were created! To configure it, 
 do not modify their original structure of groups! 
 Make the adjustments in the properties window.</source>
-        <translation type="unfinished"></translation>
+        <translation>As Cúpulas Celestes foram criadas! Para configurá-las,
+não modifique a estrutura original dos grupos!
+Faça os ajustes na janela de propriedades.</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="1115"/>
         <source>Sky Domes properties not found!</source>
-        <translation type="unfinished"></translation>
+        <translation>Propriedades das Cúpulas Celestes não encontradas!</translation>
     </message>
     <message>
         <location filename="../SkyDomes.py" line="1161"/>
         <source>Could not get Sky Domes:
 {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Não foi possível obter as Cúpulas Celestes:
+{}</translation>
     </message>
 </context>
 <context>
@@ -1083,312 +1105,318 @@ Make the adjustments in the properties window.</source>
     <message>
         <location filename="../SkyDomesDialog.py" line="54"/>
         <source>Sky Domes configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Configuração Cúpulas Celestes</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="83"/>
         <source>Epw/ Location</source>
-        <translation type="unfinished"></translation>
+        <translation>Epw/ Localização</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="86"/>
         <source>Location data get from epw file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Os dados de localização são obtidos do arquivo EPW.</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="90"/>
         <source>epw file</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivo epw</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="94"/>
         <source>Get epw file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Obter arquivo EPW:</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="97"/>
         <source>Click the link to get the epw file</source>
-        <translation type="unfinished"></translation>
+        <translation>Clique no link para obter o arquivo epw.</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="101"/>
         <source>Click to download the epw file</source>
-        <translation type="unfinished"></translation>
+        <translation>Clique para baixar o arquivo epw</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="105"/>
         <source>epw file path:</source>
-        <translation type="unfinished"></translation>
+        <translation>Caminho do arquivo epw:</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="108"/>
         <source>After downloading the epw file, 
 indicate its path on your machine</source>
-        <translation type="unfinished"></translation>
+        <translation>Após baixar o arquivo epw,
+indique seu caminho na sua máquina.</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="113"/>
         <source>The epw file path on your machine</source>
-        <translation type="unfinished"></translation>
+        <translation>O caminho do arquivo epw em sua máquina.</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="117"/>
         <source>Indicate the epw file path</source>
-        <translation type="unfinished"></translation>
+        <translation>Indique o caminho do arquivo epw</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="121"/>
         <source>Location</source>
-        <translation type="unfinished"></translation>
+        <translation>Localização</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="125"/>
         <source>City:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cidade:</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="129"/>
         <source>Country:</source>
-        <translation type="unfinished"></translation>
+        <translation>País:</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="133"/>
         <source>Latitude:</source>
-        <translation type="unfinished"></translation>
+        <translation>Latitude:</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="137"/>
         <source>Longitude:</source>
-        <translation type="unfinished"></translation>
+        <translation>Longitude:</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="141"/>
         <source>Elevation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Altitude:</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="145"/>
         <source>Time zone:</source>
-        <translation type="unfinished"></translation>
+        <translation>Fuso horário:</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="149"/>
         <source>North angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ângulo do norte:</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="153"/>
         <source>Indicate the true north.
 Clockwise with zero in 
 the direction of the y-axis</source>
-        <translation type="unfinished"></translation>
+        <translation>Indique o norte verdadeiro.
+Sentido horário, com o zero na direção do eixo y.</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="159"/>
         <source>Sky Domes configurations</source>
-        <translation type="unfinished"></translation>
+        <translation>Configurações das Cúpulas Celestes</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="163"/>
         <source>Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Raio:</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="167"/>
         <source>Set the radius of the sky dome (mm).</source>
-        <translation type="unfinished"></translation>
+        <translation>Defina o raio da cúpula celeste (mm).</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="171"/>
         <source>Adjust the x position of the center of the 
 dome according to the project (mm).</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajuste a posição x do centro da cúpula de acordo com o projeto (mm).</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="176"/>
         <source>Adjust the y position of the center of the 
 dome according to the project (mm).</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajuste a posição y do centro da cúpula de acordo com o projeto (mm).</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="181"/>
         <source>Adjust the z position of the center of the 
 dome according to the project (mm).</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajuste a posição z do centro da cúpula de acordo com o projeto (mm).</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="186"/>
         <source>Analysis period</source>
-        <translation type="unfinished"></translation>
+        <translation>Período de análise</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="189"/>
         <source>An analysis period between two dates of the year and between certain hours.</source>
-        <translation type="unfinished"></translation>
+        <translation>Um período de análise entre duas datas do ano e entre determinadas horas.</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="194"/>
         <source>Date from:</source>
-        <translation type="unfinished"></translation>
+        <translation>Data de:</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="198"/>
         <source>Indicate the start date of the analysis period.</source>
-        <translation type="unfinished"></translation>
+        <translation>Indique a data de início do período de análise.</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="218"/>
         <source>to:</source>
-        <translation type="unfinished"></translation>
+        <translation>a:</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="206"/>
         <source>Indicate the end date of the analysis period.</source>
-        <translation type="unfinished"></translation>
+        <translation>Indique a data final do período de análise.</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="210"/>
         <source>Time from:</source>
-        <translation type="unfinished"></translation>
+        <translation>Horário a partir de:</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="214"/>
         <source>Indicate the start time of the analysis period.</source>
-        <translation type="unfinished"></translation>
+        <translation>Indique a hora de início do período de análise.</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="222"/>
         <source>Indicate the end time of the analysis period.</source>
-        <translation type="unfinished"></translation>
+        <translation>Indique a data e hora de término do período de análise.</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="226"/>
         <source>Timestep</source>
-        <translation type="unfinished"></translation>
+        <translation>Intervalo de tempo</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="241"/>
         <source>leap year</source>
-        <translation type="unfinished"></translation>
+        <translation>ano bissexto</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="244"/>
         <source>Indicate whether the Analysis
 Period represents a leap year.</source>
-        <translation type="unfinished"></translation>
+        <translation>Indique se o período de análise representa um ano bissexto.</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="249"/>
         <source>Sky Domes</source>
-        <translation type="unfinished"></translation>
+        <translation>Cúpulas Celestes</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="253"/>
         <source>Model:</source>
-        <translation type="unfinished"></translation>
+        <translation>Modelo:</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="257"/>
         <source>Tregenza</source>
-        <translation type="unfinished"></translation>
+        <translation>Tregenza</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="260"/>
         <source>Reinhart</source>
-        <translation type="unfinished"></translation>
+        <translation>Reinhart</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="270"/>
         <source>Units:</source>
-        <translation type="unfinished"></translation>
+        <translation>Unidades:</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="277"/>
         <source>Indicate whether the sky dome should be plotted with 
 units of total Radiation (kWh/m²) or 
 average Irradiance (W/m²).</source>
-        <translation type="unfinished"></translation>
+        <translation>Indique se a cúpula celeste deve ser representada graficamente com
+unidades de radiação total (kWh/m²) ou
+irradiância média (W/m²).</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="283"/>
         <source>Direct and diffuse</source>
-        <translation type="unfinished"></translation>
+        <translation>Direto e difuso</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="286"/>
         <source>Enable it to visualize the direct and diffuse domes values.</source>
-        <translation type="unfinished"></translation>
+        <translation>Habilite a visualização para identificar os valores das cúpulas direta e difusa.</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="290"/>
         <source>Center vectors</source>
-        <translation type="unfinished"></translation>
+        <translation>Vetores centrais</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="293"/>
         <source>Enable it to visualize the center vector of each dome patch.</source>
-        <translation type="unfinished"></translation>
+        <translation>Habilite-o para visualizar o vetor central de cada área da cúpula.</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="297"/>
         <source>Transparency</source>
-        <translation type="unfinished"></translation>
+        <translation>Transparência</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="301"/>
         <source>Adjust the transparency of the Sky Domes.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajuste a transparência das Cúpulas Celestes.</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="305"/>
         <source>Legend</source>
-        <translation type="unfinished"></translation>
+        <translation>Legenda</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="309"/>
         <source>Color count</source>
-        <translation type="unfinished"></translation>
+        <translation>Contagem de cores</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="312"/>
         <source>Indicate the legend number of colors 
 (default: 11).</source>
-        <translation type="unfinished"></translation>
+        <translation>Indique o número de cores da legenda
+(padrão: 11).</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="317"/>
         <source>Color set:</source>
-        <translation type="unfinished"></translation>
+        <translation>Conjunto de cores:</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="363"/>
         <source>Choose the legend color set.</source>
-        <translation type="unfinished"></translation>
+        <translation>Escolha o conjunto de cores da legenda.</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="367"/>
         <source>Apply</source>
-        <translation type="unfinished"></translation>
+        <translation>Aplicar</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="391"/>
         <source>Select epw file</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecione o arquivo epw</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="408"/>
         <source>Warning</source>
-        <translation type="unfinished"></translation>
+        <translation>Aviso</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="408"/>
         <source>Indicate a epw file before close the dialog Sky Domes!</source>
-        <translation type="unfinished"></translation>
+        <translation>Indique um arquivo epw antes de fechar a 
+caixa de diálogo das Cúpulas Celestes!</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="596"/>
         <source>There is no Sky Domes group!</source>
-        <translation type="unfinished"></translation>
+        <translation>Não existe nenhum grupo de Cúpulas Celestes!</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="230"/>
@@ -1400,7 +1428,13 @@ from 0 to 23 hours.
 Note that larger numbers 
 will increase the computation time.
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Especifique o número de vezes por hora
+que a interpolação linear de valores sub-horários
+será realizada.
+Funciona apenas com intervalos de tempo
+de 0 a 23 horas.
+Observe que números maiores
+aumentarão o tempo de computação.</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="263"/>
@@ -1408,7 +1442,10 @@ will increase the computation time.
 or high-resolution (Reinhart) one.
 Remember that the Reinhart model can take a 
 considerable amount of time to calculate.</source>
-        <translation type="unfinished"></translation>
+        <translation>Escolha entre o modelo de baixa resolução (Tregenza)
+ou o de alta resolução (Reinhart).
+Lembre-se de que o modelo de Reinhart pode levar um
+tempo considerável para ser calculado.</translation>
     </message>
 </context>
 <context>
@@ -1416,196 +1453,200 @@ considerable amount of time to calculate.</source>
     <message>
         <location filename="../SunAnalysis.py" line="387"/>
         <source>Create a Sun Analysis</source>
-        <translation type="unfinished"></translation>
+        <translation>Criar uma Análise Solar</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="413"/>
         <source>Modify a Sun Analysis</source>
-        <translation type="unfinished"></translation>
+        <translation>Modificar uma Análise Solar</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="415"/>
         <source>Select a Sun Analysis, click this button to open the dialog and modify its configuration.</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecione uma Análise Solar, clique neste botão para abrir a caixa de diálogo e modificar sua configuração.</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="443"/>
         <source>Delete a Sun Analysis</source>
-        <translation type="unfinished"></translation>
+        <translation>Excluir uma Análise Solar</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="476"/>
         <source>To create a new Sun Analysis, you must select a group 
 that contents all objects to be analyzed!
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Para criar uma nova Análise Solar, você deve selecionar um grupo
+que contenha todos os objetos a serem analisados!</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="504"/>
         <source>To modify a set of Sun Analysis, first you must select one!
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Para modificar um conjunto de Análises Solares, primeiro você deve selecionar um!</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="517"/>
         <source>To delete a Sun Analysis, first you must select one!
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Para excluir uma Análise Solar, primeiro você precisa selecionar uma!</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="520"/>
         <source>To delete a set of Sun Analysis, first you must select one!
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Para excluir um conjunto de Análises Solares, primeiro você deve selecionar um!</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="536"/>
         <source>Warning: The object selected is not a Sun Analysis!
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Atenção: O objeto selecionado não é uma Análise Solar!</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="539"/>
         <source>There is no selection!
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Não há seleção!</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="1348"/>
         <source>Sun Analysis object could not be found!</source>
-        <translation type="unfinished"></translation>
+        <translation>O objeto de Análise Solar não foi encontrado!</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="1409"/>
         <source>For using EPW, please provide a valid file path.</source>
-        <translation type="unfinished"></translation>
+        <translation>Para usar o EPW, forneça um caminho de arquivo válido.</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="1413"/>
         <source>Could not get epw!
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Não foi possível obter o epw!</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="791"/>
         <source>SA Total group</source>
-        <translation type="unfinished"></translation>
+        <translation>AS Grupo Total</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="1541"/>
         <source>Sun Analysis {} - {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Análise Solar {} - {}</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="1553"/>
         <source>Sun hours</source>
-        <translation type="unfinished"></translation>
+        <translation>Horas de sol</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="898"/>
         <source>Sun Analysis - Sun hours</source>
-        <translation type="unfinished"></translation>
+        <translation>Análise Solar - Horas de sol</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="1082"/>
         <source>For getting irradiance values, Radiance software must be 
 installed in your machine.
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Para obter os valores de irradiância, o aplicativo Radiance deve estar instalado em sua máquina.</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="1286"/>
         <source>SA Direct group</source>
-        <translation type="unfinished"></translation>
+        <translation>AS Grupo Directo</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="1297"/>
         <source>SA Diffuse group</source>
-        <translation type="unfinished"></translation>
+        <translation>AS Grupo Difuso</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="1313"/>
         <source>Sun Analysis - Total Radiation</source>
-        <translation type="unfinished"></translation>
+        <translation>Análise Solar - Radiação Total</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="1316"/>
         <source>Sun Analysis - Direct Radiation</source>
-        <translation type="unfinished"></translation>
+        <translation>Análise Solar - Radiação Direta</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="1318"/>
         <source>Sun Analysis - Diffuse Radiation</source>
-        <translation type="unfinished"></translation>
+        <translation>Análise Solar - Radiação Difusa</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="1324"/>
         <source>Sun Analysis - Total Irradiance</source>
-        <translation type="unfinished"></translation>
+        <translation>Análise Solar - Irradiância Total</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="1326"/>
         <source>Sun Analysis - Direct Irradiance</source>
-        <translation type="unfinished"></translation>
+        <translation>Análise Solar - Irradiância Direta</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="1328"/>
         <source>Sun Analysis - Diffuse Irradiance</source>
-        <translation type="unfinished"></translation>
+        <translation>Análise Solar - Irradiância Difusa</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="1377"/>
         <source>It was not possible to update bar legend position!</source>
-        <translation type="unfinished"></translation>
+        <translation>Não foi possível atualizar a posição da legenda da barra!</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="1381"/>
         <source>There is no direct and diffuse analysis!</source>
-        <translation type="unfinished"></translation>
+        <translation>Não existe análise direta e difusa!</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="1399"/>
         <source>Attempting to get Sun Analysis values: Sun Analysis object could not be found!</source>
-        <translation type="unfinished"></translation>
+        <translation>Tentativa de obter valores de Análise Solar: O objeto Análise Solar não foi encontrado!</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="1453"/>
         <source>There is no study objects!</source>
-        <translation type="unfinished"></translation>
+        <translation>Não há objetos de estudo!</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="1617"/>
         <source>There is no direct or diffuse analysis group!</source>
-        <translation type="unfinished"></translation>
+        <translation>Não existe grupo de análise direta ou difusa!</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="388"/>
         <source>First, select the group containing the objects to be analyzed, created previously, then click this button to configure the analysis.
 You need to select an epw file and choose the objects to be analyzed, 
 as well as their context.</source>
-        <translation type="unfinished"></translation>
+        <translation>Primeiro, selecione o grupo que contém os objetos a serem analisados, criado previamente, e clique neste botão para configurar a análise.
+Você precisa selecionar um arquivo epw e escolher os objetos a serem analisados,
+bem como o contexto deles.</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="445"/>
         <source>Select a Sun Analysis, click this button to delete it.
 Be careful, you will not be able to undo this action!</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecione uma Análise Solar e clique neste botão para excluí-la.
+Atenção: esta ação não poderá ser desfeita!</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="590"/>
         <source>Analysis compound</source>
-        <translation type="unfinished"></translation>
+        <translation>Composto de análise</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="778"/>
         <source>There is no study objects or 
 context selected!</source>
-        <translation type="unfinished"></translation>
+        <translation>Não há objetos de estudo ou contexto selecionados!</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="1483"/>
         <source>There is no legend position!</source>
-        <translation type="unfinished"></translation>
+        <translation>Não existe posição de legenda!</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="1632"/>
@@ -1615,7 +1656,11 @@ and you won&apos;t be able to undo it.
 
 Are you sure you want to delete these Sun Analysis?
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Isso excluirá todos os objetos principais da
+Análise Solar selecionada,
+e você não poderá desfazer essa ação.
+
+Tem certeza de que deseja excluir esta Análise Solar?</translation>
     </message>
 </context>
 <context>
@@ -1623,146 +1668,156 @@ Are you sure you want to delete these Sun Analysis?
     <message>
         <location filename="../SunAnalysisDialog.py" line="56"/>
         <source>Sun Analysis configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Configuração da Análise Solar</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="86"/>
         <source>Epw/ Location/ Legend</source>
-        <translation type="unfinished"></translation>
+        <translation>Epw/ Localização/ Legenda</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="89"/>
         <source>Location data get from epw file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dados de localização obtidos do arquivo EPW.</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="93"/>
         <source>epw file</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivo epw</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="97"/>
         <source>Get epw file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Obter arquivo EPW:</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="100"/>
         <source>Click the link to get the epw file</source>
-        <translation type="unfinished"></translation>
+        <translation>Clique no link para obter o arquivo epw.</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="104"/>
         <source>Click to download the epw file</source>
-        <translation type="unfinished"></translation>
+        <translation>Clique para baixar o arquivo epw</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="108"/>
         <source>epw file path:</source>
-        <translation type="unfinished"></translation>
+        <translation>Caminho do arquivo epw:</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="111"/>
         <source>After downloading the epw file, 
 indicate its path on your machine</source>
-        <translation type="unfinished"></translation>
+        <translation>Após baixar o arquivo epw,
+indique seu caminho em sua máquina.</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="116"/>
         <source>The epw file path on your machine</source>
-        <translation type="unfinished"></translation>
+        <translation>Caminho do arquivo epw em sua máquina.</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="120"/>
         <source>Indicate the path of the epw file</source>
-        <translation type="unfinished"></translation>
+        <translation>Indique o caminho do arquivo epw.</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="124"/>
         <source>Location</source>
-        <translation type="unfinished"></translation>
+        <translation>Localização</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="128"/>
         <source>City:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cidade:</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="132"/>
         <source>Country:</source>
-        <translation type="unfinished"></translation>
+        <translation>País:</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="136"/>
         <source>Latitude:</source>
-        <translation type="unfinished"></translation>
+        <translation>Latitude:</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="140"/>
         <source>Longitude:</source>
-        <translation type="unfinished"></translation>
+        <translation>Longitude:</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="144"/>
         <source>Elevation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Altitude:</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="148"/>
         <source>Time zone:</source>
-        <translation type="unfinished"></translation>
+        <translation>Fuso horário:</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="152"/>
         <source>North angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ângulo do norte:</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="156"/>
         <source>Indicate the true north.
 Clockwise with zero in 
 the direction of the y-axis</source>
-        <translation type="unfinished"></translation>
+        <translation>Indique o norte verdadeiro.
+Sentido horário, com zero na direção do eixo y.</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="162"/>
         <source>Study objects:</source>
-        <translation type="unfinished"></translation>
+        <translation>Objetos de estudo:</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="166"/>
         <source>Objects to be analyzed. 
 Use only simple volumetric objects.</source>
-        <translation type="unfinished"></translation>
+        <translation>Objetos a serem analisados.
+Use apenas objetos volumétricos simples.</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="171"/>
         <source>Select the objects to be analyzed. 
 Use only simple volumetric objects.</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecione os objetos a serem analisados.
+Use apenas objetos volumétricos simples.</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="176"/>
         <source>Study context:</source>
-        <translation type="unfinished"></translation>
+        <translation>Contexto do estudo:</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="180"/>
         <source>Contextual objects that affect the 
 insolation of the objects being analyzed. 
 Use only simple volumetric objects.</source>
-        <translation type="unfinished"></translation>
+        <translation>Objetos contextuais que afetam a
+insolação dos objetos que estão sendo analisados.
+
+Use apenas objetos volumétricos simples.</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="186"/>
         <source>Select the ontextual objects that affect the 
 insolation of the objects being analyzed. 
 Use only simple volumetric objects.</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecione os objetos contextuais que afetam a
+insolação dos objetos que estão sendo analisados.
+
+Use apenas objetos volumétricos simples.</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="192"/>
         <source>Max. length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Comprimento máximo:</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="196"/>
@@ -1770,73 +1825,77 @@ Use only simple volumetric objects.</source>
 triangular sub faces (mm).
 Warning: small values ​​can result in 
 very long calculation times.</source>
-        <translation type="unfinished"></translation>
+        <translation>Especifique o valor máximo para as
+subfaces triangulares (mm).
+Aviso: valores pequenos podem resultar em
+tempos de cálculo muito longos.</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="203"/>
         <source>Offset distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Distância de deslocamento:</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="207"/>
         <source>Specify the value for the 
 offset distance (mm).</source>
-        <translation type="unfinished"></translation>
+        <translation>Especifique o valor para a 
+distância de deslocamento (mm).</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="212"/>
         <source>Sun Analysis configurations</source>
-        <translation type="unfinished"></translation>
+        <translation>Configurações de análise solar</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="216"/>
         <source>Sun Analysis period</source>
-        <translation type="unfinished"></translation>
+        <translation>Período de análise solar</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="219"/>
         <source>An analysis period between two dates of the year and between certain hours.</source>
-        <translation type="unfinished"></translation>
+        <translation>Um período de análise entre duas datas do ano e entre determinadas horas.</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="224"/>
         <source>Date from:</source>
-        <translation type="unfinished"></translation>
+        <translation>Data de:</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="228"/>
         <source>Indicate the start date of the analysis period.</source>
-        <translation type="unfinished"></translation>
+        <translation>Indique a data de início do período de análise.</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="248"/>
         <source>to:</source>
-        <translation type="unfinished"></translation>
+        <translation>a:</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="236"/>
         <source>Indicate the end date of the analysis period.</source>
-        <translation type="unfinished"></translation>
+        <translation>Indique a data final do período de análise.</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="240"/>
         <source>Time from:</source>
-        <translation type="unfinished"></translation>
+        <translation>Horário a partir de:</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="244"/>
         <source>Indicate the start time of the analysis period.</source>
-        <translation type="unfinished"></translation>
+        <translation>Indique a hora de início do período de análise.</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="252"/>
         <source>Indicate the end time of the analysis period.</source>
-        <translation type="unfinished"></translation>
+        <translation>Indique a data e hora de término do período de análise.</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="256"/>
         <source>Timestep</source>
-        <translation type="unfinished"></translation>
+        <translation>Intervalo de tempo</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="260"/>
@@ -1844,117 +1903,123 @@ offset distance (mm).</source>
 the calculation will be performed. 
 Note that larger numbers will 
 increase the computation time.</source>
-        <translation type="unfinished"></translation>
+        <translation>Especifique quantas vezes por hora o cálculo será realizado.
+Observe que números maiores aumentarão o tempo de computação.</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="267"/>
         <source>Leap year</source>
-        <translation type="unfinished"></translation>
+        <translation>Ano bissexto</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="270"/>
         <source>Indicate whether the analysis period 
 is in leap year.</source>
-        <translation type="unfinished"></translation>
+        <translation>Indique se o período de análise
+é um ano bissexto.</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="275"/>
         <source>Sun Analysis results</source>
-        <translation type="unfinished"></translation>
+        <translation>Resultados da Análise Solar</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="279"/>
         <source>Sky matrix high density</source>
-        <translation type="unfinished"></translation>
+        <translation>Matriz celeste de alta densidade</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="287"/>
         <source>Results:</source>
-        <translation type="unfinished"></translation>
+        <translation>Resultados:</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="301"/>
         <source>Direct and diffuse</source>
-        <translation type="unfinished"></translation>
+        <translation>Direto e difuso</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="304"/>
         <source>Enable it to visualize the direct and diffuse values.</source>
-        <translation type="unfinished"></translation>
+        <translation>Habilite para visualizar os valores diretos e difusos.</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="308"/>
         <source>Legend</source>
-        <translation type="unfinished"></translation>
+        <translation>Legenda</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="312"/>
         <source>Color count</source>
-        <translation type="unfinished"></translation>
+        <translation>Número de cores</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="315"/>
         <source>Indicate the legend number of colors 
 (default: 11).</source>
-        <translation type="unfinished"></translation>
+        <translation>Indique o número de cores da legenda
+(padrão: 11).</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="320"/>
         <source>Color_set:</source>
-        <translation type="unfinished"></translation>
+        <translation>Conjunto de cores:</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="366"/>
         <source>Choose the legend color set.</source>
-        <translation type="unfinished"></translation>
+        <translation>Escolha o conjunto de cores da legenda.</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="370"/>
         <source>Apply</source>
-        <translation type="unfinished"></translation>
+        <translation>Aplicar</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="394"/>
         <source>Select epw file</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecione o arquivo epw</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="411"/>
         <source>Warning</source>
-        <translation type="unfinished"></translation>
+        <translation>Aviso</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="411"/>
         <source>Indicate a epw file before close the dialog Sun Analysis!</source>
-        <translation type="unfinished"></translation>
+        <translation>Indique um arquivo epw antes de fechar a caixa de diálogo Análise Sun!</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="763"/>
         <source>Selection of study or context objects</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleção de objetos de estudo ou contexto</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="775"/>
         <source>Confirm</source>
-        <translation type="unfinished"></translation>
+        <translation>Confirmar</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="282"/>
         <source>Enable sky matrix high density (Reinhart model) 
 or not (Tregenza one).</source>
-        <translation type="unfinished"></translation>
+        <translation>Habilitar matriz celeste de alta densidade (modelo Reinhart)
+ou não (modelo Tregenza).</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="295"/>
         <source>Indicate whether the Solar Analysis results 
 should be presented in sun hours, 
 Radiation (kWh/m²) or Irradiance (W/m²).</source>
-        <translation type="unfinished"></translation>
+        <translation>Indique se os resultados da Análise Solar
+devem ser apresentados em horas de sol,
+Radiação (kWh/m²) ou Irradiância (W/m²).</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="592"/>
         <source>There is no Sun Analysis group!</source>
-        <translation type="unfinished"></translation>
+        <translation>Não existe um grupo de Análise Solar!</translation>
     </message>
 </context>
 <context>
@@ -1962,272 +2027,280 @@ Radiation (kWh/m²) or Irradiance (W/m²).</source>
     <message>
         <location filename="../SunDialog.py" line="59"/>
         <source>Sun path configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Configuração da Trajetória Solar</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="105"/>
         <source>Sun position</source>
-        <translation type="unfinished"></translation>
+        <translation>Posição do sol</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="108"/>
         <source>Set all data for sun position</source>
-        <translation type="unfinished"></translation>
+        <translation>Defina todos os dados para a posição do sol.</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="112"/>
         <source>epw file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivo epw:</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="115"/>
         <source>Enable this button to automatically 
 adjust the sun position for a location</source>
-        <translation type="unfinished"></translation>
+        <translation>Ative este botão para ajustar automaticamente a posição do sol para um local.</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="120"/>
         <source>Get epw file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Obter arquivo EPW:</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="123"/>
         <source>Click the link to get the epw file</source>
-        <translation type="unfinished"></translation>
+        <translation>Clique no link para obter o arquivo EPW.</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="127"/>
         <source>Click to download the epw file</source>
-        <translation type="unfinished"></translation>
+        <translation>Clique para baixar o arquivo epw</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="131"/>
         <source>epw file path:</source>
-        <translation type="unfinished"></translation>
+        <translation>Caminho do arquivo epw:</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="134"/>
         <source>After downloading the epw file, 
 indicate its path on your machine</source>
-        <translation type="unfinished"></translation>
+        <translation>Após baixar o arquivo epw,
+indique o caminho dele em sua máquina.</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="139"/>
         <source>The epw file path on your machine</source>
-        <translation type="unfinished"></translation>
+        <translation>O caminho do arquivo epw em sua máquina.</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="143"/>
         <source>Indicate the path of the epw file</source>
-        <translation type="unfinished"></translation>
+        <translation>Indique o caminho do arquivo epw.</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="147"/>
         <source>Location:</source>
-        <translation type="unfinished"></translation>
+        <translation>Localização:</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="150"/>
         <source>Activate this button to adjust 
 the sun position for a specific location</source>
-        <translation type="unfinished"></translation>
+        <translation>Ative este botão para ajustar
+a posição do sol para um local específico</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="155"/>
         <source>City:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cidade:</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="159"/>
         <source>Country:</source>
-        <translation type="unfinished"></translation>
+        <translation>País:</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="163"/>
         <source>Latitude:</source>
-        <translation type="unfinished"></translation>
+        <translation>Latitude</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="167"/>
         <source>Longitude:</source>
-        <translation type="unfinished"></translation>
+        <translation>Longitude:</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="171"/>
         <source>Elevation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Elevação:</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="175"/>
         <source>Time zone:</source>
-        <translation type="unfinished"></translation>
+        <translation>Fuso horário:</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="179"/>
         <source>North angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ângulo norte:</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="182"/>
         <source>Indicate the true north.
 Clockwise with zero in 
 the direction of the y-axis</source>
-        <translation type="unfinished"></translation>
+        <translation>Indique o norte verdadeiro.
+Sentido horário, com zero na direção do eixo y.</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="188"/>
         <source>Date and time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Data e hora:</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="191"/>
         <source>Indicate the date and time 
 of the sun&apos;s position</source>
-        <translation type="unfinished"></translation>
+        <translation>Indique a data e a hora
+da posição do sol</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="196"/>
         <source>Equin./Solst.:</source>
-        <translation type="unfinished"></translation>
+        <translation>Equin./Solst.:</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="199"/>
         <source>Consult the equinoxes and solstices 
 in the next links</source>
-        <translation type="unfinished"></translation>
+        <translation>Consulte os equinócios e solstícios
+nos links seguintes</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="207"/>
         <source>Enable it for daylight saving periods</source>
-        <translation type="unfinished"></translation>
+        <translation>Ative-o durante os períodos de horário de verão.</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="211"/>
         <source>Results:</source>
-        <translation type="unfinished"></translation>
+        <translation>Resultados:</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="214"/>
         <source>These are the results of the adjustments made</source>
-        <translation type="unfinished"></translation>
+        <translation>Estes são os resultados dos ajustes realizados.</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="218"/>
         <source>Altitude:</source>
-        <translation type="unfinished"></translation>
+        <translation>Altitude:</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="222"/>
         <source>Azimuth:</source>
-        <translation type="unfinished"></translation>
+        <translation>Azimute:</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="226"/>
         <source>Day hours:</source>
-        <translation type="unfinished"></translation>
+        <translation>Horário diurno:</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="230"/>
         <source>Sunrise:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nascer do sol:</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="234"/>
         <source>Noon:</source>
-        <translation type="unfinished"></translation>
+        <translation>Meio-dia:</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="238"/>
         <source>Sunset:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pôr do sol:</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="242"/>
         <source>Sun additional configurations</source>
-        <translation type="unfinished"></translation>
+        <translation>Configurações adicionais do Sun</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="245"/>
         <source>Adjust the other aspects of the solar study here</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajuste aqui os outros aspectos do estudo solar.</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="249"/>
         <source>Sun light and diagram configurations</source>
-        <translation type="unfinished"></translation>
+        <translation>Configurações da luz e diagrama solar</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="252"/>
         <source>Enable it to view and adjust representations 
 of the sun and its path.</source>
-        <translation type="unfinished"></translation>
+        <translation>Habilite-o para visualizar e ajustar representações
+do sol e de sua trajetória.</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="257"/>
         <source>Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Raio:</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="261"/>
         <source>Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Distância:</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="265"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Centro</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="268"/>
         <source>Adjust the center position according to the project</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajuste a posição do centro de acordo com o projeto.</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="279"/>
         <source>Ray representation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Representação de raio:</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="283"/>
         <source>Visible</source>
-        <translation type="unfinished"></translation>
+        <translation>Visível</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="304"/>
         <source>Color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cor:</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="291"/>
         <source>Choose the color of the sunlight representation</source>
-        <translation type="unfinished"></translation>
+        <translation>Escolha a cor da representação da luz solar.</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="295"/>
         <source>Sun path diagram (Arch Site)</source>
-        <translation type="unfinished"></translation>
+        <translation>Diagrama da trajetória solar (Arch Site)</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="298"/>
         <source>It is necessary to have an Arch Site object
 to enable the sun path diagram.
 For Color 3D view shadows, leave it disabled.</source>
-        <translation type="unfinished"></translation>
+        <translation>É necessário ter um objeto Arch Site
+para habilitar o diagrama de trajetória solar.
+Para sombras na visualização 3D colorida, deixe-a desabilitada.</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="308"/>
         <source>Choose the color of the sun path diagram</source>
-        <translation type="unfinished"></translation>
+        <translation>Escolha a cor do diagrama da trajetória solar</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="312"/>
         <source>Show and/or save image:</source>
-        <translation type="unfinished"></translation>
+        <translation>Exibir e/ou salvar imagem:</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="316"/>
         <source>Image from:</source>
-        <translation type="unfinished"></translation>
+        <translation>Imagem de:</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="325"/>
@@ -2235,177 +2308,186 @@ For Color 3D view shadows, leave it disabled.</source>
 Use None/Reset to clear the settings.
 Color 3D preview only works in FreeCAD-Link.
 For Render 3D preview, install Render WB.</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecione o tipo de cena.
+Use Nenhum/Redefinir para limpar as configurações.
+A pré-visualização 3D colorida funciona apenas no FreeCAD-Link.
+Para pré-visualização 3D renderizada, instale o Render WB.</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="332"/>
         <source>Images, w:</source>
-        <translation type="unfinished"></translation>
+        <translation>Imagens, l:</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="345"/>
         <source>h:</source>
-        <translation type="unfinished"></translation>
+        <translation>a:</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="354"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Salvar</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="357"/>
         <source>Enable it to save the images created</source>
-        <translation type="unfinished"></translation>
+        <translation>Ative esta opção para salvar as imagens criadas.</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="361"/>
         <source>Sun path animation</source>
-        <translation type="unfinished"></translation>
+        <translation>Animação da trajetória solar</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="364"/>
         <source>Enable the sun path animation</source>
-        <translation type="unfinished"></translation>
+        <translation>Habilite a animação da trajetória solar</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="368"/>
         <source>Time from:</source>
-        <translation type="unfinished"></translation>
+        <translation>Horário a partir de:</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="372"/>
         <source>Adjust the time for the beginning of the sun path</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajuste o horário de início da trajetória solar.</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="376"/>
         <source>to:</source>
-        <translation type="unfinished"></translation>
+        <translation>a:</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="380"/>
         <source>Adjust the time for the end of the sun path</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajuste o horário para o fim da trajetória solar.</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="384"/>
         <source>Sunrise-Sunset</source>
-        <translation type="unfinished"></translation>
+        <translation>Nascer do sol - Pôr do sol</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="387"/>
         <source>Enable it to get the sunrise and sunset values, then hit Apply.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ative a opção para obter os valores do nascer e do pôr do sol e, 
+em seguida, clique em Aplicar.</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="392"/>
         <source>Interval:</source>
-        <translation type="unfinished"></translation>
+        <translation>Intervalo:</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="396"/>
         <source>Adjust the interval between each step of the solar path.
 Must not be zero.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajuste o intervalo entre cada etapa do percurso solar.
+Não deve ser zero.</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="401"/>
         <source>Recompute</source>
-        <translation type="unfinished"></translation>
+        <translation>Recalcular</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="404"/>
         <source>Enable it if you need to animate objects as well</source>
-        <translation type="unfinished"></translation>
+        <translation>Habilite essa opção se você também precisar animar objetos.</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="408"/>
         <source>Fps:</source>
-        <translation type="unfinished"></translation>
+        <translation>Fps:</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="412"/>
         <source>Enter the frames per second of the solar path animation</source>
-        <translation type="unfinished"></translation>
+        <translation>Insira o número de quadros por segundo da animação da trajetória solar.</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="416"/>
         <source>Frames:</source>
-        <translation type="unfinished"></translation>
+        <translation>Quadros:</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="420"/>
         <source>Show the resulting total frames</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar o total de quadros resultantes.</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="424"/>
         <source>Apply</source>
-        <translation type="unfinished"></translation>
+        <translation>Aplicar</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="472"/>
         <source>Select epw file</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecione o arquivo epw</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="472"/>
         <source>EPW Files (*.epw);;All Files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivos EPW (*.epw);;Todos os arquivos (*)</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="492"/>
         <source>Warning</source>
-        <translation type="unfinished"></translation>
+        <translation>Aviso</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="492"/>
         <source>If you want to use EPW, provide a valid file path.</source>
-        <translation type="unfinished"></translation>
+        <translation>Se você deseja usar o EPW, forneça um caminho de arquivo válido.</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="512"/>
         <source>File Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erro no arquivo</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="204"/>
         <source>Daylight saving</source>
-        <translation type="unfinished"></translation>
+        <translation>Horário de verão</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="272"/>
         <source>Sunlight</source>
-        <translation type="unfinished"></translation>
+        <translation>Luz solar</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="275"/>
         <source>Enable the sunlight representation</source>
-        <translation type="unfinished"></translation>
+        <translation>Ative a representação da luz solar</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="335"/>
         <source>Set the image resolution.
 Use for render images</source>
-        <translation type="unfinished"></translation>
+        <translation>Defina a resolução da imagem.
+Use para imagens renderizarizadas.</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="340"/>
         <source>Set the image width in pixels.
 Use for render images</source>
-        <translation type="unfinished"></translation>
+        <translation>Defina a largura da imagem em pixels.
+Use para imagens renderizarizadas.</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="349"/>
         <source>Set the image height in pixels.
 Use for render images</source>
-        <translation type="unfinished"></translation>
+        <translation>Defina a altura da imagem em pixels.
+Use para renderizar imagens.</translation>
     </message>
     <message>
         <location filename="../SunDialog.py" line="512"/>
         <source>Could not read EPW file:
 {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Não foi possível ler o arquivo EPW:
+{}</translation>
     </message>
 </context>
 <context>
@@ -2413,38 +2495,39 @@ Use for render images</source>
     <message>
         <location filename="../SunPathAnimation.py" line="46"/>
         <source>Start Sun Path Animation</source>
-        <translation type="unfinished"></translation>
+        <translation>Iniciar Animação da Trajetória Solar</translation>
     </message>
     <message>
         <location filename="../SunPathAnimation.py" line="80"/>
         <source>Stop SunPath Animation</source>
-        <translation type="unfinished"></translation>
+        <translation>Parar animação da Trajetória Solar</translation>
     </message>
     <message>
         <location filename="../SunPathAnimation.py" line="82"/>
         <source>Stops a sun path animation. After the sun path animation started, click this button to stop it.</source>
-        <translation type="unfinished"></translation>
+        <translation>Interrompe a animação da trajetória solar. Após o início da animação, clique neste botão para interrompê-la.</translation>
     </message>
     <message>
         <location filename="../SunPathAnimation.py" line="137"/>
         <source>Interval must be non-zero!</source>
-        <translation type="unfinished"></translation>
+        <translation>O intervalo deve ser diferente de zero!</translation>
     </message>
     <message>
         <location filename="../SunPathAnimation.py" line="204"/>
         <source>No MovieCamera found!</source>
-        <translation type="unfinished"></translation>
+        <translation>Nenhuma CameraFilme encontrada!</translation>
     </message>
     <message>
         <location filename="../SunPathAnimation.py" line="217"/>
         <source>Render animation was set! 
 Click play to start the animation.</source>
-        <translation type="unfinished"></translation>
+        <translation>Animação de renderização foi configurada!
+Clique em reproduzir para iniciar a animação.</translation>
     </message>
     <message>
         <location filename="../SunPathAnimation.py" line="222"/>
         <source>No Clapperboard found!</source>
-        <translation type="unfinished"></translation>
+        <translation>Claquete não encontrada!</translation>
     </message>
     <message>
         <location filename="../SunPathAnimation.py" line="48"/>
@@ -2452,23 +2535,27 @@ Click play to start the animation.</source>
 To use it, open the dialog and enable Sun Path animation.
 To view shadow projection, choose the image other than None.
 Click this button to get started its animation</source>
-        <translation type="unfinished"></translation>
+        <translation>Inicia uma animação de trajetória solar.
+Para usá-la, abra a caixa de diálogo e habilite a animação de trajeto solar.
+Para visualizar a projeção de sombras, escolha uma imagem diferente de &amp;quot;Nenhuma&amp;quot;.
+Clique neste botão para iniciar a animação.</translation>
     </message>
     <message>
         <location filename="../SunPathAnimation.py" line="116"/>
         <source>Sun Path animation, animation off.</source>
-        <translation type="unfinished"></translation>
+        <translation>Animação da Trajetória Solar, animação desativada.</translation>
     </message>
     <message>
         <location filename="../SunPathAnimation.py" line="120"/>
         <source>Sun Path animation, animation on.</source>
-        <translation type="unfinished"></translation>
+        <translation>Animação da Trajetória Solar, animação ativada.</translation>
     </message>
     <message>
         <location filename="../SunPathAnimation.py" line="155"/>
         <source>A path to save images is required! 
 Click &apos;Stop Animation&apos; to start again.</source>
-        <translation type="unfinished"></translation>
+        <translation>É necessário um caminho para salvar as imagens!
+Clique em 'Parar animação' para começar novamente.</translation>
     </message>
 </context>
 <context>
@@ -2477,58 +2564,59 @@ Click &apos;Stop Animation&apos; to start again.</source>
         <location filename="../SunProperties.py" line="532"/>
         <source>So far, the shadows with colored imagesonly work in the FreeCAD-Link version 20241006.
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Até o momento, as sombras com imagens coloridas funcionam apenas na versão 20241006 do FreeCAD-Link.</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="541"/>
         <source>SunPath {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Trajetória Solar {}</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="571"/>
         <source>If you want use EPW, please provide a valid file path.</source>
-        <translation type="unfinished"></translation>
+        <translation>Se você deseja usar o EPW, forneça um caminho de arquivo válido.</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="596"/>
         <source>File Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erro no arquivo</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="702"/>
         <source>No render project found!</source>
-        <translation type="unfinished"></translation>
+        <translation>Nenhum projeto de renderização encontrado!</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="753"/>
         <source>SunLight</source>
-        <translation type="unfinished"></translation>
+        <translation>Luz Solar</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="787"/>
         <source>Ray</source>
-        <translation type="unfinished"></translation>
+        <translation>Raio</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="832"/>
         <source>There is no SunLight to update!</source>
-        <translation type="unfinished"></translation>
+        <translation>Não há Luz Solar para atualizar!</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="855"/>
         <source>There is no sun ray to update!</source>
-        <translation type="unfinished"></translation>
+        <translation>Não há raio de sol para atualizar!</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="558"/>
         <source>A Sun Path was created! To configure it, make the adjustments in its properties window.</source>
-        <translation type="unfinished"></translation>
+        <translation>Uma Trajetória Solar foi criada! Para configurá-la, faça os ajustes na janela de propriedades.</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="596"/>
         <source>Could not read EPW file:
 {}</source>
-        <translation type="unfinished"></translation>
+        <translation>Não foi possível ler o arquivo EPW:
+{}</translation>
     </message>
 </context>
 <context>
@@ -2542,7 +2630,13 @@ to make them invisible before generating the shadows.
 Avoid spherical or complex surfaces. 
 
 Do you want to generate shadows now?</source>
-        <translation type="unfinished"></translation>
+        <translation>Este recurso ainda não foi totalmente testado!
+Para evitar problemas, salve seu arquivo antes de usá-lo.
+Para superfícies transparentes, recomenda-se
+torná-las invisíveis antes de gerar as sombras.
+Evite superfícies esféricas ou complexas.
+
+Deseja gerar sombras agora?</translation>
     </message>
 </context>
 </TS>
