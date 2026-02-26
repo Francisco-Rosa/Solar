@@ -1844,7 +1844,7 @@ Use apenas objetos volumétricos simples.</translation>
     <message>
         <location filename="../SunAnalysisDialog.py" line="200"/>
         <source>Max. length:</source>
-        <translation>Comprimento máximo:</translation>
+        <translation>Comp. máx.:</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="204"/>
@@ -1860,7 +1860,7 @@ tempos de cálculo muito longos.</translation>
     <message>
         <location filename="../SunAnalysisDialog.py" line="211"/>
         <source>Offset distance:</source>
-        <translation>Distância de deslocamento:</translation>
+        <translation>Dist desloc.:</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="215"/>
