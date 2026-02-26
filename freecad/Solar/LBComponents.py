@@ -23,11 +23,11 @@
 
 """This module implements the ladybug components."""
 
+import os
 import math
 import FreeCAD
 import FreeCADGui as Gui
 import Draft
-from PySide.QtCore import QT_TRANSLATE_NOOP
 from ladybug.color import ColorRange, Colorset
 from ladybug.legend import Legend, LegendParameters
 from ladybug_geometry.geometry3d import Point3D
@@ -41,52 +41,56 @@ from ladybug.datacollection import HourlyContinuousCollection
 from ladybug.header import Header
 from ladybug.datatype.energy import Energy
 
+translate = FreeCAD.Qt.translate
+
+LanguagePath = os.path.dirname(__file__) + '/translations'
+Gui.addLanguagePath(LanguagePath)
 #=================================================
 # 0. Globals
 #=================================================
 
-RESUL_00 = QT_TRANSLATE_NOOP("LBComponents", "Direct Sunlight (Sun hours)")
-RESUL_01 = QT_TRANSLATE_NOOP("LBComponents", "Radiation (kWh/m²)")
-RESUL_02 = QT_TRANSLATE_NOOP("LBComponents", "Irradiance (W/m²)")
+RESUL_00 = translate("LBComponents", "Direct Sunlight (Sun hours)")
+RESUL_01 = translate("LBComponents", "Radiation (kWh/m²)")
+RESUL_02 = translate("LBComponents", "Irradiance (W/m²)")
 
-IMAGE_00 = QT_TRANSLATE_NOOP("LBComponents", "None/Reset")
-IMAGE_01 = QT_TRANSLATE_NOOP("LBComponents", "BW 3D view")
-IMAGE_02 = QT_TRANSLATE_NOOP("LBComponents", "Color 3D view")
-IMAGE_03 = QT_TRANSLATE_NOOP("LBComponents", "Render 3D view")
+IMAGE_00 = translate("LBComponents", "None/Reset")
+IMAGE_01 = translate("LBComponents", "BW 3D view")
+IMAGE_02 = translate("LBComponents", "Color 3D view")
+IMAGE_03 = translate("LBComponents", "Render 3D view")
 
-COLORS_00 = QT_TRANSLATE_NOOP("LBComponents", "Original Ladybug")
-COLORS_01 = QT_TRANSLATE_NOOP("LBComponents", "Nuanced Ladybug")
-COLORS_02 = QT_TRANSLATE_NOOP("LBComponents", "Multi-colored Ladybug")
-COLORS_03 = QT_TRANSLATE_NOOP("LBComponents", "Ecotect")
-COLORS_04 = QT_TRANSLATE_NOOP("LBComponents", "View Study")
-COLORS_05 = QT_TRANSLATE_NOOP("LBComponents", "Shadow Study")
-COLORS_06 = QT_TRANSLATE_NOOP("LBComponents", "Glare Study")
-COLORS_07 = QT_TRANSLATE_NOOP("LBComponents", "Annual Comfort")
-COLORS_08 = QT_TRANSLATE_NOOP("LBComponents", "Thermal Comfort")
-COLORS_09 = QT_TRANSLATE_NOOP("LBComponents", "Peak Load Balance")
-COLORS_10 = QT_TRANSLATE_NOOP("LBComponents", "Heat Sensation")
-COLORS_11 = QT_TRANSLATE_NOOP("LBComponents", "Cold Sensation")
-COLORS_12 = QT_TRANSLATE_NOOP("LBComponents", "Benefit/Harm")
-COLORS_13 = QT_TRANSLATE_NOOP("LBComponents", "Harm")
-COLORS_14 = QT_TRANSLATE_NOOP("LBComponents", "Benefit")
-COLORS_15 = QT_TRANSLATE_NOOP("LBComponents", "Shade Benefit/Harm")
-COLORS_16 = QT_TRANSLATE_NOOP("LBComponents", "Shade Harm")
-COLORS_17 = QT_TRANSLATE_NOOP("LBComponents", "Shade Benefit")
-COLORS_18 = QT_TRANSLATE_NOOP("LBComponents", "Energy Balance")
-COLORS_19 = QT_TRANSLATE_NOOP("LBComponents", "Energy Balance w/ Storage")
-COLORS_20 = QT_TRANSLATE_NOOP("LBComponents", "THERM")
-COLORS_21 = QT_TRANSLATE_NOOP("LBComponents", "Cloud Cover")
-COLORS_22 = QT_TRANSLATE_NOOP("LBComponents", "Black to White")
-COLORS_23 = QT_TRANSLATE_NOOP("LBComponents", "Blue, Green, Red")
-COLORS_24 = QT_TRANSLATE_NOOP("LBComponents", "Multicolored 2")
-COLORS_25 = QT_TRANSLATE_NOOP("LBComponents", "Multicolored 3")
-COLORS_26 = QT_TRANSLATE_NOOP("LBComponents", "OpenStudio Palette")
-COLORS_27 = QT_TRANSLATE_NOOP("LBComponents", "Cividis (colorblind friendly)")
-COLORS_28 = QT_TRANSLATE_NOOP("LBComponents", "Viridis (colorblind friendly)")
-COLORS_29 = QT_TRANSLATE_NOOP("LBComponents", "Parula (colorblind friendly)")
-COLORS_30 = QT_TRANSLATE_NOOP("LBComponents", "Energy Balance by Face Type")
-COLORS_31 = QT_TRANSLATE_NOOP("LBComponents", "Peak Cooling by Face Type")
-COLORS_32 = QT_TRANSLATE_NOOP("LBComponents", "Peak Hating by Face Type")
+COLORS_00 = translate("LBComponents", "Original Ladybug")
+COLORS_01 = translate("LBComponents", "Nuanced Ladybug")
+COLORS_02 = translate("LBComponents", "Multi-colored Ladybug")
+COLORS_03 = translate("LBComponents", "Ecotect")
+COLORS_04 = translate("LBComponents", "View Study")
+COLORS_05 = translate("LBComponents", "Shadow Study")
+COLORS_06 = translate("LBComponents", "Glare Study")
+COLORS_07 = translate("LBComponents", "Annual Comfort")
+COLORS_08 = translate("LBComponents", "Thermal Comfort")
+COLORS_09 = translate("LBComponents", "Peak Load Balance")
+COLORS_10 = translate("LBComponents", "Heat Sensation")
+COLORS_11 = translate("LBComponents", "Cold Sensation")
+COLORS_12 = translate("LBComponents", "Benefit/Harm")
+COLORS_13 = translate("LBComponents", "Harm")
+COLORS_14 = translate("LBComponents", "Benefit")
+COLORS_15 = translate("LBComponents", "Shade Benefit/Harm")
+COLORS_16 = translate("LBComponents", "Shade Harm")
+COLORS_17 = translate("LBComponents", "Shade Benefit")
+COLORS_18 = translate("LBComponents", "Energy Balance")
+COLORS_19 = translate("LBComponents", "Energy Balance w/ Storage")
+COLORS_20 = translate("LBComponents", "THERM")
+COLORS_21 = translate("LBComponents", "Cloud Cover")
+COLORS_22 = translate("LBComponents", "Black to White")
+COLORS_23 = translate("LBComponents", "Blue, Green, Red")
+COLORS_24 = translate("LBComponents", "Multicolored 2")
+COLORS_25 = translate("LBComponents", "Multicolored 3")
+COLORS_26 = translate("LBComponents", "OpenStudio Palette")
+COLORS_27 = translate("LBComponents", "Cividis (colorblind friendly)")
+COLORS_28 = translate("LBComponents", "Viridis (colorblind friendly)")
+COLORS_29 = translate("LBComponents", "Parula (colorblind friendly)")
+COLORS_30 = translate("LBComponents", "Energy Balance by Face Type")
+COLORS_31 = translate("LBComponents", "Peak Cooling by Face Type")
+COLORS_32 = translate("LBComponents", "Peak Hating by Face Type")
 
 #=================================================
 # 1. Geometries
@@ -310,7 +314,7 @@ def get_sky_dome_values(sky_matrix = None,
                                plot_irradiance = plot_irradiance)
                                # (If True, Radiance must be installed)
     except Exception:
-        FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("LBComponents",
+        FreeCAD.Console.PrintMessage(translate("LBComponents",
             "To get irradiance values, it is necessary \n"
             "to install Radiance in your machine.\n"))
         return
@@ -376,7 +380,7 @@ def get_sky_matrix_dome_values(epw_path = "",
             diffuse_values = sky_dome_obj[3]
         except Exception:
             FreeCAD.Console.PrintMessage(
-                "get sky matrix dome values: " + QT_TRANSLATE_NOOP("LBComponents",
+                "get sky matrix dome values: " + translate("LBComponents",
                 "To get irradiance values, Radiance software must be \n"
                 "installed in your machine.\n"))
             return
@@ -553,21 +557,21 @@ def get_compass_group(center = None,
         scale = 1.0
         font = "Arial"
         if angles_compas == 0.0:
-            angle_leg = QT_TRANSLATE_NOOP("LBComponents", "N")
+            angle_leg = translate("LBComponents", "N")
             scale = 2.0
             font = "ArialBlack"
             point_n = points[0]
         elif angles_compas == 90.0:
-            angle_leg = QT_TRANSLATE_NOOP("LBComponents", "E")
+            angle_leg = translate("LBComponents", "E")
             scale = 2.0
             font = "ArialBlack"
             point_e = points[0]
         elif angles_compas == 180.0:
-            angle_leg = QT_TRANSLATE_NOOP("LBComponents", "S")
+            angle_leg = translate("LBComponents", "S")
             scale = 2.0
             font = "ArialBlack"
         elif angles_compas == 270.0:
-            angle_leg = QT_TRANSLATE_NOOP("LBComponents", "W")
+            angle_leg = translate("LBComponents", "W")
             scale = 2.0
             font = "ArialBlack"
             point_w = points[0]
@@ -635,7 +639,7 @@ def get_compass_group(center = None,
     # Total compass - compound
     total_compass = doc.addObject("Part::Compound",
                                   "Total_compass_circles")
-    total_compass.Label = QT_TRANSLATE_NOOP("LBComponents",
+    total_compass.Label = translate("LBComponents",
                                             "Total compass circles")
     doc.getObject(total_compass.Name).Links = compass_list
     doc.getObject(total_group.Name).addObject(total_compass)
@@ -643,44 +647,44 @@ def get_compass_group(center = None,
         # Compass direct - clone
         direct_compass = Draft.make_clone(doc.getObject(total_compass.Name))
         doc.getObject(direct_compass.Name).Placement.Base = (deltx2, 0,0)
-        doc.getObject(direct_compass.Name).Label = QT_TRANSLATE_NOOP(
+        doc.getObject(direct_compass.Name).Label = translate(
                                                    "LBComponents",
                                                    "Direct compass circles")
         doc.getObject(direct_group.Name).addObject(direct_compass)
         # Compass diffuse - clone
         diffuse_compass = Draft.make_clone(doc.getObject(total_compass.Name))
         doc.getObject(diffuse_compass.Name).Placement.Base = (deltx3, 0,0)
-        doc.getObject(diffuse_compass.Name).Label = QT_TRANSLATE_NOOP(
+        doc.getObject(diffuse_compass.Name).Label = translate(
                                                     "LBComponents",
                                                     "Diffuse compass circles")
         doc.getObject(diffuse_group.Name).addObject(diffuse_compass)
     ## managing groups
     # Create compass groups
     total_compass_group = create_group(group_name = "Total_Compass_Group",
-                           group_label = QT_TRANSLATE_NOOP("LBComponents",
+                           group_label = translate("LBComponents",
                                                     "Total Compass Group")
                             )
     # Create compass legend groups
     total_compass_leg_group = create_group(group_name = "Total_Compass_Legend_Group",
-                           group_label = QT_TRANSLATE_NOOP("LBComponents",
+                           group_label = translate("LBComponents",
                                                     "Total Compass Legend Group")
                             )
     if direct_group != None or diffuse_group != None:
         direct_compass_group = create_group(group_name = "Direct_Compass_Group",
-                               group_label = QT_TRANSLATE_NOOP("LBComponents",
+                               group_label = translate("LBComponents",
                                                         "Direct Compass Group")
                                 )
         diffuse_compass_group = create_group(group_name = "Diffuse_Compass_Group",
-                               group_label = QT_TRANSLATE_NOOP("LBComponents",
+                               group_label = translate("LBComponents",
                                                         "Diffuse Compass Group")
                                 )
         # Create compass legend groups
         direct_compass_leg_group = create_group(group_name = "Direct_Compass_Legend_Group",
-                               group_label = QT_TRANSLATE_NOOP("LBComponents",
+                               group_label = translate("LBComponents",
                                                         "Direct Compass Legend Group")
                                 )
         diffuse_compass_leg_group = create_group(group_name = "Diffuse_Compass_Legend_Group",
-                               group_label = QT_TRANSLATE_NOOP("LBComponents",
+                               group_label = translate("LBComponents",
                                                         "Diffuse Compass Legend Group")
                                 )
     #Compasses to their groups
@@ -929,12 +933,12 @@ def get_modify_legend_bar(bar_obj = None,
                                     n_z = 1,
                                     use_link = False
                                     )
-        bar_new.Label = QT_TRANSLATE_NOOP("LBComponents",
+        bar_new.Label = translate("LBComponents",
                                           "Legend bar")
         bar = bar_new
         # create legend bar groups
         leg_bar_group = create_group(group_name = "Legend_Bar_Group",
-                         group_label = QT_TRANSLATE_NOOP("LBComponents",
+                         group_label = translate("LBComponents",
                                                      "Legend Bar Group"),
                          )
         put_obj_group(obj = bar_new,
@@ -942,7 +946,7 @@ def get_modify_legend_bar(bar_obj = None,
                       )
         # create legend text group
         leg_text_group = create_group(group_name = "Legend_bar_text",
-                         group_label = QT_TRANSLATE_NOOP("LBComponents",
+                         group_label = translate("LBComponents",
                          "Legend bar text"),
                          )
     else:
@@ -1060,20 +1064,20 @@ def get_metadata(epw_path = "", period = None):
     epw = EPW(epw_path)
     epw_metadata = epw.metadata
     source_name = epw_metadata["source"]
-    source_str = QT_TRANSLATE_NOOP("LBComponents",
-                                   "Source: {}").format(source_name)
+    source_str = translate("LBComponents",
+                           "Source: {}").format(source_name)
     metadata.append(source_str)
     country_name = epw_metadata["country"]
-    country_str = QT_TRANSLATE_NOOP("LBComponents",
-                                     "Country: {}").format(country_name)
+    country_str = translate("LBComponents",
+                            "Country: {}").format(country_name)
     metadata.append(country_str)
     city_name = epw_metadata["city"]
-    city_str = QT_TRANSLATE_NOOP("LBComponents",
-                                 "City: {}").format(city_name)
+    city_str = translate("LBComponents",
+                         "City: {}").format(city_name)
     metadata.append(city_str)
     time_zone_name = epw_metadata["time-zone"]
-    time_zone_str = QT_TRANSLATE_NOOP("LBComponents",
-                                      "Time-zone: {}").format(time_zone_name)
+    time_zone_str = translate("LBComponents",
+                              "Time-zone: {}").format(time_zone_name)
     metadata.append(time_zone_str)
     return metadata
 
@@ -1095,17 +1099,17 @@ def get_main_legend_texts(units = None,
     time_zone_leg = f"{metadata[7]}"
     source_leg = f"{metadata[4]}"
     # Total title
-    title_leg1 = QT_TRANSLATE_NOOP(
+    title_leg1 = translate(
                  "LBComponents", "Total" + " " + "{}").format(units)
     text_total = [title_leg1, period_leg, city_leg,
                   country_leg, time_zone_leg, source_leg]
     # Direct title
-    title_leg2 = QT_TRANSLATE_NOOP(
+    title_leg2 = translate(
                  "LBComponents", "Direct" + " " + "{}").format(units)
     text_direct = [title_leg2, period_leg, city_leg,
                    country_leg, time_zone_leg, source_leg]
     # Diffuse title
-    title_leg3 = QT_TRANSLATE_NOOP(
+    title_leg3 = translate(
                  "LBComponents", "Diffuse" + " " + "{}").format(units)
     text_diffuse = [title_leg3, period_leg, city_leg,
                     country_leg, time_zone_leg, source_leg]
@@ -1139,12 +1143,12 @@ def get_main_legends(pos1 = (0.0, 0.0, 0.0),
                                     height=text_high,
                                     line_spacing=1.2
                                     )
-        text_leg1.Label = QT_TRANSLATE_NOOP("LBComponents",
-                                            "Total legend")
+        text_leg1.Label = translate("LBComponents",
+                                    "Total legend")
         #create groups and put main legends into correspondent ones
         leg_total_group = create_group(group_name = "Total_Legend_Group",
-                                       group_label = QT_TRANSLATE_NOOP("LBComponents",
-                                                                 "Total Legend Group"),
+                                       group_label = translate("LBComponents",
+                                                     "Total Legend Group"),
                                        )
         put_obj_group(obj = text_leg1,
                       group = leg_total_group,
@@ -1167,25 +1171,25 @@ def get_main_legends(pos1 = (0.0, 0.0, 0.0),
                                     height=text_high,
                                     line_spacing=1.2
                                     )
-        text_leg2.Label = QT_TRANSLATE_NOOP("LBComponents",
-                                            "Direct legend")
+        text_leg2.Label = translate("LBComponents",
+                                    "Direct legend")
         text_leg3 = Draft.make_text(text_diffuse, placement=pl3_leg,
                                     screen=None, height=text_high,
                                     line_spacing=1.2
                                     )
-        text_leg3.Label = QT_TRANSLATE_NOOP("LBComponents",
-                                            "Diffuse legend")
+        text_leg3.Label = translate("LBComponents",
+                                    "Diffuse legend")
         #create groups and put main legends into correspondent ones
         leg_direct_group = create_group(group_name = "Direct_Legend_Group",
-                                       group_label = QT_TRANSLATE_NOOP("LBComponents",
-                                                               "Direct Legend Group"),
+                                       group_label = translate("LBComponents",
+                                                     "Direct Legend Group"),
                                        )
         put_obj_group(obj = text_leg2,
                       group = leg_direct_group,
                        )
         leg_diffuse_group = create_group(group_name = "Diffuse Legend Group",
-                                       group_label = QT_TRANSLATE_NOOP("LBComponents",
-                                                               "Diffuse Legend Group"),
+                                       group_label = translate("LBComponents",
+                                                     "Diffuse Legend Group"),
                                        )
         put_obj_group(obj = text_leg3,
                       group = leg_diffuse_group,

@@ -33,8 +33,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>959</width>
-        <height>630</height>
+        <width>980</width>
+        <height>610</height>
        </rect>
       </property>
       <layout class="QFormLayout" name="formLayout">
@@ -1016,7 +1016,7 @@ indicate its path on your machine</string>
                        <string>Adjust the center of the dome according to the project.</string>
                       </property>
                       <property name="text">
-                       <string>Position</string>
+                       <string>Position:</string>
                       </property>
                      </widget>
                     </item>
@@ -1046,8 +1046,7 @@ indicate its path on your machine</string>
                          </font>
                         </property>
                         <property name="toolTip">
-                         <string>Adjust the y position of the center of the 
-dome according to the project (mm).</string>
+                         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Adjust the y coordinate of the center of the &lt;/p&gt;&lt;p&gt;dome according to the project (mm).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                         </property>
                         <property name="text">
                          <string>0.00</string>
@@ -1128,8 +1127,7 @@ dome according to the project (mm).</string>
                          </font>
                         </property>
                         <property name="toolTip">
-                         <string>Adjust the x position of the center of the 
-dome according to the project (mm).</string>
+                         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Adjust the x coordinate of the center of the &lt;/p&gt;&lt;p&gt;dome according to the project (mm).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                         </property>
                         <property name="text">
                          <string>0.00</string>
@@ -1160,8 +1158,7 @@ dome according to the project (mm).</string>
                          </font>
                         </property>
                         <property name="toolTip">
-                         <string>Adjust the z position of the center of the 
-dome according to the project (mm).</string>
+                         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Adjust the z coordinate of the center of the &lt;/p&gt;&lt;p&gt;dome according to the project (mm).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                         </property>
                         <property name="text">
                          <string>0.00</string>
@@ -1222,7 +1219,7 @@ dome according to the project (mm).</string>
                   </font>
                  </property>
                  <property name="toolTip">
-                  <string>An analysis period between two dates of the year and between certain hours.</string>
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Analysis period between two dates and hours of the year.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                  <property name="title">
                   <string>Analysis period</string>

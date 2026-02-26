@@ -28,8 +28,12 @@ import FreeCAD
 import FreeCADGui as Gui
 from PySide import QtCore, QtWidgets
 from PySide.QtCore import QDate
-from PySide.QtCore import QT_TRANSLATE_NOOP
 import freecad.Solar.SkyDomes as SkyDomes
+
+translate = FreeCAD.Qt.translate
+
+LanguagePath = os.path.dirname(__file__) + '/translations'
+Gui.addLanguagePath(LanguagePath)
 
 SD = None
 
@@ -46,12 +50,15 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
         self.ui = Gui.PySideUic.loadUi(ui_file)
 
         # Run tests on FC Pynthon console
-        # user_mod_path = os.path.join(FreeCAD.getUserAppDataDir(), "Mod")
-        # SkyDomesUi = FreeCADGui.PySideUic.loadUi(user_mod_path + '/Solar/SkyDomes.ui')
-        # SkyDomesUi.show()
+        """
+        user_mod_path = os.path.join(FreeCAD.getUserAppDataDir(), "Mod")
+        SkyDomesUi = FreeCADGui.PySideUic.loadUi(
+                        user_mod_path + '/Solar/freecad/Solar/SkyDomes.ui')
+        SkyDomesUi.show()
+        """
 
         # Correctly embed the loaded UI as a child widget
-        self.setWindowTitle(QT_TRANSLATE_NOOP("SkyDomesDialog", "Sky Domes configuration"))
+        self.setWindowTitle(translate("SkyDomesDialog", "Sky Domes configuration"))
         layout = QtWidgets.QVBoxLayout(self)
         layout.addWidget(self.ui)
         self.resize(self.ui.size())
@@ -81,154 +88,161 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
         # translation
         #groupBox_epw_location
         self.ui.groupBox_epw_location.setTitle(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
+                        translate("SkyDomesDialog",
                         "Epw/ Location"))
         self.ui.groupBox_epw_location.setToolTip(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
+                        translate("SkyDomesDialog",
                         "Location data get from epw file."))
         #groupBox_epw_file
         self.ui.groupBox_epw_file.setTitle(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
+                        translate("SkyDomesDialog",
                         "epw file"))
         #label_Get_epw_file
         self.ui.label_Get_epw_file.setText(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
+                        translate("SkyDomesDialog",
                         "Get epw file:"))
         self.ui.label_Get_epw_file.setToolTip(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
+                        translate("SkyDomesDialog",
                         "Click the link to get the epw file"))
         #label_epw_map_link
         self.ui.label_epw_map_link.setToolTip(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
+                        translate("SkyDomesDialog",
                         "Click to download the epw file"))
         #label_epw_path
         self.ui.label_epw_path.setText(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
+                        translate("SkyDomesDialog",
                         "epw file path:"))
         self.ui.label_epw_path.setToolTip(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
+                        translate("SkyDomesDialog",
                         "After downloading the epw file, \n"
-                        "indicate its path on your machine"))
+                        "indicate the path on your machine"))
         #lineEdit_epw_path
         self.ui.lineEdit_epw_path.setToolTip(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
+                        translate("SkyDomesDialog",
                         "The epw file path on your machine"))
         #toolButton_epw_path
         self.ui.toolButton_epw_path.setToolTip(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
+                        translate("SkyDomesDialog",
                         "Indicate the epw file path"))
         #groupBox_location
         self.ui.groupBox_location.setTitle(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
+                        translate("SkyDomesDialog",
                         "Location"))
         #label_City
         self.ui.label_City.setText(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
+                        translate("SkyDomesDialog",
                         "City:"))
         #label_Country
         self.ui.label_Country.setText(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
+                        translate("SkyDomesDialog",
                         "Country:"))
         #label_Latitude
         self.ui.label_Latitude.setText(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
+                        translate("SkyDomesDialog",
                         "Latitude:"))
         #label_Longitude
         self.ui.label_Longitude.setText(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
+                        translate("SkyDomesDialog",
                         "Longitude:"))
         #label_Elevation
         self.ui.label_Elevation.setText(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
+                        translate("SkyDomesDialog",
                         "Elevation:"))
         #label_Time_zone
         self.ui.label_Time_zone.setText(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
+                        translate("SkyDomesDialog",
                         "Time zone:"))
         #label_North_angle
         self.ui.label_North_angle.setText(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
+                        translate("SkyDomesDialog",
                         "North angle:"))
         #lineEdit_North_angle
         self.ui.lineEdit_North_angle.setToolTip(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
+                        translate("SkyDomesDialog",
                         "Indicate the true north.\n"
-                        "Clockwise with zero in \n"
-                        "the direction of the y-axis"))
+                        "Values ​​in a clockwise direction, \n"
+                        "with zero in the direction of the y-axis"))
         #groupBox_sky_domes_configuration
         self.ui.groupBox_sky_domes_configuration.setTitle(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
+                        translate("SkyDomesDialog",
                         "Sky Domes configurations"))
         #label_radius
         self.ui.label_radius.setText(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
+                        translate("SkyDomesDialog",
                         "Radius:"))
         #lineEdit_Radius
         self.ui.lineEdit_Radius.setToolTip(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
+                        translate("SkyDomesDialog",
                         "Set the radius of the sky dome (mm)."))
+        #label_Position
+        self.ui.label_Position.setText(
+                        translate("SkyDomesDialog",
+                        "Position:"))
+        self.ui.label_Position.setToolTip(
+                        translate("SkyDomesDialog",
+                        "Adjust the center of the dome according to the project."))
         #lineEdit_Position_x
         self.ui.lineEdit_Position_x.setToolTip(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
-                        "Adjust the x position of the center of the \n"
+                        translate("SkyDomesDialog",
+                        "Adjust the x coordinate of the center of the \n"
                         "dome according to the project (mm)."))
         #lineEdit_Position_y
         self.ui.lineEdit_Position_y.setToolTip(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
-                        "Adjust the y position of the center of the \n"
+                        translate("SkyDomesDialog",
+                        "Adjust the y coordinate of the center of the \n"
                         "dome according to the project (mm)."))
         #lineEdit_Position_z
         self.ui.lineEdit_Position_z.setToolTip(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
-                        "Adjust the z position of the center of the \n"
+                        translate("SkyDomesDialog",
+                        "Adjust the z coordinate of the center of the \n"
                         "dome according to the project (mm)."))
         #groupBox_analysis_period
         self.ui.groupBox_analysis_period.setTitle(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
+                        translate("SkyDomesDialog",
                         "Analysis period"))
         self.ui.groupBox_analysis_period.setToolTip(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
-                        "An analysis period between two dates of the "
-                        "year and between certain hours."))
+                        translate("SkyDomesDialog",
+                        "Analysis period between two dates and \n"
+                        "hours of the year."))
         #label_Date_from
         self.ui.label_Date_from.setText(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
+                        translate("SkyDomesDialog",
                         "Date from:"))
         #dateEdit_date_from
         self.ui.dateEdit_date_from.setToolTip(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
+                        translate("SkyDomesDialog",
                         "Indicate the start date of the analysis period."))
         #label_date_to
         self.ui.label_date_to.setText(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
+                        translate("SkyDomesDialog",
                         "to:"))
         #dateEdit_date_to
         self.ui.dateEdit_date_to.setToolTip(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
+                        translate("SkyDomesDialog",
                         "Indicate the end date of the analysis period."))
         #label_Time_from
         self.ui.label_Time_from.setText(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
+                        translate("SkyDomesDialog",
                         "Time from:"))
         #spinBox_time_from
         self.ui.spinBox_time_from.setToolTip(
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
+                       translate("SkyDomesDialog",
                        "Indicate the start time of the analysis period."))
         #label_to
         self.ui.label_to.setText(
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
+                       translate("SkyDomesDialog",
                        "to:"))
         #spinBox_time_to
         self.ui.spinBox_time_to.setToolTip(
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
+                       translate("SkyDomesDialog",
                        "Indicate the end time of the analysis period."))
         #label_Timestep
         self.ui.label_Timestep.setText(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
+                        translate("SkyDomesDialog",
                         "Timestep"))
         #comboBox_timestep
         self.ui.comboBox_timestep.setToolTip(
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
+                       translate("SkyDomesDialog",
                        "Specify the number of times per hour \n"
                        "the linear interpolation of sub-hourly \n"
                        "values ​​will be performed.\n"
@@ -239,84 +253,84 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
                        ))
         #checkBox_leap_year
         self.ui.checkBox_leap_year.setText(
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
+                       translate("SkyDomesDialog",
                        "leap year"))
         self.ui.checkBox_leap_year.setToolTip(
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
+                       translate("SkyDomesDialog",
                        "Indicate whether the Analysis\n"
                        "Period represents a leap year."))
         #groupBox_sky_domes
         self.ui.groupBox_sky_domes.setTitle(
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
+                       translate("SkyDomesDialog",
                        "Sky Domes"))
         #label_model
         self.ui.label_model.setText(
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
+                       translate("SkyDomesDialog",
                        "Model:"))
         #comboBox_model
         self.ui.comboBox_model.setItemText(0,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
+                       translate("SkyDomesDialog",
                        "Tregenza"))
         self.ui.comboBox_model.setItemText(1,
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
+                       translate("SkyDomesDialog",
                        "Reinhart"))
         self.ui.comboBox_model.setToolTip(
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
+                       translate("SkyDomesDialog",
                        "Choose between the low-resolution model (Tregenza)\n"
                        "or high-resolution (Reinhart) one.\n"
                        "Remember that the Reinhart model can take a \n"
                        "considerable amount of time to calculate."))
         #label_Units
         self.ui.label_Units.setText(
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
+                       translate("SkyDomesDialog",
                        "Units:"))
         #comboBox_units
         from freecad.Solar.LBComponents import RESUL_01, RESUL_02
         self.ui.comboBox_units.setItemText(0, f"00 - {RESUL_01}")
         self.ui.comboBox_units.setItemText(1, f"01 - {RESUL_02}")
         self.ui.comboBox_units.setToolTip(
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
+                       translate("SkyDomesDialog",
                        "Indicate whether the sky dome should be plotted with \n"
                        "units of total Radiation (kWh/m²) or \n"
                        "average Irradiance (W/m²)."))
         #checkBox_direct_diffuse
         self.ui.checkBox_direct_diffuse.setText(
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
+                       translate("SkyDomesDialog",
                        "Direct and diffuse"))
         self.ui.checkBox_direct_diffuse.setToolTip(
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "Enable it to visualize the direct and diffuse domes values."))
+                       translate("SkyDomesDialog",
+                       "Enable it to visualize the direct and diffuse domes."))
         #checkBox_center_vectors
         self.ui.checkBox_center_vectors.setText(
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
+                       translate("SkyDomesDialog",
                        "Center vectors"))
         self.ui.checkBox_center_vectors.setToolTip(
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "Enable it to visualize the center vector of each dome patch."))
+                       translate("SkyDomesDialog",
+                       "Enable it to visualize the center vectors of each dome patch."))
         #label_5Transparency
         self.ui.label_5Transparency.setText(
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
+                       translate("SkyDomesDialog",
                        "Transparency"))
         #horizontalSlider_transparency
         self.ui.horizontalSlider_transparency.setToolTip(
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
+                       translate("SkyDomesDialog",
                        "Adjust the transparency of the Sky Domes."))
         #groupBox_Legend
         self.ui.groupBox_Legend.setTitle(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
-                        "Legend"))
+                        translate("SkyDomesDialog",
+                        "Legend Bar"))
         #label_color_count
         self.ui.label_color_count.setText(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
-                        "Color count"))
+                        translate("SkyDomesDialog",
+                        "Num. of colors:"))
         self.ui.label_color_count.setToolTip(
-                        QT_TRANSLATE_NOOP("SkyDomesDialog",
-                        "Indicate the legend number of colors \n"
+                        translate("SkyDomesDialog",
+                        "Indicate the number of colors of the legend bar \n"
                         "(default: 11)."))
         #label_color_set
         self.ui.label_color_set.setText(
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "Color set:"))
+                       translate("SkyDomesDialog",
+                       "Color palette:"))
         #comboBox_color_set
         from freecad.Solar.LBComponents import COLORS_00, COLORS_01, COLORS_02, COLORS_03
         from freecad.Solar.LBComponents import COLORS_04, COLORS_05, COLORS_06, COLORS_07
@@ -361,15 +375,12 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
         self.ui.comboBox_color_set.setItemText(31, f"31 - {COLORS_31}")
         self.ui.comboBox_color_set.setItemText(32, f"32 - {COLORS_32}")
         self.ui.comboBox_color_set.setToolTip(
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
-                       "Choose the legend color set."))
+                       translate("SkyDomesDialog",
+                       "Choose the legend bar color palette."))
         #pushButton_Apply
         self.ui.pushButton_Apply.setText(
-                       QT_TRANSLATE_NOOP("SkyDomesDialog",
+                       translate("SkyDomesDialog",
                        "Apply"))
-
-    def QT_TRANSLATE_NOOP(self, text):
-        return text
 
     # Slots
     def show_dialog(self):
@@ -390,7 +401,7 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
             parent = None
         fname, _ = QtWidgets.QFileDialog.getOpenFileName(
             parent,  # parent window
-            QT_TRANSLATE_NOOP("SkyDomesDialog", "Select epw file"),
+            translate("SkyDomesDialog", "Select epw file"),
             "",
             "EPW Files (*.epw);;All Files (*)"
         )
@@ -406,8 +417,8 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
         epw_path = self.ui.findChild(QtWidgets.QLineEdit, "lineEdit_epw_path").text()
         if not epw_path or not os.path.isfile(epw_path):
             QtWidgets.QMessageBox.warning(
-                self, QT_TRANSLATE_NOOP("SkyDomesDialog", "Warning"),
-                QT_TRANSLATE_NOOP("SkyDomesDialog",
+                self, translate("SkyDomesDialog", "Warning"),
+                translate("SkyDomesDialog",
                                   "Indicate a epw file before "
                                   "close the dialog Sky Domes!")
             )
@@ -474,10 +485,10 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
                     # epw file
                     if obj1.epw_path != "":
                         self.ui.lineEdit_epw_path.setText(obj1.epw_path)
-                        print("epw path get from sun properties")
+                        FreeCAD.Console.PrintMessage(translate("SkyDomesDialog",
+                            "epw path get from Sun Path" + '\n'))
                     else:
                         self.ui.lineEdit_epw_path.setText(SD.epw_path)
-                        print("epw path get from SD")
                     # North
                     self.ui.lineEdit_North_angle.setText((str(float(obj1.North))))
                     # radius and position
@@ -493,7 +504,7 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
             else:
                 # epw file
                 self.ui.lineEdit_epw_path.setText(SD.epw_path)
-                print("epw path get from SD")
+                #print("epw path get from SD")
                 # North
                 self.ui.lineEdit_North_angle.setText((str(float(SD.north))))
                 # radius and position
@@ -532,7 +543,7 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
             if idx3 >= 0:
                 self.ui.comboBox_color_set.setCurrentIndex(idx3)
         else:
-            FreeCAD.Console.PrintMessage('get properties: ' + QT_TRANSLATE_NOOP(
+            FreeCAD.Console.PrintMessage('get properties: ' + translate(
                 'SkyDomesDialog', 'There is no Sky Domes group!') + '\n')
 
     def save_to_propeties(self):
@@ -586,14 +597,14 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
                 SD.Group[2].Visibility = SD.direct_diffuse_domes
             SD.transparency = self.ui.horizontalSlider_transparency.value()
             # Legend
-            SD.leg_title = self.ui.comboBox_units.currentText()[5:-1]
+            SD.leg_title = self.ui.comboBox_units.currentText()[5:]
             SD.color_count = self.ui.spinBox_color_count.value()
             #SD.color_set = self.ui.comboBox_color_set.currentText()
             prefix2 = int(self.ui.comboBox_color_set.currentText()[0:2])
             color_set_list = SD.getEnumerationsOfProperty("color_set")
             SD.color_set = color_set_list[prefix2]
         else:
-            FreeCAD.Console.PrintMessage('save to properties: ' + QT_TRANSLATE_NOOP(
+            FreeCAD.Console.PrintMessage('save to properties: ' + translate(
                 'SkyDomesDialog', 'There is no Sky Domes group!') + '\n')
         FreeCAD.ActiveDocument.recompute()
 
@@ -693,7 +704,8 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
             print(f"dif_forms: {dif_forms}, dif_values: {dif_values}")
             if dif_forms is True or dif_values is True:
                 SkyDomes.modify_sky_domes(forms = dif_forms, values = dif_values)
-                print("updated Sky Domes data!")
+                FreeCAD.Console.PrintMessage(translate("SkyDomesDialog",
+                                                       "Sky Domes was updated!\n"))
         else:
             print("Compare sky domes data: Can not get data from Sky Domes!")
 

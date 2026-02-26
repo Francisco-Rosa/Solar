@@ -24,11 +24,16 @@
 
 """A sun black and white shadow module with independent widget window"""
 
+import os
 import OfflineRenderingUtils
 import FreeCAD
 import FreeCADGui as Gui
 from PySide import QtWidgets
-from PySide.QtCore import QT_TRANSLATE_NOOP
+
+translate = FreeCAD.Qt.translate
+
+LanguagePath = os.path.dirname(__file__) + '/translations'
+Gui.addLanguagePath(LanguagePath)
 
 LIGHT = None
 VIEW = None
@@ -112,7 +117,7 @@ def show_warning_dialog():
 
     msg = QtWidgets.QMessageBox()
     msg.setWindowTitle("BWShadow Save Warning")
-    msg.setText(QT_TRANSLATE_NOOP('SunShadowBW',
+    msg.setText(translate('SunShadowBW',
         "This feature has not been fully tested yet! \n"
         "To prevent issues, save your file before using it. \n"
         "For transparent surfaces, it is recommended \n"
