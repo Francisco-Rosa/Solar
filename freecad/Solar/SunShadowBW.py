@@ -24,11 +24,16 @@
 
 """A sun black and white shadow module with independent widget window"""
 
+import os
 import OfflineRenderingUtils
 import FreeCAD
 import FreeCADGui as Gui
 from PySide import QtWidgets
-from PySide.QtCore import QT_TRANSLATE_NOOP
+
+translate = FreeCAD.Qt.translate
+
+LanguagePath = os.path.dirname(__file__) + '/translations'
+Gui.addLanguagePath(LanguagePath)
 
 LIGHT = None
 VIEW = None
@@ -55,8 +60,8 @@ def create_shadows_black_white():
         if view is None:
             QtWidgets.QMessageBox.warning(
                 None, "No 3D View",
-                "No active 3D view found. "
-                "Please select or open a 3D view "
+                "No active 3D view found.\n"
+                "Please select or open a 3D view \n"
                 "for your document and try again."
                 )
             return
@@ -112,12 +117,12 @@ def show_warning_dialog():
 
     msg = QtWidgets.QMessageBox()
     msg.setWindowTitle("BWShadow Save Warning")
-    msg.setText(QT_TRANSLATE_NOOP('SunShadowBW',
-        "This feature has not been fully tested yet! \n"
-        "To prevent issues, save your file before opening it. \n"
+    msg.setText(translate('SunShadowBW',
+        "This feature has not been fully tested yet!\n"
+        "To prevent issues, save your file before using it.\n"
         "For transparent surfaces, it is recommended \n"
-        "to make them invisible before generating these shadows. \n"
-        "Avoid spherical or complex surfaces. \n"
+        "to make them invisible before generating the shadows.\n"
+        "Avoid spherical or complex surfaces.\n"
         "\n"
         "Do you want to generate shadows now?"
     ))

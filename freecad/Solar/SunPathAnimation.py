@@ -29,6 +29,11 @@ import FreeCAD
 import FreeCADGui as Gui
 from PySide.QtCore import QT_TRANSLATE_NOOP
 
+translate = FreeCAD.Qt.translate
+
+LanguagePath = os.path.dirname(__file__) + '/translations'
+Gui.addLanguagePath(LanguagePath)
+
 import freecad.Solar.SunProperties as Properties
 
 Gui.addLanguagePath(Properties.LanguagePath)
@@ -43,11 +48,9 @@ class StartSunPathAnimation:
     def GetResources(self):
         __dir__ = os.path.dirname(__file__)
         return {'Pixmap': __dir__ + '/icons/StartSunPathAnimationIcon.svg',
-                'MenuText': QT_TRANSLATE_NOOP(
-                'SunPathAnimation', 'StartSunPathAnimation'),
-                'ToolTip': QT_TRANSLATE_NOOP(
-                'SunPathAnimation', 'Start a sun path animation. \n'
-                'To use it, open the SunDialog and enable Sun path animation. \n'
+                'MenuText': QT_TRANSLATE_NOOP('StartSunPathAnimation', 'Start Sun Path Animation'),
+                'ToolTip': QT_TRANSLATE_NOOP('StartSunPathAnimation', 'Starts a sun path animation.\n'
+                'To use it, open the dialog and enable Sun Path animation.\n'
                 'To view shadow projection, choose the image other than None.\n'
                 'Click this button to get started its animation')}
 
@@ -77,12 +80,12 @@ class StopSunPathAnimation:
     def GetResources(self):
         __dir__ = os.path.dirname(__file__)
         return {'Pixmap': __dir__ + '/icons/StopSunPathAnimationIcon.svg',
-                'MenuText': QT_TRANSLATE_NOOP(
-                'SunPathAnimation', 'StopSunPathAnimation'),
-                'ToolTip': QT_TRANSLATE_NOOP(
-                'SunPathAnimation', 'Stop a sun path animation. '
-                'After the sun path animation started, '
-                'click this button to stop it.')}
+                'MenuText': QT_TRANSLATE_NOOP('StopSunPathAnimation',
+                                            'Stop SunPath Animation'),
+                'ToolTip': QT_TRANSLATE_NOOP('StopSunPathAnimation',
+                                        'Stops a sun path animation. '
+                                        'After the sun path animation started, '
+                                        'click this button to stop it.')}
 
     def IsActive(self):
         if Gui.ActiveDocument:
@@ -113,12 +116,12 @@ def modify_anim_indicator(animation = False):
     global ANIMATION
     if animation is False:
         ANIMATION = False
-        FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP(
-            'SunPathAnimation', 'SunPathAnimation, Animation off.') + '\n')
+        FreeCAD.Console.PrintMessage(translate(
+            'SunPathAnimation', 'Sun Path animation, animation off.') + '\n')
     if animation is True:
         ANIMATION = True
-        FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP(
-            'SunPathAnimation', 'SunPathAnimation, Animation on.') + '\n')
+        FreeCAD.Console.PrintMessage(translate(
+            'SunPathAnimation', 'Sun Path animation, animation on.') + '\n')
     FreeCAD.ActiveDocument.recompute()
 
 def calculate_frames():
@@ -134,7 +137,7 @@ def calculate_frames():
     if interv != 0:
         obj.Frames = int(time_range / interv)
     else:
-        FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP(
+        FreeCAD.Console.PrintMessage(translate(
             'SunPathAnimation', 'Interval must be non-zero!') + '\n')
 
 def sun_path_animation():
@@ -147,14 +150,13 @@ def sun_path_animation():
     pause = 1/fps
     obj.Hour = obj.start_hour
     obj.Min = obj.start_min
-    #if obj.SunPathAnimation is True and obj.Image_from == "03 - Render 3D view":
     if obj.SunPathAnimation is True and obj.Image_from[0:2] == "03":
         Gui.runCommand('StartRecordRender',0)
         CL = FreeCAD.ActiveDocument.Clapperboard
         if CL.Frame_04OutputPath == "":
-            FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP(
+            FreeCAD.Console.PrintMessage(translate(
                 "SunPathAnimation", "A path to save images is required! \n"
-                "Click stop animation to start again.") + '\n')
+                "Click 'Stop Animation' to start again.") + "\n")
             return
     Properties.get_sun_position() # First step
     Gui.updateGui()
@@ -201,9 +203,9 @@ def set_render_animation():
         Gui.runCommand('EnableMovieCamera',0)
         Gui.Selection.clearSelection()
     except Exception:
-        FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP(
+        FreeCAD.Console.PrintMessage(translate(
                         "SunPathAnimation",
-                        "No MovieCamera found!") + '\n')
+                        "No MovieCamera found!") + "\n")
     # Clapperboard
     try:
         CL = FreeCAD.ActiveDocument.Clapperboard
@@ -214,14 +216,14 @@ def set_render_animation():
         Gui.runCommand('EnableMovieClapperboard',0)
         Gui.runCommand('PlayBackwardMovieAnimation',0)
         FreeCAD.ActiveDocument.recompute()
-        FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP(
+        FreeCAD.Console.PrintMessage(translate(
                         "SunPathAnimation",
                         "Render animation was set! \n"
-                        "Click play to start the animation.") + '\n')
+                        "Click play to start the animation.") + "\n")
     except:
-        FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP(
+        FreeCAD.Console.PrintMessage(translate(
                         "SunPathAnimation",
-                        "No Clapperboard found!") + '\n')
+                        "No Clapperboard found!") + "\n")
 
 #---------------------------------------------------
 

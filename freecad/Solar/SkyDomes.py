@@ -34,6 +34,11 @@ from ladybug.analysisperiod import AnalysisPeriod
 import freecad.Solar.SkyDomesDialog as SkyDomesDialog
 import freecad.Solar.LBComponents as LBComponents
 
+translate = FreeCAD.Qt.translate
+
+LanguagePath = os.path.dirname(__file__) + '/translations'
+Gui.addLanguagePath(LanguagePath)
+
 #=================================================
 # A. Main classes
 #=================================================
@@ -42,7 +47,7 @@ SD_NEW = False
 
 class SkyDomes:
 
-    """Visualize and configure Sky domes in FreeCAD's 3D view."""
+    """Visualize and configure Sky Domes in FreeCAD's 3D view."""
 
     def __init__(self,obj):
         obj.Proxy = self
@@ -50,7 +55,7 @@ class SkyDomes:
 
     def setProperties(self,obj):
 
-        """Gives the object properties to sky domes."""
+        """Gives the object properties to Sky Domes."""
 
         pl = obj.PropertiesList
         # 01 epw file and city
@@ -86,7 +91,7 @@ class SkyDomes:
             obj.addProperty("App::PropertyEnumeration",
                             "units", "03_Units",
                             QT_TRANSLATE_NOOP("App::Property",
-                            "Sky domes units")
+                            "Sky Domes units")
                             ).units = (f"00 - {RESUL_01}",
                                        f"01 - {RESUL_02}",
                             )
@@ -101,19 +106,19 @@ class SkyDomes:
             obj.addProperty("App::PropertyFloatList",
                             "total_values", "04_SkyDomes",
                             QT_TRANSLATE_NOOP("App::Property",
-                            "Sky dome total values")
+                            "Total sky dome values")
                             ).total_values = []
         if not "direct_values" in pl:
             obj.addProperty("App::PropertyFloatList",
                             "direct_values", "04_SkyDomes",
                             QT_TRANSLATE_NOOP("App::Property",
-                            "Sky dome direct values")
+                            "Direct sky dome values")
                             ).direct_values = []
         if not "diffuse_values" in pl:
             obj.addProperty("App::PropertyFloatList",
                             "diffuse_values", "04_SkyDomes",
                             QT_TRANSLATE_NOOP("App::Property",
-                            "sky dome diffuse values")
+                            "Diffuse sky dome values")
                             ).diffuse_values = []
         if not "center_vectors" in pl:
             obj.addProperty("App::PropertyBool",
@@ -140,14 +145,15 @@ class SkyDomes:
             obj.addProperty("App::PropertyLength",
                             "radius", "06_Radius",
                             QT_TRANSLATE_NOOP("App::Property",
-                            "Sky domes radius (mm)")
+                            "Sky Domes radius (mm)")
                             ).radius = 10000
         # 07 Position
         if not "position" in pl:
             obj.addProperty("App::PropertyVector",
                             "position", "07_Position",
                             QT_TRANSLATE_NOOP("App::Property",
-                            "Center position of the sky dome total in mm (x, y, z)")
+                            "Center position of the total sky dome "
+                            "in mm (x, y, z)")
                             ).position = (0.0, 0.0, 0.0)
         # 08 Analysis period
         if not "start_year" in pl:
@@ -216,7 +222,7 @@ class SkyDomes:
             obj.addProperty("App::PropertyPercent",
                             "transparency", "08_Analysis_period",
                             QT_TRANSLATE_NOOP("App::Property",
-                            "Sky domes transparency")
+                            "Sky Domes transparency")
                             ).transparency = 20
         # 09 Legend
         if not "leg_title" in pl:
@@ -230,7 +236,8 @@ class SkyDomes:
             obj.addProperty("App::PropertyVector",
                             "leg_position", "09_Legend",
                             QT_TRANSLATE_NOOP("App::Property",
-                            "Base left position of legend bar in mm (x, y, z).\n"
+                            "Base left position of legend bar "
+                            "in mm (x, y, z).\n"
                             "It is read only.")
                             ).leg_position = (0.0, 0.0, 0.0)
         if not "leg_width" in pl:
@@ -244,7 +251,8 @@ class SkyDomes:
             obj.addProperty("App::PropertyInteger",
                             "color_count", "09_Legend",
                             QT_TRANSLATE_NOOP("App::Property",
-                            "Number of segments of legend bar (default = 11).")
+                            "Number of segments of legend bar "
+                            "(default = 11).")
                             ).color_count = 11
         if not "color_set" in pl:
             from freecad.Solar.LBComponents import COLORS_00, COLORS_01, COLORS_02, COLORS_03
@@ -298,7 +306,7 @@ class SkyDomes:
 
 class SkyDomesViewProvider:
 
-    """A View Provider for the Skydomes object"""
+    """A View Provider for the Sky Domes object"""
 
     def __init__(self, obj):
         obj.Proxy = self
@@ -317,11 +325,11 @@ class CreateSkyDomes:
     def GetResources(self):
         __dir__ = os.path.dirname(__file__)
         return {'Pixmap': __dir__ + '/icons/CreateSkyDomesIcon.svg',
-                'MenuText': QT_TRANSLATE_NOOP(
-                'SkyDomes', 'CreateSkyDomes'),
-                'ToolTip': QT_TRANSLATE_NOOP(
-                'SkyDomes', 'Create Sky Domes. \n'
-                'Open the dialog and configure its data.')}
+                'MenuText': QT_TRANSLATE_NOOP('CreateSkyDomes',
+                                              'Create Sky Domes'),
+                'ToolTip': QT_TRANSLATE_NOOP('CreateSkyDomes',
+                'Click this button to open the dialog '
+                'and configure the data for new Sky Domes.')}
 
     def IsActive(self):
         if Gui.ActiveDocument:
@@ -334,7 +342,7 @@ class CreateSkyDomes:
 
 class ModifySkyDomes:
 
-    """Modify a set of sky domes."""
+    """Modify a set of Sky Domes."""
 
     def QT_TRANSLATE_NOOP(self, text):
         return text
@@ -342,19 +350,17 @@ class ModifySkyDomes:
     def GetResources(self):
         __dir__ = os.path.dirname(__file__)
         return {'Pixmap': __dir__ + '/icons/ModifySkyDomesIcon.svg',
-                'MenuText': QT_TRANSLATE_NOOP(
-                           'SkyDomes', 'ModifySkyDomes'),
-                           'ToolTip': QT_TRANSLATE_NOOP(
-                                      'SkyDomes', 'Modify Sky Domes. \n'
-                                      'Select a SkyDomes group, click this button to \n'
-                                      'open the dialog and modify its configuration. \n'
-                                      'Please note, this only works if the original \n'
-                                      'group (folder) structure is preserved! \n')}
+                'MenuText': QT_TRANSLATE_NOOP('ModifySkyDomes', 'Modify Sky Domes'),
+                           'ToolTip': QT_TRANSLATE_NOOP('ModifySkyDomes',
+                            'Select a Sky Domes group, click this button to \n'
+                            'open the dialog and modify its configuration. \n'
+                            'Please note, this only works if the original \n'
+                            'group structure is preserved!')}
 
     def IsActive(self):
         if Gui.ActiveDocument:
             try:
-                FreeCAD.ActiveDocument.SkyDomes
+                FreeCAD.ActiveDocument.findObjects(Name = "SkyDomes")[0].Name
                 return True
             except:
                 pass
@@ -366,7 +372,7 @@ class ModifySkyDomes:
 
 class DeleteSkyDomes:
 
-    """Delete a set of sky domes."""
+    """Delete a set of Sky Domes."""
 
     def QT_TRANSLATE_NOOP(self, text):
         return text
@@ -374,17 +380,15 @@ class DeleteSkyDomes:
     def GetResources(self):
         __dir__ = os.path.dirname(__file__)
         return {'Pixmap': __dir__ + '/icons/DeleteSkyDomesIcon.svg',
-                'MenuText': QT_TRANSLATE_NOOP(
-                            'SkyDomes', 'DeleteSkyDomes'),
-                             'ToolTip': QT_TRANSLATE_NOOP(
-                                        'SkyDomes', 'Delete Sky Domes. \n'
-                                        'Select a SkyDomes group to delete.\n'
-                                        'Be careful, you will not be able to \n'
-                                        'undo this action.!')}
+                'MenuText': QT_TRANSLATE_NOOP('DeleteSkyDomes', 'Delete Sky Domes'),
+                             'ToolTip': QT_TRANSLATE_NOOP('DeleteSkyDomes',
+                             'Select a Sky Domes group to delete.\n'
+                             'Be careful, you will not be able to \n'
+                             'undo this action!')}
     def IsActive(self):
         if Gui.ActiveDocument:
             try:
-                FreeCAD.ActiveDocument.SkyDomes
+                FreeCAD.ActiveDocument.findObjects(Name = "SkyDomes")[0].Name
                 return True
             except:
                 pass
@@ -395,7 +399,7 @@ class DeleteSkyDomes:
 
 def activated_create_sky_domes(self):
 
-    """Create the SkyDomes"""
+    """Create the Sky Domes"""
 
     global SD
     global SD_NEW
@@ -405,13 +409,13 @@ def activated_create_sky_domes(self):
     SkyDomes(folder)
     SkyDomesViewProvider(folder.ViewObject)
     SD = folder
-    print(f"create sky domes: SD = {SD.Name}")
+    #print(f"create sky domes: SD = {SD.Name}")
     SD_NEW = True
     SkyDomesDialog.open_sky_domes_configuration()
 
 def activated_modify_sky_domes(self):
 
-    """Modify the SkyDomes selected"""
+    """Modify the Sky Domes selected"""
 
     global SD
     global SD_NEW
@@ -421,12 +425,13 @@ def activated_modify_sky_domes(self):
         print(f"activated modify sky domes: SD = {SD.Name}")
         SkyDomesDialog.open_sky_domes_configuration()
     else:
-        FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SkyDomes",
-            "To modify a set of sky domes, first you must select one!" + '\n'))
+        FreeCAD.Console.PrintMessage(translate("SkyDomes",
+            "To modify a set of Sky Domes, "
+            "first you must select one!") + '\n')
 
 def activated_delete_sky_domes(self):
 
-    """Delete the SkyDomes selected"""
+    """Delete the Sky Domes selected"""
 
     try:
         selection = select_sky_domes()
@@ -434,15 +439,17 @@ def activated_delete_sky_domes(self):
             print(f"activated delete sky domes: SD = {selection.Name}")
             delete_sky_domes(selection)
         else:
-            FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SkyDomes",
-             "To delete a set of sky domes, first you must select one!" + '\n'))
+            FreeCAD.Console.PrintMessage(translate("SkyDomes",
+             "To delete a set of Sky Domes, "
+             "first you must select one!") + '\n')
     except Exception:
-        FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SkyDomes",
-            "To delete a set of sky domes, first you must select one!" + '\n'))
+        FreeCAD.Console.PrintMessage(translate("SkyDomes",
+            "To delete a set of Sky Domes, "
+            "first you must select one!") + '\n')
 
 def select_sky_domes():
 
-    """Select a SkyDomes"""
+    """Select a Sky Domes"""
 
     SD = None
     selection = []
@@ -453,11 +460,11 @@ def select_sky_domes():
             SD = selection[0]
             return SD
         else:
-            FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SkyDomes",
-                "Warning: The object selected is not a SkyDomes!" + '\n'))
+            FreeCAD.Console.PrintMessage(translate("SkyDomes",
+                "Warning: The objects selected are not Sky Domes!") + '\n')
     except:
-        FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SkyDomes",
-                              "There is no selection!" + '\n'))
+        FreeCAD.Console.PrintMessage(translate("SkyDomes",
+                              "There is no selection!") + '\n')
 
 #=================================================
 # B. Sky domes
@@ -469,7 +476,7 @@ def get_sky_dome_forms(center_dome = None,
                         sky_dome_model = ""
                         ):
 
-    """Get sky domes geometry"""
+    """Get Sky Domes geometry"""
 
     doc = FreeCAD.ActiveDocument
     TREGENZA_PATCHES_PER_ROW = (30, 30, 24, 24, 18, 12, 6)
@@ -496,7 +503,7 @@ def get_sky_dome_forms(center_dome = None,
     except Exception:
         dome_const_group = doc.addObject('App::DocumentObjectGroup',
                                          'SD_Construction_Group')
-        dome_const_group.Label = QT_TRANSLATE_NOOP('SkyDomes',
+        dome_const_group.Label = translate('SkyDomes',
                                          'SD Constructions Group')
     if sky_dome_model == "Tregenza":
         try:
@@ -507,7 +514,7 @@ def get_sky_dome_forms(center_dome = None,
         except Exception:
             dome_model_group = doc.addObject('App::DocumentObjectGroup',
                                              'Model_Tregenza')
-            dome_model_group.Label = QT_TRANSLATE_NOOP('SkyDomes',
+            dome_model_group.Label = translate('SkyDomes',
                                              'Model Tregenza')
             doc.getObject(dome_const_group.Name).addObject(dome_model_group)
             create_surfaces = True
@@ -520,7 +527,7 @@ def get_sky_dome_forms(center_dome = None,
         except Exception:
             dome_model_group = doc.addObject('App::DocumentObjectGroup',
                                              'Model_Reinhart')
-            dome_model_group.Label = QT_TRANSLATE_NOOP('SkyDomes',
+            dome_model_group.Label = translate('SkyDomes',
                                              'Model Reinhart')
             doc.getObject(dome_const_group.Name).addObject(dome_model_group)
             create_surfaces = True
@@ -635,15 +642,15 @@ def get_sky_dome_forms(center_dome = None,
             dome = FreeCAD.activeDocument().addObject(
                                            "Part::Compound",
                                            "SD_Tregenza")
-            dome.Label = QT_TRANSLATE_NOOP("SkyDomes",
-                                           "SD Tregenza")
+            dome.Label = translate("SkyDomes",
+                                   "SD Tregenza")
             dome.Links = surfaces
         if sky_dome_model == "Reinhart":
             dome = FreeCAD.activeDocument().addObject(
                                            "Part::Compound",
                                            "SD_Reinhart")
-            dome.Label = QT_TRANSLATE_NOOP("SkyDomes",
-                                           "SD Reinhart")
+            dome.Label = translate("SkyDomes",
+                                   "SD Reinhart")
             dome.Links = surfaces
         doc.getObject(dome_model_group.Name).addObject(dome)
         # Group visibility
@@ -656,12 +663,12 @@ def get_sky_dome_forms(center_dome = None,
     # total values - clone1
     # total group
     dome_total_group = doc.addObject("App::DocumentObjectGroup",
-                                           "Total_Sky_Dome_Group")
-    dome_total_group.Label = QT_TRANSLATE_NOOP("SkyDomes",
+                                     "Total_Sky_Dome_Group")
+    dome_total_group.Label = translate("SkyDomes",
                                            "Total Sky Dome Group")
     # total values - clone1
     dome_total = LBComponents.get_analysis_clone(compound = dome_compound,
-                           obj_label = QT_TRANSLATE_NOOP(
+                           obj_label = translate(
                                             "SkyDomes",
                                             "Total Sky Dome"),
                            analysis_group = dome_total_group
@@ -675,12 +682,12 @@ def get_sky_dome_forms(center_dome = None,
     # direct values - clone2
     # direct group
     dome_direct_group = doc.addObject('App::DocumentObjectGroup',
-                                            'Direct_Sky_Dome_Group')
-    dome_direct_group.Label = QT_TRANSLATE_NOOP("SkyDomes",
-                                            "Direct Sky Dome Group")
+                                      'Direct_Sky_Dome_Group')
+    dome_direct_group.Label = translate("SkyDomes",
+                                        "Direct Sky Dome Group")
     # direct values - clone2
     dome_direct = LBComponents.get_analysis_clone(compound = dome_compound,
-                           obj_label = QT_TRANSLATE_NOOP(
+                           obj_label = translate(
                                             "SkyDomes",
                                             "Direct Sky Dome"),
                            analysis_group = dome_direct_group
@@ -695,11 +702,11 @@ def get_sky_dome_forms(center_dome = None,
     # diffuse values - clone3
     dome_diffuse_group = doc.addObject('App::DocumentObjectGroup',
                                        'Diffuse_Sky_Dome_Group')
-    dome_diffuse_group.Label = QT_TRANSLATE_NOOP("SkyDomes",
-                                                 "Diffuse Sky Dome Group")
+    dome_diffuse_group.Label = translate("SkyDomes",
+                                         "Diffuse Sky Dome Group")
     # diffuse values - clone3
     dome_diffuse = LBComponents.get_analysis_clone(compound = dome_compound,
-                           obj_label = QT_TRANSLATE_NOOP(
+                           obj_label = translate(
                                             "SkyDomes",
                                             "Diffuse Sky Dome"),
                            analysis_group = dome_diffuse_group
@@ -728,7 +735,7 @@ def modify_sky_dome_forms(sky_domes_group = None,
                            center_vectors = False
                            ):
 
-    """Modify sky domes geometry"""
+    """Modify Sky Domes geometry"""
 
     # Get initial objects and necessary data
     doc = FreeCAD.ActiveDocument
@@ -832,13 +839,13 @@ def get_center_vectors(center = (0.0, 0.0, 0.0),
     if model == "Tregenza":
         dome_vectors_group = doc.addObject('App::DocumentObjectGroup',
                                            'Vectors_TR')
-        dome_vectors_group.Label = QT_TRANSLATE_NOOP("SkyDomes",
-                                                     "Vectors TR")
+        dome_vectors_group.Label = translate("SkyDomes",
+                                             "Vectors TR")
     if model == "Reinhart":
         dome_vectors_group = doc.addObject('App::DocumentObjectGroup',
                                            'Vectors_RE')
-        dome_vectors_group.Label = QT_TRANSLATE_NOOP("SkyDomes",
-                                                     "Vectors RE")
+        dome_vectors_group.Label = translate("SkyDomes",
+                                             "Vectors RE")
     #modify scale and position
     for i in range(len(vector_values)):
         point = Draft.make_point(
@@ -900,7 +907,7 @@ def manage_sky_dome_groups(domes_group = None,
                            direct_diffuse_domes = False
                            ):
 
-    """Manage the sky domes groups"""
+    """Manage the Sky Domes groups"""
 
     doc = FreeCAD.ActiveDocument
     # Total compass group to total sky dome group
@@ -939,25 +946,25 @@ def manage_sky_dome_groups(domes_group = None,
 
 def create_sky_domes():
 
-    """Create a complete sky domes set"""
+    """Create a complete Sky Domes set"""
 
     if SD is not None:
         pass
     else:
-        FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SkyDomes",
-            "Create sky domes: Could not get sky domes properties!") + "\n")
+        FreeCAD.Console.PrintMessage("create sky domes: " + translate("SkyDomes",
+            "Could not get Sky Domes properties!") + "\n")
         return
     global SD_NEW
     # epw_path
     if SD.epw_path != "":
         epw_path = SD.epw_path
         if not epw_path or not os.path.isfile(epw_path):
-            FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SkyDomes",
-                "To create sky domes you must provide a valid epw file!") + '\n')
+            FreeCAD.Console.PrintMessage(translate("SkyDomes",
+                "To create Sky Domes you must provide a valid epw file!") + '\n')
             return
     else:
-        FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SkyDomes",
-            "To create sky domes, you need to indicate an epw file!" + '\n'))
+        FreeCAD.Console.PrintMessage(translate("SkyDomes",
+            "To create Sky Domes, you need to indicate an epw file!") + '\n')
         return
     #period
     period = None
@@ -972,7 +979,7 @@ def create_sky_domes():
                             SD.leap_year
                             )
     # Getting sky domes
-    print ("getting sky domes...")
+    print ("getting Sky Domes...")
     sky_domes = get_sky_dome_forms(center_dome = SD.position,
                               radius = float(SD.radius),
                               north = float(SD.north),
@@ -990,7 +997,7 @@ def create_sky_domes():
                                deltx = None
                                )
     # Getting values
-    print ("getting sky domes values...")
+    print ("getting Sky Domes values...")
     high_density = False
     if SD.model == "Reinhart":
         high_density = True
@@ -1086,17 +1093,16 @@ def create_sky_domes():
                           direct_values = SD.direct_values,
                           diffuse_values = SD.diffuse_values,
                           leg_colors = color_rgb_leg,
-                          label = QT_TRANSLATE_NOOP("SkyDomes",
-                                                    "SkyDomes {} {}").format(
+                          label = translate("SkyDomes",
+                                                    "Sky Domes {} {}").format(
                                                            SD.city, SD.units),
                           transparency = SD.transparency
                           )
-    FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP(
+    FreeCAD.Console.PrintMessage(translate(
                                 'SkyDomes',
-                                'Sky domes were created! To configure it, \n'
-                                'do not modify the their original structure \n'
-                                'of groups (folders)! \n'
-                                'Make the adjustments in its properties window.'
+                                'Sky Domes created! \n'
+                                'Do not modify their original structure of groups \n'
+                                'to make possible further adjustments.'
                                  ) + '\n')
     SD_NEW = False
     Gui.SendMsgToActiveView("ViewFit")
@@ -1107,25 +1113,25 @@ def create_sky_domes():
 
 def modify_sky_domes(forms = False, values = False):
 
-    """Modify a complete sky domes set"""
+    """Modify a complete Sky Domes set"""
 
     if SD is not None:
         pass
     else:
-        FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SkyDomes",
-            "Modify sky domes: Could not get sky domes properties!") + "\n")
+        FreeCAD.Console.PrintMessage("modify sky domes: " + translate("SkyDomes",
+            "Sky Domes properties not found!") + "\n")
         return
     global SD_NEW
     # epw_path
     if SD.epw_path != "":
         epw_path = SD.epw_path
         if not epw_path or not os.path.isfile(epw_path):
-            FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SkyDomes",
-                "To create sky domes you must provide a valid epw file!") + '\n')
+            FreeCAD.Console.PrintMessage(translate("SkyDomes",
+                "To create Sky Domes you must provide a valid epw file!") + '\n')
             return
     else:
-        FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SkyDomes",
-            "To create sky domes, you need to indicate an epw file!" + '\n'))
+        FreeCAD.Console.PrintMessage(translate("SkyDomes",
+            "To create Sky Domes, you need to indicate an epw file!") + '\n')
         return
     #period
     period = None
@@ -1152,14 +1158,14 @@ def modify_sky_domes(forms = False, values = False):
 
 def update_forms():
 
-    """Update a complete sky domes set geometry"""
+    """Update a complete Sky Domes set geometry"""
 
     doc = FreeCAD.ActiveDocument
     try:
         SD != None
     except Exception as e:
-        FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SkyDomes",
-            f"Update forms: Could not get Sky domes:\n{e}") + '\n')
+        FreeCAD.Console.PrintMessage("update forms: " + translate("SkyDomes",
+            "Could not get Sky Domes:\n{}").format(e) + '\n')
         return
     modify_sky_dome_forms(sky_domes_group = SD,
                            center_dome = SD.position,
@@ -1242,13 +1248,13 @@ def update_forms():
 
 def update_values(epw_path = None, period = None):
 
-    """Update a complete sky domes set values"""
+    """Update a complete Sky Domes set values"""
 
     try:
         SD is not None
     except Exception as e:
-        FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SkyDomes",
-            f"Update values: Could not get Sky domes:\n{e}") + '\n')
+        FreeCAD.Console.PrintMessage("update values: " + translate("SkyDomes",
+            f"Could not get Sky Domes:\n{e}") + '\n')
         return
     high_density = False
     if SD.model == "Reinhart":
@@ -1288,7 +1294,7 @@ def update_values(epw_path = None, period = None):
                               color_leg_set = int(SD.color_set[0:2])
                               )
     color_rgb_leg = legend[1]
-    print ("modifying sky domes forms...")
+    print ("modifying Sky Domes forms...")
     modify_sky_dome_forms(sky_domes_group = SD,
                            center_dome = SD.position,
                            radius = float(SD.radius),
@@ -1297,14 +1303,14 @@ def update_values(epw_path = None, period = None):
                            transparency = SD.transparency,
                            center_vectors = SD.center_vectors
                            )
-    print ("modifying sky domes values...")
+    print ("modifying Sky Domes values...")
     apply_sky_dome_values(sky_domes_group = SD,
                           total_values = SD.total_values,
                           direct_values = SD.direct_values,
                           diffuse_values = SD.diffuse_values,
                           leg_colors = color_rgb_leg,
-                          label = QT_TRANSLATE_NOOP("SkyDomes",
-                          "SkyDomes {} {}").format(
+                          label = translate("SkyDomes",
+                          "Sky Domes {} {}").format(
                                  SD.city, SD.units),
                           transparency = SD.transparency
                           )
@@ -1333,16 +1339,17 @@ def update_values(epw_path = None, period = None):
 
 def delete_sky_domes(sky_domes = None):
 
-    """Delete a complete sky domes"""
+    """Delete a complete Sky Domes"""
 
     def show_warning_dialog():
         msg = QtWidgets.QMessageBox()
         msg.setWindowTitle("Delete Warning")
-        msg.setText(QT_TRANSLATE_NOOP("SkyDomes",
-            "This will delete all main objects from the selected Sky Domes, \n"
+        msg.setText(translate("SkyDomes",
+            "This will delete all main objects \n"
+            "from the selected Sky Domes, \n"
             "and you won't be able to undo it. \n"
             "\n"
-            "Are you sure you want to delete these Sky Domes? \n"
+            "Are you sure you want to delete these Sky Domes?\n"
         ))
         msg.setIcon(QtWidgets.QMessageBox.Warning)
         msg.setStandardButtons(

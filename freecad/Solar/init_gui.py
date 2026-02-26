@@ -39,7 +39,7 @@ class Solar(Gui.Workbench):
 
     MenuText = translate("InitGui", "Solar")
     ToolTip = translate("InitGui",
-                        "Workbench to manage solar analysis and configurations")
+                        "Workbench for solar analysis and configuration.")
     from .SunProperties import IconPath
     Icon = os.path.join(IconPath, "Logo.svg")
 

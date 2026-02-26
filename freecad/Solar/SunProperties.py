@@ -35,6 +35,8 @@ IconPath = os.path.join(_dir, 'icons')
 LanguagePath = os.path.join(_dir, 'translations')
 Gui.addLanguagePath(LanguagePath)
 
+translate = FreeCAD.Qt.translate
+
 try:
     for root, dirs, files in os.walk(os.path.join(FreeCAD.getUserAppDataDir(),
                                      "AdditionalPythonPackages")):
@@ -129,7 +131,7 @@ class SunProperties:
             "TimeZone", "02_Location",
             QT_TRANSLATE_NOOP(
                 "App::Property",
-                "UTC location"
+                "Time zone"
                 )
             ).TimeZone = -3
         # 03 North
@@ -158,7 +160,7 @@ class SunProperties:
             "DaylightSaving", "04_Date_and_time",
             QT_TRANSLATE_NOOP(
                 "App::Property",
-                "True, for daylight saving time to be applied."
+                "Daylight saving."
                 )
             ).DaylightSaving = False
         if not "Hour" in pl:
@@ -259,8 +261,7 @@ class SunProperties:
             "SunLightDiagramConfig", "06_Sun_light_diagram_config",
             QT_TRANSLATE_NOOP(
                 "App::Property",
-                "True, for configuring "
-                "the sun light and/or diagram"
+                "Configure the sun light and/or diagram"
                 )
             ).SunLightDiagramConfig = False
         if not "Distance" in pl:
@@ -305,7 +306,7 @@ class SunProperties:
             "SunLightRepresentation", "06_Sun_light_diagram_config",
             QT_TRANSLATE_NOOP(
                 "App::Property",
-                "True, for sun light representation to be visibled"
+                "Sunlight representation"
                 )
             ).SunLightRepresentation = False
         if not "RayRepresentation" in pl:
@@ -314,7 +315,7 @@ class SunProperties:
             "RayRepresentation", "06_Sun_light_diagram_config",
             QT_TRANSLATE_NOOP(
                 "App::Property",
-                "True, for light ray representation to be visible"
+                "Light ray representation"
                 )
             ).RayRepresentation = False
         if not "SunLightColor" in pl:
@@ -332,7 +333,7 @@ class SunProperties:
             "SunPathDiagram", "06_Sun_light_diagram_config",
             QT_TRANSLATE_NOOP(
                 "App::Property",
-                "True, for sun path diagram to be visible"
+                "Sun path diagram"
                 )
             ).SunPathDiagram = False
         if not "DiagColor" in pl:
@@ -382,7 +383,7 @@ class SunProperties:
             "Save_to", "07_Show_save_image",
             QT_TRANSLATE_NOOP(
                 "App::Property",
-                "True, for saving image"
+                "Save image"
                 )
             ).Save_to = False
         # 08. Sun path animation
@@ -392,7 +393,7 @@ class SunProperties:
             "SunPathAnimation", "08_Sun_path_animation",
             QT_TRANSLATE_NOOP(
                 "App::Property",
-                "True, for sun path animation"
+                "Sun path animation"
                 )
             ).SunPathAnimation = False
         if not "start_hour" in pl:
@@ -402,7 +403,7 @@ class SunProperties:
             QT_TRANSLATE_NOOP(
                 "App::Property",
                 "The initial hour of the analysis period \n"
-                "or sun path animation"
+                "or of the sun path animation"
                 )
             ).start_hour = 6
         if not "end_hour" in pl:
@@ -412,7 +413,7 @@ class SunProperties:
             QT_TRANSLATE_NOOP(
                 "App::Property",
                 "The final hour of the analysis period \n"
-                "or sun path animation"
+                "or of the sun path animation"
                 )
             ).end_hour = 18
         if not "start_min" in pl:
@@ -422,7 +423,7 @@ class SunProperties:
             QT_TRANSLATE_NOOP(
                 "App::Property",
                 "The initial minute of the analysis period \n"
-                "or sun path animation"
+                "or of the sun path animation"
                 )
             ).start_min = 0
         if not "end_min" in pl:
@@ -432,7 +433,7 @@ class SunProperties:
             QT_TRANSLATE_NOOP(
                 "App::Property",
                 "The final minute of the analysis period \n"
-                "or sun path animation"
+                "or of the sun path animation"
                 )
             ).end_min = 0
         if not "sunrise_sunset" in pl:
@@ -441,7 +442,7 @@ class SunProperties:
             "sunrise_sunset", "08_Sun_path_animation",
             QT_TRANSLATE_NOOP(
                 "App::Property",
-                "True, for getting sunrise and sunset data"
+                "Get sunrise and sunset data"
                 )
             ).sunrise_sunset = False
         if not "inter_hour" in pl:
@@ -451,7 +452,7 @@ class SunProperties:
             QT_TRANSLATE_NOOP(
                 "App::Property",
                 "The interval (in hours) of the analysis period \n"
-                "or sun path animation"
+                "or of the sun path animation"
                 )
             ).inter_hour = 0
         if not "inter_min" in pl:
@@ -461,7 +462,7 @@ class SunProperties:
             QT_TRANSLATE_NOOP(
                 "App::Property",
                 "The interval (in minutes) of the analysis period \n"
-                "or sun path animation"
+                "or of the sun path animation"
                 )
             ).inter_min = 10
         if not "Recompute" in pl:
@@ -470,7 +471,7 @@ class SunProperties:
             "Recompute", "08_Sun_path_animation",
             QT_TRANSLATE_NOOP(
                 "App::Property",
-                "True, when necessary to recompute between frames"
+                "Recompute between frames"
                 )
             ).Recompute = False
         if not "Fps" in pl:
@@ -498,6 +499,9 @@ class SunPropertiesViewProvider:
 
     def __init__(self, obj):
         obj.Proxy = self
+
+    def QT_TRANSLATE_NOOP(self, text):
+        return text
 
     def getIcon(self):
         __dir__ = os.path.dirname(__file__)
@@ -529,17 +533,17 @@ class SunPropertiesViewProvider:
                     Gui.runCommand('Std_DrawStyleShadow',0)
                     Gui.ActiveDocument.ActiveView.Shadow_ShowGround = False
                 except Exception:
-                    FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP(
-                                "SunProperties",
-                                "So far, the shadows with colored images"
-                                "only work in the FreeCAD-Link version 20241006.\n"))
+                    FreeCAD.Console.PrintMessage(translate(
+                                "SunPropertiesViewProvider",
+                                "So far, the shadows with colored images "
+                                "only work in the FreeCAD-Link version 20241006.") + "\n")
         if prop in ["epw_path"]:
             if obj.epw_path is not None:
                 autofill_from_epw2()
                 get_sun_position()
         if prop in ["City"]:
-            obj.Label = QT_TRANSLATE_NOOP("SunProperties",
-            "SunPath {}").format(obj.City)
+            obj.Label = translate("SunPropertiesViewProvider",
+                                          "SunPath {}").format(obj.City)
 
 def activated_sun_properties():
 
@@ -551,14 +555,14 @@ def activated_sun_properties():
     except Exception:
         folder = FreeCAD.ActiveDocument.addObject('App::DocumentObjectGroupPython',
                                                   'SunProperties')
-        folder.Label = QT_TRANSLATE_NOOP('SunProperties', 'SunProperties')
+        folder.Label = 'SunProperties'
         SunProperties(folder)
         SunPropertiesViewProvider(folder.ViewObject)
         create_sun_representation()
-        FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP('SunProperties',
-                                    'A sun position was created! '
+        FreeCAD.Console.PrintMessage(translate('SunProperties',
+                                    'A Sun Path was created! '
                                     'To configure it, '
-                                    'make the adjustments in its properties window.') + '\n')
+                                    'make the adjustments in its properties window.') + "\n")
 
 def autofill_from_epw2(obj = None):
 
@@ -568,8 +572,8 @@ def autofill_from_epw2(obj = None):
     obj = FreeCAD.ActiveDocument.SunProperties
     epw_path = obj.epw_path
     if not epw_path or not os.path.isfile(epw_path):
-        FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP("SunProperties",
-            "If you want use EPW, please provide a valid file path.") + '\n')
+        FreeCAD.Console.PrintMessage(translate("SunProperties",
+            "If you want use EPW, please provide a valid file path.") + "\n")
         return
     try:
         epw = EPW(epw_path)
@@ -593,12 +597,12 @@ def autofill_from_epw2(obj = None):
         except:
             pass
     except Exception as e:
-        FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP(
+        FreeCAD.Console.PrintMessage(translate(
                                      "SunProperties",
                                      "File Error"),
-                                     QT_TRANSLATE_NOOP(
+                                     translate(
                                      "SunProperties",
-                                     f"Could not read EPW file:\n{e}" + '\n'))
+                                     "Could not read EPW file:\n{}").format(e) + "\n")
         return
 
 def get_sun_position(obj = None):
@@ -645,7 +649,8 @@ def get_sun_position(obj = None):
                                             sun_coordinates[2]
                                             )
                     # Update Sun representation
-                    update_sun_representation()
+                    if obj.SunLightRepresentation is True:
+                        update_sun_representation()
                     # Update BW shadows
                     #if obj.Image_from == "01 - BW 3D view":
                     if obj.Image_from[0:2] == "01":
@@ -699,9 +704,10 @@ def get_sun_position(obj = None):
                                 except:
                                     print("SunProperties: No Render animation")
                         except Exception:
-                            FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP(
+                            FreeCAD.Console.PrintMessage(translate(
                                 "SunProperties",
-                                "No render project found!") + '\n')
+                                "For a 3D Render 3D view, a render \n"
+                                "project is required, and none was found!") + "\n")
 
                     # Altitude and Azimute:
                     obj.Altitude = sun.altitude
@@ -750,7 +756,7 @@ def create_sun_representation(obj = None):
     except Exception:
         # Sun representation
         sun_light_1 = FreeCAD.ActiveDocument.addObject("Part::Sphere","SunLight")
-        sun_light_1.Label = QT_TRANSLATE_NOOP("SunProperties", "SunLight")
+        sun_light_1.Label = translate("SunProperties", "SunLight")
         sun_light_1.Placement.Base = pt2_vector
         sun_light_1.Radius = str(obj.Radius)
         try:
@@ -776,21 +782,28 @@ def create_sun_representation(obj = None):
     except Exception:
         import Draft
         pl = FreeCAD.Placement()
-        pl.Base = pt1_vector
-        pt_final = FreeCAD.Vector(pt2_vector)
+        #pl.Base = pt1_vector
+        #pt_final = FreeCAD.Vector(pt2_vector)
+        pl.Base = pt2_vector
+        pt_final = FreeCAD.Vector(pt1_vector)
         points = [FreeCAD.Vector(pl.Base), FreeCAD.Vector(pt_final)]
         ray_1 = Draft.make_wire(points,
                                 placement=pl,
                                 closed=False,
                                 face=True,
                                 support=None)
-        ray_1.Label = QT_TRANSLATE_NOOP("SunProperties", "Ray")
+        ray_1.Label = translate("SunProperties", "Ray")
         obj.addObject(ray_1)
         if hasattr(RAY, "ViewObject"):
             ray_1.ViewObject.LineColor = obj.SunLightColor
             ray_1.ViewObject.PointColor = obj.SunLightColor
-            ray_1.ViewObject.ArrowSizeStart = obj.Radius/3
-            ray_1.ViewObject.ArrowTypeStart = "Arrow"
+            try:
+                ray_1.ViewObject.ArrowSize = obj.Radius/3
+                ray_1.ViewObject.ArrowType = "Arrow"
+                ray_1.ViewObject.EndArrow = True
+            except Exception:
+                ray_1.ViewObject.ArrowSizeEnd = obj.Radius/3
+                ray_1.ViewObject.ArrowTypeEnd = "Arrow"
         if obj.SunLightRepresentation is True:
             if obj.RayRepresentation is True:
                 ray_1.Visibility = True
@@ -829,7 +842,7 @@ def update_sun_representation(obj = None):
         else:
             sun_light_2.Visibility = False
     except Exception:
-        FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP(
+        FreeCAD.Console.PrintMessage(translate(
             'SunProperties', 'There is no SunLight to update!') + '\n')
     # solar ray
     try:
@@ -837,10 +850,17 @@ def update_sun_representation(obj = None):
         if obj.SunLightRepresentation is True:
             if obj.RayRepresentation is True:
                 ray_2.Visibility = True
-                ray_2.Start = pt1_vector
-                ray_2.End = pt2_vector
-                ray_2.ViewObject.ArrowSizeStart = obj.Radius/3
-                ray_2.ViewObject.ArrowTypeStart = "Arrow"
+                #ray_2.Start = pt1_vector
+                #ray_2.End = pt2_vector
+                ray_2.Start = pt2_vector
+                ray_2.End = pt1_vector
+                try:
+                    ray_2.ViewObject.ArrowSize = obj.Radius/3
+                    ray_2.ViewObject.ArrowType = "Arrow"
+                    ray_2.ViewObject.EndArrow = True
+                except Exception:
+                    ray_2.ViewObject.ArrowSizeEnd = obj.Radius/3
+                    ray_2.ViewObject.ArrowTypeEnd = "Arrow"
                 Gui.ActiveDocument.getObject(
                             ray_2.Name).LineColor = obj.SunLightColor
                 Gui.ActiveDocument.getObject(
@@ -852,7 +872,7 @@ def update_sun_representation(obj = None):
         else:
             ray_2.Visibility = False
     except Exception:
-        FreeCAD.Console.PrintMessage(QT_TRANSLATE_NOOP(
+        FreeCAD.Console.PrintMessage(translate(
             'SunProperties', 'There is no sun ray to update!') + '\n')
 
 def get_diagram_from_site(obj = None):
@@ -892,7 +912,7 @@ def send_diagram_to_site(obj = None):
             site_obj2.TimeZone = obj.TimeZone
             site_obj2.Declination = - obj.North
     except:
-        print("Site diagram was not updated")
+        #print("send_diagram_to_site: Site diagram was not updated")
         pass
 
 def send_data_to_sky_domes(obj = None, SD = None):
