@@ -611,10 +611,10 @@ class SunPathDialog(QtWidgets.QDialog):
                 self.ui.lineEdit_1_epw_path.setText(SD.epw_path)
                 self.autofill_from_epw()
                 FreeCAD.Console.PrintMessage(translate("SunDialog",
-                    "epw path get from Sky Domes" + '\n'))
+                    "epw path get from Sky Domes" + "\n"))
                 self.ui.lineEdit_3_North_angle.setText((str(float(SD.north))))
                 FreeCAD.Console.PrintMessage(translate("SunDialog",
-                    "North angle get from Sky Domes" + '\n'))
+                    "North angle get from Sky Domes" + "\n"))
             else:
                 # Location
                 self.ui.lineEdit_1_epw_path.setText(obj.epw_path)
@@ -689,7 +689,7 @@ class SunPathDialog(QtWidgets.QDialog):
                 f"{int(color1[1]*255)}, {int(color1[2]*255)});")
         except:
             FreeCAD.Console.PrintMessage("get properties:" + translate("SunDialog",
-                "Sun path diagram not updated" + '\n'))
+                "Sun path diagram not updated" + "\n"))
         try:
             obj = FreeCAD.ActiveDocument.SunProperties
             # Sun_path_animation
