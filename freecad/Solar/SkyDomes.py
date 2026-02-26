@@ -1016,7 +1016,7 @@ def create_sky_domes():
     SD.direct_values = sky_dome_values[1]
     SD.diffuse_values = sky_dome_values[2]
     SD.vector_values = sky_dome_values[3]
-    SD.metadata = sky_dome_values[4]
+    SD.metadata = LBComponents.get_metadata(epw_path, period)
     # Getting legend bar
     print("getting legend bar...")
     SD.leg_width = float(SD.radius*2/SD.color_count)
@@ -1273,7 +1273,7 @@ def update_values(epw_path = None, period = None):
     SD.direct_values = sky_dome_values[1]
     SD.diffuse_values = sky_dome_values[2]
     SD.vector_values = sky_dome_values[3]
-    SD.metadata = sky_dome_values[4]
+    SD.metadata = LBComponents.get_metadata(epw_path, period)
     print("modifying legend bar...")
     SD.leg_width = float(SD.radius*2/SD.color_count)
     if SD.direct_diffuse_domes is True:
