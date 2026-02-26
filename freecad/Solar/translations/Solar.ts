@@ -163,11 +163,6 @@ It is read only.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis_ant.py" line="101"/>
-        <source>UTC location - read only</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../SunAnalysis.py" line="121"/>
         <source>Group of objects to be analyzed.</source>
         <translation type="unfinished"></translation>
@@ -194,11 +189,6 @@ triangular sub faces (mm).</source>
     <message>
         <location filename="../SunAnalysis.py" line="153"/>
         <source>Offset distance (mm).</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysis_ant.py" line="155"/>
-        <source>Compound of object study sub faces - read only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -289,18 +279,8 @@ or not (Tregenza one).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunProperties_ant.py" line="127"/>
-        <source>UTC location</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../SunProperties.py" line="149"/>
         <source>The day of the sun&apos;s position</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunProperties_ant.py" line="156"/>
-        <source>True, for daylight saving time to be applied.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -354,11 +334,6 @@ or not (Tregenza one).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunProperties_ant.py" line="257"/>
-        <source>True, for configuring the sun light and/or diagram</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../SunProperties.py" line="268"/>
         <source>Light representation distance</source>
         <translation type="unfinished"></translation>
@@ -379,18 +354,8 @@ or not (Tregenza one).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunProperties_ant.py" line="312"/>
-        <source>True, for light ray representation to be visible</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../SunProperties.py" line="322"/>
         <source>Color of the sun light</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunProperties_ant.py" line="330"/>
-        <source>True, for sun path diagram to be visible</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -411,26 +376,6 @@ or not (Tregenza one).</source>
     <message>
         <location filename="../SunProperties.py" line="372"/>
         <source>The image width to be saved in pixels</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunProperties_ant.py" line="380"/>
-        <source>True, for saving image</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunProperties_ant.py" line="390"/>
-        <source>True, for sun path animation</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunProperties_ant.py" line="439"/>
-        <source>True, for getting sunrise and sunset data</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunProperties_ant.py" line="468"/>
-        <source>True, when necessary to recompute between frames</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -466,11 +411,6 @@ or not (Tregenza one).</source>
     <message>
         <location filename="../SunAnalysis.py" line="276"/>
         <source>Sun path vectors values - read only</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunProperties_ant.py" line="303"/>
-        <source>True, for sunlight representation to be visible</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -858,20 +798,6 @@ undo this action!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="317"/>
-        <source>To get irradiance values, it is necessary 
-to install Radiance in your machine.
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../LBComponents.py" line="382"/>
-        <source>To get irradiance values, Radiance software must be 
-installed in your machine.
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../LBComponents.py" line="560"/>
         <source>N</source>
         <translation type="unfinished"></translation>
@@ -1016,6 +942,18 @@ installed in your machine.
         <source>Time-zone: {}</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../LBComponents.py" line="317"/>
+        <source>To get irradiance values, it is necessary 
+to install Radiance in your machine.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LBComponents.py" line="382"/>
+        <source>To get irradiance values, Radiance software must be 
+installed in your machine.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ModifySkyDomes</name>
@@ -1029,8 +967,7 @@ installed in your machine.
         <source>Select a Sky Domes group, click this button to 
 open the dialog and modify its configuration. 
 Please note, this only works if the original 
-group structure is preserved! 
-</source>
+group structure is preserved!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1050,45 +987,6 @@ open the dialog and modify its configuration.</source>
 </context>
 <context>
     <name>SkyDomes</name>
-    <message>
-        <location filename="../SkyDomes_ant.py" line="320"/>
-        <source>Create Sky Domes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes_ant.py" line="322"/>
-        <source>Click this button to open the dialog and configure 
-the data for new Sky Domes.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes_ant.py" line="346"/>
-        <source>Modify Sky Domes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes_ant.py" line="378"/>
-        <source>Delete Sky Domes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="428"/>
-        <source>To modify a set of Sky Domes, first you must select one!
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="446"/>
-        <source>To delete a set of Sky Domes, first you must select one!
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="466"/>
-        <source>There is no selection!
-</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <location filename="../SkyDomes.py" line="506"/>
         <source>SD Constructions Group</source>
@@ -1165,12 +1063,6 @@ the data for new Sky Domes.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="1133"/>
-        <source>To create Sky Domes, you need to indicate an epw file!
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../SkyDomes.py" line="1307"/>
         <source>Sky Domes {} {}</source>
         <translation type="unfinished"></translation>
@@ -1179,44 +1071,6 @@ the data for new Sky Domes.</source>
         <location filename="../SkyDomes.py" line="1256"/>
         <source>Could not get Sky Domes:
 {e}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes_ant.py" line="1341"/>
-        <source>This will delete all main objects from the selected Sky Domes, 
-and you won&apos;t be able to undo it. 
-
-Are you sure you want to delete these Sky Domes?
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes_ant.py" line="348"/>
-        <source>Select a Sky Domes group, click this button to 
-open the dialog and modify its configuration. 
-Please note, this only works if the original 
-group structure is preserved! 
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes_ant.py" line="380"/>
-        <source>Select a Sky Domes group to delete.
-Be careful, you will not be able to 
-undo this action!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="463"/>
-        <source>Warning: The objects selected are not Sky Domes!
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes_ant.py" line="1095"/>
-        <source>Sky Domes were created! To configure it, 
-do not modify their original structure of groups! 
-Make the adjustments in the properties window.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1241,11 +1095,35 @@ Are you sure you want to delete these Sky Domes?
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../SkyDomes.py" line="428"/>
+        <source>To modify a set of Sky Domes, first you must select one!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomes.py" line="446"/>
+        <source>To delete a set of Sky Domes, first you must select one!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomes.py" line="463"/>
+        <source>Warning: The objects selected are not Sky Domes!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomes.py" line="466"/>
+        <source>There is no selection!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomes.py" line="1133"/>
+        <source>To create Sky Domes, you need to indicate an epw file!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../SkyDomes.py" line="1101"/>
         <source>Sky Domes created! 
 Do not modify their original structure of groups 
-to make possible further adjustments.
-</source>
+to make possible further adjustments.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1289,12 +1167,6 @@ to make possible further adjustments.
     <message>
         <location filename="../SkyDomesDialog.py" line="112"/>
         <source>epw file path:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomesDialog_ant.py" line="108"/>
-        <source>After downloading the epw file, 
-indicate its path on your machine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1348,13 +1220,6 @@ indicate its path on your machine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomesDialog_ant.py" line="153"/>
-        <source>Indicate the true north.
-Clockwise with zero in 
-the direction of the y-axis</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../SkyDomesDialog.py" line="166"/>
         <source>Sky Domes configurations</source>
         <translation type="unfinished"></translation>
@@ -1370,31 +1235,8 @@ the direction of the y-axis</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomesDialog_ant.py" line="171"/>
-        <source>Adjust the x position of the center of the 
-dome according to the project (mm).</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomesDialog_ant.py" line="176"/>
-        <source>Adjust the y position of the center of the 
-dome according to the project (mm).</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomesDialog_ant.py" line="181"/>
-        <source>Adjust the z position of the center of the 
-dome according to the project (mm).</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../SkyDomesDialog.py" line="200"/>
         <source>Analysis period</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomesDialog_ant.py" line="189"/>
-        <source>An analysis period between two dates of the year and between certain hours.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1486,18 +1328,8 @@ average Irradiance (W/m²).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomesDialog_ant.py" line="286"/>
-        <source>Enable it to visualize the direct and diffuse domes values.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../SkyDomesDialog.py" line="304"/>
         <source>Center vectors</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomesDialog_ant.py" line="293"/>
-        <source>Enable it to visualize the center vector of each dome patch.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1508,32 +1340,6 @@ average Irradiance (W/m²).</source>
     <message>
         <location filename="../SkyDomesDialog.py" line="315"/>
         <source>Adjust the transparency of the Sky Domes.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomesDialog_ant.py" line="305"/>
-        <source>Legend</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomesDialog_ant.py" line="309"/>
-        <source>Color count</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomesDialog_ant.py" line="312"/>
-        <source>Indicate the legend number of colors 
-(default: 11).</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomesDialog_ant.py" line="317"/>
-        <source>Color set:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomesDialog_ant.py" line="363"/>
-        <source>Choose the legend color set.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1559,18 +1365,6 @@ average Irradiance (W/m²).</source>
     <message>
         <location filename="../SkyDomesDialog.py" line="607"/>
         <source>There is no Sky Domes group!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomesDialog.py" line="244"/>
-        <source>Specify the number of times per hour 
-the linear interpolation of sub-hourly 
-values ​​will be performed.
-It works only with time intervals 
-from 0 to 23 hours.
-Note that larger numbers 
-will increase the computation time.
-</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1665,15 +1459,24 @@ hours of the year.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../SkyDomesDialog.py" line="244"/>
+        <source>Specify the number of times per hour 
+the linear interpolation of sub-hourly 
+values ​​will be performed.
+It works only with time intervals 
+from 0 to 23 hours.
+Note that larger numbers 
+will increase the computation time.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../SkyDomesDialog.py" line="488"/>
-        <source>epw path get from Sun Path
-</source>
+        <source>epw path get from Sun Path</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="707"/>
-        <source>Sky Domes was updated!
-</source>
+        <source>Sky Domes were updated!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1709,186 +1512,48 @@ Click this button to get started its animation</source>
 <context>
     <name>SunAnalysis</name>
     <message>
-        <location filename="../SunAnalysis_ant.py" line="387"/>
-        <source>Create a Sun Analysis</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysis_ant.py" line="413"/>
-        <source>Modify a Sun Analysis</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysis_ant.py" line="415"/>
-        <source>Select a Sun Analysis, click this button to open the dialog and modify its configuration.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysis_ant.py" line="443"/>
-        <source>Delete a Sun Analysis</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysis_ant.py" line="476"/>
-        <source>To create a new Sun Analysis, you must select a group 
-that contents all objects to be analyzed!
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysis_ant.py" line="504"/>
-        <source>To modify a set of Sun Analysis, first you must select one!
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysis_ant.py" line="517"/>
-        <source>To delete a Sun Analysis, first you must select one!
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysis_ant.py" line="520"/>
-        <source>To delete a set of Sun Analysis, first you must select one!
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysis_ant.py" line="536"/>
-        <source>Warning: The object selected is not a Sun Analysis!
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysis_ant.py" line="539"/>
-        <source>There is no selection!
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysis.py" line="1355"/>
+        <location filename="../SunAnalysis.py" line="1352"/>
         <source>Sun Analysis object could not be found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1414"/>
+        <location filename="../SunAnalysis.py" line="1411"/>
         <source>For using EPW, please provide a valid file path.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis_ant.py" line="1413"/>
-        <source>Could not get epw!
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysis_ant.py" line="791"/>
-        <source>SA Total group</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysis.py" line="1546"/>
+        <location filename="../SunAnalysis.py" line="1543"/>
         <source>Sun Analysis {} - {}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1558"/>
+        <location filename="../SunAnalysis.py" line="1555"/>
         <source>Sun hours</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis_ant.py" line="898"/>
-        <source>Sun Analysis - Sun hours</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysis.py" line="1105"/>
-        <source>For getting irradiance values, Radiance software must be 
-installed in your machine.
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysis_ant.py" line="1286"/>
-        <source>SA Direct group</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysis_ant.py" line="1297"/>
-        <source>SA Diffuse group</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysis_ant.py" line="1313"/>
-        <source>Sun Analysis - Total Radiation</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysis_ant.py" line="1316"/>
-        <source>Sun Analysis - Direct Radiation</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysis_ant.py" line="1318"/>
-        <source>Sun Analysis - Diffuse Radiation</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysis_ant.py" line="1324"/>
-        <source>Sun Analysis - Total Irradiance</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysis_ant.py" line="1326"/>
-        <source>Sun Analysis - Direct Irradiance</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysis_ant.py" line="1328"/>
-        <source>Sun Analysis - Diffuse Irradiance</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysis.py" line="1384"/>
+        <location filename="../SunAnalysis.py" line="1381"/>
         <source>It was not possible to update bar legend position!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1387"/>
+        <location filename="../SunAnalysis.py" line="1384"/>
         <source>There is no direct and diffuse analysis!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1404"/>
+        <location filename="../SunAnalysis.py" line="1401"/>
         <source>Attempting to get Sun Analysis values: Sun Analysis object could not be found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1458"/>
+        <location filename="../SunAnalysis.py" line="1455"/>
         <source>There is no study objects!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1622"/>
+        <location filename="../SunAnalysis.py" line="1619"/>
         <source>There is no direct or diffuse analysis group!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysis_ant.py" line="388"/>
-        <source>First, select the group containing the objects to be analyzed, created previously, then click this button to configure the analysis.
-You need to select an epw file and choose the objects to be analyzed, 
-as well as their context.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysis_ant.py" line="445"/>
-        <source>Select a Sun Analysis, click this button to delete it.
-Be careful, you will not be able to undo this action!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysis_ant.py" line="590"/>
-        <source>Analysis compound</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1898,26 +1563,8 @@ context selected!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1488"/>
+        <location filename="../SunAnalysis.py" line="1485"/>
         <source>There is no legend position!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysis.py" line="1637"/>
-        <source>This will delete all main objects from 
-the selected Sun Analysis, 
-and you won&apos;t be able to undo it. 
-
-Are you sure you want to delete these Sun Analysis?
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysis.py" line="862"/>
-        <source>Sun Analysis created! 
-Do not modify their original structure of groups 
-to make possible further adjustments.
-</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1926,12 +1573,12 @@ to make possible further adjustments.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1310"/>
+        <location filename="../SunAnalysis.py" line="1307"/>
         <source>Direct Sun Analysis Group</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1322"/>
+        <location filename="../SunAnalysis.py" line="1319"/>
         <source>Diffuse Sun Analysis Group</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1941,12 +1588,12 @@ to make possible further adjustments.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1303"/>
+        <location filename="../SunAnalysis.py" line="1300"/>
         <source>Direct Sun Analysis</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1315"/>
+        <location filename="../SunAnalysis.py" line="1312"/>
         <source>Diffuse Sun Analysis</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1987,8 +1634,30 @@ that contents all objects to be analyzed!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1418"/>
+        <location filename="../SunAnalysis.py" line="1415"/>
         <source>Could not get epw!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunAnalysis.py" line="862"/>
+        <source>Sun Analysis created! 
+Do not modify their original structure of groups 
+to make possible further adjustments.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunAnalysis.py" line="1102"/>
+        <source>For getting irradiance values, Radiance software must be 
+installed in your machine.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunAnalysis.py" line="1634"/>
+        <source>This will delete all objects from 
+the selected Sun Analysis, 
+and you won&apos;t be able to undo it. 
+
+Are you sure you want to delete these Sun Analysis?</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2032,12 +1701,6 @@ that contents all objects to be analyzed!</source>
     <message>
         <location filename="../SunAnalysisDialog.py" line="112"/>
         <source>epw file path:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysisDialog_ant.py" line="111"/>
-        <source>After downloading the epw file, 
-indicate its path on your machine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2091,13 +1754,6 @@ indicate its path on your machine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysisDialog_ant.py" line="156"/>
-        <source>Indicate the true north.
-Clockwise with zero in 
-the direction of the y-axis</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../SunAnalysisDialog.py" line="170"/>
         <source>Study objects:</source>
         <translation type="unfinished"></translation>
@@ -2111,25 +1767,6 @@ Use only simple volumetric objects.</source>
     <message>
         <location filename="../SunAnalysisDialog.py" line="179"/>
         <source>Select the objects to be analyzed. 
-Use only simple volumetric objects.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysisDialog_ant.py" line="176"/>
-        <source>Study context:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysisDialog_ant.py" line="180"/>
-        <source>Contextual objects that affect the 
-insolation of the objects being analyzed. 
-Use only simple volumetric objects.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysisDialog_ant.py" line="186"/>
-        <source>Select the ontextual objects that affect the 
-insolation of the objects being analyzed. 
 Use only simple volumetric objects.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2165,11 +1802,6 @@ offset distance (mm).</source>
     <message>
         <location filename="../SunAnalysisDialog.py" line="224"/>
         <source>Sun Analysis period</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysisDialog_ant.py" line="219"/>
-        <source>An analysis period between two dates of the year and between certain hours.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2213,14 +1845,6 @@ offset distance (mm).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysisDialog.py" line="268"/>
-        <source>Specify how many times per hour 
-the calculation will be performed. 
-Note that larger numbers will 
-increase the computation time.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../SunAnalysisDialog.py" line="275"/>
         <source>Leap year</source>
         <translation type="unfinished"></translation>
@@ -2254,32 +1878,6 @@ is in leap year.</source>
     <message>
         <location filename="../SunAnalysisDialog.py" line="312"/>
         <source>Enable it to visualize the direct and diffuse values.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysisDialog_ant.py" line="308"/>
-        <source>Legend</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysisDialog_ant.py" line="312"/>
-        <source>Color count</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysisDialog_ant.py" line="315"/>
-        <source>Indicate the legend number of colors 
-(default: 11).</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysisDialog_ant.py" line="320"/>
-        <source>Color_set:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysisDialog_ant.py" line="366"/>
-        <source>Choose the legend color set.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2326,11 +1924,6 @@ Radiation (kWh/m²) or Irradiance (W/m²).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysisDialog_ant.py" line="592"/>
-        <source>There is no Sun Analysis group!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../SunAnalysisDialog.py" line="115"/>
         <source>After downloading the epw file, 
 indicate the path on your machine</source>
@@ -2351,20 +1944,6 @@ with zero in the direction of the y-axis</source>
     <message>
         <location filename="../SunAnalysisDialog.py" line="184"/>
         <source>Context objects:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysisDialog.py" line="188"/>
-        <source>Context objects that affect the 
-insolation of the objects being analyzed. 
-Use only simple volumetric objects.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysisDialog.py" line="194"/>
-        <source>Select the context objects that affect the 
-insolation of the objects being analyzed. 
-Use only simple volumetric objects.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2399,12 +1978,6 @@ Use only simple volumetric objects.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysisDialog.py" line="710"/>
-        <source>Sun Analysis was updated!
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../SunAnalysisDialog.py" line="488"/>
         <source>epw path get from Sun Path</source>
         <translation type="unfinished"></translation>
@@ -2412,6 +1985,33 @@ Use only simple volumetric objects.</source>
     <message>
         <location filename="../SunAnalysisDialog.py" line="601"/>
         <source>There is no Sun Analysis!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunAnalysisDialog.py" line="188"/>
+        <source>Context objects that affect the 
+insolation of the objects being analyzed.
+Use only simple volumetric objects.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunAnalysisDialog.py" line="194"/>
+        <source>Select the context objects that affect the 
+insolation of the objects being analyzed.
+Use only simple volumetric objects.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunAnalysisDialog.py" line="268"/>
+        <source>Specify how many times per hour 
+the calculation will be performed.
+Note that larger numbers will 
+increase the computation time.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunAnalysisDialog.py" line="710"/>
+        <source>Sun Analysis was updated!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2461,12 +2061,6 @@ adjust the sun position for a location</source>
     <message>
         <location filename="../SunDialog.py" line="137"/>
         <source>epw file path:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog_ant.py" line="134"/>
-        <source>After downloading the epw file, 
-indicate its path on your machine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2526,13 +2120,6 @@ the sun position for a specific location</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog_ant.py" line="182"/>
-        <source>Indicate the true north.
-Clockwise with zero in 
-the direction of the y-axis</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../SunDialog.py" line="194"/>
         <source>Date and time:</source>
         <translation type="unfinished"></translation>
@@ -2549,12 +2136,6 @@ of the sun&apos;s position</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog_ant.py" line="199"/>
-        <source>Consult the equinoxes and solstices 
-in the next links</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../SunDialog.py" line="213"/>
         <source>Enable it for daylight saving periods</source>
         <translation type="unfinished"></translation>
@@ -2562,11 +2143,6 @@ in the next links</source>
     <message>
         <location filename="../SunDialog.py" line="217"/>
         <source>Results:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog_ant.py" line="214"/>
-        <source>These are the results of the adjustments made</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2600,11 +2176,6 @@ in the next links</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog_ant.py" line="242"/>
-        <source>Sun additional configurations</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../SunDialog.py" line="251"/>
         <source>Adjust the other aspects of the solar study here</source>
         <translation type="unfinished"></translation>
@@ -2628,11 +2199,6 @@ of the sun and its path.</source>
     <message>
         <location filename="../SunDialog.py" line="267"/>
         <source>Distance:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog_ant.py" line="265"/>
-        <source>Center</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2685,14 +2251,6 @@ For Color 3D view shadows, leave it disabled.</source>
     <message>
         <location filename="../SunDialog.py" line="322"/>
         <source>Image from:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog_ant.py" line="325"/>
-        <source>Select the scene type.
-Use None/Reset to clear the settings.
-Color 3D preview only works in FreeCAD-Link.
-For Render 3D preview, install Render WB.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2792,11 +2350,6 @@ Must not be zero.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog_ant.py" line="420"/>
-        <source>Show the resulting total frames</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../SunDialog.py" line="430"/>
         <source>Apply</source>
         <translation type="unfinished"></translation>
@@ -2814,11 +2367,6 @@ Must not be zero.</source>
     <message>
         <location filename="../SunDialog.py" line="498"/>
         <source>Warning</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunDialog_ant.py" line="492"/>
-        <source>If you want to use EPW, provide a valid file path.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2939,21 +2487,6 @@ in the links</source>
 <context>
     <name>SunPathAnimation</name>
     <message>
-        <location filename="../SunPathAnimation_ant.py" line="46"/>
-        <source>Start Sun Path Animation</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunPathAnimation_ant.py" line="80"/>
-        <source>Stop SunPath Animation</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunPathAnimation_ant.py" line="82"/>
-        <source>Stops a sun path animation. After the sun path animation started, click this button to stop it.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../SunPathAnimation.py" line="140"/>
         <source>Interval must be non-zero!</source>
         <translation type="unfinished"></translation>
@@ -2972,14 +2505,6 @@ Click play to start the animation.</source>
     <message>
         <location filename="../SunPathAnimation.py" line="224"/>
         <source>No Clapperboard found!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunPathAnimation_ant.py" line="48"/>
-        <source>Starts a sun path animation.
-To use it, open the dialog and enable Sun Path animation.
-To view shadow projection, choose the image other than None.
-Click this button to get started its animation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3015,17 +2540,6 @@ Click &apos;Stop Animation&apos; to start again.</source>
 <context>
     <name>SunProperties</name>
     <message>
-        <location filename="../SunProperties_ant.py" line="532"/>
-        <source>So far, the shadows with colored imagesonly work in the FreeCAD-Link version 20241006.
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunProperties_ant.py" line="541"/>
-        <source>SunPath {}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../SunProperties.py" line="575"/>
         <source>If you want use EPW, please provide a valid file path.</source>
         <translation type="unfinished"></translation>
@@ -3033,11 +2547,6 @@ Click &apos;Stop Animation&apos; to start again.</source>
     <message>
         <location filename="../SunProperties.py" line="600"/>
         <source>File Error</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunProperties_ant.py" line="702"/>
-        <source>No render project found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3081,14 +2590,13 @@ project is required, and none was found!</source>
 <context>
     <name>SunPropertiesViewProvider</name>
     <message>
-        <location filename="../SunProperties.py" line="536"/>
-        <source>So far, the shadows with colored imagesonly work in the FreeCAD-Link version 20241006.
-</source>
+        <location filename="../SunProperties.py" line="545"/>
+        <source>SunPath {}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunProperties.py" line="545"/>
-        <source>SunPath {}</source>
+        <location filename="../SunProperties.py" line="536"/>
+        <source>So far, the shadows with colored images only work in the FreeCAD-Link version 20241006.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3096,11 +2604,11 @@ project is required, and none was found!</source>
     <name>SunShadowBW</name>
     <message>
         <location filename="../SunShadowBW.py" line="120"/>
-        <source>This feature has not been fully tested yet! 
-To prevent issues, save your file before using it. 
+        <source>This feature has not been fully tested yet!
+To prevent issues, save your file before using it.
 For transparent surfaces, it is recommended 
-to make them invisible before generating the shadows. 
-Avoid spherical or complex surfaces. 
+to make them invisible before generating the shadows.
+Avoid spherical or complex surfaces.
 
 Do you want to generate shadows now?</source>
         <translation type="unfinished"></translation>
