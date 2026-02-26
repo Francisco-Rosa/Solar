@@ -316,7 +316,7 @@ def get_sky_dome_values(sky_matrix = None,
     except Exception:
         FreeCAD.Console.PrintMessage(translate("LBComponents",
             "To get irradiance values, it is necessary \n"
-            "to install Radiance in your machine.\n"))
+            "to install Radiance in your machine.") + '\n')
         return
     # Get and convert lb values
     #values
@@ -382,7 +382,7 @@ def get_sky_matrix_dome_values(epw_path = "",
             FreeCAD.Console.PrintMessage(
                 "get sky matrix dome values: " + translate("LBComponents",
                 "To get irradiance values, Radiance software must be \n"
-                "installed in your machine.\n"))
+                "installed in your machine.") + '\n')
             return
     else:
         total_values = sky_matrix_values[1]

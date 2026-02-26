@@ -188,13 +188,13 @@ class SunAnalysisConfigurationDialog(QtWidgets.QDialog):
         self.ui.lineEdit_study_context.setToolTip(
                        translate("SunAnalysisDialog",
                        "Context objects that affect the \n"
-                       "insolation of the objects being analyzed. \n"
+                       "insolation of the objects being analyzed.\n"
                        "Use only simple volumetric objects."))
         #toolButton_study_context
         self.ui.toolButton_study_context.setToolTip(
                        translate("SunAnalysisDialog",
                        "Select the context objects that affect the \n"
-                       "insolation of the objects being analyzed. \n"
+                       "insolation of the objects being analyzed.\n"
                        "Use only simple volumetric objects."))
         #label_max_length
         self.ui.label_max_length.setText(
@@ -268,7 +268,7 @@ class SunAnalysisConfigurationDialog(QtWidgets.QDialog):
         self.ui.comboBox_timestep.setToolTip(
                        translate("SunAnalysisDialog",
                        "Specify how many times per hour \n"
-                       "the calculation will be performed. \n"
+                       "the calculation will be performed.\n"
                        "Note that larger numbers will \n"
                        "increase the computation time."))
         #checkBox_leap_year
@@ -486,7 +486,7 @@ class SunAnalysisConfigurationDialog(QtWidgets.QDialog):
                     if obj1.epw_path != "":
                         self.ui.lineEdit_epw_path.setText(obj1.epw_path)
                         FreeCAD.Console.PrintMessage(translate("SunAnalysisDialog",
-                                                      "epw path get from Sun Path") + '\n')
+                                                      "epw path get from Sun Path") + "\n")
                     else:
                         self.ui.lineEdit_epw_path.setText(SA.epw_path)
                         #print("epw path get from SA")
@@ -708,7 +708,7 @@ class SunAnalysisConfigurationDialog(QtWidgets.QDialog):
                                                 values_colors = dif_values_colors,
                                                 colors = dif_colors)
                 FreeCAD.Console.PrintMessage(translate('SunAnalysisDialog',
-                                                       "Sun Analysis was updated!\n"))
+                                                       "Sun Analysis was updated!") + "\n")
         else:
             print ("Compare sun analysis data: Can not get data from Sun Analysis!")
 
@@ -751,7 +751,7 @@ class GroupRestrictedSelector(QtWidgets.QDialog):
 
         super(GroupRestrictedSelector, self).__init__(Gui.getMainWindow())
         self.setWindowTitle(translate("SunAnalysisDialog",
-                                              "Selection of study or context objects"))
+                                      "Selection of study or context objects"))
         self.setMinimumSize(450, 500)
         self.selected_group = selected_group
         layout = QtWidgets.QVBoxLayout(self)

@@ -60,8 +60,8 @@ def create_shadows_black_white():
         if view is None:
             QtWidgets.QMessageBox.warning(
                 None, "No 3D View",
-                "No active 3D view found. "
-                "Please select or open a 3D view "
+                "No active 3D view found.\n"
+                "Please select or open a 3D view \n"
                 "for your document and try again."
                 )
             return
@@ -118,11 +118,11 @@ def show_warning_dialog():
     msg = QtWidgets.QMessageBox()
     msg.setWindowTitle("BWShadow Save Warning")
     msg.setText(translate('SunShadowBW',
-        "This feature has not been fully tested yet! \n"
-        "To prevent issues, save your file before using it. \n"
+        "This feature has not been fully tested yet!\n"
+        "To prevent issues, save your file before using it.\n"
         "For transparent surfaces, it is recommended \n"
-        "to make them invisible before generating the shadows. \n"
-        "Avoid spherical or complex surfaces. \n"
+        "to make them invisible before generating the shadows.\n"
+        "Avoid spherical or complex surfaces.\n"
         "\n"
         "Do you want to generate shadows now?"
     ))

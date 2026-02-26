@@ -156,7 +156,7 @@ def sun_path_animation():
         if CL.Frame_04OutputPath == "":
             FreeCAD.Console.PrintMessage(translate(
                 "SunPathAnimation", "A path to save images is required! \n"
-                "Click 'Stop Animation' to start again.") + '\n')
+                "Click 'Stop Animation' to start again.") + "\n")
             return
     Properties.get_sun_position() # First step
     Gui.updateGui()
@@ -205,7 +205,7 @@ def set_render_animation():
     except Exception:
         FreeCAD.Console.PrintMessage(translate(
                         "SunPathAnimation",
-                        "No MovieCamera found!") + '\n')
+                        "No MovieCamera found!") + "\n")
     # Clapperboard
     try:
         CL = FreeCAD.ActiveDocument.Clapperboard
@@ -219,11 +219,11 @@ def set_render_animation():
         FreeCAD.Console.PrintMessage(translate(
                         "SunPathAnimation",
                         "Render animation was set! \n"
-                        "Click play to start the animation.") + '\n')
+                        "Click play to start the animation.") + "\n")
     except:
         FreeCAD.Console.PrintMessage(translate(
                         "SunPathAnimation",
-                        "No Clapperboard found!") + '\n')
+                        "No Clapperboard found!") + "\n")
 
 #---------------------------------------------------
 

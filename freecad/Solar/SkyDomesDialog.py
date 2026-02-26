@@ -249,7 +249,7 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
                        "It works only with time intervals \n"
                        "from 0 to 23 hours.\n"
                        "Note that larger numbers \n"
-                       "will increase the computation time.\n"
+                       "will increase the computation time."
                        ))
         #checkBox_leap_year
         self.ui.checkBox_leap_year.setText(
@@ -486,7 +486,7 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
                     if obj1.epw_path != "":
                         self.ui.lineEdit_epw_path.setText(obj1.epw_path)
                         FreeCAD.Console.PrintMessage(translate("SkyDomesDialog",
-                            "epw path get from Sun Path" + '\n'))
+                            "epw path get from Sun Path") + '\n')
                     else:
                         self.ui.lineEdit_epw_path.setText(SD.epw_path)
                     # North
@@ -705,7 +705,7 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
             if dif_forms is True or dif_values is True:
                 SkyDomes.modify_sky_domes(forms = dif_forms, values = dif_values)
                 FreeCAD.Console.PrintMessage(translate("SkyDomesDialog",
-                                                       "Sky Domes was updated!\n"))
+                                                       "Sky Domes were updated!") + "\n")
         else:
             print("Compare sky domes data: Can not get data from Sky Domes!")
 

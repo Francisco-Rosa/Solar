@@ -535,8 +535,8 @@ class SunPropertiesViewProvider:
                 except Exception:
                     FreeCAD.Console.PrintMessage(translate(
                                 "SunPropertiesViewProvider",
-                                "So far, the shadows with colored images"
-                                "only work in the FreeCAD-Link version 20241006.\n"))
+                                "So far, the shadows with colored images "
+                                "only work in the FreeCAD-Link version 20241006.") + "\n")
         if prop in ["epw_path"]:
             if obj.epw_path is not None:
                 autofill_from_epw2()
@@ -562,7 +562,7 @@ def activated_sun_properties():
         FreeCAD.Console.PrintMessage(translate('SunProperties',
                                     'A Sun Path was created! '
                                     'To configure it, '
-                                    'make the adjustments in its properties window.') + '\n')
+                                    'make the adjustments in its properties window.') + "\n")
 
 def autofill_from_epw2(obj = None):
 
@@ -573,7 +573,7 @@ def autofill_from_epw2(obj = None):
     epw_path = obj.epw_path
     if not epw_path or not os.path.isfile(epw_path):
         FreeCAD.Console.PrintMessage(translate("SunProperties",
-            "If you want use EPW, please provide a valid file path.") + '\n')
+            "If you want use EPW, please provide a valid file path.") + "\n")
         return
     try:
         epw = EPW(epw_path)
@@ -602,7 +602,7 @@ def autofill_from_epw2(obj = None):
                                      "File Error"),
                                      translate(
                                      "SunProperties",
-                                     "Could not read EPW file:\n{}").format(e) + '\n')
+                                     "Could not read EPW file:\n{}").format(e) + "\n")
         return
 
 def get_sun_position(obj = None):
@@ -707,7 +707,7 @@ def get_sun_position(obj = None):
                             FreeCAD.Console.PrintMessage(translate(
                                 "SunProperties",
                                 "For a 3D Render 3D view, a render \n"
-                                "project is required, and none was found!") + '\n')
+                                "project is required, and none was found!") + "\n")
 
                     # Altitude and Azimute:
                     obj.Altitude = sun.altitude

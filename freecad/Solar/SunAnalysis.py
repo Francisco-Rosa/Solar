@@ -489,12 +489,12 @@ def activated_create_sun_analysis(self):
             objs_group = sel_objs_group[0]
         else:
             FreeCAD.Console.PrintMessage(translate("SunAnalysis",
-                "The selection is not a Group!") + '\n')
+                "The selection is not a Group!") + "\n")
             return
     except Exception:
         FreeCAD.Console.PrintMessage(translate("SunAnalysis",
             "To create a new Sun Analysis, you must select a group \n"
-            "that contents all objects to be analyzed!") + '\n')
+            "that contents all objects to be analyzed!") + "\n")
         return
     folder = FreeCAD.ActiveDocument.addObject(
              'App::DocumentObjectGroupPython',
@@ -521,7 +521,7 @@ def activated_modify_sun_analysis(self):
         SunAnalysisDialog.open_sun_analysis_configuration()
     else:
         FreeCAD.Console.PrintMessage(translate("SunAnalysis",
-            "To modify a set of Sun Analysis, first you must select one!") + '\n')
+            "To modify a set of Sun Analysis, first you must select one!") + "\n")
 
 def activated_delete_sun_analysis(self):
 
@@ -534,10 +534,10 @@ def activated_delete_sun_analysis(self):
             delete_sun_analysis(selection)
         else:
             FreeCAD.Console.PrintMessage(translate("SunAnalysis",
-             "To delete a Sun Analysis, first you must select one!") + '\n')
+             "To delete a Sun Analysis, first you must select one!") + "\n")
     except Exception:
         FreeCAD.Console.PrintMessage(translate("SunAnalysis",
-            "To delete a set of Sun Analysis, first you must select one!") + '\n')
+            "To delete a set of Sun Analysis, first you must select one!") + "\n")
 
 def select_sun_analysis():
 
@@ -553,10 +553,10 @@ def select_sun_analysis():
             return SA
         else:
             FreeCAD.Console.PrintMessage(translate("SunAnalysis",
-                "Warning: The object selected is not a Sun Analysis!") + '\n')
+                "Warning: The object selected is not a Sun Analysis!") + "\n")
     except:
         FreeCAD.Console.PrintMessage(translate("SunAnalysis",
-                              "There is no selection!") + '\n')
+                              "There is no selection!") + "\n")
 
 #=================================================
 # B. General functions
@@ -772,10 +772,10 @@ def create_sun_analysis(study_objs = None,
         if not epw_path or not os.path.isfile(epw_path):
             FreeCAD.Console.PrintMessage("create sun analysis: " + translate(
                 "SunAnalysis",
-                "For using EPW, please provide a valid file path.") + '\n')
+                "For using EPW, please provide a valid file path.") + "\n")
     else:
         FreeCAD.Console.PrintMessage(translate("SunAnalysis",
-            "Could not get epw!") + '\n')
+            "Could not get epw!") + "\n")
         return
     #period
     period = None
@@ -862,7 +862,7 @@ def create_sun_analysis(study_objs = None,
     FreeCAD.Console.PrintMessage(translate('SunAnalysis',
                                 "Sun Analysis created! \n"
                                 "Do not modify their original structure of groups \n"
-                                "to make possible further adjustments.\n"))
+                                "to make possible further adjustments.") + "\n")
     FreeCAD.ActiveDocument.recompute()
 
 def get_modify_sun_hours(period = None,
@@ -917,9 +917,6 @@ def get_modify_sun_hours(period = None,
     title = f"{RESUL_00}"
     leg_title = translate("SunAnalysis",
                                   "Sun hours")
-    """#get study total label
-    SA.study_compound.Label = translate("SunAnalysis",
-                                        "Sun Analysis - Sun hours")"""
     SA.leg_position = leg_pos[0]
     pos1 = leg_pos[6]
     pos2 = None
@@ -1104,7 +1101,7 @@ def get_modify_sun_radiation(epw_path = "",
     except Exception:
         FreeCAD.Console.PrintMessage("get modify Sun Radiation: " + translate("SunAnalysis",
             "For getting irradiance values, Radiance software must be \n"
-            "installed in your machine.\n"))
+            "installed in your machine.") + "\n")
         return
     #get sky matrix cosine intersections
     sky_inter_matrix_cosines = sky_intersection_matrix(sky_matrix,
@@ -1413,11 +1410,11 @@ def modify_sun_analysis(forms = False,
         if not epw_path or not os.path.isfile(epw_path):
             FreeCAD.Console.PrintMessage("modify sun analysis: " + translate(
                 "SunAnalysis",
-                "For using EPW, please provide a valid file path.") + '\n')
+                "For using EPW, please provide a valid file path.") + "\n")
     else:
         FreeCAD.Console.PrintMessage("modify sun analysis: " + translate(
             "SunAnalysis",
-            "Could not get epw!") + '\n')
+            "Could not get epw!") + "\n")
         return
     #period
     period = None
@@ -1635,11 +1632,11 @@ def delete_sun_analysis(SA = None):
         msg = QtWidgets.QMessageBox()
         msg.setWindowTitle("Delete Warning")
         msg.setText(translate("SunAnalysis",
-            "This will delete all main objects from \n"
+            "This will delete all objects from \n"
             "the selected Sun Analysis, \n"
             "and you won't be able to undo it. \n"
             "\n"
-            "Are you sure you want to delete these Sun Analysis?\n"
+            "Are you sure you want to delete these Sun Analysis?"
         ))
         msg.setIcon(QtWidgets.QMessageBox.Warning)
         msg.setStandardButtons(

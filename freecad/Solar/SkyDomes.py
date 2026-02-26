@@ -355,7 +355,7 @@ class ModifySkyDomes:
                             'Select a Sky Domes group, click this button to \n'
                             'open the dialog and modify its configuration. \n'
                             'Please note, this only works if the original \n'
-                            'group structure is preserved! \n')}
+                            'group structure is preserved!')}
 
     def IsActive(self):
         if Gui.ActiveDocument:
@@ -427,7 +427,7 @@ def activated_modify_sky_domes(self):
     else:
         FreeCAD.Console.PrintMessage(translate("SkyDomes",
             "To modify a set of Sky Domes, "
-            "first you must select one!" + '\n'))
+            "first you must select one!") + '\n')
 
 def activated_delete_sky_domes(self):
 
@@ -441,11 +441,11 @@ def activated_delete_sky_domes(self):
         else:
             FreeCAD.Console.PrintMessage(translate("SkyDomes",
              "To delete a set of Sky Domes, "
-             "first you must select one!" + '\n'))
+             "first you must select one!") + '\n')
     except Exception:
         FreeCAD.Console.PrintMessage(translate("SkyDomes",
             "To delete a set of Sky Domes, "
-            "first you must select one!" + '\n'))
+            "first you must select one!") + '\n')
 
 def select_sky_domes():
 
@@ -461,10 +461,10 @@ def select_sky_domes():
             return SD
         else:
             FreeCAD.Console.PrintMessage(translate("SkyDomes",
-                "Warning: The objects selected are not Sky Domes!" + '\n'))
+                "Warning: The objects selected are not Sky Domes!") + '\n')
     except:
         FreeCAD.Console.PrintMessage(translate("SkyDomes",
-                              "There is no selection!" + '\n'))
+                              "There is no selection!") + '\n')
 
 #=================================================
 # B. Sky domes
@@ -964,7 +964,7 @@ def create_sky_domes():
             return
     else:
         FreeCAD.Console.PrintMessage(translate("SkyDomes",
-            "To create Sky Domes, you need to indicate an epw file!" + '\n'))
+            "To create Sky Domes, you need to indicate an epw file!") + '\n')
         return
     #period
     period = None
@@ -1102,7 +1102,7 @@ def create_sky_domes():
                                 'SkyDomes',
                                 'Sky Domes created! \n'
                                 'Do not modify their original structure of groups \n'
-                                'to make possible further adjustments.\n'
+                                'to make possible further adjustments.'
                                  ) + '\n')
     SD_NEW = False
     Gui.SendMsgToActiveView("ViewFit")
@@ -1131,7 +1131,7 @@ def modify_sky_domes(forms = False, values = False):
             return
     else:
         FreeCAD.Console.PrintMessage(translate("SkyDomes",
-            "To create Sky Domes, you need to indicate an epw file!" + '\n'))
+            "To create Sky Domes, you need to indicate an epw file!") + '\n')
         return
     #period
     period = None
