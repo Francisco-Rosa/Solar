@@ -223,11 +223,6 @@ or not (Tregenza one).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="283"/>
-        <source>Sun hour value values - read only</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../SunAnalysis.py" line="291"/>
         <source>Sun analysis legend title - read only</source>
         <translation type="unfinished"></translation>
@@ -507,6 +502,11 @@ or of the sun path animation</source>
     <message>
         <location filename="../SunProperties.py" line="469"/>
         <source>Recompute between frames</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunAnalysis.py" line="283"/>
+        <source>Sun hour values - read only</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -793,11 +793,6 @@ undo this action!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="93"/>
-        <source>Peak Hating by Face Type</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../LBComponents.py" line="560"/>
         <source>N</source>
         <translation type="unfinished"></translation>
@@ -952,6 +947,11 @@ to install Radiance in your machine.</source>
         <location filename="../LBComponents.py" line="382"/>
         <source>To get irradiance values, Radiance software must be 
 installed in your machine.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LBComponents.py" line="93"/>
+        <source>Peak Heating by Face Type</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

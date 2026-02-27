@@ -228,11 +228,6 @@ ou não (modelo Tregenza).</translation>
         <translation>Valores totais de radiação/irradiância - somente leitura</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="283"/>
-        <source>Sun hour value values - read only</source>
-        <translation>Valores de horas de sol - somente leitura</translation>
-    </message>
-    <message>
         <location filename="../SunAnalysis.py" line="291"/>
         <source>Sun analysis legend title - read only</source>
         <translation>Título da legenda da análise solar - somente leitura</translation>
@@ -520,6 +515,11 @@ ou da animação da trajetória solar</translation>
         <location filename="../SunProperties.py" line="469"/>
         <source>Recompute between frames</source>
         <translation>Recalcular entre quadros</translation>
+    </message>
+    <message>
+        <location filename="../SunAnalysis.py" line="283"/>
+        <source>Sun hour values - read only</source>
+        <translation>Valores das horas de sol - somente leitura</translation>
     </message>
 </context>
 <context>
@@ -814,11 +814,6 @@ Atenção: você não poderá desfazer esta ação!</translation>
         <translation>Pico Resfriamento por Tipo de Face</translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="93"/>
-        <source>Peak Hating by Face Type</source>
-        <translation>Pico Aquecimento por Tipo de Face</translation>
-    </message>
-    <message>
         <location filename="../LBComponents.py" line="560"/>
         <source>N</source>
         <translation>N</translation>
@@ -975,6 +970,11 @@ instalar o Radiance em sua máquina.</translation>
         <source>To get irradiance values, Radiance software must be 
 installed in your machine.</source>
         <translation>Para obter os valores de irradiância, o aplicativo Radiance deve estar instalado em sua máquina.</translation>
+    </message>
+    <message>
+        <location filename="../LBComponents.py" line="93"/>
+        <source>Peak Heating by Face Type</source>
+        <translation>Pico Aquecimento por Tipo de Face</translation>
     </message>
 </context>
 <context>
