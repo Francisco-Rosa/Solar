@@ -90,7 +90,7 @@ COLORS_28 = translate("LBComponents", "Viridis (colorblind friendly)")
 COLORS_29 = translate("LBComponents", "Parula (colorblind friendly)")
 COLORS_30 = translate("LBComponents", "Energy Balance by Face Type")
 COLORS_31 = translate("LBComponents", "Peak Cooling by Face Type")
-COLORS_32 = translate("LBComponents", "Peak Hating by Face Type")
+COLORS_32 = translate("LBComponents", "Peak Heating by Face Type")
 
 #=================================================
 # 1. Geometries

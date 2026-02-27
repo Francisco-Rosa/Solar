@@ -283,7 +283,7 @@ class SunAnalysis:
             obj.addProperty("App::PropertyFloatList",
                             "sun_hour_values", "04_Analysis_results",
                             QT_TRANSLATE_NOOP("App::Property",
-                            "Sun hour value values "
+                            "Sun hour values "
                             "- read only")
                             ).sun_hour_values = []
         # 05 Legend
