@@ -1094,8 +1094,8 @@ def create_sky_domes():
                           diffuse_values = SD.diffuse_values,
                           leg_colors = color_rgb_leg,
                           label = translate("SkyDomes",
-                                                    "Sky Domes {} {}").format(
-                                                           SD.city, SD.units),
+                                                    "Sky Domes {} - {}").format(
+                                                           SD.city, SD.leg_title),
                           transparency = SD.transparency
                           )
     FreeCAD.Console.PrintMessage(translate(
@@ -1310,8 +1310,8 @@ def update_values(epw_path = None, period = None):
                           diffuse_values = SD.diffuse_values,
                           leg_colors = color_rgb_leg,
                           label = translate("SkyDomes",
-                          "Sky Domes {} {}").format(
-                                 SD.city, SD.units),
+                          "Sky Domes {} - {}").format(
+                                 SD.city, SD.leg_title),
                           transparency = SD.transparency
                           )
     x1 = SD.position[0] - float(SD.radius)

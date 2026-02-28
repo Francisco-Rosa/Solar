@@ -649,10 +649,8 @@ def get_sun_position(obj = None):
                                             sun_coordinates[2]
                                             )
                     # Update Sun representation
-                    if obj.SunLightRepresentation is True:
-                        update_sun_representation()
+                    update_sun_representation()
                     # Update BW shadows
-                    #if obj.Image_from == "01 - BW 3D view":
                     if obj.Image_from[0:2] == "01":
                         SunShadow.update_shadow_direction()
                         if obj.Save_to is True and obj.SunPathAnimation is False:
@@ -850,8 +848,6 @@ def update_sun_representation(obj = None):
         if obj.SunLightRepresentation is True:
             if obj.RayRepresentation is True:
                 ray_2.Visibility = True
-                #ray_2.Start = pt1_vector
-                #ray_2.End = pt2_vector
                 ray_2.Start = pt2_vector
                 ray_2.End = pt1_vector
                 try:

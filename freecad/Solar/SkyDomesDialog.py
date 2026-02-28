@@ -269,11 +269,9 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
                        "Model:"))
         #comboBox_model
         self.ui.comboBox_model.setItemText(0,
-                       translate("SkyDomesDialog",
-                       "Tregenza"))
+                       "Tregenza")
         self.ui.comboBox_model.setItemText(1,
-                       translate("SkyDomesDialog",
-                       "Reinhart"))
+                       "Reinhart")
         self.ui.comboBox_model.setToolTip(
                        translate("SkyDomesDialog",
                        "Choose between the low-resolution model (Tregenza)\n"
@@ -526,12 +524,13 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
                 self.ui.comboBox_timestep.setCurrentIndex(idx)
             self.ui.checkBox_leap_year.setChecked(SD.leap_year)
             # Sky domes
-            idx3 = self.ui.comboBox_model.findText(SD.model)
+            idx2 = self.ui.comboBox_model.findText(SD.model)
+            if idx2 >= 0:
+                self.ui.comboBox_model.setCurrentIndex(idx2)
+            #idx3 = self.ui.comboBox_units.findText(SD.units))
+            idx3 = int((SD.units)[0:2])
             if idx3 >= 0:
-                self.ui.comboBox_model.setCurrentIndex(idx3)
-            idx4 = self.ui.comboBox_units.findText(SD.units)
-            if idx4 >= 0:
-                self.ui.comboBox_units.setCurrentIndex(idx4)
+                self.ui.comboBox_units.setCurrentIndex(idx3)
             self.ui.checkBox_direct_diffuse.setChecked(SD.direct_diffuse_domes)
             self.ui.checkBox_center_vectors.setChecked(SD.center_vectors)
             # Transparency
@@ -539,9 +538,10 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
             self.ui.horizontalSlider_transparency.setValue(SD.transparency)
             # Legend
             self.ui.spinBox_color_count.setValue(SD.color_count)
-            idx3 = self.ui.comboBox_color_set.findText(SD.color_set)
-            if idx3 >= 0:
-                self.ui.comboBox_color_set.setCurrentIndex(idx3)
+            #idx4 = self.ui.comboBox_color_set.findText(SD.color_set)
+            idx4 = int((SD.color_set)[0:2])
+            if idx4 >= 0:
+                self.ui.comboBox_color_set.setCurrentIndex(idx4)
         else:
             FreeCAD.Console.PrintMessage('get properties: ' + translate(
                 'SkyDomesDialog', 'There is no Sky Domes group!') + '\n')
@@ -586,7 +586,6 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
             SD.timestep = self.ui.comboBox_timestep.currentText()
             SD.leap_year = self.ui.checkBox_leap_year.isChecked()
             SD.model = self.ui.comboBox_model.currentText()
-            #SD.units = self.ui.comboBox_units.currentText()
             prefix1 = int(self.ui.comboBox_units.currentText()[0:2])
             units_list = SD.getEnumerationsOfProperty("units")
             SD.units = units_list[prefix1]
@@ -599,7 +598,6 @@ class SkyDomesConfigurationDialog(QtWidgets.QDialog):
             # Legend
             SD.leg_title = self.ui.comboBox_units.currentText()[5:]
             SD.color_count = self.ui.spinBox_color_count.value()
-            #SD.color_set = self.ui.comboBox_color_set.currentText()
             prefix2 = int(self.ui.comboBox_color_set.currentText()[0:2])
             color_set_list = SD.getEnumerationsOfProperty("color_set")
             SD.color_set = color_set_list[prefix2]

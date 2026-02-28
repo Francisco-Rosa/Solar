@@ -1499,6 +1499,10 @@ def update_sun_analysis_values_colors(epw_path = None,
     #doc = FreeCAD.ActiveDocument
     from freecad.Solar.LBComponents import RESUL_00, RESUL_01, RESUL_02
 
+    #update metadata
+    SA.metadata = []
+    SA.metadata = LBComponents.get_metadata(epw_path, period)
+
     #get study faces
     faces_tris = SA.study_compound.Shape.Faces
     centroids_normals_lb = LBComponents.get_lb_centroids_normals(faces_tris)

@@ -94,6 +94,12 @@ class SunPathDialog(QtWidgets.QDialog):
         self.ui.label_4_Solstices_link.setOpenExternalLinks(True)
         self.ui.label_4_Solstices_link.setTextInteractionFlags(
                                        QtCore.Qt.TextBrowserInteraction)
+        #checkBox_sun_light_config
+        self.ui.checkBox_sun_light_config.clicked.connect(
+                                        self.sun_light_config_toggled)
+        #checkBox_Sun_light_representation
+        self.ui.checkBox_Sun_light_representation.clicked.connect(
+                                        self.Sun_light_representation_toggled)
         # colorButtonTop
         self.ui.colorButtonTop.clicked.connect(self.choose_color)
         # colorButtonTop_2
@@ -524,6 +530,15 @@ class SunPathDialog(QtWidgets.QDialog):
                                                 "Could not read EPW file:\n{}").format(e))
             return
 
+    def sun_light_config_toggled(self):
+        if self.ui.checkBox_sun_light_config.isChecked() is False:
+            self.ui.checkBox_Sun_light_representation.setChecked(False)
+            self.ui.checkBox_Ray_representation.setChecked(False)
+
+    def Sun_light_representation_toggled(self):
+        if self.ui.checkBox_Sun_light_representation.isChecked() is False:
+            self.ui.checkBox_Ray_representation.setChecked(False)
+
     def choose_color(self):
 
         """Open color dialog, returns QColor"""
@@ -569,7 +584,6 @@ class SunPathDialog(QtWidgets.QDialog):
                     self.ui.checkBox_Sun_path_animation.setEnabled(False)
         except:
             pass
-        #if self.ui.comboBox_Images.currentText() == "03 - Render 3D view":
         if self.ui.comboBox_Images.currentText()[0:2] == "03":
             try:
                 FreeCAD.ActiveDocument.Project
@@ -721,8 +735,7 @@ class SunPathDialog(QtWidgets.QDialog):
             # Show_save
             self.ui.checkBox_Save_to.setChecked(
                                     obj.Save_to)
-            idx1 = self.ui.comboBox_Images.findText(
-                                    obj.Image_from)
+            idx1 = int((obj.Image_from)[0:2])
             if idx1 >= 0:
                 self.ui.comboBox_Images.setCurrentIndex(idx1)
         except Exception:
@@ -829,14 +842,15 @@ class SunPathDialog(QtWidgets.QDialog):
         try:
             obj = FreeCAD.ActiveDocument.SunProperties
             # Show_save
-            obj.Image_from = self.ui.comboBox_Images.currentText()
+            prefix = int(self.ui.comboBox_Images.currentText()[0:2])
+            image_from_list = obj.getEnumerationsOfProperty("Image_from")
+            obj.Image_from = image_from_list[prefix]
             obj.Save_to = self.ui.checkBox_Save_to.isChecked()
         except:
             print ("save properties: Show_save properties not changed from dialog")
 
         SunProperties.get_sun_position()
         SunProperties.send_diagram_to_site()
-        #if obj.Image_from == "03 - Render 3D view" and obj.SunPathAnimation is True:
         if obj.Image_from[0:2] == "03" and obj.SunPathAnimation is True:
             SunPathAnimation.set_render_animation()
         FreeCAD.ActiveDocument.recompute()

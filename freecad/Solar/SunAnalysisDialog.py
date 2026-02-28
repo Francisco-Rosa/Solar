@@ -525,7 +525,8 @@ class SunAnalysisConfigurationDialog(QtWidgets.QDialog):
             self.ui.checkBox_leap_year.setChecked(SA.leap_year)
             self.autofill_from_epw() #get location data
             self.ui.spinBox_color_count.setValue(SA.color_count)
-            idx3 = self.ui.comboBox_color_set.findText(SA.color_set)
+            #idx3 = self.ui.comboBox_color_set.findText(SA.color_set)
+            idx3 = int((SA.color_set)[0:2])
             if idx3 >= 0:
                 self.ui.comboBox_color_set.setCurrentIndex(idx3)
             # Geometries
@@ -542,7 +543,8 @@ class SunAnalysisConfigurationDialog(QtWidgets.QDialog):
             self.ui.lineEdit_max_length.setText(str(SA.max_length))
             self.ui.lineEdit_offset_distance.setText(str(SA.offset_distance))
             # Sun analysis results
-            idx2 = self.ui.comboBox_results.findText(SA.results)
+            #idx2 = self.ui.comboBox_results.findText(SA.results)
+            idx2 = int((SA.results)[0:2])
             if idx2 >= 0:
                 self.ui.comboBox_results.setCurrentIndex(idx2)
             #checkBox_sky_matrix_high_density
