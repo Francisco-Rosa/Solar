@@ -1063,11 +1063,6 @@ open the dialog and modify its configuration.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="1307"/>
-        <source>Sky Domes {} {}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../SkyDomes.py" line="1256"/>
         <source>Could not get Sky Domes:
 {e}</source>
@@ -1124,6 +1119,11 @@ Are you sure you want to delete these Sky Domes?
         <source>Sky Domes created! 
 Do not modify their original structure of groups 
 to make possible further adjustments.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomes.py" line="1307"/>
+        <source>Sky Domes {} - {}</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1301,74 +1301,64 @@ Period represents a leap year.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomesDialog.py" line="271"/>
-        <source>Tregenza</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomesDialog.py" line="274"/>
-        <source>Reinhart</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomesDialog.py" line="284"/>
+        <location filename="../SkyDomesDialog.py" line="282"/>
         <source>Units:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomesDialog.py" line="291"/>
+        <location filename="../SkyDomesDialog.py" line="289"/>
         <source>Indicate whether the sky dome should be plotted with 
 units of total Radiation (kWh/m²) or 
 average Irradiance (W/m²).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomesDialog.py" line="297"/>
+        <location filename="../SkyDomesDialog.py" line="295"/>
         <source>Direct and diffuse</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomesDialog.py" line="304"/>
+        <location filename="../SkyDomesDialog.py" line="302"/>
         <source>Center vectors</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomesDialog.py" line="311"/>
+        <location filename="../SkyDomesDialog.py" line="309"/>
         <source>Transparency</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomesDialog.py" line="315"/>
+        <location filename="../SkyDomesDialog.py" line="313"/>
         <source>Adjust the transparency of the Sky Domes.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomesDialog.py" line="381"/>
+        <location filename="../SkyDomesDialog.py" line="379"/>
         <source>Apply</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomesDialog.py" line="402"/>
+        <location filename="../SkyDomesDialog.py" line="400"/>
         <source>Select epw file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomesDialog.py" line="419"/>
+        <location filename="../SkyDomesDialog.py" line="417"/>
         <source>Warning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomesDialog.py" line="419"/>
+        <location filename="../SkyDomesDialog.py" line="417"/>
         <source>Indicate a epw file before close the dialog Sky Domes!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomesDialog.py" line="607"/>
+        <location filename="../SkyDomesDialog.py" line="605"/>
         <source>There is no Sky Domes group!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomesDialog.py" line="277"/>
+        <location filename="../SkyDomesDialog.py" line="275"/>
         <source>Choose between the low-resolution model (Tregenza)
 or high-resolution (Reinhart) one.
 Remember that the Reinhart model can take a 
@@ -1423,38 +1413,38 @@ hours of the year.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomesDialog.py" line="300"/>
+        <location filename="../SkyDomesDialog.py" line="298"/>
         <source>Enable it to visualize the direct and diffuse domes.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomesDialog.py" line="307"/>
+        <location filename="../SkyDomesDialog.py" line="305"/>
         <source>Enable it to visualize the center vectors of each dome patch.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomesDialog.py" line="319"/>
+        <location filename="../SkyDomesDialog.py" line="317"/>
         <source>Legend Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomesDialog.py" line="326"/>
+        <location filename="../SkyDomesDialog.py" line="324"/>
         <source>Indicate the number of colors of the legend bar 
 (default: 11).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomesDialog.py" line="331"/>
+        <location filename="../SkyDomesDialog.py" line="329"/>
         <source>Color palette:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomesDialog.py" line="323"/>
+        <location filename="../SkyDomesDialog.py" line="321"/>
         <source>Num. of colors:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomesDialog.py" line="377"/>
+        <location filename="../SkyDomesDialog.py" line="375"/>
         <source>Choose the legend bar color palette.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1470,12 +1460,12 @@ will increase the computation time.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomesDialog.py" line="488"/>
+        <location filename="../SkyDomesDialog.py" line="486"/>
         <source>epw path get from Sun Path</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomesDialog.py" line="707"/>
+        <location filename="../SkyDomesDialog.py" line="705"/>
         <source>Sky Domes were updated!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1522,12 +1512,12 @@ Click this button to get started its animation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1543"/>
+        <location filename="../SunAnalysis.py" line="1547"/>
         <source>Sun Analysis {} - {}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1555"/>
+        <location filename="../SunAnalysis.py" line="1559"/>
         <source>Sun hours</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1552,7 +1542,7 @@ Click this button to get started its animation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1619"/>
+        <location filename="../SunAnalysis.py" line="1623"/>
         <source>There is no direct or diffuse analysis group!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1652,7 +1642,7 @@ installed in your machine.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1634"/>
+        <location filename="../SunAnalysis.py" line="1638"/>
         <source>This will delete all objects from 
 the selected Sun Analysis, 
 and you won&apos;t be able to undo it. 
@@ -1901,12 +1891,12 @@ is in leap year.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysisDialog.py" line="753"/>
+        <location filename="../SunAnalysisDialog.py" line="755"/>
         <source>Selection of study or context objects</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysisDialog.py" line="765"/>
+        <location filename="../SunAnalysisDialog.py" line="767"/>
         <source>Confirm</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1983,7 +1973,7 @@ with zero in the direction of the y-axis</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysisDialog.py" line="601"/>
+        <location filename="../SunAnalysisDialog.py" line="603"/>
         <source>There is no Sun Analysis!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2010,7 +2000,7 @@ increase the computation time.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysisDialog.py" line="710"/>
+        <location filename="../SunAnalysisDialog.py" line="712"/>
         <source>Sun Analysis was updated!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2023,426 +2013,426 @@ increase the computation time.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="111"/>
+        <location filename="../SunDialog.py" line="117"/>
         <source>Sun position</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="114"/>
+        <location filename="../SunDialog.py" line="120"/>
         <source>Set all data for sun position</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="118"/>
+        <location filename="../SunDialog.py" line="124"/>
         <source>epw file:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="121"/>
+        <location filename="../SunDialog.py" line="127"/>
         <source>Enable this button to automatically 
 adjust the sun position for a location</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="126"/>
+        <location filename="../SunDialog.py" line="132"/>
         <source>Get epw file:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="129"/>
+        <location filename="../SunDialog.py" line="135"/>
         <source>Click the link to get the epw file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="133"/>
+        <location filename="../SunDialog.py" line="139"/>
         <source>Click to download the epw file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="137"/>
+        <location filename="../SunDialog.py" line="143"/>
         <source>epw file path:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="145"/>
+        <location filename="../SunDialog.py" line="151"/>
         <source>The epw file path on your machine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="149"/>
+        <location filename="../SunDialog.py" line="155"/>
         <source>Indicate the path of the epw file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="153"/>
+        <location filename="../SunDialog.py" line="159"/>
         <source>Location:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="156"/>
+        <location filename="../SunDialog.py" line="162"/>
         <source>Activate this button to adjust 
 the sun position for a specific location</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="161"/>
+        <location filename="../SunDialog.py" line="167"/>
         <source>City:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="165"/>
+        <location filename="../SunDialog.py" line="171"/>
         <source>Country:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="169"/>
+        <location filename="../SunDialog.py" line="175"/>
         <source>Latitude:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="173"/>
+        <location filename="../SunDialog.py" line="179"/>
         <source>Longitude:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="177"/>
+        <location filename="../SunDialog.py" line="183"/>
         <source>Elevation:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="181"/>
+        <location filename="../SunDialog.py" line="187"/>
         <source>Time zone:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="185"/>
+        <location filename="../SunDialog.py" line="191"/>
         <source>North angle:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="194"/>
+        <location filename="../SunDialog.py" line="200"/>
         <source>Date and time:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="197"/>
+        <location filename="../SunDialog.py" line="203"/>
         <source>Indicate the date and time 
 of the sun&apos;s position</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="202"/>
+        <location filename="../SunDialog.py" line="208"/>
         <source>Equin./Solst.:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="213"/>
+        <location filename="../SunDialog.py" line="219"/>
         <source>Enable it for daylight saving periods</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="217"/>
+        <location filename="../SunDialog.py" line="223"/>
         <source>Results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="224"/>
+        <location filename="../SunDialog.py" line="230"/>
         <source>Altitude:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="228"/>
+        <location filename="../SunDialog.py" line="234"/>
         <source>Azimuth:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="232"/>
+        <location filename="../SunDialog.py" line="238"/>
         <source>Day hours:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="236"/>
+        <location filename="../SunDialog.py" line="242"/>
         <source>Sunrise:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="240"/>
+        <location filename="../SunDialog.py" line="246"/>
         <source>Noon:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="244"/>
+        <location filename="../SunDialog.py" line="250"/>
         <source>Sunset:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="251"/>
+        <location filename="../SunDialog.py" line="257"/>
         <source>Adjust the other aspects of the solar study here</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="255"/>
+        <location filename="../SunDialog.py" line="261"/>
         <source>Sun light and diagram configurations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="258"/>
+        <location filename="../SunDialog.py" line="264"/>
         <source>Enable it to view and adjust representations 
 of the sun and its path.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="263"/>
+        <location filename="../SunDialog.py" line="269"/>
         <source>Radius:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="267"/>
+        <location filename="../SunDialog.py" line="273"/>
         <source>Distance:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="274"/>
+        <location filename="../SunDialog.py" line="280"/>
         <source>Adjust the center position according to the project</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="285"/>
+        <location filename="../SunDialog.py" line="291"/>
         <source>Ray representation:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="289"/>
+        <location filename="../SunDialog.py" line="295"/>
         <source>Visible</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="310"/>
+        <location filename="../SunDialog.py" line="316"/>
         <source>Color:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="297"/>
+        <location filename="../SunDialog.py" line="303"/>
         <source>Choose the color of the sunlight representation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="301"/>
+        <location filename="../SunDialog.py" line="307"/>
         <source>Sun path diagram (Arch Site)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="304"/>
+        <location filename="../SunDialog.py" line="310"/>
         <source>It is necessary to have an Arch Site object
 to enable the sun path diagram.
 For Color 3D view shadows, leave it disabled.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="314"/>
+        <location filename="../SunDialog.py" line="320"/>
         <source>Choose the color of the sun path diagram</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="318"/>
+        <location filename="../SunDialog.py" line="324"/>
         <source>Show and/or save image:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="322"/>
+        <location filename="../SunDialog.py" line="328"/>
         <source>Image from:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="338"/>
+        <location filename="../SunDialog.py" line="344"/>
         <source>Images, w:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="351"/>
+        <location filename="../SunDialog.py" line="357"/>
         <source>h:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="360"/>
+        <location filename="../SunDialog.py" line="366"/>
         <source>Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="363"/>
+        <location filename="../SunDialog.py" line="369"/>
         <source>Enable it to save the images created</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="367"/>
+        <location filename="../SunDialog.py" line="373"/>
         <source>Sun path animation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="370"/>
+        <location filename="../SunDialog.py" line="376"/>
         <source>Enable the sun path animation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="374"/>
+        <location filename="../SunDialog.py" line="380"/>
         <source>Time from:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="378"/>
+        <location filename="../SunDialog.py" line="384"/>
         <source>Adjust the time for the beginning of the sun path</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="382"/>
+        <location filename="../SunDialog.py" line="388"/>
         <source>to:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="386"/>
+        <location filename="../SunDialog.py" line="392"/>
         <source>Adjust the time for the end of the sun path</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="390"/>
+        <location filename="../SunDialog.py" line="396"/>
         <source>Sunrise-Sunset</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="393"/>
+        <location filename="../SunDialog.py" line="399"/>
         <source>Enable it to get the sunrise and sunset values, then hit Apply.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="398"/>
+        <location filename="../SunDialog.py" line="404"/>
         <source>Interval:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="402"/>
+        <location filename="../SunDialog.py" line="408"/>
         <source>Adjust the interval between each step of the solar path.
 Must not be zero.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="407"/>
+        <location filename="../SunDialog.py" line="413"/>
         <source>Recompute</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="410"/>
+        <location filename="../SunDialog.py" line="416"/>
         <source>Enable it if you need to animate objects as well</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="414"/>
+        <location filename="../SunDialog.py" line="420"/>
         <source>Fps:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="418"/>
+        <location filename="../SunDialog.py" line="424"/>
         <source>Enter the frames per second of the solar path animation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="422"/>
+        <location filename="../SunDialog.py" line="428"/>
         <source>Frames:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="430"/>
+        <location filename="../SunDialog.py" line="436"/>
         <source>Apply</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="478"/>
+        <location filename="../SunDialog.py" line="484"/>
         <source>Select epw file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="478"/>
+        <location filename="../SunDialog.py" line="484"/>
         <source>EPW Files (*.epw);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="498"/>
+        <location filename="../SunDialog.py" line="504"/>
         <source>Warning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="518"/>
+        <location filename="../SunDialog.py" line="524"/>
         <source>File Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="210"/>
+        <location filename="../SunDialog.py" line="216"/>
         <source>Daylight saving</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="278"/>
+        <location filename="../SunDialog.py" line="284"/>
         <source>Sunlight</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="281"/>
+        <location filename="../SunDialog.py" line="287"/>
         <source>Enable the sunlight representation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="341"/>
+        <location filename="../SunDialog.py" line="347"/>
         <source>Set the image resolution.
 Use for render images</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="346"/>
+        <location filename="../SunDialog.py" line="352"/>
         <source>Set the image width in pixels.
 Use for render images</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="355"/>
+        <location filename="../SunDialog.py" line="361"/>
         <source>Set the image height in pixels.
 Use for render images</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="518"/>
+        <location filename="../SunDialog.py" line="524"/>
         <source>Could not read EPW file:
 {}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="140"/>
+        <location filename="../SunDialog.py" line="146"/>
         <source>After downloading the epw file, 
 indicate the path on your machine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="188"/>
+        <location filename="../SunDialog.py" line="194"/>
         <source>Indicate the true north.
 Values ​​in a clockwise direction, 
 with zero in the direction of the y-axis</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="220"/>
+        <location filename="../SunDialog.py" line="226"/>
         <source>Results of the adjustments made</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="248"/>
+        <location filename="../SunDialog.py" line="254"/>
         <source>Additional configurations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="271"/>
+        <location filename="../SunDialog.py" line="277"/>
         <source>Center:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="331"/>
+        <location filename="../SunDialog.py" line="337"/>
         <source>Select the scene type.
 Use None/Reset to clear the settings.
 Color 3D view only works in FreeCAD-Link.
@@ -2450,36 +2440,36 @@ For Render 3D view, install Render WB.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="426"/>
+        <location filename="../SunDialog.py" line="432"/>
         <source>Resulting total frames</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="205"/>
+        <location filename="../SunDialog.py" line="211"/>
         <source>Consult the equinoxes and solstices 
 in the links</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="613"/>
+        <location filename="../SunDialog.py" line="627"/>
         <source>epw path get from Sky Domes
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="616"/>
+        <location filename="../SunDialog.py" line="630"/>
         <source>North angle get from Sky Domes
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="691"/>
+        <location filename="../SunDialog.py" line="705"/>
         <source>Sun path diagram not updated
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="498"/>
+        <location filename="../SunDialog.py" line="504"/>
         <source>If you want to use EPW for Sun Path, provide a valid file path.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2527,12 +2517,12 @@ Click &apos;Stop Animation&apos; to start again.</source>
 <context>
     <name>SunPathDialog</name>
     <message>
-        <location filename="../SunDialog.py" line="440"/>
+        <location filename="../SunDialog.py" line="446"/>
         <source>Sun Path Dialog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="441"/>
+        <location filename="../SunDialog.py" line="447"/>
         <source>Creates and manages the Sun Path Dialog. After the sun path created, configure its properties</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2550,22 +2540,22 @@ Click &apos;Stop Animation&apos; to start again.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunProperties.py" line="759"/>
+        <location filename="../SunProperties.py" line="757"/>
         <source>SunLight</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunProperties.py" line="795"/>
+        <location filename="../SunProperties.py" line="793"/>
         <source>Ray</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunProperties.py" line="845"/>
+        <location filename="../SunProperties.py" line="843"/>
         <source>There is no SunLight to update!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunProperties.py" line="875"/>
+        <location filename="../SunProperties.py" line="871"/>
         <source>There is no sun ray to update!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2581,7 +2571,7 @@ Click &apos;Stop Animation&apos; to start again.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunProperties.py" line="707"/>
+        <location filename="../SunProperties.py" line="705"/>
         <source>For a 3D Render 3D view, a render 
 project is required, and none was found!</source>
         <translation type="unfinished"></translation>
