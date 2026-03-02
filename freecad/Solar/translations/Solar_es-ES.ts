@@ -1322,7 +1322,7 @@ grupos para permitir ajustes adicionales.</translation>
     <message>
         <location filename="../SkyDomesDialog.py" line="255"/>
         <source>leap year</source>
-        <translation>año bisiesto</translation>
+        <translation>Año bisiesto</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="258"/>
@@ -1955,7 +1955,7 @@ is in leap year.</source>
     <message>
         <location filename="../SunAnalysisDialog.py" line="378"/>
         <source>Apply</source>
-        <translation>Apply</translation>
+        <translation>Aplicar</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="402"/>

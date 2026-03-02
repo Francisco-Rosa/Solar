@@ -1316,7 +1316,7 @@ para possibilitar ajustes futuros.</translation>
     <message>
         <location filename="../SkyDomesDialog.py" line="255"/>
         <source>leap year</source>
-        <translation>ano bissexto</translation>
+        <translation>Ano bissexto</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="258"/>
