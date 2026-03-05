@@ -483,14 +483,15 @@ def apply_color_faces(obj = None,
 #=================================================
 
 def get_compass_group(center = None,
-                radius = None,
-                north = None,
-                variation_angle = None,
-                total_group = None,
-                direct_group = None,
-                diffuse_group = None,
-                deltx = None
-                ):
+                      radius = None,
+                      north = None,
+                      variation_angle = None,
+                      total_group = None,
+                      direct_group = None,
+                      diffuse_group = None,
+                      SA = False,
+                      scale = 1
+                      ):
 
     """Create compass and manage their groups"""
 
@@ -505,13 +506,15 @@ def get_compass_group(center = None,
     max_angle = 360
     n_angles = int(max_angle / variation_angle)
     # compass circles
+    center = (center[0], center[1], 0)
     pl=FreeCAD.Placement()
     pl.Base = FreeCAD.Vector(center)
     pl1=FreeCAD.Placement()
     pl2=FreeCAD.Placement()
     pl3=FreeCAD.Placement()
     pl.Rotation.setYawPitchRoll(0,0,0)
-    radius_compas = radius
+
+    radius_compas = radius * scale
     circle1 = Draft.make_circle(radius=radius_compas,
                                 placement=pl,
                                 face=False,
@@ -526,12 +529,8 @@ def get_compass_group(center = None,
                                 support=None)
     compass_list = [circle1, circle2, circle3]
     #displacement
-    if deltx == None:
-        deltx2 = radius*3
-        deltx3 = radius*6
-    else:
-        deltx2 = deltx
-        deltx3 = 2*deltx
+    deltx2 = radius*3
+    deltx3 = radius*6
     delty = - radius/50
     # compass lines and texts
     for i in range(n_angles):
@@ -624,8 +623,10 @@ def get_compass_group(center = None,
             text_compas_leg3.ViewObject.ScaleMultiplier = scale
             diffuse_text_list.append(text_compas_leg3)
     # create a north triangle
-    if deltx is not None:
+    if SA is True:
         points = [point_n, point_e, point_w]
+        print(f"points: {points}")
+        print(f"pl: {pl}")
         triangle = Draft.make_wire(points,
                                     placement=pl,
                                     closed=True,
@@ -643,23 +644,7 @@ def get_compass_group(center = None,
                                             "Total compass circles")
     doc.getObject(total_compass.Name).Links = compass_list
     doc.getObject(total_group.Name).addObject(total_compass)
-    if direct_group != None or diffuse_group != None:
-        # Compass direct - clone
-        direct_compass = Draft.make_clone(doc.getObject(total_compass.Name))
-        doc.getObject(direct_compass.Name).Placement.Base = (deltx2, 0,0)
-        doc.getObject(direct_compass.Name).Label = translate(
-                                                   "LBComponents",
-                                                   "Direct compass circles")
-        doc.getObject(direct_group.Name).addObject(direct_compass)
-        # Compass diffuse - clone
-        diffuse_compass = Draft.make_clone(doc.getObject(total_compass.Name))
-        doc.getObject(diffuse_compass.Name).Placement.Base = (deltx3, 0,0)
-        doc.getObject(diffuse_compass.Name).Label = translate(
-                                                    "LBComponents",
-                                                    "Diffuse compass circles")
-        doc.getObject(diffuse_group.Name).addObject(diffuse_compass)
-    ## managing groups
-    # Create compass groups
+    # Create total compass groups
     total_compass_group = create_group(group_name = "Total_Compass_Group",
                            group_label = translate("LBComponents",
                                                     "Total Compass Group")
@@ -669,24 +654,6 @@ def get_compass_group(center = None,
                            group_label = translate("LBComponents",
                                                     "Total Compass Legend Group")
                             )
-    if direct_group != None or diffuse_group != None:
-        direct_compass_group = create_group(group_name = "Direct_Compass_Group",
-                               group_label = translate("LBComponents",
-                                                        "Direct Compass Group")
-                                )
-        diffuse_compass_group = create_group(group_name = "Diffuse_Compass_Group",
-                               group_label = translate("LBComponents",
-                                                        "Diffuse Compass Group")
-                                )
-        # Create compass legend groups
-        direct_compass_leg_group = create_group(group_name = "Direct_Compass_Legend_Group",
-                               group_label = translate("LBComponents",
-                                                        "Direct Compass Legend Group")
-                                )
-        diffuse_compass_leg_group = create_group(group_name = "Diffuse_Compass_Legend_Group",
-                               group_label = translate("LBComponents",
-                                                        "Diffuse Compass Legend Group")
-                                )
     #Compasses to their groups
     put_obj_group(obj = total_compass,
                   group = total_compass_group,
@@ -695,26 +662,61 @@ def get_compass_group(center = None,
     put_group1_in_group2(group1 = total_compass_leg_group,
                         group2 = total_compass_group,
                         )
+    if SA is False:
+        if direct_group != None or diffuse_group != None:
+            # Compass direct - clone
+            direct_compass = Draft.make_clone(doc.getObject(total_compass.Name))
+            doc.getObject(direct_compass.Name).Placement.Base = (deltx2, 0,0)
+            doc.getObject(direct_compass.Name).Label = translate(
+                                                       "LBComponents",
+                                                       "Direct compass circles")
+            doc.getObject(direct_group.Name).addObject(direct_compass)
+            # Compass diffuse - clone
+            diffuse_compass = Draft.make_clone(doc.getObject(total_compass.Name))
+            doc.getObject(diffuse_compass.Name).Placement.Base = (deltx3, 0,0)
+            doc.getObject(diffuse_compass.Name).Label = translate(
+                                                        "LBComponents",
+                                                        "Diffuse compass circles")
+            doc.getObject(diffuse_group.Name).addObject(diffuse_compass)
+            # Create direct and diffuse compass groups
+            direct_compass_group = create_group(group_name = "Direct_Compass_Group",
+                                   group_label = translate("LBComponents",
+                                                            "Direct Compass Group")
+                                    )
+            diffuse_compass_group = create_group(group_name = "Diffuse_Compass_Group",
+                                   group_label = translate("LBComponents",
+                                                            "Diffuse Compass Group")
+                                    )
+            # Create direct and diffuse compass legend groups
+            direct_compass_leg_group = create_group(group_name = "Direct_Compass_Legend_Group",
+                                   group_label = translate("LBComponents",
+                                                            "Direct Compass Legend Group")
+                                    )
+            diffuse_compass_leg_group = create_group(group_name = "Diffuse_Compass_Legend_Group",
+                                   group_label = translate("LBComponents",
+                                                            "Diffuse Compass Legend Group")
+                                    )
     # Texts to legend groups
     for i in range(n_angles):
         doc.getObject(total_compass_leg_group.Name).addObject(total_text_list[i])
-        if direct_group != None or diffuse_group != None:
-            doc.getObject(direct_compass_leg_group.Name).addObject(direct_text_list[i])
-            doc.getObject(diffuse_compass_leg_group.Name).addObject(diffuse_text_list[i])
-            # Compasses to their groups
-            put_obj_group(obj = direct_compass,
-                          group = direct_compass_group,
-                          )
-            put_obj_group(obj = diffuse_compass,
-                          group = diffuse_compass_group,
-                          )
-            # Text groups to their groups
-            put_group1_in_group2(group1 = direct_compass_leg_group,
-                                group2 = direct_compass_group,
-                                )
-            put_group1_in_group2(group1 = diffuse_compass_leg_group,
-                                group2 = diffuse_compass_group,
-                                )
+        if SA is False:
+            if direct_group != None or diffuse_group != None:
+                doc.getObject(direct_compass_leg_group.Name).addObject(direct_text_list[i])
+                doc.getObject(diffuse_compass_leg_group.Name).addObject(diffuse_text_list[i])
+                # Compasses to their groups
+                put_obj_group(obj = direct_compass,
+                              group = direct_compass_group,
+                              )
+                put_obj_group(obj = diffuse_compass,
+                              group = diffuse_compass_group,
+                              )
+                # Text groups to their groups
+                put_group1_in_group2(group1 = direct_compass_leg_group,
+                                    group2 = direct_compass_group,
+                                    )
+                put_group1_in_group2(group1 = diffuse_compass_leg_group,
+                                    group2 = diffuse_compass_group,
+                                    )
     FreeCAD.ActiveDocument.recompute()
     return [total_compass_group, #[0]
             direct_compass_group, #[1]
@@ -730,7 +732,7 @@ def modify_compass(center = None,
                    variation_angle = None,
                    sky_domes_group = None,
                    sun_analysis_group = None,
-                   deltx = None
+                   scale = 1
                    ):
 
     """Modify compass"""
@@ -748,7 +750,9 @@ def modify_compass(center = None,
     text_list1 = []
     text_list2 = []
     text_list3 = []
-
+    #update scale
+    radius = radius*scale
+    center = (center[0], center[1], 0)
     if sky_domes_group is not None:
         circ_lines_list = sky_domes_group.Group[0].Group[1].Group[0].Links
         text_list1 = sky_domes_group.Group[0].Group[1].Group[1].Group
@@ -759,28 +763,20 @@ def modify_compass(center = None,
         compass_clone2 = sky_domes_group.Group[2].Group[1].Group[0]
         deltx2 = radius*3
         deltx3 = radius*6
-    elif sun_analysis_group is not None and deltx is not None:
+    elif sun_analysis_group is not None:
         circ_lines_list1 = sun_analysis_group.Group[1].Group[1].Group[1].Group[0].Links
         compass_triangle = circ_lines_list1[-1]
         compass_triangle.Points
         circ_lines_list = circ_lines_list1[0:-1]
         text_list1 = sun_analysis_group.Group[1].Group[1].Group[1].Group[1].Group
         compass_original = sun_analysis_group.Group[1].Group[1].Group[1].Group[0]
-        deltx2 = deltx
-        deltx3 = 2*deltx
-        try:
-            text_list2 = sun_analysis_group.Group[2].Group[1].Group[1].Group[1].Group
-            text_list3 = sun_analysis_group.Group[3].Group[1].Group[1].Group[1].Group
-            compass_clone1 = sun_analysis_group.Group[2].Group[1].Group[1].Group[0]
-            compass_clone2 = sun_analysis_group.Group[3].Group[1].Group[1].Group[0]
-        except:
-            pass
     else:
         FreeCAD.Console.PrintMessage(
             "Modify compass: Could not get existing compass! \n")
         return
     pl = FreeCAD.Placement() # original
     pl.Base = FreeCAD.Vector(center)
+    #pl.Base = FreeCAD.Vector(0.0, 0.0, 0.0)
     pl.Rotation.setYawPitchRoll(north,0,0)
     circle1 = circ_lines_list[0]
     circle1.Placement = pl
@@ -844,7 +840,7 @@ def modify_compass(center = None,
     try:
         points = [point_e, point_w, point_n]
         # update a north triangle
-        if sun_analysis_group is not None and deltx is not None:
+        if sun_analysis_group is not None:
             compass_triangle.Placement.Base = FreeCAD.Vector(0.0, 0.0, 0.0)
             compass_triangle.Points = points
     except:
@@ -882,7 +878,8 @@ def get_modify_legend_bar(bar_obj = None,
                           seg_width = 1000,
                           seg_count = 11,
                           color_leg_set = 0,
-                          min = 0.0
+                          min = 0.0,
+                          scale = 1
                           ):
 
     """Get or modify legend using ladybug color range
@@ -900,6 +897,9 @@ def get_modify_legend_bar(bar_obj = None,
     """
 
     doc = FreeCAD.ActiveDocument
+    #update scale
+    seg_height = seg_height*scale
+    seg_width = seg_width*scale
     #color_scheme
     color_scheme = Colorset()
     #leg_par
@@ -1039,7 +1039,8 @@ def get_modify_legend_bar(bar_obj = None,
         doc.getObject(leg_bar_group.Name).addObject(leg_text_group)
     FreeCAD.ActiveDocument.recompute()
     return [leg_bar_group, #[0]
-            color_rgb_leg #[1]
+            color_rgb_leg, #[1]
+            seg_width #[2]
             ]
 
 #=================================================
@@ -1125,10 +1126,15 @@ def get_main_legends(pos1 = (0.0, 0.0, 0.0),
                      units = None,
                      metadata = None,
                      text_high = 100,
+                     scale = 1
                      ):
 
     """Create main legend"""
-
+    #update scale
+    print(f"text_high1: {text_high}")
+    print(f"scale: {scale}")
+    text_high = text_high*scale
+    print(f"text_high2: {text_high}")
     #get texts
     leg_titles = get_main_legend_texts(units, metadata)
     if pos1 is not None:
@@ -1213,11 +1219,14 @@ def modify_main_legends(main_leg1 = None,
                          metadata = None,
                          modify_position = False,
                          modify_values = False,
-                         font_size = None
+                         font_size = None,
+                         #scale = 1
                          ):
 
     """ Modify main legend position and text size
     - Sun analysis"""
+
+    font_size = font_size
     if modify_position is True:
         main_leg1.Placement.Base = FreeCAD.Vector(pos1)
         main_leg1.ViewObject.FontSize = font_size

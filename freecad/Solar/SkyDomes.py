@@ -994,7 +994,8 @@ def create_sky_domes():
                                total_group = sky_domes[0],
                                direct_group = sky_domes[1],
                                diffuse_group = sky_domes[2],
-                               deltx = None
+                               SA = False,
+                               scale = 1
                                )
     # Getting values
     print ("getting Sky Domes values...")
@@ -1028,14 +1029,14 @@ def create_sky_domes():
     SD.leg_position = (bar_x, bar_y, 0.0)
     legend = LBComponents.get_modify_legend_bar(bar_obj = None,
                               text_leg_group = None,
-                              #title = SD.units,
                               title = SD.leg_title,
                               values = SD.total_values,
                               position = SD.leg_position,
                               seg_height = SD.leg_width,
                               seg_width = SD.leg_width,
                               seg_count = SD.color_count,
-                              color_leg_set = int(SD.color_set[0:2])
+                              color_leg_set = int(SD.color_set[0:2]),
+                              scale = 1
                               )
     leg_group = legend[0]
     color_rgb_leg = legend[1]
@@ -1065,10 +1066,10 @@ def create_sky_domes():
     main_leg_groups = LBComponents.get_main_legends(pos1,
                                            pos2,
                                            pos3,
-                                           #units = SD.units,
                                            units = SD.leg_title,
                                            metadata = SD.metadata,
                                            text_high = float(SD.radius)/10,
+                                           scale = 1
                                            )
     # Managing groups
     print("managing group...")
@@ -1203,7 +1204,7 @@ def update_forms():
                        variation_angle = 10,
                        sky_domes_group = SD,
                        sun_analysis_group = None,
-                       deltx = None
+                       scale = 1
                        )
     SD.leg_width = float(SD.radius*2/SD.color_count)
     if SD.direct_diffuse_domes is True:
@@ -1214,14 +1215,14 @@ def update_forms():
     SD.leg_position = (bar_x, bar_y, 0.0)
     LBComponents.get_modify_legend_bar(bar_obj = SD.Group[3].Group[0],
                               text_leg_group = SD.Group[3].Group[1],
-                              #title = SD.units,
                               title = SD.leg_title,
                               values = SD.total_values,
                               position = SD.leg_position,
                               seg_height = SD.leg_width,
                               seg_width = SD.leg_width,
                               seg_count = SD.color_count,
-                              color_leg_set = int(SD.color_set[0:2])
+                              color_leg_set = int(SD.color_set[0:2]),
+                              scale = 1
                               )
     x1 = SD.position[0] - float(SD.radius)
     x2 = SD.position[0] + float(SD.radius)*2
@@ -1284,14 +1285,14 @@ def update_values(epw_path = None, period = None):
     SD.leg_position = (bar_x, bar_y, 0.0)
     legend = LBComponents.get_modify_legend_bar(bar_obj = SD.Group[3].Group[0],
                               text_leg_group = SD.Group[3].Group[1],
-                              #title = SD.units,
                               title = SD.leg_title,
                               values = SD.total_values,
                               position = SD.leg_position,
                               seg_height = SD.leg_width,
                               seg_width = SD.leg_width,
                               seg_count = SD.color_count,
-                              color_leg_set = int(SD.color_set[0:2])
+                              color_leg_set = int(SD.color_set[0:2]),
+                              scale = 1
                               )
     color_rgb_leg = legend[1]
     print ("modifying Sky Domes forms...")

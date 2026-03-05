@@ -374,6 +374,13 @@ class SunAnalysisConfigurationDialog(QtWidgets.QDialog):
         self.ui.comboBox_color_set.setToolTip(
                        translate("SunAnalysisDialog",
                        "Choose the legend bar color palette."))
+        #label_scale
+        self.ui.label_scale.setText(
+                       translate("SunAnalysisDialog",
+                       "Scale:"))
+        self.ui.lineEdit_scale.setToolTip(
+                       translate("SunAnalysisDialog",
+                       "Adjust the scale of the legends if necessary."))
         #pushButton_Apply
         self.ui.pushButton_Apply.setText(
                        translate("SunAnalysisDialog",
@@ -465,6 +472,9 @@ class SunAnalysisConfigurationDialog(QtWidgets.QDialog):
         else:
             self.ui.checkBox_direct_diffuse.setEnabled(True)
 
+    def scale_toggled(self):
+        SunAnalysis.direct_diffuse_visualization()
+
     def direct_diffuse_toggled(self):
         if self.ui.comboBox_results.currentText()[0:2] != "00":
             from freecad.Solar.SunAnalysis import SA
@@ -524,11 +534,12 @@ class SunAnalysisConfigurationDialog(QtWidgets.QDialog):
                     self.ui.comboBox_timestep.setCurrentIndex(idx)
             self.ui.checkBox_leap_year.setChecked(SA.leap_year)
             self.autofill_from_epw() #get location data
+            # Legend
             self.ui.spinBox_color_count.setValue(SA.color_count)
-            #idx3 = self.ui.comboBox_color_set.findText(SA.color_set)
             idx3 = int((SA.color_set)[0:2])
             if idx3 >= 0:
                 self.ui.comboBox_color_set.setCurrentIndex(idx3)
+            self.ui.lineEdit_scale.setText(str(SA.leg_scale))
             # Geometries
             labels_objs = []
             for o in range(len(SA.study_objs)):
@@ -543,7 +554,6 @@ class SunAnalysisConfigurationDialog(QtWidgets.QDialog):
             self.ui.lineEdit_max_length.setText(str(SA.max_length))
             self.ui.lineEdit_offset_distance.setText(str(SA.offset_distance))
             # Sun analysis results
-            #idx2 = self.ui.comboBox_results.findText(SA.results)
             idx2 = int((SA.results)[0:2])
             if idx2 >= 0:
                 self.ui.comboBox_results.setCurrentIndex(idx2)
@@ -574,10 +584,12 @@ class SunAnalysisConfigurationDialog(QtWidgets.QDialog):
             SA.time_zone = int(float(self.ui.label_time_zone_value.text()))
             # North angle
             SA.north  = float(self.ui.lineEdit_North_angle.text())
+            # Legend
             SA.color_count = self.ui.spinBox_color_count.value()
             prefix1 = int(self.ui.comboBox_color_set.currentText()[0:2])
             color_set_list = SA.getEnumerationsOfProperty("color_set")
             SA.color_set = color_set_list[prefix1]
+            SA.leg_scale = float(self.ui.lineEdit_scale.text())
             # Geometries
             SA.max_length = float(self.ui.lineEdit_max_length.text())
             SA.offset_distance = float(self.ui.lineEdit_offset_distance.text())
@@ -614,6 +626,7 @@ class SunAnalysisConfigurationDialog(QtWidgets.QDialog):
         #values and colors
         epw_path2 = self.ui.lineEdit_epw_path.text()
         north2 = float(self.ui.lineEdit_North_angle.text())
+        leg_scale2 = float(self.ui.lineEdit_scale.text())
         offset_distance2 = float(self.ui.lineEdit_offset_distance.text())
         date_string1 = self.ui.dateEdit_date_from.date()
         start_day2 = date_string1.day()
@@ -643,6 +656,7 @@ class SunAnalysisConfigurationDialog(QtWidgets.QDialog):
             epw_path1 = SA.epw_path
             north1 = float(SA.north)
             color_count1 = SA.color_count
+            leg_scale1 = SA.leg_scale
             offset_distance1 = SA.offset_distance
             color_set1 = SA.color_set[0:2]
             max_length1 = SA.max_length
@@ -679,7 +693,6 @@ class SunAnalysisConfigurationDialog(QtWidgets.QDialog):
                                                start_hour1 != start_hour2,
                                                end_hour1 != end_hour2,
                                                timestep1 != timestep2,
-                                               #daylight_saving1 != daylight_saving2,
                                                leap_year1 != leap_year2,
                                                results1 != results2,
                                                sky_matrix_high_density1 != sky_matrix_high_density2,      
@@ -689,7 +702,6 @@ class SunAnalysisConfigurationDialog(QtWidgets.QDialog):
                 print(f"found difference for values_colors: {dif_values_colors}")
             #else:
                 #print(f"dif_values_colors: {dif_values_colors}")
-
             #check colors
             if any(condition for condition in [color_count1 != color_count2,
                                                color_set1 != color_set2
@@ -699,10 +711,11 @@ class SunAnalysisConfigurationDialog(QtWidgets.QDialog):
                 print(f"found difference for dif_colors: {dif_colors}")
             #else:
                 #print(f"dif_colors: {dif_colors}")
-
             #update properties
             self.save_to_propeties()
             #print("send data to Sun Analysis!")
+            if leg_scale1 != leg_scale2:
+                SunAnalysis.direct_diffuse_visualization()
             #print(f"dif_forms: {dif_forms}, dif_values_colors: {dif_values_colors}, dif_colors: {dif_colors}")
             if dif_forms is True or dif_values_colors is True or dif_colors is True:
                 #print("try to update Sun Analysis data!")

@@ -26,7 +26,6 @@
 import os
 import FreeCAD
 import FreeCADGui as Gui
-#import Draft
 import Part
 import MeshPart
 from PySide.QtCore import QT_TRANSLATE_NOOP
@@ -316,6 +315,13 @@ class SunAnalysis:
                             "Width of legend bar in mm "
                             "(x, y, z) - read only")
                             ).leg_width = 1000
+        if not "leg_scale" in pl:
+            obj.addProperty("App::PropertyFloat",
+                            "leg_scale", "05_Legend",
+                            QT_TRANSLATE_NOOP("App::Property",
+                            "Scale of the legends (titles and bar). "
+                            "- read only")
+                            ).leg_scale = 1.0
         if not "color_count" in pl:
             obj.addProperty("App::PropertyInteger",
                             "color_count", "05_Legend",
@@ -681,8 +687,6 @@ def get_leg_pos(study_objs = None,
         posy.append(y1)
         y2 = context_obj.Shape.BoundBox.YMin
         posy.append(y2)
-    #print(f"posx:{posx}")
-    #print(f"posy:{posy}")
     #get legend position1
     #boundaries
     max_x = max(posx)
@@ -691,7 +695,7 @@ def get_leg_pos(study_objs = None,
     min_y = min(posy)
     #get legend bar position 1
     max_side = max((max_x - min_x), (max_y - min_y))
-    deltx1 = max_side/5
+    deltx1 = max_side/10
     leg_bar_position1 = ((max_x + deltx1), min_y, 0)
     #get legend height and width
     bar_leg_height = (max_y - min_y)
@@ -707,11 +711,10 @@ def get_leg_pos(study_objs = None,
     #get legend bar position 2
     leg_bar_position2 = (max_x + deltx1 + 2*deltx2, min_y, 0)
     #get legend compass position 1, 2 and 3
-    x1 = (max_x - min_x) - (max_y - min_y)/12 + min_x
-    y1 = (min_y - deltx1) - (max_y - min_y)/12
+    x1 = max_x + deltx1 + bar_leg_width/2
+    y1 = (min_y - deltx1) - (max_y - min_y)/20
     compass_leg_position1 = (x1, y1, 0)
-    compass_leg_position2 = (x1 + deltx2, y1, 0)
-    compass_leg_position3 = (x1 + 2*deltx2, y1, 0)
+    compass_leg_position2 = (x1 + 2*deltx2, y1, 0)
     return [leg_bar_position1, #0
             leg_bar_position2, #1
             bar_leg_width, #2
@@ -722,8 +725,7 @@ def get_leg_pos(study_objs = None,
             main_leg_position2, #7
             main_leg_position3, #8
             compass_leg_position1, #9
-            compass_leg_position2, #10
-            compass_leg_position3, #11
+            compass_leg_position2 #10
             ]
 
 #=================================================
@@ -809,7 +811,6 @@ def create_sun_analysis(study_objs = None,
                                      'Total_SA_group')
     study_total_group.Label = translate('SunAnalysis',
                                      'Total Sun Analysis Group')
-    #doc.getObject(study_total_group.Name).addObject(SA.study_compound)
     SA.addObject(SA.study_compound)
     SA.addObject(study_total_group)
     #get study faces
@@ -934,17 +935,19 @@ def get_modify_sun_hours(period = None,
                                       units = title,
                                       metadata = SA.metadata,
                                       text_high = SA.leg_width/2,
+                                      scale = SA.leg_scale
                                       )
 
-        #get compass legends
+        #get compass
         compass_groups = LBComponents.get_compass_group(center = leg_pos[9],
-                                 radius = SA.leg_height/12,
+                                 radius = SA.leg_height/20,
                                  north = float(SA.north),
                                  variation_angle = 90,
                                  total_group = main_leg_groups[0],
-                                 direct_group = main_leg_groups[1],
-                                 diffuse_group = main_leg_groups[2],
-                                 deltx = leg_pos[10][0] - leg_pos[9][0]
+                                 direct_group = None,
+                                 diffuse_group = None,
+                                 SA = True,
+                                 scale = SA.leg_scale
                                  )
         compass_main_leg_created = True
     if modify == False:
@@ -957,12 +960,14 @@ def get_modify_sun_hours(period = None,
                                            seg_height = SA.leg_width,
                                            seg_width = SA.leg_width,
                                            seg_count = SA.color_count,
-                                           color_leg_set = int(SA.color_set[0:2])
+                                           color_leg_set = int(SA.color_set[0:2]),
+                                           scale = SA.leg_scale
                                            )
         bar_leg_group = bar_leg[0]
         doc.getObject(study_total_group.Name).addObject(bar_leg_group)
         doc.getObject(study_total_group.Name).addObject(main_leg_groups[0])
         doc.getObject(main_leg_groups[0].Name).addObject(compass_groups[0])
+        SA.leg_width = bar_leg[2]
     else:
         print("updating legend bar and colors...")
         #Update leg bar data
@@ -976,8 +981,10 @@ def get_modify_sun_hours(period = None,
                                                    seg_height = seg_height,
                                                    seg_width = SA.leg_width,
                                                    seg_count = SA.color_count,
-                                                   color_leg_set = int(SA.color_set[0:2])
+                                                   color_leg_set = int(SA.color_set[0:2]),
+                                                   scale = SA.leg_scale
                                                    )
+        SA.leg_width = bar_leg[2]
         if compass_main_leg_created == False:
             print ("updating main legends...")
             LBComponents.modify_main_legends(
@@ -994,13 +1001,16 @@ def get_modify_sun_hours(period = None,
                                      font_size = SA.leg_width/2
                                      )
             #modify compass
-            LBComponents.modify_compass(center = leg_pos[9],
-                                        radius = SA.leg_height/12,
+            compass_center = ((leg_pos[0][0] + SA.leg_width/2),
+                              leg_pos[9][1], leg_pos[9][2]
+                              )
+            LBComponents.modify_compass(center = compass_center,
+                                        radius = SA.leg_height/20,
                                         north = float(SA.north),
                                         variation_angle = 90,
                                         sky_domes_group = None,
                                         sun_analysis_group = SA,
-                                        deltx = leg_pos[10][0] - leg_pos[9][0]
+                                        scale = SA.leg_scale
                                         )
         #remove direct an diffuse groups and clones
         try:
@@ -1025,7 +1035,7 @@ def get_modify_sun_hours(period = None,
         total_compass = compass_groups[3]
     except Exception:
         total_compass = SA.Group[1].Group[1].Group[1].Group[0]
-    color = bar_leg[-1][-1]
+    color = bar_leg[1][-1]
     color_rgb = (color[0], color[1], color[2])
     total_compass.ViewObject.ShapeAppearance = FreeCAD.Material(
                                     DiffuseColor = color_rgb)
@@ -1137,8 +1147,10 @@ def get_modify_sun_radiation(epw_path = "",
     diffuse_values = SA.diffuse_values
     if SA.direct_diffuse_values == False:
         SA.leg_position = leg_pos[0]
+        #compass_center =  leg_pos[9]
     else:
         SA.leg_position = leg_pos[1]
+        #compass_center =  leg_pos[10]
     SA.leg_width = leg_pos[2]
     compass_main_leg_created = False
     try:
@@ -1163,20 +1175,23 @@ def get_modify_sun_radiation(epw_path = "",
                                           units = title,
                                           metadata = SA.metadata,
                                           text_high = SA.leg_width/2,
+                                          scale = SA.leg_scale
                                           )
         #get compass legends
-        compass_groups = LBComponents.get_compass_group(center = leg_pos[9],
-                                     radius = SA.leg_height/12,
+        compass_center = ((SA.leg_position[0] + SA.leg_width/2*SA.leg_scale),
+                          leg_pos[9][1], leg_pos[9][2]
+                          )
+        compass_groups = LBComponents.get_compass_group(center = compass_center,
+                                     radius = SA.leg_height/20,
                                      north = float(SA.north),
                                      variation_angle = 90,
                                      total_group = main_leg_groups[0],
-                                     direct_group = main_leg_groups[1],
-                                     diffuse_group = main_leg_groups[2],
-                                     deltx = leg_pos[10][0] - leg_pos[9][0]
+                                     direct_group = None,
+                                     diffuse_group = None,
+                                     SA = True,
+                                     scale = SA.leg_scale
                                      )
         doc.getObject(main_leg_groups[0].Name).addObject(compass_groups[0])
-        doc.getObject(main_leg_groups[1].Name).addObject(compass_groups[1])
-        doc.getObject(main_leg_groups[2].Name).addObject(compass_groups[2])
         compass_main_leg_created = True
     except:
         pass
@@ -1190,10 +1205,12 @@ def get_modify_sun_radiation(epw_path = "",
                                        seg_height = SA.leg_width,
                                        seg_width = SA.leg_width,
                                        seg_count = SA.color_count,
-                                       color_leg_set = int(SA.color_set[0:2])
+                                       color_leg_set = int(SA.color_set[0:2]),
+                                       scale = SA.leg_scale
                                        )
         leg_bar_group = bar_leg[0]
         doc.getObject(study_total_group.Name).addObject(leg_bar_group)
+        SA.leg_width = bar_leg[2]
     else:
         study_direct_group = SA.Group[2]
         study_diffuse_group = SA.Group[3]
@@ -1210,8 +1227,10 @@ def get_modify_sun_radiation(epw_path = "",
                                                    seg_height = seg_height,
                                                    seg_width = SA.leg_width,
                                                    seg_count = SA.color_count,
-                                                   color_leg_set = int(SA.color_set[0:2])
+                                                   color_leg_set = int(SA.color_set[0:2]),
+                                                   scale = SA.leg_scale
                                                    )
+        SA.leg_width = bar_leg[2]
         if compass_main_leg_created is False:
             print ("updating main legends...")
             LBComponents.modify_main_legends(
@@ -1228,13 +1247,16 @@ def get_modify_sun_radiation(epw_path = "",
                                          font_size = SA.leg_width/2
                                          )
             #modify compass
-            LBComponents.modify_compass(center = leg_pos[9],
-                                            radius = SA.leg_height/12,
+            compass_center = ((SA.leg_position[0] + SA.leg_width/2),
+                              leg_pos[9][1], leg_pos[9][2]
+                              )
+            LBComponents.modify_compass(center = compass_center,
+                                            radius = SA.leg_height/20,
                                             north = float(SA.north),
                                             variation_angle = 90,
                                             sky_domes_group = None,
                                             sun_analysis_group = SA,
-                                            deltx = leg_pos[10][0] - leg_pos[9][0]
+                                            scale = SA.leg_scale
                                             )
     try:
         total_main_leg_group = main_leg_groups[0]
@@ -1269,20 +1291,16 @@ def get_modify_sun_radiation(epw_path = "",
                                    face_colors = f_colors_diffuse)
     try:
         total_compass = compass_groups[3]
-        direct_compass = compass_groups[4]
-        diffuse_compass = compass_groups[5]
     except Exception:
         total_compass = SA.Group[1].Group[1].Group[1].Group[0]
-        direct_compass = SA.Group[2].Group[1].Group[1].Group[0]
-        diffuse_compass = SA.Group[3].Group[1].Group[1].Group[0]
-    color = bar_leg[-1][-1]
+    color = bar_leg[1][-1]
     color_rgb = (color[0], color[1], color[2])
     total_compass.ViewObject.ShapeAppearance = FreeCAD.Material(
                                     DiffuseColor = color_rgb)
-    direct_compass.ViewObject.ShapeAppearance = FreeCAD.Material(
+    """direct_compass.ViewObject.ShapeAppearance = FreeCAD.Material(
                                     DiffuseColor = color_rgb)
     diffuse_compass.ViewObject.ShapeAppearance = FreeCAD.Material(
-                                    DiffuseColor = color_rgb)
+                                    DiffuseColor = color_rgb)"""
     #groups
     doc.getObject(study_direct_group.Name).Visibility = SA.direct_diffuse_values
     doc.getObject(study_diffuse_group.Name).Visibility = SA.direct_diffuse_values
@@ -1353,37 +1371,90 @@ def direct_diffuse_visualization():
             "SunAnalysis",
             "Sun Analysis object could not be found!") + "\n")
         return
-    #update direct and diffuse analysis visualization
+
+    doc = FreeCAD.ActiveDocument
+
+    # update leg positions
+    leg_pos = get_leg_pos(study_objs = SA.study_objs,
+                          study_context = SA.study_context,
+                          color_count = SA.color_count
+                          )
+    SA.leg_height = leg_pos[3]
+    #update leg bar position
+    bar_obj = SA.Group[1].Group[0].Group[0]
+    bar_obj.Base.Placement.Base = FreeCAD.Vector(SA.leg_position)
+    #update text leg bar positions
+    text_leg = SA.Group[1].Group[0].Group[1].Group
+    #Update leg bar data
+    main_leg2 = None
+    main_leg3 = None
+    seg_height = SA.leg_height/SA.color_count
+    SA.leg_width = seg_height
+    for i in range(len(text_leg)):
+        text = text_leg[i]
+        text.Placement.Base.x = SA.leg_position.x + SA.leg_width
+    if SA.results[0:2] == "00":
+        values = SA.sun_hour_values
+    else:
+        values = SA.total_values
+    if SA.direct_diffuse_values == False:
+        SA.leg_position = leg_pos[0]
+    else:
+        if SA.results[0:2] == "01" or SA.results[0:2] == "02":
+            SA.leg_position = leg_pos[1]
     try:
-        doc = FreeCAD.ActiveDocument
+        #update direct and diffuse analysis visualization
         doc.getObject(SA.Group[2].Name).Visibility = SA.direct_diffuse_values #direct group
         doc.getObject(SA.Group[3].Name).Visibility = SA.direct_diffuse_values #diffuse group
-        try:
-            #update legend and bar positions
-            leg_pos = get_leg_pos(study_objs = SA.study_objs,
-                                      study_context = SA.study_context,
-                                      color_count = SA.color_count
-                                      )
-            SA.leg_height = leg_pos[3]
-            #update leg bar position
-            if SA.direct_diffuse_values == False:
-                SA.leg_position = leg_pos[0]
-            else:
-                SA.leg_position = leg_pos[1]
-            bar_obj = SA.Group[1].Group[0].Group[0]
-            bar_obj.Base.Placement.Base = FreeCAD.Vector(SA.leg_position)
-            #update text leg bar positions
-            text_leg = SA.Group[1].Group[0].Group[1].Group
-            for i in range(len(text_leg)):
-                text = text_leg[i]
-                text.Placement.Base.x = SA.leg_position.x + SA.leg_width
-        except Exception:
-            FreeCAD.Console.PrintMessage(translate("SunAnalysis",
-                           "It was not possible to update bar legend position!") + "\n")
+        main_leg2 = SA.Group[2].Group[1].Group[0]
+        main_leg3 = SA.Group[3].Group[1].Group[0]
     except Exception:
         FreeCAD.Console.PrintMessage(translate("SunAnalysis",
-                           "There is no direct and diffuse analysis!") + "\n")
+                               "There are still no direct and diffuse analyses!") + "\n")
+    print("updating legend bar...")
+    bar_leg = LBComponents.get_modify_legend_bar(bar_obj = SA.Group[1].Group[0].Group[0],
+                                                   text_leg_group = SA.Group[1].Group[0].Group[1],
+                                                   title = SA.leg_title,
+                                                   values = values,
+                                                   position = SA.leg_position,
+                                                   seg_height = seg_height,
+                                                   seg_width = SA.leg_width,
+                                                   seg_count = SA.color_count,
+                                                   color_leg_set = int(SA.color_set[0:2]),
+                                                   scale = SA.leg_scale
+                                                   )
+    SA.leg_width = bar_leg[2]
+    print ("updating main legends...")
+    LBComponents.modify_main_legends(
+                                 main_leg1 = SA.Group[1].Group[1].Group[0],
+                                 main_leg2 = main_leg2,
+                                 main_leg3 = main_leg3,
+                                 pos1 = leg_pos[6],
+                                 pos2 = leg_pos[7],
+                                 pos3 = leg_pos[8],
+                                 unit = SA.leg_title,
+                                 metadata = SA.metadata,
+                                 modify_position = True,
+                                 modify_values = True,
+                                 font_size = SA.leg_width/2
+                                 )
+    #modify compass
+    compass_center = ((SA.leg_position[0] + SA.leg_width/2),
+                      leg_pos[9][1], leg_pos[9][2]
+                      )
+    LBComponents.modify_compass(center = compass_center,
+                                radius = SA.leg_height/20,
+                                north = float(SA.north),
+                                variation_angle = 90,
+                                sky_domes_group = None,
+                                sun_analysis_group = SA,
+                                scale = SA.leg_scale
+                                )
     doc.recompute()
+
+    """except Exception:
+        FreeCAD.Console.PrintMessage(translate("SunAnalysis",
+                       "It was not possible to update legend positions!") + "\n")"""
 
 # C.2 Modify Sun Analysis
 #------------------------
@@ -1578,8 +1649,10 @@ def update_sun_analysis_colors():
                                                seg_height = seg_height,
                                                seg_width = SA.leg_width,
                                                seg_count = SA.color_count,
-                                               color_leg_set = int(SA.color_set[0:2])
+                                               color_leg_set = int(SA.color_set[0:2]),
+                                               scale = SA.leg_scale
                                                )
+    SA.leg_width = bar_leg[2]
     f_colors_total = LBComponents.get_face_colors(sun_analysis_results,
                                                 domain,
                                                 bar_leg[1]
@@ -1587,7 +1660,7 @@ def update_sun_analysis_colors():
     LBComponents.apply_color_faces(obj = SA.study_compound,
                                    face_colors = f_colors_total)
     total_compass = SA.Group[1].Group[1].Group[1].Group[0]
-    color = bar_leg[-1][-1]
+    color = bar_leg[1][-1]
     color_rgb = (color[0], color[1], color[2])
     total_compass.ViewObject.ShapeAppearance = FreeCAD.Material(
                                     DiffuseColor = color_rgb)
