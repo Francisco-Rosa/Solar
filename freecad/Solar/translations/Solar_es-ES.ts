@@ -55,52 +55,52 @@ of each patch dome</source>
         <translation>Radio de las Cúpulas Celestes (mm)</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="169"/>
+        <location filename="../SunAnalysis.py" line="168"/>
         <source>The initial year of the analysis period</source>
         <translation>El año inicial del período de análisis</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="175"/>
+        <location filename="../SunAnalysis.py" line="174"/>
         <source>The final year of the analysis period</source>
         <translation>El último año del período de análisis</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="181"/>
+        <location filename="../SunAnalysis.py" line="180"/>
         <source>The initial month of the analysis period</source>
         <translation>El mes inicial del período de análisis</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="187"/>
+        <location filename="../SunAnalysis.py" line="186"/>
         <source>The final month of the analysis period</source>
         <translation>El último mes del período de análisis</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="193"/>
+        <location filename="../SunAnalysis.py" line="192"/>
         <source>The initial day of the analysis period</source>
         <translation>El día inicial del período de análisis</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="199"/>
+        <location filename="../SunAnalysis.py" line="198"/>
         <source>The final day of the analysis period</source>
         <translation>El último día del período de análisis</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="205"/>
+        <location filename="../SunAnalysis.py" line="204"/>
         <source>The initial hour of the analysis period</source>
         <translation>La hora inicial del período de análisis</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="211"/>
+        <location filename="../SunAnalysis.py" line="210"/>
         <source>The final hour of the analysis period</source>
         <translation>La última hora del período de análisis</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="217"/>
+        <location filename="../SunAnalysis.py" line="216"/>
         <source>Timestep per hour</source>
         <translation>Paso de tiempo por hora</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="225"/>
+        <location filename="../SunAnalysis.py" line="224"/>
         <source>Leap year</source>
         <translation>Año bisiesto</translation>
     </message>
@@ -132,53 +132,53 @@ It is read only.</source>
 Es de solo lectura.</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="320"/>
+        <location filename="../SunAnalysis.py" line="326"/>
         <source>Number of segments of legend bar (default = 11).</source>
         <translation>Número de segmentos de la barra 
 de leyenda (predeterminado = 11).</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="342"/>
+        <location filename="../SunAnalysis.py" line="348"/>
         <source>Choose the legend color set.</source>
         <translation>Elija el conjunto de colores de la leyenda.</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="72"/>
+        <location filename="../SunAnalysis.py" line="71"/>
         <source>City - read only</source>
         <translation>Ciudad - solo lectura</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="78"/>
+        <location filename="../SunAnalysis.py" line="77"/>
         <source>Country of the location - read only</source>
         <translation>País de la ubicación - solo lectura</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="85"/>
+        <location filename="../SunAnalysis.py" line="84"/>
         <source>Elevation of the location - read only</source>
         <translation>Elevación de la ubicación - solo lectura</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="92"/>
+        <location filename="../SunAnalysis.py" line="91"/>
         <source>Latitude of the location - read only</source>
         <translation>Latitud de la ubicación - solo lectura</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="99"/>
+        <location filename="../SunAnalysis.py" line="98"/>
         <source>Longitude of the location - read only</source>
         <translation>Longitud de la ubicación - solo lectura</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="121"/>
+        <location filename="../SunAnalysis.py" line="120"/>
         <source>Group of objects to be analyzed.</source>
         <translation>Grupo de objetos a analizar.</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="128"/>
+        <location filename="../SunAnalysis.py" line="127"/>
         <source>Select the objects to be analyzed.</source>
         <translation>Seleccione los objetos que desea analizar.</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="135"/>
+        <location filename="../SunAnalysis.py" line="134"/>
         <source>Select the objects from the context 
 of the analysis.
 If there isn&apos;t one, adopt 
@@ -187,75 +187,75 @@ the objects of study.</source>
 Si no existen, adopte los objetos de estudio.</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="145"/>
+        <location filename="../SunAnalysis.py" line="144"/>
         <source>Maximum value for the 
 triangular sub faces (mm).</source>
         <translation>Valor máximo para las 
 subcaras triangulares (mm).</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="153"/>
+        <location filename="../SunAnalysis.py" line="152"/>
         <source>Offset distance (mm).</source>
         <translation>Distancia de desplazamiento (mm).</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="233"/>
+        <location filename="../SunAnalysis.py" line="232"/>
         <source>Sun analysis results</source>
         <translation>Resultados del análisis solar</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="242"/>
+        <location filename="../SunAnalysis.py" line="241"/>
         <source>Enable sky matrix high density (Reinhart model) 
 or not (Tregenza one).</source>
         <translation>Habilitar la matriz celeste de alta densidad (modelo Reinhart) 
 o no (modelo Tregenza).</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="249"/>
+        <location filename="../SunAnalysis.py" line="248"/>
         <source>Visualize direct and diffuse analysis</source>
         <translation>Visualizar análisis directos y difusos</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="255"/>
+        <location filename="../SunAnalysis.py" line="254"/>
         <source>Direct radiation/irradiance values - read only</source>
         <translation>Valores de radiación/irradiancia directa (solo lectura)</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="262"/>
+        <location filename="../SunAnalysis.py" line="261"/>
         <source>Diffuse radiation/irradiance values - read only</source>
         <translation>Valores de radiación /irradiancia difusa - solo lectura</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="269"/>
+        <location filename="../SunAnalysis.py" line="268"/>
         <source>Total radiation/irradiance values - read only</source>
         <translation>Valores de radiación/irradiancia total - solo lectura</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="291"/>
+        <location filename="../SunAnalysis.py" line="290"/>
         <source>Sun analysis legend title - read only</source>
         <translation>Título de la leyenda del análisis solar: solo lectura</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="298"/>
+        <location filename="../SunAnalysis.py" line="297"/>
         <source>Base left position of legend bar in mm (x, y, z) 
 - read only</source>
         <translation>Posición base izquierda de la barra 
 de leyenda en mm (x, y, z) - solo lectura</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="306"/>
+        <location filename="../SunAnalysis.py" line="305"/>
         <source>Height of legend bar in mm (x, y, z) - read only</source>
         <translation>Altura de la barra de leyenda en mm (x, y, z)
  - solo lectura</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="313"/>
+        <location filename="../SunAnalysis.py" line="312"/>
         <source>Width of legend bar in mm (x, y, z) - read only</source>
         <translation>Ancho de la barra de leyenda en mm (x, y, z)
  - solo lectura</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="327"/>
+        <location filename="../SunAnalysis.py" line="333"/>
         <source>Metadata - read only</source>
         <translation>Metadatos - solo lectura</translation>
     </message>
@@ -421,7 +421,7 @@ de la trayectoria del sol</translation>
 total en mm (x, y, z)</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="276"/>
+        <location filename="../SunAnalysis.py" line="275"/>
         <source>Sun path vectors values - read only</source>
         <translation>Valores de los vectores de la trayectoria solar (solo lectura)</translation>
     </message>
@@ -468,12 +468,12 @@ or of the sun path animation</source>
 o de la animación de la trayectoria solar.</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="106"/>
+        <location filename="../SunAnalysis.py" line="105"/>
         <source>Time zone - read only</source>
         <translation>Huso horario - solo lectura</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="160"/>
+        <location filename="../SunAnalysis.py" line="159"/>
         <source>Compound of the sub faces of the objects of study - read only</source>
         <translation>Compuesto de las subcaras de los 
 objetos de estudio - sólo lectura</translation>
@@ -529,9 +529,14 @@ objetos de estudio - sólo lectura</translation>
         <translation>Recalcular entre fotogramas</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="283"/>
+        <location filename="../SunAnalysis.py" line="282"/>
         <source>Sun hour values - read only</source>
         <translation>Valores de horas de sol - solo lectura</translation>
+    </message>
+    <message>
+        <location filename="../SunAnalysis.py" line="319"/>
+        <source>Scale of the legends (titles and bar). - read only</source>
+        <translation>Escala de las leyendas (títulos y barras). - sólo lectura</translation>
     </message>
 </context>
 <context>
@@ -551,12 +556,12 @@ y configurar los datos para las nuevas Cúpulas Celestes.</translation>
 <context>
     <name>CreateSunAnalysis</name>
     <message>
-        <location filename="../SunAnalysis.py" line="403"/>
+        <location filename="../SunAnalysis.py" line="409"/>
         <source>Create a Sun Analysis</source>
         <translation>Crear un Análisis Solar</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="404"/>
+        <location filename="../SunAnalysis.py" line="410"/>
         <source>First, select the group containing the objects 
 to be analyzed, created previously, then click 
 this button to configure the analysis.
@@ -586,12 +591,12 @@ undo this action!</source>
 <context>
     <name>DeleteSunAnalysis</name>
     <message>
-        <location filename="../SunAnalysis.py" line="459"/>
+        <location filename="../SunAnalysis.py" line="465"/>
         <source>Delete a Sun Analysis</source>
         <translation>Borrar un Análisis Solar</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="460"/>
+        <location filename="../SunAnalysis.py" line="466"/>
         <source>Select a Sun Analysis, click this button 
 to delete it.
 Be careful, you will not be able to 
@@ -821,67 +826,67 @@ undo this action!</source>
         <translation>Enfriamiento Máximo por Tipo de Cara</translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="560"/>
+        <location filename="../LBComponents.py" line="559"/>
         <source>N</source>
         <translation>N</translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="565"/>
+        <location filename="../LBComponents.py" line="564"/>
         <source>E</source>
         <translation>E</translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="570"/>
+        <location filename="../LBComponents.py" line="569"/>
         <source>S</source>
         <translation>S</translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="574"/>
+        <location filename="../LBComponents.py" line="573"/>
         <source>W</source>
         <translation>O</translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="642"/>
+        <location filename="../LBComponents.py" line="643"/>
         <source>Total compass circles</source>
         <translation>Círculos de la brújula total</translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="650"/>
+        <location filename="../LBComponents.py" line="670"/>
         <source>Direct compass circles</source>
         <translation>Círculos de brújula directa</translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="657"/>
+        <location filename="../LBComponents.py" line="677"/>
         <source>Diffuse compass circles</source>
         <translation>Círculos de brújula difusa</translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="663"/>
+        <location filename="../LBComponents.py" line="648"/>
         <source>Total Compass Group</source>
         <translation>Grupo Brújula Total</translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="668"/>
+        <location filename="../LBComponents.py" line="653"/>
         <source>Total Compass Legend Group</source>
         <translation>Grupo Leyenda Brújula Total</translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="673"/>
+        <location filename="../LBComponents.py" line="682"/>
         <source>Direct Compass Group</source>
         <translation>Grupo Brújula Directa</translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="677"/>
+        <location filename="../LBComponents.py" line="686"/>
         <source>Diffuse Compass Group</source>
         <translation>Grupo Brújula Difusa</translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="682"/>
+        <location filename="../LBComponents.py" line="691"/>
         <source>Direct Compass Legend Group</source>
         <translation>Grupo Leyenda Brújula Directa</translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="686"/>
+        <location filename="../LBComponents.py" line="695"/>
         <source>Diffuse Compass Legend Group</source>
         <translation>Grupo Leyenda Brújula Difusa</translation>
     </message>
@@ -901,67 +906,67 @@ undo this action!</source>
         <translation>Texto de la barra de leyenda</translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="1102"/>
+        <location filename="../LBComponents.py" line="1103"/>
         <source>Total {}</source>
         <translation>{} - Total</translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="1107"/>
+        <location filename="../LBComponents.py" line="1108"/>
         <source>Direct {}</source>
         <translation>{} - Directa</translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="1112"/>
+        <location filename="../LBComponents.py" line="1113"/>
         <source>Diffuse {}</source>
         <translation>{} - Difusa</translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="1146"/>
+        <location filename="../LBComponents.py" line="1152"/>
         <source>Total legend</source>
         <translation>Leyenda total</translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="1149"/>
+        <location filename="../LBComponents.py" line="1155"/>
         <source>Total Legend Group</source>
         <translation>Grupo Leyenda Total</translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="1174"/>
+        <location filename="../LBComponents.py" line="1180"/>
         <source>Direct legend</source>
         <translation>Leyenda directa</translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="1180"/>
+        <location filename="../LBComponents.py" line="1186"/>
         <source>Diffuse legend</source>
         <translation>Leyenda difusa</translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="1183"/>
+        <location filename="../LBComponents.py" line="1189"/>
         <source>Direct Legend Group</source>
         <translation>Grupo Leyenda Directa</translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="1190"/>
+        <location filename="../LBComponents.py" line="1196"/>
         <source>Diffuse Legend Group</source>
         <translation>Grupo Leyenda Difusa</translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="1067"/>
+        <location filename="../LBComponents.py" line="1068"/>
         <source>Source: {}</source>
         <translation>Fuente: {}</translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="1071"/>
+        <location filename="../LBComponents.py" line="1072"/>
         <source>Country: {}</source>
         <translation>País: {}</translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="1075"/>
+        <location filename="../LBComponents.py" line="1076"/>
         <source>City: {}</source>
         <translation>Ciudad: {}</translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="1079"/>
+        <location filename="../LBComponents.py" line="1080"/>
         <source>Time-zone: {}</source>
         <translation>Huso horario: {}</translation>
     </message>
@@ -1004,12 +1009,12 @@ group structure is preserved!</source>
 <context>
     <name>ModifySunAnalysis</name>
     <message>
-        <location filename="../SunAnalysis.py" line="431"/>
+        <location filename="../SunAnalysis.py" line="437"/>
         <source>Modify a Sun Analysis</source>
         <translation>Modificar un Análisis Solar</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="432"/>
+        <location filename="../SunAnalysis.py" line="438"/>
         <source>Select a Sun Analysis, click this button to 
 open the dialog and modify its configuration.</source>
         <translation>Seleccione un Análisis Solar y haga clic en este 
@@ -1090,13 +1095,13 @@ botón para abrir el diálogo y modificar su configuración.</translation>
 de las Cúpulas Celestes!</translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="1129"/>
+        <location filename="../SkyDomes.py" line="1130"/>
         <source>To create Sky Domes you must provide a valid epw file!</source>
         <translation>¡Para crear Cúpulas Celestes debes proporcionar 
 un archivo epw válido!</translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="1256"/>
+        <location filename="../SkyDomes.py" line="1257"/>
         <source>Could not get Sky Domes:
 {e}</source>
         <translation>No se pudieron obtener
@@ -1104,19 +1109,19 @@ las Cúpulas Celestiales:
 {e}</translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="1121"/>
+        <location filename="../SkyDomes.py" line="1122"/>
         <source>Sky Domes properties not found!</source>
         <translation>¡No se encontraron propiedades de las Cúpulas Celestes!</translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="1167"/>
+        <location filename="../SkyDomes.py" line="1168"/>
         <source>Could not get Sky Domes:
 {}</source>
         <translation>No se pudieron conseguir las Cúpulas Celestes:
 {}</translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="1347"/>
+        <location filename="../SkyDomes.py" line="1348"/>
         <source>This will delete all main objects 
 from the selected Sky Domes, 
 and you won&apos;t be able to undo it. 
@@ -1148,12 +1153,12 @@ Are you sure you want to delete these Sky Domes?
         <translation>¡No hay selección!</translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="1133"/>
+        <location filename="../SkyDomes.py" line="1134"/>
         <source>To create Sky Domes, you need to indicate an epw file!</source>
         <translation>¡Para crear Cúpuls Celestes, debes indicar un archivo epw!</translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="1101"/>
+        <location filename="../SkyDomes.py" line="1102"/>
         <source>Sky Domes created! 
 Do not modify their original structure of groups 
 to make possible further adjustments.</source>
@@ -1162,7 +1167,7 @@ No modifique la estructura original de
 grupos para permitir ajustes adicionales.</translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="1307"/>
+        <location filename="../SkyDomes.py" line="1308"/>
         <source>Sky Domes {} - {}</source>
         <translation>Cúpulas Celestes  {} - {}</translation>
     </message>
@@ -1358,7 +1363,7 @@ o de irradiancia media (W/m²).</translation>
     <message>
         <location filename="../SkyDomesDialog.py" line="295"/>
         <source>Direct and diffuse</source>
-        <translation>Directa y difusa</translation>
+        <translation>Directas y difusas</translation>
     </message>
     <message>
         <location filename="../SkyDomesDialog.py" line="302"/>
@@ -1567,139 +1572,139 @@ Una vez iniciada, haga clic en este botón para detenerla.</translation>
 <context>
     <name>SunAnalysis</name>
     <message>
-        <location filename="../SunAnalysis.py" line="1352"/>
+        <location filename="../SunAnalysis.py" line="1370"/>
         <source>Sun Analysis object could not be found!</source>
         <translation>¡No se pudo encontrar el objeto de Análisis Solar!</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1411"/>
+        <location filename="../SunAnalysis.py" line="1482"/>
         <source>For using EPW, please provide a valid file path.</source>
         <translation>Para utilizar EPW, proporcione una ruta de archivo válida.</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1547"/>
+        <location filename="../SunAnalysis.py" line="1618"/>
         <source>Sun Analysis {} - {}</source>
         <translation>Análisis Solar {} - {}</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1559"/>
+        <location filename="../SunAnalysis.py" line="1630"/>
         <source>Sun hours</source>
         <translation>Horas de sol</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1381"/>
+        <location filename="../SunAnalysis_ant.py" line="1381"/>
         <source>It was not possible to update bar legend position!</source>
         <translation>¡No fue posible actualizar la posición de la leyenda de la barra!</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1384"/>
+        <location filename="../SunAnalysis_ant.py" line="1384"/>
         <source>There is no direct and diffuse analysis!</source>
-        <translation>¡No hay análisis directo y difuso!</translation>
+        <translation>¡No hay análisis directos y difusos!</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1401"/>
+        <location filename="../SunAnalysis.py" line="1472"/>
         <source>Attempting to get Sun Analysis values: Sun Analysis object could not be found!</source>
         <translation>Intentando obtener valores de Análisis Solar: 
 ¡No se pudo encontrar el objeto de Análisis Solar!</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1455"/>
+        <location filename="../SunAnalysis.py" line="1526"/>
         <source>There is no study objects!</source>
         <translation>¡No hay objetos de estudio!</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1623"/>
+        <location filename="../SunAnalysis.py" line="1696"/>
         <source>There is no direct or diffuse analysis group!</source>
-        <translation>¡No existe grupo de análisis directo o difuso!</translation>
+        <translation>¡No existe grupo de análisis directos o difusos!</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="797"/>
+        <location filename="../SunAnalysis.py" line="799"/>
         <source>There is no study objects or 
 context selected!</source>
         <translation>¡No hay objetos de estudio o contexto seleccionado!</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1485"/>
+        <location filename="../SunAnalysis.py" line="1556"/>
         <source>There is no legend position!</source>
         <translation>¡No existe posición de leyenda!</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="810"/>
+        <location filename="../SunAnalysis.py" line="812"/>
         <source>Total Sun Analysis Group</source>
         <translation>Grupo Análisis Solar Total</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1307"/>
+        <location filename="../SunAnalysis.py" line="1325"/>
         <source>Direct Sun Analysis Group</source>
         <translation>Grupo Análisis Solar Directa</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1319"/>
+        <location filename="../SunAnalysis.py" line="1337"/>
         <source>Diffuse Sun Analysis Group</source>
         <translation>Grupo Análisis Solar Difusa</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="609"/>
+        <location filename="../SunAnalysis.py" line="615"/>
         <source>Total Sun Analysis</source>
         <translation>Análisis Solar Total</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1300"/>
+        <location filename="../SunAnalysis.py" line="1318"/>
         <source>Direct Sun Analysis</source>
         <translation>Análisis Solar Directa</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1312"/>
+        <location filename="../SunAnalysis.py" line="1330"/>
         <source>Diffuse Sun Analysis</source>
         <translation>Análisis Solar Difusa</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="491"/>
+        <location filename="../SunAnalysis.py" line="497"/>
         <source>The selection is not a Group!</source>
         <translation>¡La selección no es un Grupo!</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="495"/>
+        <location filename="../SunAnalysis.py" line="501"/>
         <source>To create a new Sun Analysis, you must select a group 
 that contents all objects to be analyzed!</source>
         <translation>Para crear un nuevo Análisis Solar, debes seleccionar 
 un grupo que contenga todos los objetos que se analizarán.</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="523"/>
+        <location filename="../SunAnalysis.py" line="529"/>
         <source>To modify a set of Sun Analysis, first you must select one!</source>
         <translation>Para modificar un conjunto de Análisis Solar, 
 ¡primero debes seleccionar uno!</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="536"/>
+        <location filename="../SunAnalysis.py" line="542"/>
         <source>To delete a Sun Analysis, first you must select one!</source>
         <translation>Para eliminar un Análisis Solar, 
 ¡primero debes seleccionar uno!</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="539"/>
+        <location filename="../SunAnalysis.py" line="545"/>
         <source>To delete a set of Sun Analysis, first you must select one!</source>
         <translation>Para eliminar un conjunto de Análisis Solar, 
 ¡primero debes seleccionar uno!</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="555"/>
+        <location filename="../SunAnalysis.py" line="561"/>
         <source>Warning: The object selected is not a Sun Analysis!</source>
         <translation>Aviso: ¡El objeto seleccionado no es un Análisis Solar!</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="558"/>
+        <location filename="../SunAnalysis.py" line="564"/>
         <source>There is no selection!</source>
         <translation>¡No hay selección!</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1415"/>
+        <location filename="../SunAnalysis.py" line="1486"/>
         <source>Could not get epw!</source>
         <translation>¡No se pudo obtener epw!</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="862"/>
+        <location filename="../SunAnalysis.py" line="863"/>
         <source>Sun Analysis created! 
 Do not modify their original structure of groups 
 to make possible further adjustments.</source>
@@ -1708,13 +1713,13 @@ No modifique la estructura original de grupos
 para permitir ajustes adicionales.</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1102"/>
+        <location filename="../SunAnalysis.py" line="1112"/>
         <source>For getting irradiance values, Radiance software must be 
 installed in your machine.</source>
         <translation>Para obtener valores de irradiancia, el aplicativo Radiance debe estar instalado en su máquina.</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1638"/>
+        <location filename="../SunAnalysis.py" line="1711"/>
         <source>This will delete all objects from 
 the selected Sun Analysis, 
 and you won&apos;t be able to undo it. 
@@ -1725,6 +1730,11 @@ Análisis Solares seleccionados y no
 podrás deshacer esta acción.
 
 ¿Seguro que deseas eliminar estos Análisis Solares?</translation>
+    </message>
+    <message>
+        <location filename="../SunAnalysis.py" line="1412"/>
+        <source>There are still no direct and diffuse analyses!</source>
+        <translation>¡Aún no existen análisis directos y difusos!</translation>
     </message>
 </context>
 <context>
@@ -1945,7 +1955,7 @@ is in leap year.</source>
     <message>
         <location filename="../SunAnalysisDialog.py" line="309"/>
         <source>Direct and diffuse</source>
-        <translation>Directa y difusa</translation>
+        <translation>Directos y difusos</translation>
     </message>
     <message>
         <location filename="../SunAnalysisDialog.py" line="312"/>
@@ -1953,33 +1963,33 @@ is in leap year.</source>
         <translation>Habilitar para visualizar los valores directos y difusos.</translation>
     </message>
     <message>
-        <location filename="../SunAnalysisDialog.py" line="378"/>
+        <location filename="../SunAnalysisDialog.py" line="385"/>
         <source>Apply</source>
         <translation>Aplicar</translation>
     </message>
     <message>
-        <location filename="../SunAnalysisDialog.py" line="402"/>
+        <location filename="../SunAnalysisDialog.py" line="409"/>
         <source>Select epw file</source>
         <translation>Seleccionar archivo epw</translation>
     </message>
     <message>
-        <location filename="../SunAnalysisDialog.py" line="419"/>
+        <location filename="../SunAnalysisDialog.py" line="426"/>
         <source>Warning</source>
         <translation>Aviso</translation>
     </message>
     <message>
-        <location filename="../SunAnalysisDialog.py" line="419"/>
+        <location filename="../SunAnalysisDialog.py" line="426"/>
         <source>Indicate a epw file before close the dialog Sun Analysis!</source>
         <translation>¡Indique un archivo epw antes de cerrar 
 el diálogo Análisis Solar!</translation>
     </message>
     <message>
-        <location filename="../SunAnalysisDialog.py" line="755"/>
+        <location filename="../SunAnalysisDialog.py" line="768"/>
         <source>Selection of study or context objects</source>
         <translation>Selección de objetos de estudio o contexto</translation>
     </message>
     <message>
-        <location filename="../SunAnalysisDialog.py" line="767"/>
+        <location filename="../SunAnalysisDialog.py" line="780"/>
         <source>Confirm</source>
         <translation>Confirmar</translation>
     </message>
@@ -2058,12 +2068,12 @@ en dirección del eje y.</translation>
         <translation>Elija la paleta de colores de la barra de leyenda.</translation>
     </message>
     <message>
-        <location filename="../SunAnalysisDialog.py" line="488"/>
+        <location filename="../SunAnalysisDialog.py" line="498"/>
         <source>epw path get from Sun Path</source>
         <translation>Ruta epw obtenida de la Trayectoria Solar</translation>
     </message>
     <message>
-        <location filename="../SunAnalysisDialog.py" line="603"/>
+        <location filename="../SunAnalysisDialog.py" line="615"/>
         <source>There is no Sun Analysis!</source>
         <translation>¡No hay Análisis Solar!</translation>
     </message>
@@ -2097,9 +2107,19 @@ Tenga en cuenta que un número
 mayor aumentará el tiempo de cálculo.</translation>
     </message>
     <message>
-        <location filename="../SunAnalysisDialog.py" line="712"/>
+        <location filename="../SunAnalysisDialog.py" line="725"/>
         <source>Sun Analysis was updated!</source>
         <translation>¡El Análisis Solar fue actualizado!</translation>
+    </message>
+    <message>
+        <location filename="../SunAnalysisDialog.py" line="378"/>
+        <source>Scale:</source>
+        <translation>Escala:</translation>
+    </message>
+    <message>
+        <location filename="../SunAnalysisDialog.py" line="381"/>
+        <source>Adjust the scale of the legends if necessary.</source>
+        <translation>Ajuste la escala de las leyendas si es necesario.</translation>
     </message>
 </context>
 <context>

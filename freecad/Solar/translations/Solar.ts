@@ -55,52 +55,52 @@ of each patch dome</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="169"/>
+        <location filename="../SunAnalysis.py" line="168"/>
         <source>The initial year of the analysis period</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="175"/>
+        <location filename="../SunAnalysis.py" line="174"/>
         <source>The final year of the analysis period</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="181"/>
+        <location filename="../SunAnalysis.py" line="180"/>
         <source>The initial month of the analysis period</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="187"/>
+        <location filename="../SunAnalysis.py" line="186"/>
         <source>The final month of the analysis period</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="193"/>
+        <location filename="../SunAnalysis.py" line="192"/>
         <source>The initial day of the analysis period</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="199"/>
+        <location filename="../SunAnalysis.py" line="198"/>
         <source>The final day of the analysis period</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="205"/>
+        <location filename="../SunAnalysis.py" line="204"/>
         <source>The initial hour of the analysis period</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="211"/>
+        <location filename="../SunAnalysis.py" line="210"/>
         <source>The final hour of the analysis period</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="217"/>
+        <location filename="../SunAnalysis.py" line="216"/>
         <source>Timestep per hour</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="225"/>
+        <location filename="../SunAnalysis.py" line="224"/>
         <source>Leap year</source>
         <translation type="unfinished"></translation>
     </message>
@@ -128,52 +128,52 @@ It is read only.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="320"/>
+        <location filename="../SunAnalysis.py" line="326"/>
         <source>Number of segments of legend bar (default = 11).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="342"/>
+        <location filename="../SunAnalysis.py" line="348"/>
         <source>Choose the legend color set.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="72"/>
+        <location filename="../SunAnalysis.py" line="71"/>
         <source>City - read only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="78"/>
+        <location filename="../SunAnalysis.py" line="77"/>
         <source>Country of the location - read only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="85"/>
+        <location filename="../SunAnalysis.py" line="84"/>
         <source>Elevation of the location - read only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="92"/>
+        <location filename="../SunAnalysis.py" line="91"/>
         <source>Latitude of the location - read only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="99"/>
+        <location filename="../SunAnalysis.py" line="98"/>
         <source>Longitude of the location - read only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="121"/>
+        <location filename="../SunAnalysis.py" line="120"/>
         <source>Group of objects to be analyzed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="128"/>
+        <location filename="../SunAnalysis.py" line="127"/>
         <source>Select the objects to be analyzed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="135"/>
+        <location filename="../SunAnalysis.py" line="134"/>
         <source>Select the objects from the context 
 of the analysis.
 If there isn&apos;t one, adopt 
@@ -181,70 +181,70 @@ the objects of study.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="145"/>
+        <location filename="../SunAnalysis.py" line="144"/>
         <source>Maximum value for the 
 triangular sub faces (mm).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="153"/>
+        <location filename="../SunAnalysis.py" line="152"/>
         <source>Offset distance (mm).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="233"/>
+        <location filename="../SunAnalysis.py" line="232"/>
         <source>Sun analysis results</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="242"/>
+        <location filename="../SunAnalysis.py" line="241"/>
         <source>Enable sky matrix high density (Reinhart model) 
 or not (Tregenza one).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="249"/>
+        <location filename="../SunAnalysis.py" line="248"/>
         <source>Visualize direct and diffuse analysis</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="255"/>
+        <location filename="../SunAnalysis.py" line="254"/>
         <source>Direct radiation/irradiance values - read only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="262"/>
+        <location filename="../SunAnalysis.py" line="261"/>
         <source>Diffuse radiation/irradiance values - read only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="269"/>
+        <location filename="../SunAnalysis.py" line="268"/>
         <source>Total radiation/irradiance values - read only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="291"/>
+        <location filename="../SunAnalysis.py" line="290"/>
         <source>Sun analysis legend title - read only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="298"/>
+        <location filename="../SunAnalysis.py" line="297"/>
         <source>Base left position of legend bar in mm (x, y, z) 
 - read only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="306"/>
+        <location filename="../SunAnalysis.py" line="305"/>
         <source>Height of legend bar in mm (x, y, z) - read only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="313"/>
+        <location filename="../SunAnalysis.py" line="312"/>
         <source>Width of legend bar in mm (x, y, z) - read only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="327"/>
+        <location filename="../SunAnalysis.py" line="333"/>
         <source>Metadata - read only</source>
         <translation type="unfinished"></translation>
     </message>
@@ -404,7 +404,7 @@ or not (Tregenza one).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="276"/>
+        <location filename="../SunAnalysis.py" line="275"/>
         <source>Sun path vectors values - read only</source>
         <translation type="unfinished"></translation>
     </message>
@@ -445,12 +445,12 @@ or of the sun path animation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="106"/>
+        <location filename="../SunAnalysis.py" line="105"/>
         <source>Time zone - read only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="160"/>
+        <location filename="../SunAnalysis.py" line="159"/>
         <source>Compound of the sub faces of the objects of study - read only</source>
         <translation type="unfinished"></translation>
     </message>
@@ -505,8 +505,13 @@ or of the sun path animation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="283"/>
+        <location filename="../SunAnalysis.py" line="282"/>
         <source>Sun hour values - read only</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunAnalysis.py" line="319"/>
+        <source>Scale of the legends (titles and bar). - read only</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -526,12 +531,12 @@ or of the sun path animation</source>
 <context>
     <name>CreateSunAnalysis</name>
     <message>
-        <location filename="../SunAnalysis.py" line="403"/>
+        <location filename="../SunAnalysis.py" line="409"/>
         <source>Create a Sun Analysis</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="404"/>
+        <location filename="../SunAnalysis.py" line="410"/>
         <source>First, select the group containing the objects 
 to be analyzed, created previously, then click 
 this button to configure the analysis.
@@ -559,12 +564,12 @@ undo this action!</source>
 <context>
     <name>DeleteSunAnalysis</name>
     <message>
-        <location filename="../SunAnalysis.py" line="459"/>
+        <location filename="../SunAnalysis.py" line="465"/>
         <source>Delete a Sun Analysis</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="460"/>
+        <location filename="../SunAnalysis.py" line="466"/>
         <source>Select a Sun Analysis, click this button 
 to delete it.
 Be careful, you will not be able to 
@@ -793,67 +798,67 @@ undo this action!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="560"/>
+        <location filename="../LBComponents.py" line="559"/>
         <source>N</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="565"/>
+        <location filename="../LBComponents.py" line="564"/>
         <source>E</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="570"/>
+        <location filename="../LBComponents.py" line="569"/>
         <source>S</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="574"/>
+        <location filename="../LBComponents.py" line="573"/>
         <source>W</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="642"/>
+        <location filename="../LBComponents.py" line="643"/>
         <source>Total compass circles</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="650"/>
+        <location filename="../LBComponents.py" line="670"/>
         <source>Direct compass circles</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="657"/>
+        <location filename="../LBComponents.py" line="677"/>
         <source>Diffuse compass circles</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="663"/>
+        <location filename="../LBComponents.py" line="648"/>
         <source>Total Compass Group</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="668"/>
+        <location filename="../LBComponents.py" line="653"/>
         <source>Total Compass Legend Group</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="673"/>
+        <location filename="../LBComponents.py" line="682"/>
         <source>Direct Compass Group</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="677"/>
+        <location filename="../LBComponents.py" line="686"/>
         <source>Diffuse Compass Group</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="682"/>
+        <location filename="../LBComponents.py" line="691"/>
         <source>Direct Compass Legend Group</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="686"/>
+        <location filename="../LBComponents.py" line="695"/>
         <source>Diffuse Compass Legend Group</source>
         <translation type="unfinished"></translation>
     </message>
@@ -873,67 +878,67 @@ undo this action!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="1102"/>
+        <location filename="../LBComponents.py" line="1103"/>
         <source>Total {}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="1107"/>
+        <location filename="../LBComponents.py" line="1108"/>
         <source>Direct {}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="1112"/>
+        <location filename="../LBComponents.py" line="1113"/>
         <source>Diffuse {}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="1146"/>
+        <location filename="../LBComponents.py" line="1152"/>
         <source>Total legend</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="1149"/>
+        <location filename="../LBComponents.py" line="1155"/>
         <source>Total Legend Group</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="1174"/>
+        <location filename="../LBComponents.py" line="1180"/>
         <source>Direct legend</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="1180"/>
+        <location filename="../LBComponents.py" line="1186"/>
         <source>Diffuse legend</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="1183"/>
+        <location filename="../LBComponents.py" line="1189"/>
         <source>Direct Legend Group</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="1190"/>
+        <location filename="../LBComponents.py" line="1196"/>
         <source>Diffuse Legend Group</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="1067"/>
+        <location filename="../LBComponents.py" line="1068"/>
         <source>Source: {}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="1071"/>
+        <location filename="../LBComponents.py" line="1072"/>
         <source>Country: {}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="1075"/>
+        <location filename="../LBComponents.py" line="1076"/>
         <source>City: {}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LBComponents.py" line="1079"/>
+        <location filename="../LBComponents.py" line="1080"/>
         <source>Time-zone: {}</source>
         <translation type="unfinished"></translation>
     </message>
@@ -974,12 +979,12 @@ group structure is preserved!</source>
 <context>
     <name>ModifySunAnalysis</name>
     <message>
-        <location filename="../SunAnalysis.py" line="431"/>
+        <location filename="../SunAnalysis.py" line="437"/>
         <source>Modify a Sun Analysis</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="432"/>
+        <location filename="../SunAnalysis.py" line="438"/>
         <source>Select a Sun Analysis, click this button to 
 open the dialog and modify its configuration.</source>
         <translation type="unfinished"></translation>
@@ -1058,29 +1063,29 @@ open the dialog and modify its configuration.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="1129"/>
+        <location filename="../SkyDomes.py" line="1130"/>
         <source>To create Sky Domes you must provide a valid epw file!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="1256"/>
+        <location filename="../SkyDomes.py" line="1257"/>
         <source>Could not get Sky Domes:
 {e}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="1121"/>
+        <location filename="../SkyDomes.py" line="1122"/>
         <source>Sky Domes properties not found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="1167"/>
+        <location filename="../SkyDomes.py" line="1168"/>
         <source>Could not get Sky Domes:
 {}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="1347"/>
+        <location filename="../SkyDomes.py" line="1348"/>
         <source>This will delete all main objects 
 from the selected Sky Domes, 
 and you won&apos;t be able to undo it. 
@@ -1110,19 +1115,19 @@ Are you sure you want to delete these Sky Domes?
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="1133"/>
+        <location filename="../SkyDomes.py" line="1134"/>
         <source>To create Sky Domes, you need to indicate an epw file!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="1101"/>
+        <location filename="../SkyDomes.py" line="1102"/>
         <source>Sky Domes created! 
 Do not modify their original structure of groups 
 to make possible further adjustments.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="1307"/>
+        <location filename="../SkyDomes.py" line="1308"/>
         <source>Sky Domes {} - {}</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1502,152 +1507,157 @@ Click this button to get started its animation</source>
 <context>
     <name>SunAnalysis</name>
     <message>
-        <location filename="../SunAnalysis.py" line="1352"/>
+        <location filename="../SunAnalysis.py" line="1370"/>
         <source>Sun Analysis object could not be found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1411"/>
+        <location filename="../SunAnalysis.py" line="1482"/>
         <source>For using EPW, please provide a valid file path.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1547"/>
+        <location filename="../SunAnalysis.py" line="1618"/>
         <source>Sun Analysis {} - {}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1559"/>
+        <location filename="../SunAnalysis.py" line="1630"/>
         <source>Sun hours</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1381"/>
+        <location filename="../SunAnalysis_ant.py" line="1381"/>
         <source>It was not possible to update bar legend position!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1384"/>
+        <location filename="../SunAnalysis_ant.py" line="1384"/>
         <source>There is no direct and diffuse analysis!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1401"/>
+        <location filename="../SunAnalysis.py" line="1472"/>
         <source>Attempting to get Sun Analysis values: Sun Analysis object could not be found!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1455"/>
+        <location filename="../SunAnalysis.py" line="1526"/>
         <source>There is no study objects!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1623"/>
+        <location filename="../SunAnalysis.py" line="1696"/>
         <source>There is no direct or diffuse analysis group!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="797"/>
+        <location filename="../SunAnalysis.py" line="799"/>
         <source>There is no study objects or 
 context selected!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1485"/>
+        <location filename="../SunAnalysis.py" line="1556"/>
         <source>There is no legend position!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="810"/>
+        <location filename="../SunAnalysis.py" line="812"/>
         <source>Total Sun Analysis Group</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1307"/>
+        <location filename="../SunAnalysis.py" line="1325"/>
         <source>Direct Sun Analysis Group</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1319"/>
+        <location filename="../SunAnalysis.py" line="1337"/>
         <source>Diffuse Sun Analysis Group</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="609"/>
+        <location filename="../SunAnalysis.py" line="615"/>
         <source>Total Sun Analysis</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1300"/>
+        <location filename="../SunAnalysis.py" line="1318"/>
         <source>Direct Sun Analysis</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1312"/>
+        <location filename="../SunAnalysis.py" line="1330"/>
         <source>Diffuse Sun Analysis</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="491"/>
+        <location filename="../SunAnalysis.py" line="497"/>
         <source>The selection is not a Group!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="495"/>
+        <location filename="../SunAnalysis.py" line="501"/>
         <source>To create a new Sun Analysis, you must select a group 
 that contents all objects to be analyzed!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="523"/>
+        <location filename="../SunAnalysis.py" line="529"/>
         <source>To modify a set of Sun Analysis, first you must select one!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="536"/>
+        <location filename="../SunAnalysis.py" line="542"/>
         <source>To delete a Sun Analysis, first you must select one!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="539"/>
+        <location filename="../SunAnalysis.py" line="545"/>
         <source>To delete a set of Sun Analysis, first you must select one!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="555"/>
+        <location filename="../SunAnalysis.py" line="561"/>
         <source>Warning: The object selected is not a Sun Analysis!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="558"/>
+        <location filename="../SunAnalysis.py" line="564"/>
         <source>There is no selection!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1415"/>
+        <location filename="../SunAnalysis.py" line="1486"/>
         <source>Could not get epw!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="862"/>
+        <location filename="../SunAnalysis.py" line="863"/>
         <source>Sun Analysis created! 
 Do not modify their original structure of groups 
 to make possible further adjustments.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1102"/>
+        <location filename="../SunAnalysis.py" line="1112"/>
         <source>For getting irradiance values, Radiance software must be 
 installed in your machine.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1638"/>
+        <location filename="../SunAnalysis.py" line="1711"/>
         <source>This will delete all objects from 
 the selected Sun Analysis, 
 and you won&apos;t be able to undo it. 
 
 Are you sure you want to delete these Sun Analysis?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunAnalysis.py" line="1412"/>
+        <source>There are still no direct and diffuse analyses!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1871,32 +1881,32 @@ is in leap year.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysisDialog.py" line="378"/>
+        <location filename="../SunAnalysisDialog.py" line="385"/>
         <source>Apply</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysisDialog.py" line="402"/>
+        <location filename="../SunAnalysisDialog.py" line="409"/>
         <source>Select epw file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysisDialog.py" line="419"/>
+        <location filename="../SunAnalysisDialog.py" line="426"/>
         <source>Warning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysisDialog.py" line="419"/>
+        <location filename="../SunAnalysisDialog.py" line="426"/>
         <source>Indicate a epw file before close the dialog Sun Analysis!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysisDialog.py" line="755"/>
+        <location filename="../SunAnalysisDialog.py" line="768"/>
         <source>Selection of study or context objects</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysisDialog.py" line="767"/>
+        <location filename="../SunAnalysisDialog.py" line="780"/>
         <source>Confirm</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1968,12 +1978,12 @@ with zero in the direction of the y-axis</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysisDialog.py" line="488"/>
+        <location filename="../SunAnalysisDialog.py" line="498"/>
         <source>epw path get from Sun Path</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysisDialog.py" line="603"/>
+        <location filename="../SunAnalysisDialog.py" line="615"/>
         <source>There is no Sun Analysis!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2000,8 +2010,18 @@ increase the computation time.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysisDialog.py" line="712"/>
+        <location filename="../SunAnalysisDialog.py" line="725"/>
         <source>Sun Analysis was updated!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunAnalysisDialog.py" line="378"/>
+        <source>Scale:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunAnalysisDialog.py" line="381"/>
+        <source>Adjust the scale of the legends if necessary.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
