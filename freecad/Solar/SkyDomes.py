@@ -161,13 +161,13 @@ class SkyDomes:
                             "start_year", "08_Analysis_period",
                             QT_TRANSLATE_NOOP("App::Property",
                             "The initial year of the analysis period")
-                            ).start_year = 2025
+                            ).start_year = 2026
         if not "end_year" in pl:
             obj.addProperty("App::PropertyInteger",
                             "end_year", "08_Analysis_period",
                             QT_TRANSLATE_NOOP("App::Property",
                             "The final year of the analysis period")
-                            ).end_year = 2025
+                            ).end_year = 2026
         if not "start_month" in pl:
             obj.addProperty("App::PropertyInteger",
                             "start_month", "08_Analysis_period",
