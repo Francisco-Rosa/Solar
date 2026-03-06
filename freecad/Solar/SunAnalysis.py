@@ -187,7 +187,7 @@ class SunAnalysis:
                             "end_month", "03_Analysis_period",
                             QT_TRANSLATE_NOOP("App::Property",
                             "The final month of the analysis period")
-                            ).end_month = 2
+                            ).end_month = 12
         if not "start_day" in pl:
             obj.addProperty("App::PropertyInteger",
                             "start_day", "03_Analysis_period",
@@ -199,7 +199,7 @@ class SunAnalysis:
                             "end_day", "03_Analysis_period",
                             QT_TRANSLATE_NOOP("App::Property",
                             "The final day of the analysis period")
-                            ).end_day = 30
+                            ).end_day = 31
         if not "start_hour" in pl:
             obj.addProperty("App::PropertyInteger",
                             "start_hour", "03_Analysis_period",
