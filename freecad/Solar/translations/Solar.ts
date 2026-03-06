@@ -1527,16 +1527,6 @@ Click this button to get started its animation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis_ant.py" line="1381"/>
-        <source>It was not possible to update bar legend position!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysis_ant.py" line="1384"/>
-        <source>There is no direct and diffuse analysis!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../SunAnalysis.py" line="1472"/>
         <source>Attempting to get Sun Analysis values: Sun Analysis object could not be found!</source>
         <translation type="unfinished"></translation>
@@ -1544,11 +1534,6 @@ Click this button to get started its animation</source>
     <message>
         <location filename="../SunAnalysis.py" line="1526"/>
         <source>There is no study objects!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysis.py" line="1696"/>
-        <source>There is no direct or diffuse analysis group!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1647,7 +1632,7 @@ installed in your machine.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1711"/>
+        <location filename="../SunAnalysis.py" line="1698"/>
         <source>This will delete all objects from 
 the selected Sun Analysis, 
 and you won&apos;t be able to undo it. 
@@ -1656,7 +1641,7 @@ Are you sure you want to delete these Sun Analysis?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1412"/>
+        <location filename="../SunAnalysis.py" line="1688"/>
         <source>There are still no direct and diffuse analyses!</source>
         <translation type="unfinished"></translation>
     </message>

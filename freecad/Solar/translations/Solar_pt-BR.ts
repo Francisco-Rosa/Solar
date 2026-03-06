@@ -1585,16 +1585,6 @@ Após o início da animação, clique neste botão para interrompê-la.</transla
         <translation>Horas de sol</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis_ant.py" line="1381"/>
-        <source>It was not possible to update bar legend position!</source>
-        <translation>Não foi possível atualizar a posição da legenda da barra!</translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysis_ant.py" line="1384"/>
-        <source>There is no direct and diffuse analysis!</source>
-        <translation>Não existe análises diretas e difusas!</translation>
-    </message>
-    <message>
         <location filename="../SunAnalysis.py" line="1472"/>
         <source>Attempting to get Sun Analysis values: Sun Analysis object could not be found!</source>
         <translation>Tentativa de obter valores de Análise Solar: O objeto Análise Solar não foi encontrado!</translation>
@@ -1603,11 +1593,6 @@ Após o início da animação, clique neste botão para interrompê-la.</transla
         <location filename="../SunAnalysis.py" line="1526"/>
         <source>There is no study objects!</source>
         <translation>Não há objetos de estudo!</translation>
-    </message>
-    <message>
-        <location filename="../SunAnalysis.py" line="1696"/>
-        <source>There is no direct or diffuse analysis group!</source>
-        <translation>Não existe grupo de análise direta ou difusa!</translation>
     </message>
     <message>
         <location filename="../SunAnalysis.py" line="799"/>
@@ -1712,7 +1697,7 @@ installed in your machine.</source>
 o aplicativo Radiance deve estar instalado em sua máquina.</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1711"/>
+        <location filename="../SunAnalysis.py" line="1698"/>
         <source>This will delete all objects from 
 the selected Sun Analysis, 
 and you won&apos;t be able to undo it. 
@@ -1725,7 +1710,7 @@ e você não poderá desfazer a ação.
 Tem certeza de que deseja excluir essas Análises Solares?</translation>
     </message>
     <message>
-        <location filename="../SunAnalysis.py" line="1412"/>
+        <location filename="../SunAnalysis.py" line="1688"/>
         <source>There are still no direct and diffuse analyses!</source>
         <translation>Ainda não existem análises diretas e difusas!</translation>
     </message>
@@ -2643,7 +2628,7 @@ Clique em reproduzir para iniciar a animação.</translation>
         <source>A path to save images is required! 
 Click &apos;Stop Animation&apos; to start again.</source>
         <translation>É necessário um caminho para salvar as imagens!
-Clique em &apos;Parar animação&apos; para começar novamente.</translation>
+Clique em 'Parar animação' para começar novamente.</translation>
     </message>
 </context>
 <context>
