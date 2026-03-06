@@ -1684,22 +1684,9 @@ def update_sun_analysis_colors():
                                            face_colors = f_colors_diffuse)
             doc.getObject(study_direct_group.Name).Visibility = SA.direct_diffuse_values
             doc.getObject(study_diffuse_group.Name).Visibility = SA.direct_diffuse_values
-            direct_compass = SA.Group[2].Group[1].Group[1].Group[0]
-            diffuse_compass = SA.Group[3].Group[1].Group[1].Group[0]
-            direct_compass.ViewObject.ShapeAppearance = FreeCAD.Material(
-                                            DiffuseColor = color_rgb)
-            diffuse_compass.ViewObject.ShapeAppearance = FreeCAD.Material(
-                                            DiffuseColor = color_rgb)
         except Exception:
-            msg = QtWidgets.QMessageBox()
-            msg.setWindowTitle("Warning")
-            msg.setText(translate("SunAnalysis",
-            "There is no direct or diffuse analysis group!"
-            ))
-            msg.setIcon(QtWidgets.QMessageBox.Warning)
-            msg.setStandardButtons(
-                QtWidgets.QMessageBox.Ok) #| QtWidgets.QMessageBox.Cancel)
-            msg.exec_()
+            FreeCAD.Console.PrintMessage(translate("SunAnalysis",
+            "There are still no direct and diffuse analyses!") + "\n")
 
 def delete_sun_analysis(SA = None):
 
