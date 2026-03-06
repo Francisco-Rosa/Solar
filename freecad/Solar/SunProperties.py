@@ -198,7 +198,7 @@ class SunProperties:
                 "App::Property",
                 "The year of the sun's position"
                 )
-            ).Year = 2025
+            ).Year = 2026
         # 05 Results
         if not "Altitude" in pl:
             obj.addProperty(
