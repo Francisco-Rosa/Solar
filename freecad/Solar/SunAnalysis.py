@@ -237,13 +237,12 @@ class SunAnalysis:
                                          f"01 - {RESUL_01}",
                                          f"02 - {RESUL_02}",
                             )
-        if not "sky_matrix_high_density" in pl:
+        """if not "sky_matrix_high_density" in pl: #(Not yet implemented!)
             obj.addProperty("App::PropertyBool",
                             "sky_matrix_high_density", "04_Analysis_results",
                             QT_TRANSLATE_NOOP("App::Property",
-                            "Enable sky matrix high density (Reinhart model) \n"
-                            "or not (Tregenza one).")
-                            ).sky_matrix_high_density = False
+                            "Enable sky matrix high density (Reinhart model).\n")
+                            ).sky_matrix_high_density = False"""
         if not "direct_diffuse_values" in pl:
             obj.addProperty("App::PropertyBool",
                             "direct_diffuse_values", "04_Analysis_results",
@@ -843,7 +842,7 @@ def create_sun_analysis(study_objs = None,
         if SA.results[0:2] == "02":
             title = f"{RESUL_02}"
         get_modify_sun_radiation(epw_path,
-                                 period,
+                                 #period,
                                  ground_reflectance,
                                  centroids_normals_lb,
                                  tess_context_geom,
@@ -1041,7 +1040,7 @@ def get_modify_sun_hours(period = None,
                                     DiffuseColor = color_rgb)
 
 def get_modify_sun_radiation(epw_path = "",
-                             period = None,
+                             #period = None,
                              ground_reflectance = 0.2,
                              centroids_normals_lb = None,
                              tess_context_geom = None,
@@ -1054,6 +1053,19 @@ def get_modify_sun_radiation(epw_path = "",
     """Create or modify sun radiation/irradiance analysis object."""
 
     doc = FreeCAD.ActiveDocument
+
+    #period
+    period = None
+    period = AnalysisPeriod(SA.start_month,
+                            SA.start_day,
+                            SA.start_hour,
+                            SA.end_month,
+                            SA.end_day,
+                            SA.end_hour,
+                            1, # timestep fixed
+                            SA.leap_year
+                            )
+
     pos1 = leg_pos[6]
     pos2 = leg_pos[7]
     pos3 = leg_pos[8]
@@ -1075,8 +1087,8 @@ def get_modify_sun_radiation(epw_path = "",
     print("gettind sun radiations results...")
     #get sky dome radiation values
     high_density = False
-    if SA.sky_matrix_high_density is True:
-        high_density = True
+    """if SA.sky_matrix_high_density is True:
+        high_density = True"""
     irradiance = False
     if SA.results[0:2] == "02":
         irradiance = True
@@ -1085,7 +1097,6 @@ def get_modify_sun_radiation(epw_path = "",
                             high_density,
                             plot_irradiance = irradiance,
                             timestep = int(SA.timestep),
-                            center_vectors = False,
                             ground_reflectance = 0.2
                             )
     #print(f"radiation_values: {radiation_values}")
@@ -1606,7 +1617,7 @@ def update_sun_analysis_values_colors(epw_path = None,
             title = f"{RESUL_02}"
         ground_reflectance = 0.2
         get_modify_sun_radiation(epw_path,
-                                     period,
+                                     #period,
                                      ground_reflectance,
                                      centroids_normals_lb,
                                      tess_context_geom,

@@ -289,8 +289,8 @@ class SunAnalysisConfigurationDialog(QtWidgets.QDialog):
                         "Sky matrix high density"))
         self.ui.checkBox_sky_matrix_high_density.setToolTip(
                         translate("SunAnalysisDialog",
-                        "Enable sky matrix high density (Reinhart model) \n"
-                        "or not (Tregenza one)."))
+                        "Enable sky matrix high density (Reinhart model).\n"
+                        "Not yet implemented!"))
         #label_Results
         self.ui.label_Results.setText(
                        translate("SunAnalysisDialog",
@@ -557,8 +557,8 @@ class SunAnalysisConfigurationDialog(QtWidgets.QDialog):
             idx2 = int((SA.results)[0:2])
             if idx2 >= 0:
                 self.ui.comboBox_results.setCurrentIndex(idx2)
-            #checkBox_sky_matrix_high_density
-            self.ui.checkBox_sky_matrix_high_density.setChecked(SA.sky_matrix_high_density)
+            #checkBox_sky_matrix_high_density (Not yet implemented!)
+            #self.ui.checkBox_sky_matrix_high_density.setChecked(SA.sky_matrix_high_density)
             self.ui.checkBox_direct_diffuse.setChecked(SA.direct_diffuse_values)
             self.results_toggled()
         else:
@@ -605,8 +605,8 @@ class SunAnalysisConfigurationDialog(QtWidgets.QDialog):
             SA.end_hour = self.ui.spinBox_time_to.value()
             SA.timestep = self.ui.comboBox_timestep.currentText()
             SA.leap_year = self.ui.checkBox_leap_year.isChecked()
-            # Sun analysis results
-            SA.sky_matrix_high_density = self.ui.checkBox_sky_matrix_high_density.isChecked()
+            # Sun analysis results (Not yet implemented!)
+            #SA.sky_matrix_high_density = self.ui.checkBox_sky_matrix_high_density.isChecked()
             prefix2 = int(self.ui.comboBox_results.currentText()[0:2])
             resul_list = SA.getEnumerationsOfProperty("results")
             SA.results = resul_list[prefix2]
@@ -641,7 +641,7 @@ class SunAnalysisConfigurationDialog(QtWidgets.QDialog):
         timestep2 = self.ui.comboBox_timestep.currentText()
         leap_year2 = self.ui.checkBox_leap_year.isChecked()
         results2 = self.ui.comboBox_results.currentText()[0:2]
-        sky_matrix_high_density2 = self.ui.checkBox_sky_matrix_high_density.isChecked()
+        #sky_matrix_high_density2 = self.ui.checkBox_sky_matrix_high_density.isChecked()
 
         #colors
         color_count2 = self.ui.spinBox_color_count.value()
@@ -671,7 +671,7 @@ class SunAnalysisConfigurationDialog(QtWidgets.QDialog):
             timestep1 = SA.timestep
             leap_year1 = SA.leap_year
             results1 = SA.results[0:2]
-            sky_matrix_high_density1 = SA.sky_matrix_high_density
+            #sky_matrix_high_density1 = SA.sky_matrix_high_density
 
             #check forms
             if max_length1 != max_length2 or NEW_GEOM is True:
@@ -695,7 +695,7 @@ class SunAnalysisConfigurationDialog(QtWidgets.QDialog):
                                                timestep1 != timestep2,
                                                leap_year1 != leap_year2,
                                                results1 != results2,
-                                               sky_matrix_high_density1 != sky_matrix_high_density2,      
+                                               #sky_matrix_high_density1 != sky_matrix_high_density2,
                                                ]
                 ):
                 dif_values_colors = True

@@ -974,8 +974,7 @@ def create_sky_domes():
                             SD.end_month,
                             SD.end_day,
                             SD.end_hour,
-                            #int(SD.timestep),
-                            1,
+                            1, # timestep
                             SD.leap_year
                             )
     # Getting sky domes
@@ -1010,7 +1009,7 @@ def create_sky_domes():
                                           high_density = high_density,
                                           plot_irradiance = irradiance,
                                           timestep = int(SD.timestep),
-                                          center_vectors = SD.center_vectors,
+                                          #center_vectors = SD.center_vectors,
                                           ground_reflectance = 0.2
                                           )
     SD.total_values = sky_dome_values[0]

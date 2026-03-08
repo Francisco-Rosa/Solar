@@ -353,7 +353,6 @@ def get_sky_matrix_dome_values(epw_path = "",
                         high_density = False,
                         plot_irradiance = False,
                         timestep = 1,
-                        center_vectors = False,
                         ground_reflectance = 0.2
                         ):
 
@@ -976,8 +975,6 @@ def get_modify_legend_bar(bar_obj = None,
     # get texts
     leg_text = legend.segment_text
     text_location = legend.segment_text_location # normal, origin
-    #print(F"lenleg_text: {len(leg_text)}")
-    #print(F"lentext_location: {len(text_location)}")
 
     #get title positions
     x1 = text_location[0].o.x + position[0]

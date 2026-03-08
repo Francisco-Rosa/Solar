@@ -33,8 +33,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>924</width>
-        <height>648</height>
+        <width>880</width>
+        <height>630</height>
        </rect>
       </property>
       <layout class="QGridLayout" name="gridLayout">
@@ -1599,6 +1599,9 @@ Irradiation (Wh/m2).</string>
                     <layout class="QHBoxLayout" name="horizontalLayout_6">
                      <item>
                       <widget class="QCheckBox" name="checkBox_sky_matrix_high_density">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
                        <property name="font">
                         <font>
                          <pointsize>10</pointsize>
@@ -1606,8 +1609,7 @@ Irradiation (Wh/m2).</string>
                         </font>
                        </property>
                        <property name="toolTip">
-                        <string>Enable sky matrix high density (for Reinhart model) 
-or not (for Tregenza one).</string>
+                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable sky matrix high density (for Reinhart model) &lt;/p&gt;&lt;p&gt;or not (for Tregenza one).&lt;/p&gt;&lt;p&gt;Not yet implemented!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                        </property>
                        <property name="layoutDirection">
                         <enum>Qt::RightToLeft</enum>
