@@ -125,13 +125,13 @@ class SkyDomes:
                             "center_vectors", "04_SkyDomes",
                             QT_TRANSLATE_NOOP("App::Property",
                             "Visualize the center points (vectors) \n"
-                            "of each patch dome")
+                            "of each dome patch")
                             ).center_vectors = False
         if not "vector_values" in pl:
             obj.addProperty("App::PropertyVectorList",
                             "vector_values", "04_SkyDomes",
                             QT_TRANSLATE_NOOP("App::Property",
-                            "Vectors values of each patch dome")
+                            "Vectors values of each dome patch")
                             ).vector_values = []
         # 05 North
         if not "north" in pl:

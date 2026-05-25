@@ -261,7 +261,7 @@ class SunProperties:
             "SunLightDiagramConfig", "06_Sun_light_diagram_config",
             QT_TRANSLATE_NOOP(
                 "App::Property",
-                "Configure the sun light and/or diagram"
+                "Configure the sunlight and/or the solar diagram"
                 )
             ).SunLightDiagramConfig = False
         if not "Distance" in pl:
@@ -510,7 +510,7 @@ class SunPropertiesViewProvider:
     def updateData(self,obj,prop):
 
         """Method called when the object has a property changed.
-        If Image from has changed, set the to clean view state,
+        If 'Image from' has changed, set to clean view state,
         enable bw white, color or render shadows.
         If the epw path has changed, set the autofill location data."""
 
@@ -536,14 +536,14 @@ class SunPropertiesViewProvider:
                     FreeCAD.Console.PrintMessage(translate(
                                 "SunPropertiesViewProvider",
                                 "So far, the shadows with colored images "
-                                "only work in the FreeCAD-Link version 20241006.") + "\n")
+                                "only work in the FreeCAD-Link version 20241003.") + "\n")
         if prop in ["epw_path"]:
             if obj.epw_path is not None:
                 autofill_from_epw2()
                 get_sun_position()
         if prop in ["City"]:
             obj.Label = translate("SunPropertiesViewProvider",
-                                          "SunPath {}").format(obj.City)
+                                          "Sun Path {}").format(obj.City)
 
 def activated_sun_properties():
 
@@ -754,7 +754,7 @@ def create_sun_representation(obj = None):
     except Exception:
         # Sun representation
         sun_light_1 = FreeCAD.ActiveDocument.addObject("Part::Sphere","SunLight")
-        sun_light_1.Label = translate("SunProperties", "SunLight")
+        sun_light_1.Label = translate("SunProperties", "Sunlight")
         sun_light_1.Placement.Base = pt2_vector
         sun_light_1.Radius = str(obj.Radius)
         try:
@@ -841,7 +841,7 @@ def update_sun_representation(obj = None):
             sun_light_2.Visibility = False
     except Exception:
         FreeCAD.Console.PrintMessage(translate(
-            'SunProperties', 'There is no SunLight to update!') + '\n')
+            'SunProperties', 'There is no Sunlight to update!') + '\n')
     # solar ray
     try:
         ray_2 = obj.Group[1]

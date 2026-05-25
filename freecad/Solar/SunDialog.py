@@ -487,7 +487,7 @@ class SunPathDialog(QtWidgets.QDialog):
                                  "Select epw file"),
                                  "",
                                  translate("SunDialog",
-                                 "EPW Files (*.epw);;All Files (*)")
+                                 "EPW Files (*.epw);; All Files (*)")
                                  )
         if fname:
             self.ui.lineEdit_1_epw_path.setText(fname)
