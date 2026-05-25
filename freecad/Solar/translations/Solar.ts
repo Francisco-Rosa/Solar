@@ -34,17 +34,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="124"/>
-        <source>Visualize the center points (vectors) 
-of each patch dome</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="131"/>
-        <source>Vectors values of each patch dome</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../SunProperties.py" line="139"/>
         <source>North angle (clockwise)</source>
         <translation type="unfinished"></translation>
@@ -459,11 +448,6 @@ or of the sun path animation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunProperties.py" line="259"/>
-        <source>Configure the sun light and/or diagram</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../SunProperties.py" line="304"/>
         <source>Sunlight representation</source>
         <translation type="unfinished"></translation>
@@ -506,6 +490,22 @@ or of the sun path animation</source>
     <message>
         <location filename="../SunAnalysis.py" line="318"/>
         <source>Scale of the legends (titles and bar). - read only</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomes.py" line="124"/>
+        <source>Visualize the center points (vectors) 
+of each dome patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SkyDomes.py" line="131"/>
+        <source>Vectors values of each dome patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunProperties.py" line="259"/>
+        <source>Configure the sunlight and/or the solar diagram</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2349,11 +2349,6 @@ Must not be zero.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="484"/>
-        <source>EPW Files (*.epw);;All Files (*)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../SunDialog.py" line="504"/>
         <source>Warning</source>
         <translation type="unfinished"></translation>
@@ -2472,6 +2467,11 @@ in the links</source>
         <source>If you want to use EPW for Sun Path, provide a valid file path.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../SunDialog.py" line="484"/>
+        <source>EPW Files (*.epw);; All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SunPathAnimation</name>
@@ -2539,18 +2539,8 @@ Click &apos;Stop Animation&apos; to start again.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunProperties.py" line="757"/>
-        <source>SunLight</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../SunProperties.py" line="793"/>
         <source>Ray</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SunProperties.py" line="843"/>
-        <source>There is no SunLight to update!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2575,17 +2565,27 @@ Click &apos;Stop Animation&apos; to start again.</source>
 project is required, and none was found!</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../SunProperties.py" line="757"/>
+        <source>Sunlight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SunProperties.py" line="843"/>
+        <source>There is no Sunlight to update!</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SunPropertiesViewProvider</name>
     <message>
-        <location filename="../SunProperties.py" line="545"/>
-        <source>SunPath {}</source>
+        <location filename="../SunProperties.py" line="536"/>
+        <source>So far, the shadows with colored images only work in the FreeCAD-Link version 20241003.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SunProperties.py" line="536"/>
-        <source>So far, the shadows with colored images only work in the FreeCAD-Link version 20241006.</source>
+        <location filename="../SunProperties.py" line="545"/>
+        <source>Sun Path {}</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

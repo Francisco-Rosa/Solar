@@ -34,17 +34,6 @@
         <translation>Visualizar cúpulas directas y difusas</translation>
     </message>
     <message>
-        <location filename="../SkyDomes.py" line="124"/>
-        <source>Visualize the center points (vectors) 
-of each patch dome</source>
-        <translation>Visualice los puntos centrales (vectores) de cada parche de la cúpula.</translation>
-    </message>
-    <message>
-        <location filename="../SkyDomes.py" line="131"/>
-        <source>Vectors values of each patch dome</source>
-        <translation>Valores vectoriales de cada parche de la cúpula</translation>
-    </message>
-    <message>
         <location filename="../SunProperties.py" line="139"/>
         <source>North angle (clockwise)</source>
         <translation>Ángulo norte (en sentido horario)</translation>
@@ -482,11 +471,6 @@ objetos de estudio - sólo lectura</translation>
         <translation>Horario de verano.</translation>
     </message>
     <message>
-        <location filename="../SunProperties.py" line="259"/>
-        <source>Configure the sun light and/or diagram</source>
-        <translation>Configurar la luz solar y/o el diagrama</translation>
-    </message>
-    <message>
         <location filename="../SunProperties.py" line="304"/>
         <source>Sunlight representation</source>
         <translation>Representación de la luz solar</translation>
@@ -530,6 +514,23 @@ objetos de estudio - sólo lectura</translation>
         <location filename="../SunAnalysis.py" line="318"/>
         <source>Scale of the legends (titles and bar). - read only</source>
         <translation>Escala de las leyendas (títulos y barras). - sólo lectura</translation>
+    </message>
+    <message>
+        <location filename="../SkyDomes.py" line="124"/>
+        <source>Visualize the center points (vectors) 
+of each dome patch</source>
+        <translation>Visualice los puntos centrales (vectores) 
+de cada parche de la cúpula</translation>
+    </message>
+    <message>
+        <location filename="../SkyDomes.py" line="131"/>
+        <source>Vectors values of each dome patch</source>
+        <translation>Valores vectoriales de cada parche de la cúpula</translation>
+    </message>
+    <message>
+        <location filename="../SunProperties.py" line="259"/>
+        <source>Configure the sunlight and/or the solar diagram</source>
+        <translation>Configurar la luz solar y/o el diagrama solar</translation>
     </message>
 </context>
 <context>
@@ -2455,11 +2456,6 @@ de la animación de la trayectoria solar</translation>
         <translation>Seleccionar archivo epw</translation>
     </message>
     <message>
-        <location filename="../SunDialog.py" line="484"/>
-        <source>EPW Files (*.epw);;All Files (*)</source>
-        <translation>Archivos EPW (*.epw);;Todos los archivos (*)</translation>
-    </message>
-    <message>
         <location filename="../SunDialog.py" line="504"/>
         <source>Warning</source>
         <translation>Aviso</translation>
@@ -2589,6 +2585,11 @@ in the links</source>
         <translation>Si desea utilizar EPW para la Trayectoria Solar, 
 proporcione una ruta de archivo válida.</translation>
     </message>
+    <message>
+        <location filename="../SunDialog.py" line="484"/>
+        <source>EPW Files (*.epw);; All Files (*)</source>
+        <translation>Archivos EPW (*.epw);; Todos los archivos (*)</translation>
+    </message>
 </context>
 <context>
     <name>SunPathAnimation</name>
@@ -2659,19 +2660,9 @@ Una vez creada la trayectoria solar, configure sus propiedades.</translation>
         <translation>Error de archivo</translation>
     </message>
     <message>
-        <location filename="../SunProperties.py" line="757"/>
-        <source>SunLight</source>
-        <translation>Luz Solar</translation>
-    </message>
-    <message>
         <location filename="../SunProperties.py" line="793"/>
         <source>Ray</source>
         <translation>Rayo</translation>
-    </message>
-    <message>
-        <location filename="../SunProperties.py" line="843"/>
-        <source>There is no SunLight to update!</source>
-        <translation>¡No hay Luz Solar para actualizar!</translation>
     </message>
     <message>
         <location filename="../SunProperties.py" line="871"/>
@@ -2697,18 +2688,28 @@ realice los ajustes en su ventana de propiedades.</translation>
 project is required, and none was found!</source>
         <translation>Para una vista 3D renderizada, se requiere un proyecto de renderizado, ¡y no se encontró ninguno!</translation>
     </message>
+    <message>
+        <location filename="../SunProperties.py" line="757"/>
+        <source>Sunlight</source>
+        <translation>Luz solar</translation>
+    </message>
+    <message>
+        <location filename="../SunProperties.py" line="843"/>
+        <source>There is no Sunlight to update!</source>
+        <translation>¡No hay Luz solar para actualizar!</translation>
+    </message>
 </context>
 <context>
     <name>SunPropertiesViewProvider</name>
     <message>
-        <location filename="../SunProperties.py" line="545"/>
-        <source>SunPath {}</source>
-        <translation>Trayectoria Solar {}</translation>
+        <location filename="../SunProperties.py" line="536"/>
+        <source>So far, the shadows with colored images only work in the FreeCAD-Link version 20241003.</source>
+        <translation>Hasta el momento, las sombras con imágenes en color solo funcionan en la versión 20241003 de FreeCAD-Link.</translation>
     </message>
     <message>
-        <location filename="../SunProperties.py" line="536"/>
-        <source>So far, the shadows with colored images only work in the FreeCAD-Link version 20241006.</source>
-        <translation>Hasta el momento, las sombras con imágenes en color solo funcionan en la versión 20241006 de FreeCAD-Link.</translation>
+        <location filename="../SunProperties.py" line="545"/>
+        <source>Sun Path {}</source>
+        <translation>Trayectoria del Sol {}</translation>
     </message>
 </context>
 <context>
