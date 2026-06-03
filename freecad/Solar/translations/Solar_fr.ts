@@ -36,7 +36,7 @@
     <message>
       <location filename="../SunProperties.py" line="139"/>
       <source>North angle (clockwise)</source>
-      <translation>Angle nord (sens horaire)</translation>
+      <translation>Nord géographique (sens horaire)</translation>
     </message>
     <message>
       <location filename="../SkyDomes.py" line="145"/>
@@ -257,7 +257,7 @@ triangular sub faces (mm).</source>
     <message>
       <location filename="../SunProperties.py" line="120"/>
       <source>Longitude of the location</source>
-      <translation>Longitude de l'emplacement</translation>
+      <translation>Longitude</translation>
     </message>
     <message>
       <location filename="../SunProperties.py" line="149"/>
@@ -1144,12 +1144,12 @@ to make possible further adjustments.</source>
     <message>
       <location filename="../SkyDomesDialog.py" line="90"/>
       <source>Epw/ Location</source>
-      <translation>Fichier epw/localisation</translation>
+      <translation>Fichier epw/emplacement</translation>
     </message>
     <message>
       <location filename="../SkyDomesDialog.py" line="93"/>
       <source>Location data get from epw file.</source>
-      <translation>Les données de localisation sont extraites du fichier EPW.</translation>
+      <translation>Les données de l'emplacement sont extraites du fichier EPW.</translation>
     </message>
     <message>
       <location filename="../SkyDomesDialog.py" line="97"/>
@@ -1224,7 +1224,7 @@ to make possible further adjustments.</source>
     <message>
       <location filename="../SkyDomesDialog.py" line="156"/>
       <source>North angle:</source>
-      <translation>Angle nord :</translation>
+      <translation>Nord géographique:</translation>
     </message>
     <message>
       <location filename="../SkyDomesDialog.py" line="166"/>
@@ -1259,7 +1259,7 @@ to make possible further adjustments.</source>
     <message>
       <location filename="../SkyDomesDialog.py" line="232"/>
       <source>to:</source>
-      <translation>Au :</translation>
+      <translation>À :</translation>
     </message>
     <message>
       <location filename="../SkyDomesDialog.py" line="220"/>
@@ -1269,12 +1269,12 @@ to make possible further adjustments.</source>
     <message>
       <location filename="../SkyDomesDialog.py" line="224"/>
       <source>Time from:</source>
-      <translation>Heure de début :</translation>
+      <translation>Heure initiale :</translation>
     </message>
     <message>
       <location filename="../SkyDomesDialog.py" line="228"/>
       <source>Indicate the start time of the analysis period.</source>
-      <translation>Indiquer l'heure de début de la période d'analyse</translation>
+      <translation>Indiquer l'heure initiale de la période d'analyse</translation>
     </message>
     <message>
       <location filename="../SkyDomesDialog.py" line="236"/>
@@ -1384,7 +1384,7 @@ indicate the path on your machine</source>
       <source>Indicate the true north.
 Values ​​in a clockwise direction, 
 with zero in the direction of the y-axis</source>
-      <translation>Indiquer le nord géographique. Les valeurs sont exprimées dans le sens horaire, le zéro correspondant à la direction de l'axe des y.</translation>
+      <translation>Indiquer le nord géographique. Les valeurs sont exprimées dans le sens horaire, le zéro correspondant à la direction de l'axe des Y.</translation>
     </message>
     <message>
       <location filename="../SkyDomesDialog.py" line="178"/>
@@ -1665,12 +1665,12 @@ Are you sure you want to delete these Sun Analysis?</source>
     <message>
       <location filename="../SunAnalysisDialog.py" line="90"/>
       <source>Epw/ Location/ Legend</source>
-      <translation>Fichier epw/localisation/légende</translation>
+      <translation>Fichier epw/emplacement/barre des légendes</translation>
     </message>
     <message>
       <location filename="../SunAnalysisDialog.py" line="93"/>
       <source>Location data get from epw file.</source>
-      <translation>Les données de localisation sont extraites du fichier EPW.</translation>
+      <translation>Les données de l'emplacement sont extraites du fichier EPW.</translation>
     </message>
     <message>
       <location filename="../SunAnalysisDialog.py" line="97"/>
@@ -1745,7 +1745,7 @@ Are you sure you want to delete these Sun Analysis?</source>
     <message>
       <location filename="../SunAnalysisDialog.py" line="156"/>
       <source>North angle:</source>
-      <translation>Angle nord :</translation>
+      <translation>Nord géographique:</translation>
     </message>
     <message>
       <location filename="../SunAnalysisDialog.py" line="170"/>
@@ -1812,7 +1812,7 @@ offset distance (mm).</source>
     <message>
       <location filename="../SunAnalysisDialog.py" line="256"/>
       <source>to:</source>
-      <translation>Au :</translation>
+      <translation>À :</translation>
     </message>
     <message>
       <location filename="../SunAnalysisDialog.py" line="244"/>
@@ -1822,12 +1822,12 @@ offset distance (mm).</source>
     <message>
       <location filename="../SunAnalysisDialog.py" line="248"/>
       <source>Time from:</source>
-      <translation>Heure de début :</translation>
+      <translation>Heure initiale :</translation>
     </message>
     <message>
       <location filename="../SunAnalysisDialog.py" line="252"/>
       <source>Indicate the start time of the analysis period.</source>
-      <translation>Indiquer l'heure de début de la période d'analyse</translation>
+      <translation>Indiquer l'heure initiale de la période d'analyse</translation>
     </message>
     <message>
       <location filename="../SunAnalysisDialog.py" line="260"/>
@@ -1924,7 +1924,7 @@ indicate the path on your machine</source>
       <source>Indicate the true north.
 Values ​​in a clockwise direction, 
 with zero in the direction of the y-axis</source>
-      <translation>Indiquer le nord géographique. Les valeurs sont exprimées dans le sens horaire, le zéro correspondant à la direction de l'axe des y.</translation>
+      <translation>Indiquer le nord géographique. Les valeurs sont exprimées dans le sens horaire, le zéro correspondant à la direction de l'axe des Y.</translation>
     </message>
     <message>
       <location filename="../SunAnalysisDialog.py" line="166"/>
@@ -2123,7 +2123,7 @@ the sun position for a specific location</source>
     <message>
       <location filename="../SunDialog.py" line="191"/>
       <source>North angle:</source>
-      <translation>Angle nord :</translation>
+      <translation>Nord géographique:</translation>
     </message>
     <message>
       <location filename="../SunDialog.py" line="200"/>
@@ -2263,12 +2263,12 @@ Pour les ombres de la vue 3D en couleur, laisser cette option désactivée.</tra
     <message>
       <location filename="../SunDialog.py" line="344"/>
       <source>Images, w:</source>
-      <translation>Images, largeur :</translation>
+      <translation>Largeur de l'image :</translation>
     </message>
     <message>
       <location filename="../SunDialog.py" line="357"/>
       <source>h:</source>
-      <translation>Hauteur :</translation>
+      <translation>Hauteur de l'image :</translation>
     </message>
     <message>
       <location filename="../SunDialog.py" line="366"/>
@@ -2293,7 +2293,7 @@ Pour les ombres de la vue 3D en couleur, laisser cette option désactivée.</tra
     <message>
       <location filename="../SunDialog.py" line="380"/>
       <source>Time from:</source>
-      <translation>Heure de début :</translation>
+      <translation>Heure initiale :</translation>
     </message>
     <message>
       <location filename="../SunDialog.py" line="384"/>
@@ -2303,7 +2303,7 @@ Pour les ombres de la vue 3D en couleur, laisser cette option désactivée.</tra
     <message>
       <location filename="../SunDialog.py" line="388"/>
       <source>to:</source>
-      <translation>Au :</translation>
+      <translation>À :</translation>
     </message>
     <message>
       <location filename="../SunDialog.py" line="392"/>
@@ -2427,7 +2427,7 @@ indicate the path on your machine</source>
       <source>Indicate the true north.
 Values ​​in a clockwise direction, 
 with zero in the direction of the y-axis</source>
-      <translation>Indiquer le nord géographique. Les valeurs sont exprimées dans le sens horaire, le zéro correspondant à la direction de l'axe des y.</translation>
+      <translation>Indiquer le nord géographique. Les valeurs sont exprimées dans le sens horaire, le zéro correspondant à la direction de l'axe des Y.</translation>
     </message>
     <message>
       <location filename="../SunDialog.py" line="226"/>
@@ -2474,7 +2474,7 @@ in the links</source>
       <location filename="../SunDialog.py" line="630"/>
       <source>North angle get from Sky Domes
 </source>
-      <translation>Vue nord depuis les Sky Domes</translation>
+      <translation>Nord géographique à partir des Sky Domes</translation>
     </message>
     <message>
       <location filename="../SunDialog.py" line="705"/>
