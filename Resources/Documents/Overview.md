@@ -40,4 +40,4 @@ Visualize the path the sun takes in real-time.
 Integrates with the `Movie` & `Render` workbenches.
 
 
-[Setup]: https://github.com/Francisco-Rosa/Solar/Documentation/Installation
+[Setup]: https://github.com/Francisco-Rosa/Solar/blob/main/Documentation/Installation.md
