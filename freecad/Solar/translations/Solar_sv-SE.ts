@@ -16,7 +16,7 @@
     <message>
       <location filename="../SkyDomes.py" line="75"/>
       <source>Metadata</source>
-      <translation type="unfinished">Metadata</translation>
+      <translation>Metadata</translation>
     </message>
     <message>
       <location filename="../SkyDomes.py" line="82"/>
@@ -102,8 +102,8 @@
       <location filename="../SkyDomes.py" line="229"/>
       <source>Sun analysis legend title.
 It&apos;s read-only. It&apos;s get from the units.</source>
-      <translation type="unfinished">Sun analysis legend title.
-It&apos;s read-only. It&apos;s get from the units.</translation>
+      <translation>Rubrik för teckenförklaringen i solanalysen.
+Skrivskyddad. Hämtas från enheterna.</translation>
     </message>
     <message>
       <location filename="../SkyDomes.py" line="236"/>
@@ -170,10 +170,10 @@ Den är endast läsbar.</translation>
 of the analysis.
 If there isn&apos;t one, adopt 
 the objects of study.</source>
-      <translation type="unfinished">Select the objects from the context 
-of the analysis.
-If there isn&apos;t one, adopt 
-the objects of study.</translation>
+      <translation>Välj objekten från analysens
+sammanhang.
+Om det inte finns något används
+studieobjekten.</translation>
     </message>
     <message>
       <location filename="../SunAnalysis.py" line="144"/>
@@ -267,27 +267,27 @@ triangulära underytor (mm).</translation>
     <message>
       <location filename="../SunProperties.py" line="149"/>
       <source>The day of the sun&apos;s position</source>
-      <translation type="unfinished">The day of the sun&apos;s position</translation>
+      <translation>Dagen för solens position</translation>
     </message>
     <message>
       <location filename="../SunProperties.py" line="167"/>
       <source>The hour of the sun&apos;s position</source>
-      <translation type="unfinished">The hour of the sun&apos;s position</translation>
+      <translation>Timmen för solens position</translation>
     </message>
     <message>
       <location filename="../SunProperties.py" line="176"/>
       <source>The minutes of the sun&apos;s position</source>
-      <translation type="unfinished">The minutes of the sun&apos;s position</translation>
+      <translation>Minuterna för solens position</translation>
     </message>
     <message>
       <location filename="../SunProperties.py" line="185"/>
       <source>The month of the sun&apos;s position</source>
-      <translation type="unfinished">The month of the sun&apos;s position</translation>
+      <translation>Månaden för solens position</translation>
     </message>
     <message>
       <location filename="../SunProperties.py" line="194"/>
       <source>The year of the sun&apos;s position</source>
-      <translation type="unfinished">The year of the sun&apos;s position</translation>
+      <translation>Året för solens position</translation>
     </message>
     <message>
       <location filename="../SunProperties.py" line="204"/>
@@ -510,18 +510,18 @@ eller för animeringen av solbanan</translation>
       <location filename="../SkyDomes.py" line="124"/>
       <source>Visualize the center points (vectors) 
 of each dome patch</source>
-      <translation type="unfinished">Visualize the center points (vectors) 
-of each dome patch</translation>
+      <translation>Visualisera mittpunkterna (vektorerna)
+för varje himmelskupolsegment</translation>
     </message>
     <message>
       <location filename="../SkyDomes.py" line="131"/>
       <source>Vectors values of each dome patch</source>
-      <translation type="unfinished">Vectors values of each dome patch</translation>
+      <translation>Vektorvärden för varje himmelskupolsegment</translation>
     </message>
     <message>
       <location filename="../SunProperties.py" line="259"/>
       <source>Configure the sunlight and/or the solar diagram</source>
-      <translation type="unfinished">Configure the sunlight and/or the solar diagram</translation>
+      <translation>Konfigurera solljuset och/eller soldiagrammet</translation>
     </message>
   </context>
   <context>
@@ -674,7 +674,7 @@ Var försiktig, du kommer inte att kunna
     <message>
       <location filename="../LBComponents.py" line="64"/>
       <source>Ecotect</source>
-      <translation type="unfinished">Ecotect</translation>
+      <translation>Ecotect</translation>
     </message>
     <message>
       <location filename="../LBComponents.py" line="65"/>
@@ -724,7 +724,7 @@ Var försiktig, du kommer inte att kunna
     <message>
       <location filename="../LBComponents.py" line="74"/>
       <source>Harm</source>
-      <translation type="unfinished">Harm</translation>
+      <translation>Harm</translation>
     </message>
     <message>
       <location filename="../LBComponents.py" line="75"/>
@@ -759,7 +759,7 @@ Var försiktig, du kommer inte att kunna
     <message>
       <location filename="../LBComponents.py" line="81"/>
       <source>THERM</source>
-      <translation type="unfinished">THERM</translation>
+      <translation>THERM</translation>
     </message>
     <message>
       <location filename="../LBComponents.py" line="82"/>
@@ -819,7 +819,7 @@ Var försiktig, du kommer inte att kunna
     <message>
       <location filename="../LBComponents.py" line="558"/>
       <source>N</source>
-      <translation type="unfinished">N</translation>
+      <translation>N</translation>
     </message>
     <message>
       <location filename="../LBComponents.py" line="563"/>
@@ -834,7 +834,7 @@ Var försiktig, du kommer inte att kunna
     <message>
       <location filename="../LBComponents.py" line="572"/>
       <source>W</source>
-      <translation type="unfinished">W</translation>
+      <translation>V</translation>
     </message>
     <message>
       <location filename="../LBComponents.py" line="642"/>
@@ -864,17 +864,17 @@ Var försiktig, du kommer inte att kunna
     <message>
       <location filename="../LBComponents.py" line="681"/>
       <source>Direct Compass Group</source>
-      <translation type="unfinished">Direct Compass Group</translation>
+      <translation>Grupp för direkt kompass</translation>
     </message>
     <message>
       <location filename="../LBComponents.py" line="685"/>
       <source>Diffuse Compass Group</source>
-      <translation type="unfinished">Diffuse Compass Group</translation>
+      <translation>Grupp för diffus kompass</translation>
     </message>
     <message>
       <location filename="../LBComponents.py" line="690"/>
       <source>Direct Compass Legend Group</source>
-      <translation type="unfinished">Direct Compass Legend Group</translation>
+      <translation>Grupp för teckenförklaring till direkt kompass</translation>
     </message>
     <message>
       <location filename="../LBComponents.py" line="694"/>
@@ -884,12 +884,12 @@ Var försiktig, du kommer inte att kunna
     <message>
       <location filename="../LBComponents.py" line="935"/>
       <source>Legend bar</source>
-      <translation type="unfinished">Legend bar</translation>
+      <translation>Teckenförklaringsfält</translation>
     </message>
     <message>
       <location filename="../LBComponents.py" line="939"/>
       <source>Legend Bar Group</source>
-      <translation type="unfinished">Legend Bar Group</translation>
+      <translation>Grupp för teckenförklaringsfält</translation>
     </message>
     <message>
       <location filename="../LBComponents.py" line="947"/>
@@ -914,7 +914,7 @@ Var försiktig, du kommer inte att kunna
     <message>
       <location filename="../LBComponents.py" line="1149"/>
       <source>Total legend</source>
-      <translation type="unfinished">Total legend</translation>
+      <translation>Total teckenförklaring</translation>
     </message>
     <message>
       <location filename="../LBComponents.py" line="1152"/>
@@ -934,7 +934,7 @@ Var försiktig, du kommer inte att kunna
     <message>
       <location filename="../LBComponents.py" line="1186"/>
       <source>Direct Legend Group</source>
-      <translation type="unfinished">Direct Legend Group</translation>
+      <translation>Grupp för direkt teckenförklaring</translation>
     </message>
     <message>
       <location filename="../LBComponents.py" line="1193"/>
@@ -965,8 +965,8 @@ Var försiktig, du kommer inte att kunna
       <location filename="../LBComponents.py" line="317"/>
       <source>To get irradiance values, it is necessary 
 to install Radiance in your machine.</source>
-      <translation>För att få värden för strålningsstyrka är det nödvändigt att
-att installera Radiance i din maskin.</translation>
+      <translation>För att få värden för strålningsstyrka måste
+Radiance installeras på datorn.</translation>
     </message>
     <message>
       <location filename="../LBComponents.py" line="381"/>
@@ -994,10 +994,10 @@ installerad i din maskin.</translation>
 open the dialog and modify its configuration. 
 Please note, this only works if the original 
 group structure is preserved!</source>
-      <translation>Välj en Himmelskupoler-grupp, klicka på den här knappen för att
-öppna dialogrutan och ändra dess konfiguration.
-Observera att detta endast fungerar om den ursprungliga
-ursprungliga gruppstrukturen är bevarad!</translation>
+      <translation>Välj en grupp med himmelskupoler och klicka på
+den här knappen för att öppna dialogrutan och ändra dess konfiguration.
+Detta fungerar endast om den ursprungliga
+gruppstrukturen har bevarats!</translation>
     </message>
   </context>
   <context>
@@ -1035,12 +1035,12 @@ open the dialog and modify its configuration.</source>
     <message>
       <location filename="../SkyDomes.py" line="645"/>
       <source>SD Tregenza</source>
-      <translation type="unfinished">SD Tregenza</translation>
+      <translation>SD Tregenza</translation>
     </message>
     <message>
       <location filename="../SkyDomes.py" line="652"/>
       <source>SD Reinhart</source>
-      <translation type="unfinished">SD Reinhart</translation>
+      <translation>SD Reinhart</translation>
     </message>
     <message>
       <location filename="../SkyDomes.py" line="667"/>
@@ -1055,7 +1055,7 @@ open the dialog and modify its configuration.</source>
     <message>
       <location filename="../SkyDomes.py" line="686"/>
       <source>Direct Sky Dome Group</source>
-      <translation type="unfinished">Direct Sky Dome Group</translation>
+      <translation>Grupp för direkt himmelskupol</translation>
     </message>
     <message>
       <location filename="../SkyDomes.py" line="689"/>
@@ -1065,12 +1065,12 @@ open the dialog and modify its configuration.</source>
     <message>
       <location filename="../SkyDomes.py" line="705"/>
       <source>Diffuse Sky Dome Group</source>
-      <translation type="unfinished">Diffuse Sky Dome Group</translation>
+      <translation>Grupp för diffus himmelskupol</translation>
     </message>
     <message>
       <location filename="../SkyDomes.py" line="708"/>
       <source>Diffuse Sky Dome</source>
-      <translation type="unfinished">Diffuse Sky Dome</translation>
+      <translation>Diffus himmelskupol</translation>
     </message>
     <message>
       <location filename="../SkyDomes.py" line="842"/>
@@ -1119,11 +1119,11 @@ and you won&apos;t be able to undo it.
 
 Are you sure you want to delete these Sky Domes?
 </source>
-      <translation type="unfinished">This will delete all main objects 
-from the selected Sky Domes, 
-and you won&apos;t be able to undo it. 
+      <translation>Detta tar bort alla huvudobjekt
+från de valda himmelskupolerna,
+och det går inte att ångra.
 
-Are you sure you want to delete these Sky Domes?
+Vill du ta bort dessa himmelskupoler?
 </translation>
     </message>
     <message>
@@ -1429,7 +1429,7 @@ med noll i riktning mot y-axeln</translation>
     <message>
       <location filename="../SkyDomesDialog.py" line="178"/>
       <source>Position:</source>
-      <translation type="unfinished">Position:</translation>
+      <translation>Position:</translation>
     </message>
     <message>
       <location filename="../SkyDomesDialog.py" line="181"/>
@@ -1440,8 +1440,8 @@ med noll i riktning mot y-axeln</translation>
       <location filename="../SkyDomesDialog.py" line="185"/>
       <source>Adjust the x coordinate of the center of the 
 dome according to the project (mm).</source>
-      <translation>Justera x-koordinaten för centrum av kupolen
-kupolen enligt projektet (mm).</translation>
+      <translation>Justera x-koordinaten för kupolens mitt
+enligt projektet (mm).</translation>
     </message>
     <message>
       <location filename="../SkyDomesDialog.py" line="190"/>
@@ -1477,7 +1477,7 @@ timmar under året.</translation>
     <message>
       <location filename="../SkyDomesDialog.py" line="317"/>
       <source>Legend Bar</source>
-      <translation type="unfinished">Legend Bar</translation>
+      <translation>Teckenförklaringsfält</translation>
     </message>
     <message>
       <location filename="../SkyDomesDialog.py" line="324"/>
@@ -1700,11 +1700,11 @@ the selected Sun Analysis,
 and you won&apos;t be able to undo it. 
 
 Are you sure you want to delete these Sun Analysis?</source>
-      <translation type="unfinished">This will delete all objects from 
-the selected Sun Analysis, 
-and you won&apos;t be able to undo it. 
+      <translation>Detta tar bort alla objekt från
+den valda solanalysen,
+och det går inte att ångra.
 
-Are you sure you want to delete these Sun Analysis?</translation>
+Vill du ta bort denna solanalys?</translation>
     </message>
     <message>
       <location filename="../SunAnalysis.py" line="1699"/>
@@ -1974,8 +1974,8 @@ is in leap year.</source>
 should be presented in sun hours, 
 Radiation (kWh/m²) or Irradiance (W/m²).</source>
       <translation>Ange om resultaten från solanalysen ska
-ska presenteras i soltimmar,
-Strålning (kWh/m²) eller irradians (W/m²).</translation>
+presenteras i soltimmar,
+strålning (kWh/m²) eller irradians (W/m²).</translation>
     </message>
     <message>
       <location filename="../SunAnalysisDialog.py" line="115"/>
@@ -2011,7 +2011,7 @@ med noll i riktning mot y-axeln</translation>
     <message>
       <location filename="../SunAnalysisDialog.py" line="316"/>
       <source>Legend Bar</source>
-      <translation type="unfinished">Legend Bar</translation>
+      <translation>Teckenförklaringsfält</translation>
     </message>
     <message>
       <location filename="../SunAnalysisDialog.py" line="323"/>
@@ -2093,8 +2093,8 @@ Observera att större tal kommer att
       <location filename="../SunAnalysisDialog.py" line="290"/>
       <source>Enable sky matrix high density (Reinhart model).
 Not yet implemented!</source>
-      <translation type="unfinished">Enable sky matrix high density (Reinhart model).
-Not yet implemented!</translation>
+      <translation>Aktivera hög densitet för himmelsmatrisen (Reinhart-modellen).
+Inte implementerat ännu!</translation>
     </message>
   </context>
   <context>
@@ -2399,8 +2399,7 @@ För skuggor i färg 3D-vy, lämna det inaktiverat.</translation>
     <message>
       <location filename="../SunDialog.py" line="399"/>
       <source>Enable it to get the sunrise and sunset values, then hit Apply.</source>
-      <translation>Aktivera den för att få värdena för soluppgång
-och solnedgång, och klicka sedan på Tillämpa.</translation>
+      <translation>Aktivera den för att få värden för soluppgång och solnedgång och klicka sedan på Tillämpa.</translation>
     </message>
     <message>
       <location filename="../SunDialog.py" line="404"/>
@@ -2531,7 +2530,7 @@ med noll i riktning mot y-axeln</translation>
     <message>
       <location filename="../SunDialog.py" line="277"/>
       <source>Center:</source>
-      <translation type="unfinished">Center:</translation>
+      <translation>Mittpunkt:</translation>
     </message>
     <message>
       <location filename="../SunDialog.py" line="337"/>
@@ -2585,7 +2584,7 @@ i länkarna</translation>
     <message>
       <location filename="../SunDialog.py" line="484"/>
       <source>EPW Files (*.epw);; All Files (*)</source>
-      <translation type="unfinished">EPW Files (*.epw);; All Files (*)</translation>
+      <translation>EPW-filer (*.epw);; Alla filer (*)</translation>
     </message>
   </context>
   <context>
@@ -2626,8 +2625,8 @@ Klicka på spela upp för att starta animeringen.</translation>
       <location filename="../SunPathAnimation.py" line="157"/>
       <source>A path to save images is required! 
 Click &apos;Stop Animation&apos; to start again.</source>
-      <translation type="unfinished">A path to save images is required! 
-Click &apos;Stop Animation&apos; to start again.</translation>
+      <translation>En sökväg för att spara bilder krävs!
+Klicka på ”Stoppa animering” för att börja om.</translation>
     </message>
   </context>
   <context>
@@ -2692,7 +2691,7 @@ projekt krävs, och inget sådant hittades!</translation>
     <message>
       <location filename="../SunProperties.py" line="843"/>
       <source>There is no Sunlight to update!</source>
-      <translation type="unfinished">There is no Sunlight to update!</translation>
+      <translation>Det finns inget solljus att uppdatera!</translation>
     </message>
   </context>
   <context>
@@ -2700,12 +2699,12 @@ projekt krävs, och inget sådant hittades!</translation>
     <message>
       <location filename="../SunProperties.py" line="536"/>
       <source>So far, the shadows with colored images only work in the FreeCAD-Link version 20241003.</source>
-      <translation type="unfinished">So far, the shadows with colored images only work in the FreeCAD-Link version 20241003.</translation>
+      <translation>Hittills fungerar skuggor med färgade bilder endast i FreeCAD-Link-versionen 20241003.</translation>
     </message>
     <message>
       <location filename="../SunProperties.py" line="545"/>
       <source>Sun Path {}</source>
-      <translation type="unfinished">Sun Path {}</translation>
+      <translation>Solbana {}</translation>
     </message>
   </context>
   <context>
@@ -2720,9 +2719,9 @@ Avoid spherical or complex surfaces.
 
 Do you want to generate shadows now?</source>
       <translation>Denna funktion har inte testats fullt ut ännu!
-För att undvika problem bör du spara filen innan du använder den.
-För transparenta ytor rekommenderas det att
-att göra dem osynliga innan skuggorna genereras.
+Spara filen innan du använder den för att undvika problem.
+För genomskinliga ytor rekommenderas
+att de görs osynliga innan skuggorna genereras.
 Undvik sfäriska eller komplexa ytor.
 
 Vill du generera skuggor nu?</translation>
